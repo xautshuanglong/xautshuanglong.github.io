@@ -16,17 +16,20 @@ fancybox: true
 # Sidebar
 widgets:
 - search
-- music
-- category
 - recent_posts
+- category
 - tag
 - tagcloud
+- music
+- weibo
 
 # Miscellaneous
 google_analytics:
 duoshuo_shortname: 
-rss: 
+rss:
 google_site_verification: 
 baidu_site_verification: 
 favicon: 
-music: 
+music:
+- take_you_fly.mp3
+- dun_pai_qing_chun.mp3

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
+title: Shuanglong
+subtitle: To see a word in a grain of sand. And a heaven in a wild flower.
 description:
-author: John Doe
-language:
+author: JiangShuanglong
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://xautshuanglong.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
