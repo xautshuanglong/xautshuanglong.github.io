@@ -762,7 +762,7 @@ section[role="banner"] {
 	color: rgb(0, 0, 0); /* Widget Link Normal*/
 }
 .widget-area .widget a:hover {
-	color: rgb(81, 165, 168); /* Widget Link Hover*/
+	color: rgb(250, 140, 0); /* Widget Link Hover*/
 }
 
 }
@@ -1637,7 +1637,7 @@ a.comment-edit-link:hover {
 /* List count */
 .category-list-count, .tag-list-count, .archive-list-count {
     padding-left: 5px;
-    color: #999;
+    color: #FABE78;
     font-size: 0.85em;
 }
 .category-list-count:before, .tag-list-count:before, .archive-list-count:before {
