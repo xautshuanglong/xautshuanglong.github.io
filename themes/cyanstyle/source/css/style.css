@@ -1088,6 +1088,9 @@ img.aligncenter,
 }
 .entry-content table,
 .comment-content table {
+	border-top: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+	border-right: 1px solid #ededed;
 	border-bottom: 1px solid #ededed;
 	color: #A0FF6E;
 	font-size: 14px;
@@ -1106,7 +1109,10 @@ img.aligncenter,
 }
 .entry-content td,
 .comment-content td {
-	border-top: 1px solid #ff0000;
+	border-top: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+	border-right: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
 	padding: 6px 10px 6px 0;
 }
 .site-content article {
