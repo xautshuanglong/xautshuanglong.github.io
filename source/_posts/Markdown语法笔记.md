@@ -14,7 +14,5 @@ sdf
 &copy;  +_+
 &lt;  
 -sf
-sfd
-
 asd
 asd
