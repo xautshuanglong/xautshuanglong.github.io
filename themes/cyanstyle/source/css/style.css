@@ -90,7 +90,7 @@ Microsoft YaHei,html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	vertical-align: baseline; 
+	vertical-align: baseline;
 }
 body {
 	line-height: 1;
@@ -158,7 +158,7 @@ audio:not([controls]) {
 	display: none;
 }
 del {
-	color: #333;
+	color: #A0FF6E;
 }
 ins {
 	background: rgba(235,233,233,0.5);
@@ -219,7 +219,7 @@ img {
 .entry-content th,
 .comment-content th {
 	font-size: 11px;
-	font-size: 0.785714286rem;
+	font-size: 1.085714286rem;
 	line-height: 2.181818182;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -570,7 +570,7 @@ body {
 	font-size: 1rem;
 	font-family: Microsoft YaHei,  Helvetica, Arial, sans-serif;
 	text-rendering: optimizeLegibility;
-	color: rgb(0, 0, 0);/*Article & Widget Content*/
+	color: rgb(250, 230, 90);/*Articlergb(250, 230, 90) & Widget Content*/
 }
 body.custom-font-enabled {
 	font-family: Microsoft YaHei,  Helvetica, Arial, sans-serif;
@@ -759,7 +759,7 @@ section[role="banner"] {
 	margin-left: 2.571428571rem;
 }
 .widget-area .widget a {
-	color: rgb(0, 0, 0); /* Widget Link Normal*/
+	color: rgb(233, 237, 39); /* Widget Link Normal*/
 }
 .widget-area .widget a:hover {
 	color: rgb(250, 140, 0); /* Widget Link Hover*/
@@ -772,7 +772,7 @@ section[role="banner"] {
 
 /* Footer */
 footer[role="contentinfo"] {
-	border-top: 1px solid rgba(0, 255, 0, 0.5);
+	border-top: 2px solid rgba(20, 220, 40, 1.0);
 	clear: both;
 	font-size: 12px;
 	font-size: 1.157142857rem;
@@ -988,9 +988,9 @@ article.sticky .featured-post {
 .comment-content blockquote {
     margin: 0 0 24px;
     margin: 0 0 1.714285714rem;
-    border-left: 4px solid #aaa;
+    border-left: 4px solid #4dd7f5;
     padding: 0 15px;
-    color: #aaa;
+    color: #4dd7f5;
 }
 .entry-content blockquote>:first-child,
 .comment-content blockquote>:first-child {
@@ -1006,13 +1006,13 @@ article.sticky .featured-post {
     padding: 0 5px;
     margin: 0 2px;
     font-size: 0.9em;
-    border: 1px solid rgba(255, 0, 0, 1.0);
+    border: 1px solid rgba(63, 203, 64, 1);
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
 .entry-content pre,
 .comment-content pre {
-    border: 1px solid rgba(255, 0, 0, 1.0);
+    border: 2px solid rgba(200, 100, 10, 1);
     font-family: Consolas, Monaco, Lucida Console, monospace;
     margin-bottom: 15px;
     overflow: auto;
@@ -1088,10 +1088,10 @@ img.aligncenter,
 }
 .entry-content table,
 .comment-content table {
-	border-top: 1px solid #ededed;
-	border-left: 1px solid #ededed;
-	border-right: 1px solid #ededed;
-	border-bottom: 1px solid #ededed;
+	border-top: 1px solid #aec210;
+	border-left: 1px solid #aec210;
+	border-right: 1px solid #aec210;
+	border-bottom: 1px solid #aec210;
 	color: #A0FF6E;
 	font-size: 14px;
 	font-size: 1.057142857rem;
@@ -1109,15 +1109,15 @@ img.aligncenter,
 }
 .entry-content td,
 .comment-content td {
-	border-top: 1px solid #ededed;
-	border-left: 1px solid #ededed;
-	border-right: 1px solid #ededed;
-	border-bottom: 1px solid #ededed;
+	border-top: 1px solid #aec210;
+	border-left: 1px solid #aec210;
+	border-right: 1px solid #aec210;
+	border-bottom: 1px solid #aec210;
 	padding: 6px 10px 6px 0;
 }
 .site-content article {
     /* Border Line for Article Bottom*/
-	border-bottom: 1px solid rgba(0, 255, 0, 0.5);
+	border-bottom: 2px solid rgba(20, 220, 40, 1.0);
 	margin-bottom: 72px;
 	margin-bottom: 5.142857143rem;
 	padding-bottom: 24px;
@@ -1149,7 +1149,7 @@ footer.entry-meta {
 
 /* Hexo Code */
 figure.highlight {
-    border: 1px solid rgba(180, 100, 90, 1.0);
+    border: 2px solid rgba(200, 100, 10, 1.0);
     margin-bottom: 15px;
     padding: 7px 15px;
     -webkit-border-radius: 2px;
@@ -1175,14 +1175,14 @@ figure.highlight td {
 figure.highlight .gutter {
     color: #ff000;
     padding-right: 15px;
-    border-right: 1px solid rgba(180, 100, 90, 1.0);
+    border-right: 2px solid rgba(200, 100, 10, 1.0);
     text-align: right;
     vertical-align: middle;
 }
 
 figure.highlight .code {
     padding-left: 15px;
-    border-left: 1px solid rgba(180, 100, 90, 1.0);
+    border-left: 2px solid rgba(200, 100, 10, 1.0);
 }
 
 figure.highlight pre {
@@ -1709,8 +1709,8 @@ img#wpstats {
 	.main-navigation ul.nav-menu,
 	.main-navigation div.nav-menu > ul {
 	    /* Border Line for Main */
-		border-bottom: 1px solid rgba(0, 255, 0, 0.5);
-		border-top: 1px solid rgba(0, 255, 0, 0.5);
+		border-bottom: 2px solid rgba(20, 220, 40, 1.0);
+		border-top: 2px solid rgba(20, 220, 40, 1.0);
 		display: inline-block !important;
 		text-align: left;
 		width: 100%;
