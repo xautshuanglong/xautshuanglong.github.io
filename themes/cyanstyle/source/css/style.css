@@ -218,13 +218,18 @@ img {
 .widget-title,
 .entry-content th,
 .comment-content th {
-	border-left: 1px solid #aec210;
 	font-size: 11px;
 	font-size: 1.085714286rem;
 	line-height: 2.181818182;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: rgb(0, 255, 0); /* Widget Title */
+}
+
+/*Shuanglong header of table*/
+.entry-content th,
+.comment-content th {
+	border-left: 1px solid #aec210;
 }
 
 /* Shared Post Format styling */
