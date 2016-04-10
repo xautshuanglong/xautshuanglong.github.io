@@ -458,7 +458,7 @@ img.wp-smiley,
   border-radius: 2px;
   text-align: center;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(87, 236, 34, 1);
 }
 #pagination:before,
 #pagination:after {
@@ -475,11 +475,11 @@ pagination span {
   height: 2ex;
 }
 #pagination a {
-  color: #999;
+  color: #2ddf10;
   text-decoration: none;
 }
 #pagination a:hover {
-  color: #000;
+  color: #ebd93c;
 }
 #pagination .prev {
   float: left;
@@ -496,7 +496,7 @@ pagination span {
   }
 }
 #pagination .current {
-  color: #000;
+  color: #ebd93c;
   font-weight: bold;
 }
 #pagination .space {
