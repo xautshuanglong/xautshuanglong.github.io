@@ -218,6 +218,7 @@ img {
 .widget-title,
 .entry-content th,
 .comment-content th {
+	border-left: 1px solid #aec210;
 	font-size: 11px;
 	font-size: 1.085714286rem;
 	line-height: 2.181818182;
