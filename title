@@ -1,0 +1,14 @@
+---
+title: Hexo 命令集
+date: 2016-04-02 19:02:42
+categories: Git
+tags: hexo
+---
+
+### 常用命令列表
+
+|hexo 命令|范例|说明|
+|:-----:|:-----:|:-----:|
+|new "article_tatile|hexo new "笔记"|新建一篇文章|
+|new draft "draft_tatile|hexo new draft "草稿"|新建一篇草稿|
+|publish [layout] "title"||将草稿发布 layout=post|page|

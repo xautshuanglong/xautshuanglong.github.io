@@ -1,9 +1,10 @@
 ---
-title: 关于log4cpp的配置文件
-date: 2016-04-02 19:30:25
+title: 关于 log4cpp 的配置文件
 tags: log4cpp
 categories: Libraries
+date: 2016-04-02 19:30:25
 ---
+
 
 ## 优先级：
 | 符号 | 说明 |
