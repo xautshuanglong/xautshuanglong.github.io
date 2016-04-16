@@ -6,8 +6,6 @@ tags: hexo
 ---
 
 ### 常用命令：
-hexo new "article title"    创建一篇新文章  
-hexo new draft "article title"    创建一篇新草稿
 
 | hexo 命令|范例|说明|
 |:-----:|:-----:|:-----:|
