@@ -90,5 +90,19 @@ tags: [vi,vim]
 |N|反向重复上一个搜索动作|
 |:n1,n2s/word1/word2/g<br>:n1,n2s/word1/word2/gc|在n1行与n2行之间寻找word1字符串，并将该字符串替换为word2。<br>在替换前提示用户确认是否需要替换|
 
+    6. 窗口命令
+|命令|说明|
+|:---:|:---|
+|:open file|在当前窗口打开一个新文件|
+|:split file|在新窗口中打开文件（水平分割）|
+|:new file|在新窗口中打开文件（水平方向）|
+|:vsplit file|在新窗口中打开文件（垂直分割）|
+|[Ctrl]+ww|移动到下一个窗口|
+|[Ctrl]+wh|移动到左方的窗口|
+|[Ctrl]+wj|移动到下方的窗口|
+|[Ctrl]+wk|移动到上方的窗口|
+|[Ctrl]+wl|移动到右方的窗口|
+|:only|关闭所有窗口，只保留当前窗口|
+
 [参考文档](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html "http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html")
 [超过130个你需要了解的 vim 命令](http://www.oschina.net/news/43167/130-essential-vim-commands)
