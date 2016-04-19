@@ -57,6 +57,11 @@ tags: [vi,vim]
 |nG|光标移动到文档第n行首字符|
 |gg|光标移动到文档首行首字符|
 |n<Enter>|光标向下移动n行|
+|b|将光标移动到单词开头|
+|e|将光标移动到单词末尾|
+|n&#124;|将光标移动到当前行的第 n 列|
+|[[ 或 ]]|跳转到函数 `开头` 或 `结尾`|
+|{[ 或 ]}|跳转到区块 `开头` 或 `结尾`|
 
 	4. 复制与粘贴
 |命令|说明|
@@ -107,7 +112,7 @@ tags: [vi,vim]
 
     6. 窗口命令
 |命令|说明|
-|:---:|:---|
+|:---:|:---:|
 |:open file|在当前窗口打开一个新文件|
 |:split file|在新窗口中打开文件（水平分割）|
 |:new file|在新窗口中打开文件（水平方向）|
@@ -119,5 +124,5 @@ tags: [vi,vim]
 |[Ctrl]+wl|移动到右方的窗口|
 |:only|关闭所有窗口，只保留当前窗口|
 
-[参考文档](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html "http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html")
+[Vim 命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html "http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html")
 [超过130个你需要了解的 vim 命令](http://www.oschina.net/news/43167/130-essential-vim-commands)
