@@ -4,7 +4,7 @@
 
 # Site
 title: Shuanglong
-subtitle: To see a world in a grain of sand. And a heaven in a wild flower.
+subtitle: 严于律己 宽以待人
 description:
 author: JiangShuanglong
 language: zh-CN
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cyanstyle
+theme: freemind
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
