@@ -3,6 +3,8 @@ title: Python 小技巧
 date: 2016-05-06 17:10:46
 categories: Python
 tags: Python
+description: test
+toc: true
 ---
 
 ## Python 中的小技巧
@@ -32,6 +34,7 @@ tags: Python
 			list = ['value2','value1','value0']
 			for value in sorted(set(list)):
 				print value
+<!--more-->
 2. range() 和 xrange() 的区别
 	range()返回的是一个列表 list,而xrange()返回一个对象object。
 	除非需要一个List【数据多时，生成list费时】，否则，选择xrange(),效率高【仅在调用时返回所需数字】。

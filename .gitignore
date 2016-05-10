@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+*.zip
+node_modules/
+public/
+source/music/
+.deploy*/
+.npmignore
