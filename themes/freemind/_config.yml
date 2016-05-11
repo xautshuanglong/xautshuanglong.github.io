@@ -24,16 +24,20 @@ menu:
 links:
   - title: Freemind
     url: https://github.com/wzpan/freemind/
-    intro: "Freemind's Github repository."
+    intro: "Freemind's Github repository"
     icon: "fa fa-github"
-  - title: "My Github"
-    url: http://www.github.com/wzpan
-    intro: "My Github account."
+  - title: "Shuanglong Github"
+    url: http://www.github.com/xautshuanglong
+    intro: "My Github account"
     icon: "fa fa-github"
-  - title: "My LinkedIn"
-    url: http://www.linkedin.com/in/hahack
-    intro: "My Linkin account."
-    icon: "fa fa-linkedin"
+  - title: "Twitter"
+    url: https://twitter.com/xautshuanglong
+    intro: "My Twitter account"
+    icon: "fa fa-twitter"
+  - title: "Facebook"
+    url: https://www.facebook.com/shuanglong.jiang
+    intro: "My Facebook account"
+    icon: "fa fa-facebook"
 
 widgets:
 - search
@@ -41,18 +45,19 @@ widgets:
 - tagcloud
 - recent_posts
 - links
+- weibo
 
-rss:
+rss: /atom.xml
 fancybox: true
-favicon: favicon.png
-duoshuo_shortname:
+favicon: /css/images/favicon.ico
+duoshuo_shortname: xautshuanglong
 
 # Analytics
 google_analytics:
   enable: false
   siteid:
 baidu_tongji:
-  enable: false
+  enable: true
   siteid:
 
 # search
