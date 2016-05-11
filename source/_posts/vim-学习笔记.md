@@ -7,6 +7,7 @@ tags: [vi,vim]
 
 ## vim 常用命令图解
 ![alt](/images/Linux/20160415_0.png)
+<!--more-->
 ## 命令（快捷键）详解
 	1. 编辑模式  
 
