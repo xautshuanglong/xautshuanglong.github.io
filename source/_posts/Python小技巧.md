@@ -3,7 +3,7 @@ title: Python 小技巧
 date: 2016-05-06 17:10:46
 categories: Python
 tags: Python
-description: test
+description: 小技巧
 toc: true
 ---
 

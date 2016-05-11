@@ -5,6 +5,5 @@ db.json
 *.zip
 node_modules/
 public/
-source/music/
 .deploy*/
 .npmignore
