@@ -14,7 +14,7 @@ tags: hexo
 |publish [layout] "title"|hexo publish post "title"|发布一篇草稿 layout=post\page|
 
 
-## 本站用到的 node_modules
+### 本站用到的 node_modules
 ```bash
 npm install hexo --save
 npm install hexo-deployer-git --save

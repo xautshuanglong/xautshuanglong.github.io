@@ -2,7 +2,7 @@
 title: vim 学习笔记
 date: 2016-04-15 14:02:32
 categories: Linux
-tags: [vi,vim]
+tags: [vim]
 ---
 
 ## vim 常用命令图解

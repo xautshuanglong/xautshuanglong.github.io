@@ -48,12 +48,12 @@ tags: markdown
     1. 内联式  
             This is [an example](/ "home") inline link.
     This is [an example](/ "home") inline link.(可以使用相对路径)
-    2. 参考式  
-            This is [an example][id] reference-style link.
-            [id]: /  "home  
-        _注：\[id\]要在行首，可以有字母、数字、空白和标点符号，可以使用相对路径。_  
+    2. 参考式
+	        [id]: / "home".
+	        This is [an example][id] reference-style link.
+		_注：\[id\]要在行首，可以有字母、数字、空白和标点符号，可以使用相对路径。_  
     This is [an example][id] reference-style link.
-[id]: /  "home"
+[id]: / "home"
 *   自动链接  
         <http://www.baidu.com>
     <http://www.baidu.com>  
