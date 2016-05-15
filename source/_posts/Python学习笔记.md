@@ -53,4 +53,18 @@ _注：`.pyc`或`.pyo`不会比`.py`文件运行得更快，只是加载的时�
 用模块来保存不同模块架构可以避免全局变量之间的相互冲突；
 用圆点模块名保存不同类库架构可以避免模块之间的命名冲突。
 目录中有`__init__.py`文件存在，才能使`Pyhton`视该目录为一个包。
-_`__init__.py`可以是一个空文件。_
+_注：`__init__.py`可以是一个空文件，也可以包含初始化代码，或者设置`__all__`变量。_
+
+    import package.item.subitem
+    中间的子项必须是包，最后的子项可以是包或模块，但不能是前面子项中定义的包、函数或变量。
+    package.item.subitem.definition 必须通过完整的名称来引用。
+
+    from package import item
+    item 可以是包中的一个子模块或一个子包,也可以是包中的定义，如：函数、类、变量。
+    item 可以在没有包前缀的情况下引用。
+
+    from package import *
+    如果 __init__.py 定义了 __all__，就会按照列表给出的模块名进行导入。
+
+    from Package.module import *
+    可以直接引用包中的所有定义。
