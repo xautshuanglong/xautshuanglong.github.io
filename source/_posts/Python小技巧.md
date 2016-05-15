@@ -45,5 +45,22 @@ toc: true
 	import Fibo
 	print dir('Fibo')
 	['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'fibonacci']
-### 4. 其它技巧
+### 4. `str()`和`repr()`
+`str()`将值转化为适于人阅读的形式；
+`repr()`将值转化为适于解释器读取的形式。
+若没有适于人阅读的解释形式的话，`str()`会返回与`repr()`等同的值。
+如：数值、链表、字典等，两者有统一的解读形式；字符串和浮点数则有着各自独特的解读方式。
 
+	s = 'Hello,world.'
+	s1 = str(s)  # s1 = 'Hello,world.'
+	s2 = repr(s) # s2 = "'Hello,world.'"
+	print s1,s2  # Hello,world. 'Hello,world.'
+
+	s = 'Hello,\tworld.'
+	s1 = str(s)  # s1 = 'Hello,\tworld.'
+	s2 = repr(s) # s2 = "'Hello,\\tworld.'"
+	print s1,s2  # Hello,	world. 'Hello,\tworld.'
+
+	s1 = str(1.0/7.0)  # s1 = 0.142857142857
+	s2 = repr(1.0/7.0) # s2 = 0.142857142857142857
+### 5. 其它技巧
