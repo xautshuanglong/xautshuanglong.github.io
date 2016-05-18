@@ -8,28 +8,23 @@ toc: true
 ---
 
 ## 学习资料
-
-### Python
-{% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 primary %}
-{% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 primary %}
-
-### MySQL
-{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 primary %}
-
 ### C++
-{% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 primary %}
+{% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
 
 ### C
 {% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 primary %}
 
-### HTML
-{% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 primary %}
+### Python
+{% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
+{% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 
-### CSS
-{% btn http://www.runoob.com/css/css-tutorial.html 菜鸟教程【CSS】 primary %}
+### MySQL
+{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 info %}
 
-### JavaScript
-{% btn http://www.runoob.com/js/js-tutorial.html 菜鸟教程【JavaScript】 primary %}
+### Web
+{% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 danger %}
+{% btn http://www.runoob.com/css/css-tutorial.html 菜鸟教程【CSS】 danger %}
+{% btn http://www.runoob.com/js/js-tutorial.html 菜鸟教程【JavaScript】 danger %}
 
 ## 简历
 [简历吸引力](http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm)
