@@ -8,6 +8,8 @@ toc: true
 ---
 
 ## 学习资料
+值得收藏的学习网址
+<!--more-->
 ### C++
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
 
