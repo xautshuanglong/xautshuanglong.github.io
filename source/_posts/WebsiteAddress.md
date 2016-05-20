@@ -18,7 +18,7 @@ toc: true
 
 ### Python
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
-{% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
+{% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 
 ### MySQL
 {% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 info %}
