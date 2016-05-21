@@ -17,6 +17,7 @@ toc: true
 {% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 primary %}
 
 ### Python
+{% btn https://www.python.org/ 官方文档 warning %}
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 
@@ -27,6 +28,15 @@ toc: true
 {% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 danger %}
 {% btn http://www.runoob.com/css/css-tutorial.html 菜鸟教程【CSS】 danger %}
 {% btn http://www.runoob.com/js/js-tutorial.html 菜鸟教程【JavaScript】 danger %}
+
+## Github
+{% btn https://github.com/xautshuanglong My&#32;Github success %}
+{% btn https://github.com/vim-scripts/ Vim&#32;Plugin success %}
+{% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 success %}
+
+## 公共平台
+{% btn http://duoshuo.com/ 多说评论 primary %}
+{% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
 
 ## 简历
 [简历吸引力](http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm)
