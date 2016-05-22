@@ -105,4 +105,80 @@ _注：`__init__.py`可以是一个空文件，也可以包含初始化代码，
 	3   9   27
 	4  16   64
 	5  25  125
-字符串对齐对齐方式：ljust、center、rjust。
+_注：字符串对齐对齐方式：ljust、center、rjust。  
+它们把字符串输出到新的字符串序列，不改变原字符串，并通过向左侧、右侧、左右两侧填充空格使其对齐，字符串较长时不会自动截断。  
+(如果需要截断，可以使用切割操作，如：`x.ljust(n)[:n]`)_
+`zfill()`用于向字符串左侧填充`0`，它可以正确理解正负号。
+
+    print '12'.zfill(5)
+    print '-3.14'.zfill(7)
+
+    00012
+    -003.14
+### 格式化输出
+* ##### 旧格式 `%`
+
+|格式化符号|说明|
+|:-----:|:-----:|
+| %c | 转换成字符（ASCII码值，或长度为1的字符串。） |
+| %r | 优先使用`repr()`函数进行字符串转换 |
+| %s | 优先使用`str()`函数进行字符串转换 |
+| %b | 转换成二进制整数 |
+| %d &#124; %i | 转换成有符号十进制整数 |
+| %u | 转换成无符号十进制整数 |
+| %o | 转换成无符号八进制整数 |
+| %x &#124; %X | 转换成无符号十六进制整数（x &#124; X,代表大小写） |
+| %e &#124; %E | 转换成科学计数法（e &#124; E控制输出e &#124; E） |
+| %f &#124; %F | 转换成浮点数（小数部分自然截断） |
+| %g &#124; %G | %e和%f &#124; %E和%F的简写 |
+| %% | 输出 % |
+<br>
+
+| 辅助符号 | 说明 |
+|:-----:|:-----:|
+| * | 定义宽度或者小数点精度 |
+| - | 用作左对齐 |
+| + | 在正数前面显示(+) |
+| # | 在八进制数前面显示零(0)，十六进制前面显示“0x”或“0X” |
+| 0 | 显示的数字前面填充“0”而不是默认的空格 |
+| (var) | 映射变量（通常用来处理字段类型的参数） |
+| m.n | m是显示的最小宽度，n是小数点后的位数（如果可用的话） |
+`%[(name)][flags][width].[precision]typecode`
+`(name)`为命名
+`flags`可以有：`+`，`-`，`' '`，`0`。
+`width`表示显示宽度
+`precision`表示小数点后的精度
+
+	num = 100
+	print "%d to hex is %x" %(num, num)
+	print "%d to hex is %X" %(num, num)
+	print "%d to hex is %#x" %(num, num)
+	print "%d to hex is %#X" %(num, num) 
+	
+	f = 3.1415926
+	print "value of f is: %.4f" % f
+	
+	lists = [{"name":"name1", "age":27}, {"name":"name2", "age":28}, {"name":"name3", "age":26}]
+	print "name: %10s, age: %10d" % (lists[0]["name"], lists[0]["age"])
+	print "name: %-10s, age: %-10d" % (lists[1]["name"], lists[1]["age"])
+	print "name: %*s, age: %0*d" % (10, lists[2]["name"], 10, lists[2]["age"])
+	
+	for item in lists:
+	    print "%(name)s is %(age)d years old" % item
+
+    输出结果：
+	100 to hex is 64
+	100 to hex is 64
+	100 to hex is 0x64
+	100 to hex is 0X64
+	value of f is: 3.1416
+	name:      name1, age:         27
+	name: name2     , age: 28
+	name:      name3, age: 0000000026
+	name1 is 27 years old
+	name2 is 28 years old
+	name3 is 26 years old
+
+* ##### 新格式 `format`
+在`format()`函数中，使用`{}`符号充当格式化操作符。
+_注：`print`会自动在行末尾加上回车，如果不需要换行，只需在末尾添加一个逗号`,`即可。_
