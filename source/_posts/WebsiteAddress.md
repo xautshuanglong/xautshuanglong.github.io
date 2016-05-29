@@ -12,6 +12,7 @@ toc: true
 <!--more-->
 ### C++
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
+{% btn http://www.cplusplus.com/ C&#32;Plus&#32;Plus success %}
 
 ### C
 {% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 primary %}
