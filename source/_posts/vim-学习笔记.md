@@ -3,6 +3,7 @@ title: vim 学习笔记
 date: 2016-04-15 14:02:32
 categories: Linux
 tags: [vim]
+toc: true
 ---
 
 ## vim 常用命令图解
@@ -141,3 +142,7 @@ tags: [vim]
 [Vim 命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html "http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html")
 [超过130个你需要了解的 vim 命令](http://www.oschina.net/news/43167/130-essential-vim-commands)
 [vim 命令](http://lxs647.iteye.com/blog/1245948)
+
+## vim 配置
+### 必知必会
+* .vimrc
