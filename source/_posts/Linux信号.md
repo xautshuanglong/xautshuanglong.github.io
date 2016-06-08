@@ -99,4 +99,19 @@ Either SIG_DEL or SIG_IGN is set as the default signal handling behavior at prog
 
 ### 相关系统调用
 __signal 系统调用__
-系统调用`signal`来设定某个信号的处理方法
+系统调用`signal`来设定某个信号的处理方法。声明如下：
+void (*signal(int signum, void (*handler)(int)))(int);
+signum: 指出要设置方法的信号。
+handler: 指定一个处理函数或是`SIG_IGN`、`SIG_DFL`。
+* SIG_IGN:忽略参数 signum 所指的信号。
+* SIG_DFL:恢复参数 signum 所指的信号的处理方法为默认值。
+
+传递给信号处理函数的参数是信号值，这样使得一个信号处理函数可以处理多个信号。返回值是信号 signum 上一个处理函数或者错误代码 SIG_ERR （出错时）。
+__kill 系统调用__
+系统调用`kill`用来向进程发送一个信号。声明如下：
+int kill(pid_t pid, int sig);
+如果参数 pid 大于 0 ，该调用将信号 sig 发送的进程号为 pid 的进程。
+如果参数 pid 等于 0 ，那么信号 sig 将被发送给当前进程所属的进程组里的所有进程。
+如果参数 pid 等于 -1 ，那么信号 sig 将被发送给除了进程 1 和自身以外的所有进程。
+如果参数 pid 小于 -1 ，那么信号 sig 将被发送给属于进程组 -pid 的所有进程。
+如果参数 sig 等于 0
