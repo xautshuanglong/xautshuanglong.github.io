@@ -30,6 +30,10 @@ toc: true
 {% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 danger %}
 {% btn http://www.runoob.com/css/css-tutorial.html 菜鸟教程【CSS】 danger %}
 {% btn http://www.runoob.com/js/js-tutorial.html 菜鸟教程【JavaScript】 danger %}
+{% btn https://www.zybuluo.com/yangfch3/note/167490 HTTP详解 danger %}
+{% btn https://hit-alibaba.github.io/interview 面试复习 danger %}
+{% btn http://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html Socket编程 danger%}
+{% btn https://hexo.io/docs/configuration.html Hexo参考文档 danger %}
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
