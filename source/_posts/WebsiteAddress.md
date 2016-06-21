@@ -42,6 +42,9 @@ toc: true
 
 ## Linux
 
+## Golang
+{% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
+
 
 ## 公共平台
 {% btn http://duoshuo.com/ 多说评论 primary %}
