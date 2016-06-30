@@ -23,8 +23,16 @@ toc: true
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 
+### Golang
+{% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
+	
+### Hexo
+{% btn http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/ Mathjax初级 success %}
+
+### Linux
+
 ### MySQL
-{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 info %}
+{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 primary %}
 
 ### Web
 {% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 danger %}
@@ -39,11 +47,6 @@ toc: true
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
 {% btn https://github.com/vim-scripts/ Vim&#32;Plugin success %}
 {% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 success %}
-
-## Linux
-
-## Golang
-{% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
 
 
 ## 公共平台
