@@ -45,6 +45,7 @@ toc: true
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
+{% btn https://git-scm.com/ Git&#32;Doc success %}
 {% btn https://github.com/vim-scripts/ Vim&#32;Plugin success %}
 {% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 success %}
 
