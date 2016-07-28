@@ -23,6 +23,9 @@ toc: true
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 
+### C&#35;
+{% btn https://msdn.microsoft.com/zh-cn/library/67ef8sbd(v=vs.90).aspx 编程指南【C&#35;】 danger %}
+
 ### Golang
 {% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
 	
@@ -30,9 +33,10 @@ toc: true
 {% btn http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/ Mathjax初级 success %}
 
 ### Linux
+{% btn https://linux.cn/ Linux中国-开源社区 primary %}
 
 ### MySQL
-{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 primary %}
+{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 warning %}
 
 ### Web
 {% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 danger %}
@@ -49,6 +53,9 @@ toc: true
 {% btn https://github.com/vim-scripts/ Vim&#32;Plugin success %}
 {% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 success %}
 
+## Libraries
+{% btn https://logging.apache.org/log4cxx Log4cxx warning%}
+{% btn http://log4cpp.sourceforge.net Log4cpp warning%}
 
 ## 公共平台
 {% btn http://duoshuo.com/ 多说评论 primary %}
