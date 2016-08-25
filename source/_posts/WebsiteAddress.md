@@ -8,7 +8,7 @@ toc: true
 ---
 
 ## 学习资料
-值得收藏的学习网址
+值得收藏的学习网址,每天进步一点点。
 <!--more-->
 ### C++
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
@@ -48,9 +48,13 @@ toc: true
 {% btn http://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html Socket编程 danger%}
 {% btn https://hexo.io/docs/configuration.html Hexo参考文档 danger %}
 
+### Java
+{% btn http://www.runoob.com/java/java-tutorial.html 菜鸟教程【Java】 info %}
+{% btn https://quanke.gitbooks.io/think-in-java/content/ Thinking&#32;In&#32;Java【Gitbooks】 info %}
+
 ### Android
-{% btn http://www.runoob.com/w3cnote/android-tutorial-intro.html 菜鸟教程【Android】 info %}
-{% btn http://waylenw.github.io/android-dev-teacher Android教程集锦 info %}
+{% btn http://www.runoob.com/w3cnote/android-tutorial-intro.html 菜鸟教程【Android】 success %}
+{% btn http://waylenw.github.io/android-dev-teacher Android教程集锦 success %}
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
