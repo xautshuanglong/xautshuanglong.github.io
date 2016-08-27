@@ -8,7 +8,7 @@ toc: true
 ---
 
 ## 学习资料
-值得收藏的学习网址
+值得收藏的学习网址,每天进步一点点。
 <!--more-->
 ### C++
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
@@ -23,6 +23,19 @@ toc: true
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 
+### C&#35;
+{% btn http://www.runoob.com/csharp/csharp-tutorial.html 菜鸟教程【C&#35;】 danger %}
+{% btn https://msdn.microsoft.com/zh-cn/library/67ef8sbd(v=vs.90).aspx 编程指南【C&#35;】 danger %}
+
+### Golang
+{% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
+	
+### Hexo
+{% btn http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/ Mathjax初级 success %}
+
+### Linux
+{% btn https://linux.cn/ Linux中国-开源社区 primary %}
+
 ### MySQL
 {% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 info %}
 
@@ -33,6 +46,14 @@ toc: true
 {% btn https://www.zybuluo.com/yangfch3/note/167490 HTTP详解 danger %}
 {% btn https://hit-alibaba.github.io/interview 面试复习 danger %}
 {% btn http://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html Socket编程 danger%}
+
+### Java
+{% btn http://www.runoob.com/java/java-tutorial.html 菜鸟教程【Java】 info %}
+{% btn https://quanke.gitbooks.io/think-in-java/content/ Thinking&#32;In&#32;Java【Gitbooks】 info %}
+
+### Android
+{% btn http://www.runoob.com/w3cnote/android-tutorial-intro.html 菜鸟教程【Android】 success %}
+{% btn http://waylenw.github.io/android-dev-teacher Android教程集锦 success %}
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
@@ -45,6 +66,7 @@ toc: true
 ## 公共平台
 {% btn http://duoshuo.com/ 多说评论 primary %}
 {% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
+{% btn https://portal.qiniu.com/signin 七牛云存储 primary %}
 
 ## 简历
 [简历吸引力](http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm)
