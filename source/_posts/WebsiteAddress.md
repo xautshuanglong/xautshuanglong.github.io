@@ -23,20 +23,8 @@ toc: true
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 
-### C&#35;
-{% btn https://msdn.microsoft.com/zh-cn/library/67ef8sbd(v=vs.90).aspx 编程指南【C&#35;】 danger %}
-
-### Golang
-{% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
-	
-### Hexo
-{% btn http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/ Mathjax初级 success %}
-
-### Linux
-{% btn https://linux.cn/ Linux中国-开源社区 primary %}
-
 ### MySQL
-{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 warning %}
+{% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 info %}
 
 ### Web
 {% btn http://www.runoob.com/html/html-tutorial.html 菜鸟教程【HTML】 danger %}
@@ -45,17 +33,14 @@ toc: true
 {% btn https://www.zybuluo.com/yangfch3/note/167490 HTTP详解 danger %}
 {% btn https://hit-alibaba.github.io/interview 面试复习 danger %}
 {% btn http://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html Socket编程 danger%}
-{% btn https://hexo.io/docs/configuration.html Hexo参考文档 danger %}
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
-{% btn https://git-scm.com/ Git&#32;Doc success %}
 {% btn https://github.com/vim-scripts/ Vim&#32;Plugin success %}
 {% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 success %}
 
-## Libraries
-{% btn https://logging.apache.org/log4cxx Log4cxx warning%}
-{% btn http://log4cpp.sourceforge.net Log4cpp warning%}
+## Linux
+
 
 ## 公共平台
 {% btn http://duoshuo.com/ 多说评论 primary %}
