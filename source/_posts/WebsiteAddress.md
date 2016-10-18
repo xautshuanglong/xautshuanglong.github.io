@@ -68,6 +68,10 @@ toc: true
 {% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
 {% btn https://portal.qiniu.com/signin 七牛云存储 primary %}
 
+## Host
+https://github.com/racaljk/hosts
+https://coding.net/u/scaffrey/p/hosts/git
+
 ## 简历
 [简历吸引力](http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm)
 [freemind theme参考](http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/)
