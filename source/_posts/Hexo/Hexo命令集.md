@@ -14,8 +14,12 @@ tags: hexo
 |publish [layout] "title"|hexo publish post "title"|发布一篇草稿 layout=post\page|
 
 
-### 本站用到的 node_modules
+### 相关 node_modules
 ```bash
+# 命令行工具，全局安装。
+npm install hexo-cli -g
+
+# 页面生成所需模块，安装在站点目录下(仓库根目录)
 npm install hexo --save
 npm install hexo-deployer-git --save
 npm install hexo-deployer-heroku --save
