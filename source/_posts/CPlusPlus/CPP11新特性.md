@@ -7,7 +7,8 @@ toc: true
 ---
 
 C++ 11 新特性学习笔记：
-`defaulted` 和 `deleted` 修饰特殊成员函数。
+`default` 和 `delete` 修饰特殊成员函数。
 <!-- More -->
 
+## Defaulted And Deleted Function
 

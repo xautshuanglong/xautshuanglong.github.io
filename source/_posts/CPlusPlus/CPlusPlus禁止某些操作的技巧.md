@@ -17,11 +17,11 @@ tags:
 	两个对象能够完全独立 --> 深拷贝
 	两个对象存在某种联系 --> 浅拷贝
 + 将构造函数声明为 `private`；
-+ 用 `deleted` 标记，编译器不会合成默认成员。参考[Defaulted & Deleted](https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/)
++ 用 `delete` 标记，编译器不会合成默认成员。参考[Defaulted & Deleted](https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/)
 
 ## 禁止拷贝/赋值
 + 将拷贝构造函数 与 operator= 均声明为 `private`；
-+ 用 `deleted` 标记，编译器不会合成默认成员，参考[Defaulted & Deleted](https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/)；
++ 用 `delete` 标记，编译器不会合成默认成员，参考[Defaulted & Deleted](https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/)；
 + 不提供方法的实现，防止`friend`。
 
 
