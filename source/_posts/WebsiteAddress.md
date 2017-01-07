@@ -10,9 +10,12 @@ toc: true
 ## 学习资料
 值得收藏的学习网址,每天进步一点点。
 <!--more-->
-### C++
+### C/C++
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
-{% btn http://www.cplusplus.com/ C&#32;Plus&#32;Plus success %}
+{% btn http://zh.cppreference.com/w/c C&#32;参考手册 success %}
+{% btn http://zh.cppreference.com/w/cpp CPP&#32;参考手册 success %}
+{% btn http://classfoo.com/ccby/article/acZKb CPP&#32;参考网址 success %}
+{% btn https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/ C++并发编程【Gitbooks】 success %
 
 ### C
 {% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 primary %}
@@ -32,6 +35,7 @@ toc: true
 	
 ### Hexo
 {% btn http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/ Mathjax初级 success %}
+{% btn http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/ Mathjax与LaTex公式简介 success %}
 
 ### Linux
 {% btn https://linux.cn/ Linux中国-开源社区 primary %}
@@ -50,10 +54,13 @@ toc: true
 ### Java
 {% btn http://www.runoob.com/java/java-tutorial.html 菜鸟教程【Java】 info %}
 {% btn https://quanke.gitbooks.io/think-in-java/content/ Thinking&#32;In&#32;Java【Gitbooks】 info %}
+{% btn http://help.eclipse.org/mars/index.jsp Help&#32;Eclipse info %}
+{% btn http://wiki.jikexueyuan.com/project/jni-ndk-developer-guide/ndkoverview.html Java&#32;JNI info %}
 
 ### Android
 {% btn http://www.runoob.com/w3cnote/android-tutorial-intro.html 菜鸟教程【Android】 success %}
 {% btn http://waylenw.github.io/android-dev-teacher Android教程集锦 success %}
+{% btn http://wiki.jikexueyuan.com/project/jni-ndk-developer-guide/ndkoverview.html Android&#32;NDK&#32;简介 success %}
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github success %}
