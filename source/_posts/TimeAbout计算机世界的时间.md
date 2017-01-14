@@ -64,8 +64,53 @@ time_t unixTime2 = ulargeTime.QuadPart / WINDOWS_TICK - SEC_TO_UNIX_EPOCH;
 
 ## 获取当前系统时间
 * tm
+```cpp
+struct tmi
+{
+	int tm_sec;	// the number of seconds [0-59]
+	int tm_min;	// the number of minutes [0-59]
+	int tm_hour;	// the number of hours since midnight [0-23]
+	int tm_mday;	// indicate the day of the month [1-31]
+	int tm_mon;	// the number of months since January [0-11]
+	int tm_year;	// the number of years since 1900 [117 --> 1900+117=2017]
+	int tm_wday;	// the number of days since Sundary [0-6]
+	int tm_yday;	// the number of days since January 1 [0-365]
+	int tm_isdst;	// daylight savings time [TRUE] and normal time [FALSE]
+};
+```
 * time_t
 * SYSTEMTIME
+``` c
+SYSTEMTIME m_systemTime;
+::GetLocalTime(&m_systemTime);
+char timeBuffer[64];
+sprintf_s(timeBuffer, "%4d-%02d-%02d %02d:%02d:%02d.%03d",
+	m_systemTime.wYear, m_systemTime.wMonth, m_systemTime.wDay,
+	m_systemTime.wHour, m_systemTime.wMinute, m_systemTime.wSecond, m_systemTime.wMilliseconds);
+```
+
+### 时区
+```cpp
+tm gmTime;
+tm loTime;
+gmtime_s(&gmTime, &timeTest);
+time_t gmt = mktime(&gmTime);
+localtime_s(&loTime, &timeTest);
+time_t lot = mktime(&loTime);
+double diff = difftime(gmt, lot);// -28800.000000
+
+long timeZone;
+// The _get_timezone function retrieves the difference in seconds between UTC and local time as an integer.
+// The default value is 28,800 seconds, for Pacific Standard Time (eight hours behind UTC).
+int errorCode = _get_timezone(&timeZone);// -28800(28800)
+char timeZoneName[64];
+size_t t;
+_get_tzname(&t, timeZoneName, sizeof(timeZoneName), 0);// 中国标准时间(太平洋标准时间)
+// 通过调整系统时间可知：
+// 中国标准时间   = -28800
+// 太平洋标准时间 =  28800
+// _get_timezone  =  格林威治时间 - 本地时间
+```
 
 ## 精确计算时间差
 * QueryPerformanceFrequency

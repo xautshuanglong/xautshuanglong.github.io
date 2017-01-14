@@ -12,6 +12,7 @@ toc: true
 <!--more-->
 ### C/C++
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
+{% btn http://www.cplusplus.com/reference CPlusPlus success %}
 {% btn http://zh.cppreference.com/w/c C&#32;参考手册 success %}
 {% btn http://zh.cppreference.com/w/cpp CPP&#32;参考手册 success %}
 {% btn http://classfoo.com/ccby/article/acZKb CPP&#32;参考网址 success %}
