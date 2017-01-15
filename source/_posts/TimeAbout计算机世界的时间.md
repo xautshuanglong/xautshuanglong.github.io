@@ -24,23 +24,23 @@ toc: true
 ```c
 typedef struct _FILETIME
 {
-	DWORD dwLowDateTime;	// low 32 bits
-	DWORD dwHighDateTime;	// high 32 bits
+    DWORD dwLowDateTime;	// low 32 bits
+    DWORD dwHighDateTime;	// high 32 bits
 }FILETIME, *PFILETIME, *LPFILETIME;
 
 typedef union _ULARGE_INTEGER
 {
-	struct
-	{
-		DWORD LowPart;
-		DWORD HighPart;
-	};
-	struct
-	{
-		DWORD LowPart;
-		DWORD HighPart;
-	}u;
-	ULONGLONG QuadPart;
+    struct
+    {
+        DWORD LowPart;
+        DWORD HighPart;
+    };
+    struct
+    {
+        DWORD LowPart;
+        DWORD HighPart;
+    }u;
+    ULONGLONG QuadPart;
 }ULARGE_INTEGER, *PULARGE_INTEGER;
 
 FILETIME fileTime; // 时钟嘀嗒，100ns，开始于 1601-01-01 00:00:00
@@ -63,30 +63,60 @@ time_t unixTime2 = ulargeTime.QuadPart / WINDOWS_TICK - SEC_TO_UNIX_EPOCH;
 ```
 
 ## 获取当前系统时间
-* tm
+* time_t 时间戳，距离 1900-01-01 00:00:00 的秒数。
 ```cpp
-struct tmi
-{
-	int tm_sec;	// the number of seconds [0-59]
-	int tm_min;	// the number of minutes [0-59]
-	int tm_hour;	// the number of hours since midnight [0-23]
-	int tm_mday;	// indicate the day of the month [1-31]
-	int tm_mon;	// the number of months since January [0-11]
-	int tm_year;	// the number of years since 1900 [117 --> 1900+117=2017]
-	int tm_wday;	// the number of days since Sundary [0-6]
-	int tm_yday;	// the number of days since January 1 [0-365]
-	int tm_isdst;	// daylight savings time [TRUE] and normal time [FALSE]
-};
+time_t time(time_t *timer);
+timer --> Pointer to the storage location for time.
+Return Value --> Return the time as seconds elapsed since midnight, January 1,1970,
+or -1 in the case of an error.
 ```
-* time_t
+* tm 精确到秒的时间结构体，需注意各成员的取值范围。
+```cpp
+struct tm
+{
+    int tm_sec;     // the number of seconds [0-59]
+    int tm_min;     // the number of minutes [0-59]
+    int tm_hour;    // the number of hours since midnight [0-23]
+    int tm_mday;    // indicate the day of the month [1-31]
+    int tm_mon;     // the number of months since January [0-11]
+    int tm_year;    // the number of years since 1900 [117 --> 1900+117=2017]
+    int tm_wday;    // the number of days since Sundary [0-6]
+    int tm_yday;    // the number of days since January 1 [0-365]
+    int tm_isdst;   // daylight savings time [TRUE] and normal time [FALSE]
+};
+
+tm m_tmCurTime;
+time_t m_tCurTime;
+time(&m_tCurTime);// 当前时间戳
+// 根据当前所在时区(系统设置)转换为信息全面的结构 
+localtime_s(&m_tmCurTime, &m_tCurTime);
+
+long timeZoneOffset;
+time_t tempTime;
+_tzset();
+_get_timezone(&timeZoneOffset);
+tempTime = m_tCurTime - timeZoneOffset;
+gmtime_s(&m_tmCurTime, &tempTimeOB);// 标准时间，需要根据时区自行调整(参见后文 时区)
+```
 * SYSTEMTIME
-``` c
+``` cpp
+typedef struct _SYSTEMTIME
+{
+    WORD wYear;         // The current year.
+    WORD wMonth;        // The current month; January is 1.
+    WORD wDayOfWeek;    // The current day of the week; Sunday is 0, Monday is 1, and so on.
+    WORD wDay;          // The current day of the month.
+    WORD wHour;         // The current hour.
+    WORD wMinute;       // The current minute.
+    WORD wSecond;       // The current second.
+    WORD wMilliseconds; // The current millisecond.
+} SYSTEMTIME, *PSYSTEMTIME, *LPSYSTEMTIME;
 SYSTEMTIME m_systemTime;
 ::GetLocalTime(&m_systemTime);
 char timeBuffer[64];
 sprintf_s(timeBuffer, "%4d-%02d-%02d %02d:%02d:%02d.%03d",
-	m_systemTime.wYear, m_systemTime.wMonth, m_systemTime.wDay,
-	m_systemTime.wHour, m_systemTime.wMinute, m_systemTime.wSecond, m_systemTime.wMilliseconds);
+    m_systemTime.wYear, m_systemTime.wMonth, m_systemTime.wDay,
+    m_systemTime.wHour, m_systemTime.wMinute, m_systemTime.wSecond, m_systemTime.wMilliseconds);
 ```
 
 ### 时区
@@ -100,7 +130,8 @@ time_t lot = mktime(&loTime);
 double diff = difftime(gmt, lot);// -28800.000000
 
 long timeZone;
-// The _get_timezone function retrieves the difference in seconds between UTC and local time as an integer.
+// The _get_timezone function retrieves the difference in seconds
+// between UTC and local time as an integer.
 // The default value is 28,800 seconds, for Pacific Standard Time (eight hours behind UTC).
 int errorCode = _get_timezone(&timeZone);// -28800(28800)
 char timeZoneName[64];
@@ -114,5 +145,48 @@ _get_tzname(&t, timeZoneName, sizeof(timeZoneName), 0);// 中国标准时间(太
 
 ## 精确计算时间差
 * QueryPerformanceFrequency
+```cpp
+BOOL QueryPerformanceFrequency(LARGE_INTEGER* lpFrequency);
+This function retrieves the frequency of the high-resolution performance counter
+if one is provided by the OEM.
+lpFrequency --> 
+[out] Pointer to a variable that the function sets, in counts per second,
+to the current performance-counter frequency.
+If the installed hardware does not support a high-resolution performance counter,
+the value passed back through this pointer can be zero.
+Return Value -->
+TRUE indicates that a performance frequency value was successfully filed in.
+False indicates failure.
+```
 * QueryPerformanceCounter
+```cpp
+BOOL QueryPerformanceCounter(LARGE_INTEGER* lpPerformanceCount);
+This function retrieves the current value of the high-resolution performance counter 
+if one is provided by the OEM.
+lpPerformanceCount --> 
+[in] Pointer to a variable that the function sets, in counts, 
+to the current performance-counter value.
+If the installed hardware does not support a high-resolution performance counter, 
+this parameter can be set to zero.
+Return Value -->
+TRUE indicates that a performance counter value was successfully filled in.
+FALSE indicates failure.
+```
+* GetTickCount
+```c
+DWORD WINAPI GetTickCount(void);
+Retrieves the number of milliseconds that have elapsed since the system was started,
+up to 49.7 days.
+Return Value -->
+The return value is the number of milliseconds that have elapsed since the system was started.
+```
+* clock
+```cpp
+clock_t clock( void );
+Calculates the wall-clock time used by the calling process.
+Return Value -->
+The elapsed wall-clock time since the start of the process
+(elapsed time in seconds times CLOCKS_PER_SEC).
+If the amount of elapsed time is unavailable, the function returns –1, cast as a clock_t.
+```
 
