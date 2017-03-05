@@ -2,7 +2,7 @@
 title: Shell快捷键
 date: 2016-08-27 15:24:36
 categories: Linux
-description: Shell常用快捷键，提升工作效率必备绝及。
+description: Shell常用快捷键，提升工作效率必备绝技。
 tags: shell
 ---
 
