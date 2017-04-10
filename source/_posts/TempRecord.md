@@ -16,3 +16,9 @@ toc: true
 [对象移动](http://www.voidcn.com/blog/chj90220/article/p-6228769.html)
 [右值引用与转移语义](http://www.ibm.com/developerworks/cn/aix/library/1307_lisl_c11/)
 
+### C# 相关
+
+#### C# WinForm 应用退出
+[参考1](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
+[参考2](http://blog.csdn.net/yl2isoft/article/details/38168681)
+
