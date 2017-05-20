@@ -119,8 +119,12 @@ sprintf_s(timeBuffer, "%4d-%02d-%02d %02d:%02d:%02d.%03d",
     m_systemTime.wHour, m_systemTime.wMinute, m_systemTime.wSecond, m_systemTime.wMilliseconds);
 ```
 
-### 时区
+## 时区与时间差
+* 时区 与 时间差
 ```cpp
+time_t timeTest;
+time(&timeTest);
+
 tm gmTime;
 tm loTime;
 gmtime_s(&gmTime, &timeTest);
