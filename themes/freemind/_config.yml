@@ -50,7 +50,7 @@ widgets:
 rss: /atom.xml
 fancybox: true
 favicon: css/images/favicon.ico
-duoshuo_shortname: xautshuanglong
+#duoshuo_shortname: xautshuanglong
 
 # Analytics
 google_analytics:
