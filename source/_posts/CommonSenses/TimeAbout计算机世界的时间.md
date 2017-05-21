@@ -120,7 +120,7 @@ sprintf_s(timeBuffer, "%4d-%02d-%02d %02d:%02d:%02d.%03d",
 ```
 
 ## 时区与时间差
-* 时区 与 时间差
+* 时差 UTC = LocalTime + Bias
 ```cpp
 time_t timeTest;
 time(&timeTest);
@@ -145,6 +145,37 @@ _get_tzname(&t, timeZoneName, sizeof(timeZoneName), 0);// 中国标准时间(太
 // 中国标准时间   = -28800
 // 太平洋标准时间 =  28800
 // _get_timezone  =  格林威治时间 - 本地时间
+```
+* 获取时区相关信息
+```cpp
+// set time environment variables:
+// assign values to three global variables:_daylignt,_timezone and _tzname
+_tzset();
+
+int dayLightHours;     // 以小时为单位的日光节约时间
+long dayLightSeconds;  // 以秒为单位的日光节约时间
+long timeZone;         // 秒数 = 格林威治时间 - 本地时间
+char timeZoneName[64]; // 时区名称
+size_t nameLen;        // 时区名称长度，包括终结符
+
+_get_daylight(&dayLightHours);// daylight saving time offset in hours
+_get_dstbias(&dayLightSeconds);// daylight saving time offset in seconds 
+int errorCode = _get_timezone(&timeZone);
+_get_tzname(&nameLen, timeZoneName, sizeof(timeZoneName), 0);
+
+// This structure specifies information specific to the time zone.
+typedef struct _TIME_ZONE_INFORMATION
+{
+    LONG Bias;
+    WCHAR StandardName[32];
+    SYSTEMTIME StandardDate;
+    LONG StandardBias;
+    WCHAR DaylightName[32];
+    SYSTEMTIME DaylightDate;
+    LONG DaylightBias;
+} TIME_ZONE_INFORMATION;
+TIME_ZONE_INFORMATION timeZoneInfo;
+GetTimeZoneInformation(&timeZoneInfo);
 ```
 
 ## 精确计算时间差
