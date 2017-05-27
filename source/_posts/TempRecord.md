@@ -37,3 +37,7 @@ GetLastError
 FormatMessage
 https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
 
+#### COM 编程
+Component Object Model
+https://www.microsoft.com/com/default.mspx
+
