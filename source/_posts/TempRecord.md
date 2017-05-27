@@ -22,3 +22,17 @@ toc: true
 [参考1](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
 [参考2](http://blog.csdn.net/yl2isoft/article/details/38168681)
 
+### Windows
+#### 查看 Windows 系统版本
+
+命令行
+winver
+systeminfo
+
+注册表
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
+
+#### Windows API 错误码处理：
+GetLastError
+FormatMessage
+
