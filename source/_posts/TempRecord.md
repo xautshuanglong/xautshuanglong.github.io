@@ -35,4 +35,5 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 #### Windows API 错误码处理：
 GetLastError
 FormatMessage
+https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
 
