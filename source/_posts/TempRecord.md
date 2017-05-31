@@ -41,3 +41,8 @@ https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
 Component Object Model
 https://www.microsoft.com/com/default.mspx
 
+### 需要总结内容
+#### C++ 
+* [Google开源项目风格](http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/)
+* 初始化列表
+* [STL 元素要求](http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/)
