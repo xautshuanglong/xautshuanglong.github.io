@@ -46,4 +46,9 @@ https://www.microsoft.com/com/default.mspx
 * [Google开源项目风格](http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/)
 * 初始化列表
 * [STL 元素要求](http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/)
-* CComPtr 总结
+* CComPtr 用法OB总结
+* Static 用法总结
+    [参考1](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html)
+    [参考2](http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html)
+* Const 查看是否已完善
+
