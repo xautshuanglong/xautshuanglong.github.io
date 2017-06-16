@@ -47,8 +47,12 @@ https://www.microsoft.com/com/default.mspx
 * 初始化列表
 * [STL 元素要求](http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/)
 * CComPtr 用法OB总结
-* Static 用法总结
-    [参考1](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html)
-    [参考2](http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html)
-* Const 查看是否已完善
+* static 用法总结
+    [static关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html)
+    [static作用](http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html)
+* const 查看是否已完善
+* extern 用法总结
+    [多个源文件共用一个全局变量](http://blog.sina.com.cn/s/blog_74a459380101rjh4.html)
+    [extern关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
+    [全局变量的声明和定义](http://blog.csdn.net/candyliuxj/article/details/7853938)
 
