@@ -19,8 +19,10 @@ toc: true
 ### C# 相关
 
 #### C# WinForm 应用退出
-[参考1](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
-[参考2](http://blog.csdn.net/yl2isoft/article/details/38168681)
+[C# WinForm程序退出的方法](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
+[C# — WinForm 退出方法总结](http://blog.csdn.net/yl2isoft/article/details/38168681)
+[C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
+[C# Enum,Int,String的互相转换 枚举转换](http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html)
 
 ### Windows
 #### 查看 Windows 系统版本
