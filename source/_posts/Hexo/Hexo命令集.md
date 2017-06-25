@@ -3,6 +3,7 @@ title: Hexo 命令集
 date: 2016-04-02 19:02:42
 categories: Git
 tags: hexo
+toc: true
 ---
 
 ### 常用命令：
@@ -38,3 +39,5 @@ npm install hexo-renderer-stylus --save
 npm install hexo-server --save
 npm install hexo-tag-bootstrap --save
 ```
+### 参考网址
+[hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
