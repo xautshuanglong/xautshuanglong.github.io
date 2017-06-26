@@ -24,6 +24,10 @@ toc: true
 [C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
 [C# Enum,Int,String的互相转换 枚举转换](http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html)
 
+#### C# Windows 服务
+[穿透Session 0 隔离（一）](http://www.cnblogs.com/gnielee/archive/2010/04/07/session0-isolation-part1.html)
+[穿透Session 0 隔离（二）](http://www.cnblogs.com/gnielee/archive/2010/04/08/session0-isolation-part2.html)
+
 ### Windows
 #### 查看 Windows 系统版本
 
