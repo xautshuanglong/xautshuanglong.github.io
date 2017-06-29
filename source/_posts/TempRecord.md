@@ -38,11 +38,13 @@ systeminfo
 注册表
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 
-#### Windows API 错误码处理：
-GetLastError
-FormatMessage
-https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
+#### Windows API
+* 错误码处理
+    GetLastError、FormatMessage
+    https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
 
+* 文件版本信息
+    GetFileVersionInfoSizeEx、GetFileVersionInfoEx、VerQueryValue
 #### COM 编程
 Component Object Model
 https://www.microsoft.com/com/default.mspx
