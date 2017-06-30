@@ -21,8 +21,11 @@ toc: true
 #### C# WinForm 应用退出
 [C# WinForm程序退出的方法](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
 [C# — WinForm 退出方法总结](http://blog.csdn.net/yl2isoft/article/details/38168681)
-[C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
 [C# Enum,Int,String的互相转换 枚举转换](http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html)
+
+#### C# dllimport 类型转换
+[C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
+[C#调用VC的DLL的接口函数参数类型转换一览表](http://www.cnblogs.com/Huayuan/archive/2012/07/05/2577439.html)
 
 #### C# Windows 服务
 [穿透Session 0 隔离（一）](http://www.cnblogs.com/gnielee/archive/2010/04/07/session0-isolation-part1.html)
@@ -45,6 +48,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 
 * 文件版本信息
     GetFileVersionInfoSizeEx、GetFileVersionInfoEx、VerQueryValue
+
+* 获取 Windows 特殊目录
+    SHGetFolderLocation 
+    SHGetFolderPath 
+    SHGetSpecialFolderLocation 
+    SHGetSpecialFolderPath 
+
 #### COM 编程
 Component Object Model
 https://www.microsoft.com/com/default.mspx
