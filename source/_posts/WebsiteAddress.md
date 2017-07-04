@@ -65,12 +65,13 @@ toc: true
 {% btn http://www.androidchina.net/1992.html Android&#32;UI&#32;开源框架 success %}
 
 ## Github
-{% btn https://github.com/xautshuanglong My&#32;Github success %}
-{% btn https://github.com/vim-scripts/ Vim&#32;Plugin success %}
-{% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 success %}
+{% btn https://github.com/xautshuanglong My&#32;Github warning %}
+{% btn https://github.com/vim-scripts/ Vim&#32;Plugin warning %}
+{% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 warning %}
 
-## Linux
-
+## Libraries
+{% btn https://curl.haxx.se/ Curl danger %}
+{% btn https://www.zlib.net Zlib danger %}
 
 ## 公共平台
 {% btn http://duoshuo.com/ 多说评论 primary %}
