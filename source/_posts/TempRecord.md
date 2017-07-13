@@ -74,6 +74,7 @@ https://www.microsoft.com/com/default.mspx
     [extern关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
     [全局变量的声明和定义](http://blog.csdn.net/candyliuxj/article/details/7853938)
 * inline 用法
+* explicit 用法
 
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
