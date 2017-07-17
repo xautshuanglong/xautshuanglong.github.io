@@ -54,6 +54,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
     SHGetFolderPath 
     SHGetSpecialFolderLocation 
     SHGetSpecialFolderPath 
+* 提高计时精度
+    `NtSetTimerResolution` and `NtQueryTimerResolution`. All times are specifified in hundreds of nanoseconds.
 
 #### COM 编程
 Component Object Model
@@ -75,6 +77,7 @@ https://www.microsoft.com/com/default.mspx
     [全局变量的声明和定义](http://blog.csdn.net/candyliuxj/article/details/7853938)
 * inline 用法
 * explicit 用法
+* #pragma pack([show]|[push|pop][, identifier], n)
 
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
