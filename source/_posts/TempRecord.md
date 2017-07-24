@@ -60,6 +60,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 #### COM 编程
 Component Object Model
 https://www.microsoft.com/com/default.mspx
+#### Microsoft RPC
+基于 命名管道 和 tcp/ip
 
 ### 需要总结内容
 #### C++ 
@@ -78,6 +80,10 @@ https://www.microsoft.com/com/default.mspx
 * inline 用法
 * explicit 用法
 * #pragma pack([show]|[push|pop][, identifier], n)
+* 仿函数
+    [【C++ STL】深入解析神秘的 --- 仿函数](http://blog.csdn.net/tianshuai1111/article/details/7687983)
+* std::transform(retValue.begin(), retValue.end(), retValue.begin(), toupper);
+* 类成员函数指针
 
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
