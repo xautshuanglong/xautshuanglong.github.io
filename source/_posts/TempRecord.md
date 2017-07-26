@@ -62,6 +62,8 @@ Component Object Model
 https://www.microsoft.com/com/default.mspx
 #### Microsoft RPC
 基于 命名管道 和 tcp/ip
+* [RPC 编程](https://www.ibm.com/developerworks/cn/aix/library/au-rpc_programming/)
+* [Windows RPC Demo实现](http://www.cnblogs.com/wanghaiyang1930/p/4469222.html)
 
 ### 需要总结内容
 #### C++ 
