@@ -56,6 +56,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
     SHGetSpecialFolderPath 
 * 提高计时精度
     `NtSetTimerResolution` and `NtQueryTimerResolution`. All times are specifified in hundreds of nanoseconds.
+* 键盘按键检测
+    GetAsyncKeyState _kbhit
 
 #### COM 编程
 Component Object Model
