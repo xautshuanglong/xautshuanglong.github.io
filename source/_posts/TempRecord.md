@@ -58,6 +58,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
     `NtSetTimerResolution` and `NtQueryTimerResolution`. All times are specifified in hundreds of nanoseconds.
 * 键盘按键检测
     GetAsyncKeyState _kbhit
+* Microsoft Try-except Statement
+    [try-except](https://msdn.microsoft.com/en-us/library/s58ftw19&#40;v=vs.140&#41;.aspx)
+    <https://msdn.microsoft.com/en-us/library/s58ftw19(v=vs.140).aspx>
+    [try-final](https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx)
+	<https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx>
 
 #### COM 编程
 Component Object Model
