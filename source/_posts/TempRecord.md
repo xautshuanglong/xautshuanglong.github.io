@@ -98,4 +98,6 @@ https://www.microsoft.com/com/default.mspx
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
 
+* 系统应用：`shutdown`、`sc`、`reg`。
+
 
