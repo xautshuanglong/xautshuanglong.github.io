@@ -145,4 +145,56 @@ toc: true
 
 ## vim 配置
 ### 必知必会
-* .vimrc
+* .vimrc example
+``` vim
+set autoindent
+set cindent
+set hlsearch
+set incsearch
+set number
+set nocompatible
+set noswapfile
+set nobackup
+set ruler
+set showmatch
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set showmatch
+set laststatus=2
+set wildmenu
+set scrolloff=3
+
+set cursorline
+"set cursorcolumn
+
+syntax enable
+syntax on
+filetype off
+
+set statusline=[%F]\ line=%l/%L\ col=%c]\ [%p%%]
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'pboettch/vim-cmake-syntax'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'octol/vim-cpp-enhanced-highlight'
+    Plugin 'Xuyuanp/nerdtree-git-plugin'
+call vundle#end()
+filetype plugin indent on
+
+"------------------ Tagbar Configuration --------------------"
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+
+"------------------ NERDTree Configuration --------------------"
+let NERDTreeShowBookmarks=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+let NERDTreeShowHidden=1
+let g:nerdtree_tabs_open_on_console_startup=1
+```
+
