@@ -167,6 +167,7 @@ set showmatch
 set laststatus=2
 set wildmenu
 set scrolloff=3
+set completeopt=longest,menu
 
 set cursorline
 "set cursorcolumn
@@ -197,5 +198,6 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
 let g:nerdtree_tabs_open_on_console_startup=1
+
 ```
 
