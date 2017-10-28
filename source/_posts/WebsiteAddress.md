@@ -7,7 +7,7 @@ tags: Website
 toc: true
 ---
 
-## 学习资料
+## ProgramLanguage
 值得收藏的学习网址,每天进步一点点。
 <!--more-->
 ### C/C++
@@ -71,6 +71,7 @@ toc: true
 {% btn https://github.com/xautshuanglong My&#32;Github warning %}
 {% btn https://github.com/vim-scripts/ Vim&#32;Plugin warning %}
 {% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 warning %}
+{% btn http://geek.csdn.net/news/detail/51628 优秀大数据项目 warning%}
 
 ## Libraries
 {% btn https://curl.haxx.se/ Curl danger %}

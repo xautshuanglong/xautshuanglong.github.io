@@ -27,6 +27,7 @@ toc: true
 |:w!|若文档属性为 **只读** 时，强制写入文档。能否写入成功与对该文档的权限有关。|
 |:q|离开vi|
 |:q!|强制离开，不存储文档。|
+|:e|重新加载已打开的文件。|
 |:e!|放弃所有修改，并打开原来的文件|
 |:wq|存储后离开,若为 **:wq!** 则强制存储后离开。|
 |ZZ|大写的 **Z**<br>若文档没有改动，则不存储离开；<br>若文档被改动过，则存储后离开。|
@@ -145,4 +146,58 @@ toc: true
 
 ## vim 配置
 ### 必知必会
-* .vimrc
+* .vimrc example
+``` vim
+set autoindent
+set cindent
+set hlsearch
+set incsearch
+set number
+set nocompatible
+set noswapfile
+set nobackup
+set ruler
+set showmatch
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set showmatch
+set laststatus=2
+set wildmenu
+set scrolloff=3
+set completeopt=longest,menu
+
+set cursorline
+"set cursorcolumn
+
+syntax enable
+syntax on
+filetype off
+
+set statusline=[%F]\ line=%l/%L\ col=%c]\ [%p%%]
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'majutsushi/tagbar'
+    Plugin 'pboettch/vim-cmake-syntax'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'octol/vim-cpp-enhanced-highlight'
+    Plugin 'Xuyuanp/nerdtree-git-plugin'
+call vundle#end()
+filetype plugin indent on
+
+"------------------ Tagbar Configuration --------------------"
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+
+"------------------ NERDTree Configuration --------------------"
+let NERDTreeShowBookmarks=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeAutoCenter=1
+let NERDTreeShowHidden=1
+let g:nerdtree_tabs_open_on_console_startup=1
+
+```
+
