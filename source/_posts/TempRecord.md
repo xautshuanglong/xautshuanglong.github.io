@@ -98,6 +98,7 @@ https://www.microsoft.com/com/default.mspx
 * std::transform(retValue.begin(), retValue.end(), retValue.begin(), toupper);
 * 类成员函数指针
 * 重点 std::packaged_task std::future std::chrono
+* WinUI : SkinUI DirectUI DuiEngine("svn checkout http://duiengine.googlecode.com/svn/trunk/ duiengine-read-only")
 
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
