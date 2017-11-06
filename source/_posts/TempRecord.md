@@ -93,12 +93,15 @@ https://www.microsoft.com/com/default.mspx
 * inline 用法
 * explicit 用法
 * #pragma pack([show]|[push|pop][, identifier], n)
-* 仿函数
-    [【C++ STL】深入解析神秘的 --- 仿函数](http://blog.csdn.net/tianshuai1111/article/details/7687983)
+* 仿函数 [【C++ STL】深入解析神秘的 --- 仿函数](http://blog.csdn.net/tianshuai1111/article/details/7687983)
 * std::transform(retValue.begin(), retValue.end(), retValue.begin(), toupper);
 * 类成员函数指针
 * 重点 std::packaged_task std::future std::chrono
 * WinUI : SkinUI DirectUI DuiEngine("svn checkout http://duiengine.googlecode.com/svn/trunk/ duiengine-read-only")
+* C++11 异步编程
+    [深入浅出std::async](http://www.cnblogs.com/chengyuanchun/p/5394843.html)
+	[用C++11的std::async代替线程的创建](http://www.cnblogs.com/qicosmos/p/3534211.html)
+	[协程概念](http://cnodejs.org/topic/58ddd7a303d476b42d34c911)
 
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
