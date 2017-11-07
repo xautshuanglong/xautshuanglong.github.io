@@ -49,6 +49,9 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 错误码处理
     GetLastError、FormatMessage
     https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
+    https://msdn.microsoft.com/en-us/library/ms679351(v=VS.85).aspx
+	[HRESULT 与 Windows Error Codes](http://www.cnblogs.com/greenerycn/archive/2010/08/30/hresult_and_win_error_codes.html)
+	[C++异常继承关系](http://zh.cppreference.com/w/cpp/error/exception)
 
 * 文件版本信息
     GetFileVersionInfoSizeEx、GetFileVersionInfoEx、VerQueryValue
