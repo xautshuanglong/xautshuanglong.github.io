@@ -105,6 +105,8 @@ https://www.microsoft.com/com/default.mspx
     [深入浅出std::async](http://www.cnblogs.com/chengyuanchun/p/5394843.html)
 	[用C++11的std::async代替线程的创建](http://www.cnblogs.com/qicosmos/p/3534211.html)
 	[协程概念](http://cnodejs.org/topic/58ddd7a303d476b42d34c911)
+* 并发编程
+  自旋锁：[自旋锁（spin lock）与互斥量的区别](http://blog.csdn.net/a675311/article/details/49096435), [【原创+整理】线程同步之详解自旋锁](http://www.cnblogs.com/cposture/p/SpinLock.html), [C++11实现自旋锁](http://blog.csdn.net/sharemyfree/article/details/47338001)
 
 #### BAT 批处理
 [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
