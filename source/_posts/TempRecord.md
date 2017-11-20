@@ -49,6 +49,9 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 错误码处理
     GetLastError、FormatMessage
     https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
+    https://msdn.microsoft.com/en-us/library/ms679351(v=VS.85).aspx
+	[HRESULT 与 Windows Error Codes](http://www.cnblogs.com/greenerycn/archive/2010/08/30/hresult_and_win_error_codes.html)
+	[C++异常继承关系](http://zh.cppreference.com/w/cpp/error/exception)
 
 * 文件版本信息
     GetFileVersionInfoSizeEx、GetFileVersionInfoEx、VerQueryValue
@@ -93,14 +96,25 @@ https://www.microsoft.com/com/default.mspx
 * inline 用法
 * explicit 用法
 * #pragma pack([show]|[push|pop][, identifier], n)
-* 仿函数
-    [【C++ STL】深入解析神秘的 --- 仿函数](http://blog.csdn.net/tianshuai1111/article/details/7687983)
+* 仿函数 [【C++ STL】深入解析神秘的 --- 仿函数](http://blog.csdn.net/tianshuai1111/article/details/7687983)
 * std::transform(retValue.begin(), retValue.end(), retValue.begin(), toupper);
 * 类成员函数指针
 * 重点 std::packaged_task std::future std::chrono
+* WinUI : SkinUI DirectUI DuiEngine("svn checkout http://duiengine.googlecode.com/svn/trunk/ duiengine-read-only")
+* C++11 异步编程
+    [深入浅出std::async](http://www.cnblogs.com/chengyuanchun/p/5394843.html)
+	[用C++11的std::async代替线程的创建](http://www.cnblogs.com/qicosmos/p/3534211.html)
+	[协程概念](http://cnodejs.org/topic/58ddd7a303d476b42d34c911)
+* 并发编程
+  自旋锁：[自旋锁（spin lock）与互斥量的区别](http://blog.csdn.net/a675311/article/details/49096435), [【原创+整理】线程同步之详解自旋锁](http://www.cnblogs.com/cposture/p/SpinLock.html), [C++11实现自旋锁](http://blog.csdn.net/sharemyfree/article/details/47338001)
+
+#### VisualStudio
+* VC 编译器参数设置
+  [显示类内存布局](http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/)
+
 
 #### BAT 批处理
-[DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
+  [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
 
 * 系统应用：`shutdown`、`sc`、`reg`。
 
