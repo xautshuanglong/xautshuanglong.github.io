@@ -12,19 +12,19 @@ toc: true
 
 ## 两角和(差)公式
 $$
-sin ( \alpha + \beta ) = sin \alpha cos \beta + cos \alpha sin \beta
+sin ( \alpha + \beta ) = sin ( \alpha ) cos ( \beta ) + cos ( \alpha ) sin( \beta )
 $$
 
 $$
-sin ( \alpha - \beta ) = sin \alpha cos \beta - cos \alpha sin \beta 
+sin ( \alpha - \beta ) = sin ( \alpha ) cos ( \beta ) - cos ( \alpha ) sin ( \beta ) 
 $$
 
 $$
-cos ( \alpha + \beta ) = cos \alpha cos \beta - sin \alpha sin \beta
+cos ( \alpha + \beta ) = cos ( \alpha ) cos ( \beta ) - sin ( \alpha ) sin ( \beta )
 $$
 
 $$
-cos ( \alpha - \beta ) = cos \alpha cos \beta + sin \alpha sin \beta 
+cos ( \alpha - \beta ) = cos ( \alpha ) cos ( \beta ) + sin ( \alpha ) sin ( \beta ) 
 $$
 
 $$
@@ -37,70 +37,70 @@ $$
 
 ## 倍角公式
 $$
-sin 2 \theta = 2sin \theta cos \theta
+sin ( 2 \theta ) = 2sin ( \theta ) cos ( \theta )
 $$
 
 $$
 \begin{align}
-cos 2 \theta &= cos^2 \theta - sin^2 \theta \\\\
-&= 2cos^2 \theta - 1 \\\\
-&= 1 - 2 sin^2 \theta
+cos ( 2 \theta ) &= cos^2 ( \theta ) - sin^2 ( \theta ) \\\\
+&= 2cos^2 ( \theta - 1 ) \\\\
+&= 1 - 2 sin^2 ( \theta )
 \end{align}
 $$
 
 $$
-tan 2\theta = \frac{2 tan\theta}{1 - tan^2\theta}
+tan ( 2\theta ) = \frac{ 2 tan ( \theta ) }{ 1 - tan^2 ( \theta ) }
 $$
 
 ## 半角公式
 $$
-sin \frac{\theta}{2} = \pm \sqrt {\frac{1 - cos \theta}{2}}
+sin ( \frac{ \theta }{ 2 } ) = \pm \sqrt {\frac{1 - cos ( \theta )}{2}}
 $$
 
 $$
-cos \frac{\theta}{2} = \pm \sqrt {\frac{1 + cos \theta}{2}}
+cos ( \frac{\theta}{2} ) = \pm \sqrt {\frac{1 + cos ( \theta )}{2}}
 $$
 
 $$
 \begin {align}
-tan \frac{\theta}{2} &= \pm \sqrt {\frac{1 - cos \theta}{1 + cos \theta}} \\\\
-&= \frac {sin \theta} {1 + cos \theta} \\\\
-&= \frac {1 - cos \theta} {sin \theta}
+tan ( \frac{\theta}{2} ) &= \pm \sqrt {\frac{1 - cos ( \theta )}{1 + cos ( \theta )}} \\\\
+&= \frac {sin ( \theta )} {1 + cos ( \theta )} \\\\
+&= \frac {1 - cos ( \theta )} {sin ( \theta )}
 \end {align}
 $$
 
 ## 积化和差
 $$
-sin \alpha cos \beta = \frac{1}{2}[sin (\alpha + \beta) + sin (\alpha - \beta)]
+sin ( \alpha ) cos ( \beta ) = \frac{1}{2}[sin (\alpha + \beta) + sin (\alpha - \beta)]
 $$
 
 $$
-cos \alpha sin \beta = \frac{1}{2}[sin (\alpha + \beta) - sin (\alpha - \beta)]
+cos ( \alpha ) sin ( \beta ) = \frac{1}{2}[sin (\alpha + \beta) - sin (\alpha - \beta)]
 $$
 
 $$
-cos \alpha cos \beta = \frac{1}{2}[cos (\alpha + \beta) + cos (\alpha - \beta)]
+cos ( \alpha ) cos ( \beta ) = \frac{1}{2}[cos (\alpha + \beta) + cos (\alpha - \beta)]
 $$
 
 $$
-sin \alpha sin \beta = -\frac{1}{2}[cos (\alpha + \beta) - cos (\alpha - \beta)]
+sin ( \alpha ) sin ( \beta ) = -\frac{1}{2}[cos (\alpha + \beta) - cos (\alpha - \beta)]
 $$
 
 ## 和差化积
 $$
-sin \alpha + sin \beta = 2 sin \frac{\alpha + \beta}{2} cos \frac{\alpha - \beta}{2}
+sin ( \alpha ) + sin ( \beta ) = 2 sin ( \frac{\alpha + \beta}{2} ) cos ( \frac{\alpha - \beta}{2} )
 $$
 
 $$
-sin \alpha - sin \beta = 2 cos \frac{\alpha + \beta}{2} sin \frac{\alpha - \beta}{2}
+sin ( \alpha ) - sin ( \beta ) = 2 cos ( \frac{\alpha + \beta}{2} ) sin ( \frac{\alpha - \beta}{2} )
 $$
 
 $$
-cos \alpha + cos \beta = 2 cos \frac{\alpha + \beta}{2} cos \frac{\alpha - \beta}{2}
+cos ( \alpha ) + cos ( \beta ) = 2 cos ( \frac{\alpha + \beta}{2} ) cos ( \frac{\alpha - \beta}{2} )
 $$
 
 $$
-cos \alpha - cos \beta = -2 sin \frac{\alpha + \beta}{2} sin \frac{\alpha - \beta}{2}
+cos ( \alpha ) - cos ( \beta ) = -2 sin ( \frac{\alpha + \beta}{2} ) sin ( \frac{\alpha - \beta}{2} )
 $$
 
 ## Test
