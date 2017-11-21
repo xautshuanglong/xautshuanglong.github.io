@@ -111,7 +111,8 @@ https://www.microsoft.com/com/default.mspx
 #### VisualStudio
 * VC 编译器参数设置
   [显示类内存布局](http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/)
-
+* dllimport、dllexport
+  [VS下 dllimport与dllexport作用与区别](http://blog.csdn.net/u010055724/article/details/51538686)
 
 #### BAT 批处理
   [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
