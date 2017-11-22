@@ -108,6 +108,11 @@ https://www.microsoft.com/com/default.mspx
 * 并发编程
   自旋锁：[自旋锁（spin lock）与互斥量的区别](http://blog.csdn.net/a675311/article/details/49096435), [【原创+整理】线程同步之详解自旋锁](http://www.cnblogs.com/cposture/p/SpinLock.html), [C++11实现自旋锁](http://blog.csdn.net/sharemyfree/article/details/47338001)
 
+#### Java
+* 高性存储
+    [高性能队列——Disruptor](https://tech.meituan.com/disruptor.html)
+	[并发框架Disruptor译文](http://ifeve.com/disruptor/)
+
 #### VisualStudio
 * VC 编译器参数设置
   [显示类内存布局](http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/)
