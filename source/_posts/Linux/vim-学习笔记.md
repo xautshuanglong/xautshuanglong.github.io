@@ -50,7 +50,7 @@ toc: true
 |[Ctrl]+[u]|屏幕【向上】移动半页|
 |+|光标移动到下一行首个非空格符处|
 |-|光标移动到上一行首个非空格符处|
-|n<space>|光标向右移动n个字符（包括空格），当前行剩余字符不足n时，跳至下一行|
+|n`space`|光标向右移动n个字符（包括空格），当前行剩余字符不足n时，跳至下一行|
 |0 或 home|光标移动到当前行的首字符|
 |$ 或 end|光标移动到当前行的末字符|
 |H|光标移动到屏幕首行首字符|
@@ -59,7 +59,7 @@ toc: true
 |G|光标移动到文档末行首字符|
 |nG|光标移动到文档第n行首字符|
 |gg|光标移动到文档首行首字符|
-|n<Enter>|光标向下移动n行|
+|n`Enter`|光标向下移动n行|
 |b|将光标移动到单词开头|
 |e|将光标移动到单词末尾|
 |n&#124;|将光标移动到当前行的第 n 列|
@@ -147,6 +147,7 @@ toc: true
 ## vim 配置
 ### 必知必会
 * .vimrc example
+
 ``` vim
 set autoindent
 set cindent
@@ -198,6 +199,6 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
 let g:nerdtree_tabs_open_on_console_startup=1
-
+let NERDTreeIgnore=['\.pyc','\~$','\.swp','\.o','\.a','\.so']
 ```
 
