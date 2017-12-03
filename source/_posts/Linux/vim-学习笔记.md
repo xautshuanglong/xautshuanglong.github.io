@@ -199,6 +199,6 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
 let g:nerdtree_tabs_open_on_console_startup=1
-let NERDTreeIgnore=['\.pyc','\~$','\.swp','\.o','\.a','\.so']
+let NERDTreeIgnore=['\.pyc$','\~$','\.swp$','\.o$','\.a$','\.so$']
 ```
 
