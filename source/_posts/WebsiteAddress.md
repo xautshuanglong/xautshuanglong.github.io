@@ -72,6 +72,7 @@ toc: true
 {% btn https://github.com/vim-scripts/ Vim&#32;Plugin warning %}
 {% btn https://github.com/yangyangwithgnu/use_vim_as_ide Vim配置 warning %}
 {% btn http://geek.csdn.net/news/detail/51628 优秀大数据项目 warning%}
+{% btn https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md EbookFoundation电子书+公开课 warning%}
 
 ## Libraries
 {% btn https://curl.haxx.se/ Curl danger %}
