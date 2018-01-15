@@ -63,6 +63,10 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
     SHGetSpecialFolderPath 
 * 提高计时精度
     `NtSetTimerResolution` and `NtQueryTimerResolution`. All times are specifified in hundreds of nanoseconds.
+* Timer 定时器
+    `SetTimer` 利用 Windows 窗口消息 WM_TIMER 实现。要用 `KillTimer` 销毁定时器。注：工作线程（非UI）无法使用。
+	`WaitableTimer` 可以跨线程、进程使用。`CreateWaitableTimer`创建定时器对象，`SetWaitableTime`设置回调，`CloseHandle`销毁定时器。
+	`TimerQueueTimer` 相当强大，多种工作模式，精度高。
 * 键盘按键检测
     GetAsyncKeyState _kbhit
 * Microsoft Try-except Statement
