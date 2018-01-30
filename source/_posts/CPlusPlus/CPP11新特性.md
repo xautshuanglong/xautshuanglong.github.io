@@ -74,3 +74,16 @@ C++ 11 新特性学习笔记：
 [为什么C++11引入了std::ref？](http://www.cnblogs.com/jiayayao/p/6527713.html)
 [C++11尝鲜：右值引用和转发型引用](http://blog.csdn.net/zwvista/article/details/12306283)
 
+## Lambda Expression
+
+{% alert info %}
+Lambda 表达式中的闭包说明
+{% endalert %}
+| 语法 | 说明 |
+|:----:|:----:|
+| `[a, &b]` | 其中`a`以复制捕获，`b`以引用捕获 |
+| `[this]` | 以引用捕获当前对象(\*this) |
+| `[&]` | 以引用捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在 |
+| `[=]` | 以复制捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在 |
+| `[]` | 不捕获 |
+
