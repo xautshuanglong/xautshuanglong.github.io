@@ -55,9 +55,13 @@ toc: true
 
 ### Java
 {% btn http://www.runoob.com/java/java-tutorial.html 菜鸟教程【Java】 info %}
+{% btn http://wiki.jikexueyuan.com/list/java/ 极客学院【Java】 info %}
 {% btn https://quanke.gitbooks.io/think-in-java/content/ Thinking&#32;In&#32;Java【Gitbooks】 info %}
 {% btn http://help.eclipse.org/mars/index.jsp Help&#32;Eclipse info %}
 {% btn http://wiki.jikexueyuan.com/project/jni-ndk-developer-guide/ndkoverview.html Java&#32;JNI info %}
+{% btn http://wiki.jikexueyuan.com/project/java-concurrent/ Java&#32;并发和多线程 info %}
+{% btn http://wiki.jikexueyuan.com/project/java-reflection/ Java&#32;反射机制 info %}
+{% btn http://wiki.jikexueyuan.com/project/spring/ Spring&#32;教程 info %}
 
 ### Android
 {% btn http://www.runoob.com/w3cnote/android-tutorial-intro.html 菜鸟教程【Android】 success %}
