@@ -74,6 +74,8 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
     <https://msdn.microsoft.com/en-us/library/s58ftw19(v=vs.140).aspx>
     [try-final](https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx)
 	<https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx>
+* 剪切板相关操作
+    `GetClipboardData` `OpenClipboard` `GlobalLock` `GlobalUnlock`
 
 #### COM 编程
 Component Object Model
