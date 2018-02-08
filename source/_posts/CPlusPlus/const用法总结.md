@@ -1,8 +1,10 @@
 ---
 title: const用法总结
 date: 2016-11-27 13:41:23
-categories: C++
+categories: CPP
+description: const使用详解
 tags: const
+toc: true
 ---
 
 ## Const用法参考

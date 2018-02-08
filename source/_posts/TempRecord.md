@@ -2,7 +2,7 @@
 title: Temporary Record
 date: 2016-11-18 21:12:47
 description: 临时记录，后续完善，以免忘记。
-tags: C++
+categories: CPP
 toc: true
 ---
 

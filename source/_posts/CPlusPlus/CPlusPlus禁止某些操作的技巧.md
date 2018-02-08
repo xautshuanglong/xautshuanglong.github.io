@@ -1,7 +1,7 @@
 ---
 title: C++ 禁止某些操作的技巧
 date: 2016-12-23 14:31:40
-categories: C++
+categories: CPP
 description: 做专业的程序员
 toc: true
 tags:

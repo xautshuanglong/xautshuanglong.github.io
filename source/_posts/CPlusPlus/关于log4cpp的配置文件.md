@@ -1,8 +1,8 @@
 ---
 title: 关于 log4cpp 的配置文件
-tags: log4cpp
-categories: Libraries
+categories: CPP
 date: 2016-04-02 19:30:25
+tags: log4cpp
 ---
 
 

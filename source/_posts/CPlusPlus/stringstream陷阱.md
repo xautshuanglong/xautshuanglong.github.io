@@ -1,8 +1,7 @@
 ---
 title: stringstream 陷阱
 date: 2016-05-09 12:35:45
-categories: C++
-tags: stringstream
+categories: CPP
 ---
 
 ## stringstream 陷阱

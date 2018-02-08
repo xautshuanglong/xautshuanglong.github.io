@@ -1,6 +1,7 @@
 ---
 title: WinApiCollection 常用 Windows API
 date: 2016-12-18 15:11:47
+category: CPP
 description: 实用 API，封装成工具库，以免忘记。
 tags: API
 toc: true

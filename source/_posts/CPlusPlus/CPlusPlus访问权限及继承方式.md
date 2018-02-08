@@ -1,7 +1,7 @@
 ---
 title: C++ 访问权限及继承方式
 date: 2016-06-23 18:08:40
-categories: C++
+categories: CPP
 description: 做专业的程序员
 toc: true
 tags:

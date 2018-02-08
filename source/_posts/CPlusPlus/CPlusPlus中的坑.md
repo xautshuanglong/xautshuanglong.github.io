@@ -1,7 +1,7 @@
 ---
 title: CPlusPlus中的坑
 date: 2016-11-04 10:21:15
-categories: C++
+categories: CPP
 description: 避免重复跳坑
 toc: true
 tags:

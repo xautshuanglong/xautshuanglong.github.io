@@ -2,7 +2,8 @@
 title: C++ 11 中的新特性
 date: 2016-12-26 18:38:47
 description: C++ 11 新加入的特性
-tags: C++
+category: CPP
+tags: C11
 toc: true
 ---
 
