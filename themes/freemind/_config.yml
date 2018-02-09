@@ -1,20 +1,20 @@
 slogan: "己所不欲，勿施于人。"
 
 theme: cerulean
-inverse: inverse
+inverse: true
 
 menu:
   - title: Archives
     url: archives
-    intro: "All the articles"
+    intro: "All the articles."
     icon: "fa fa-archive"
   - title: Categories
     url: categories
-    intro: "All the categories"
+    intro: "All the categories."
     icon: "fa fa-folder"
   - title: Tags
     url: tags
-    intro: "All the tags"
+    intro: "All the tags."
     icon: "fa fa-tags"
   - title: About
     url: about
@@ -24,19 +24,19 @@ menu:
 links:
   - title: Freemind
     url: https://github.com/wzpan/freemind/
-    intro: "Freemind's Github repository"
+    intro: "Freemind's Github repository."
     icon: "fa fa-github"
   - title: "Shuanglong Github"
     url: http://www.github.com/xautshuanglong
-    intro: "My Github account"
+    intro: "Shuanglong Github account."
     icon: "fa fa-github"
   - title: "Twitter"
     url: https://twitter.com/xautshuanglong
-    intro: "My Twitter account"
+    intro: "Shuanglong Twitter account."
     icon: "fa fa-twitter"
   - title: "Facebook"
     url: https://www.facebook.com/shuanglong.jiang
-    intro: "My Facebook account"
+    intro: "Shuanglong Facebook account."
     icon: "fa fa-facebook"
 
 widgets:
@@ -45,12 +45,18 @@ widgets:
 - tagcloud
 - recent_posts
 - links
+- recent_comments
 - weibo
 
 rss: /atom.xml
 fancybox: true
 favicon: css/images/favicon.ico
 #duoshuo_shortname: xautshuanglong
+
+# Recommended posts
+# Dependency: https://github.com/huiwang/hexo-recommended-posts
+recommended_posts:
+  enabled: false
 
 # Analytics
 google_analytics:
@@ -66,3 +72,12 @@ baidu_tongji:
 # share widgets
 bdshare: true
 jiathis: false
+
+# built-in comment system
+comment_js:
+  type: "github"
+  user: "xautshuanglong"
+  repo: "xautshuanglong.github.io"
+  client_id: "9393dc785289a96d8026"
+  client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28"
+  count: 5

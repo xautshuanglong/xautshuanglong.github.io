@@ -1,4 +1,3 @@
-<!-- layout/_partial/after_footer.ejs Begin -->
 <a id="gotop" href="#">
   <span>▲</span>
 </a>
@@ -29,33 +28,32 @@
      searchFunc(path, 'local-search-input', 'local-search-result');
    </script>
 <% } %>
-<!-- layout/_partial/after_footer.ejs End -->
 
 <!-- Mathjax for 3D formula by shuanglong begin -->
 <% if (page.mathjax) {%>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config(
-		{
-			"HTML-CSS":
-			{
-				preferredFont: "TeX",
-				availableFonts: ["STIX","TeX"],
-				linebreaks: { automatic:true },
-				EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-			},
+               {
+                       "HTML-CSS":
+                       {
+                               preferredFont: "TeX",
+                               availableFonts: ["STIX","TeX"],
+                               linebreaks: { automatic:true },
+                               EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+                       },
             tex2jax:
-			{
-				inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-				displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
-				processEscapes: true,
-				ignoreClass: "tex2jax_ignore|dno",
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-			},
+                       {
+                               inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+                               displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+                               processEscapes: true,
+                               ignoreClass: "tex2jax_ignore|dno",
+                               skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                       },
             TeX:
-			{
-				noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-				Macros: { href: "{}" }
-			},
+                       {
+                               noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+                               Macros: { href: "{}" }
+                       },
             messageStyle: "none"
         });
     </script>
@@ -71,3 +69,22 @@
     </script>
 <% } %>
 <!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+<% if (theme.comment_js) { %>
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+<% } %>

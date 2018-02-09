@@ -1,4 +1,3 @@
-<!-- layout/_partial/archive.ejs Begin -->
 <%
    var title = '';
    var posts = site.posts;
@@ -37,6 +36,20 @@
 
 	  <div id="top_search"></div>
 
+      <% if (page.category || page.tag) { %>
+         <!-- display as entry -->
+	     <div class="mypage">
+	       <% page.posts.each(function(item){ %>
+		     <%- partial('post/title', {item: item, index: true}) %>
+		     <%- partial('post/entry', {item: item, index: true}) %>
+	       <% }); %>
+	     </div>
+	     <div>
+	       <center>
+	         <%- partial('index_pagination') %>
+	       </center>
+	     </div>	
+      <% } else { %>
 	  <div class="archive">
 		<% posts.sort('date', -1).each(function(item){ %>
 		<%
@@ -67,11 +80,11 @@
 		<% }); %>
 		</ul>
 		</div>
+        <% } %>
 
 </div> <!-- col-md-9/col-md-12 -->
 
 <% if (theme.widgets.length) { %>
 <%- partial('sidebar') %>
 <% } %>
-<!-- layout/_partial/archive.ejs End -->
 
