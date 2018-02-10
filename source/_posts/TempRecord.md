@@ -80,10 +80,16 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 #### COM 编程
 Component Object Model
 https://www.microsoft.com/com/default.mspx
+
 #### Microsoft RPC
 基于 命名管道 和 tcp/ip
 * [RPC 编程](https://www.ibm.com/developerworks/cn/aix/library/au-rpc_programming/)
 * [Windows RPC Demo实现](http://www.cnblogs.com/wanghaiyang1930/p/4469222.html)
+
+#### Thread Pooling
+* [Thread Pools](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686756(v=vs.85).aspx)
+* [Process and Thread Functions]("https://msdn.microsoft.com/EN-US/library/windows/desktop/ms684847(v=vs.85).aspx")
+    `QueueUserWorkItem`
 
 ### 需要总结内容
 #### C++ 
