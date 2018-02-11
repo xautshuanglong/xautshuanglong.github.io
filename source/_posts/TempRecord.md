@@ -77,6 +77,10 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 剪切板相关操作
     `GetClipboardData` `OpenClipboard` `GlobalLock` `GlobalUnlock`
 
+#### Windows Service
+* Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
+* [Complete Service Sample](https://msdn.microsoft.com/EN-US/library/windows/desktop/bb540476&#40;v=vs.85&#41;.aspx)
+
 #### COM 编程
 Component Object Model
 https://www.microsoft.com/com/default.mspx
@@ -87,9 +91,19 @@ https://www.microsoft.com/com/default.mspx
 * [Windows RPC Demo实现](http://www.cnblogs.com/wanghaiyang1930/p/4469222.html)
 
 #### Thread Pooling
-* [Thread Pools](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686756(v=vs.85).aspx)
-* [Process and Thread Functions]("https://msdn.microsoft.com/EN-US/library/windows/desktop/ms684847(v=vs.85).aspx")
+* [Thread Pools](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686756&#40;v=vs.85&#41;.aspx)
+* [Process and Thread Functions](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms684847&#40;v=vs.85&#41;.aspx)
     `QueueUserWorkItem`
+
+#### Synchronization Functions
+* [Synchroization Function](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686360&#40;v=vs.85&#41;.aspx)
+	`InterlockedIncrement` `InterlockedIncrement64`
+
+#### Unhandled Exception
+* SetUnhandledExceptionFilter : Enables an application to supersede(紧接着...) the top-level exception handler of each thread of a process.
+* _set_invalid_parameter_handler : Sets a function to be called when the CRT detects an invalid argument.
+* _set_purecall_handler : Sets the handler for a pure virtual function call.
+`RtlCaptureContext`
 
 ### 需要总结内容
 #### C++ 
