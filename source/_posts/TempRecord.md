@@ -76,6 +76,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 	<https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx>
 * 剪切板相关操作
     `GetClipboardData` `OpenClipboard` `GlobalLock` `GlobalUnlock`
+* 系统信息 `sysinfoapi.h`
 
 #### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
@@ -115,6 +116,7 @@ https://www.microsoft.com/com/default.mspx
     [static关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html)
     [static作用](http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html)
 * const 查看是否已完善
+* 类型转换：`static_cast` `dynamic_cast` `const_cast` `reinterpret_cast` [参考](https://www.cnblogs.com/chio/archive/2007/07/18/822389.html)
 * extern 用法总结
     [多个源文件共用一个全局变量](http://blog.sina.com.cn/s/blog_74a459380101rjh4.html)
     [extern关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
@@ -151,4 +153,6 @@ https://www.microsoft.com/com/default.mspx
 
 * 系统应用：`shutdown`、`sc`、`reg`。
 
+### 算法
+* `局部敏感哈希`
 
