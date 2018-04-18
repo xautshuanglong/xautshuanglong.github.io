@@ -16,7 +16,8 @@ toc: true
 {% btn http://zh.cppreference.com/w/c C&#32;参考手册 success %}
 {% btn http://zh.cppreference.com/w/cpp CPP&#32;参考手册 success %}
 {% btn http://classfoo.com/ccby/article/acZKb CPP&#32;参考网址 success %}
-{% btn https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/ C++并发编程【Gitbooks】 success %
+{% btn https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/ C++并发编程【Gitbooks】 success %}
+{% btn http://zh.highscore.de/cpp/boost/ Boost&#32;C++&#32;库 success %}
 
 ### C
 {% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 primary %}
