@@ -225,3 +225,22 @@ The elapsed wall-clock time since the start of the process
 If the amount of elapsed time is unavailable, the function returns –1, cast as a clock_t.
 ```
 
+## CPP 标准库时间
+```cpp
+typedef ratio<1, 1000000000000000000LL> atto;
+typedef ratio<1, 1000000000000000LL> femto;
+typedef ratio<1, 1000000000000LL> pico;
+typedef ratio<1, 1000000000> nano;
+typedef ratio<1, 1000000> micro;
+typedef ratio<1, 1000> milli;
+typedef ratio<1, 100> centi;
+typedef ratio<1, 10> deci;
+typedef ratio<10, 1> deca;
+typedef ratio<100, 1> hecto;
+typedef ratio<1000, 1> kilo;
+typedef ratio<1000000, 1> mega;
+typedef ratio<1000000000, 1> giga;
+typedef ratio<1000000000000LL, 1> tera;
+typedef ratio<1000000000000000LL, 1> peta;
+typedef ratio<1000000000000000000LL, 1> exa;
+```
