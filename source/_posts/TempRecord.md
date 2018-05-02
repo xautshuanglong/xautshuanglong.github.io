@@ -16,6 +16,8 @@ toc: true
 [对象移动](http://www.voidcn.com/blog/chj90220/article/p-6228769.html)
 [右值引用与转移语义](http://www.ibm.com/developerworks/cn/aix/library/1307_lisl_c11/)
 
+[Range-based for 循环](https://www.cnblogs.com/h46incon/archive/2013/06/02/3113737.html)
+
 ### C# 相关
 
 #### C# WinForm 应用退出
@@ -37,6 +39,7 @@ toc: true
 命令行
 winver
 systeminfo
+vmic `windows management instrumentation command-line`
 
 注册表
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
@@ -77,6 +80,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 剪切板相关操作
     `GetClipboardData` `OpenClipboard` `GlobalLock` `GlobalUnlock`
 * 系统信息 `sysinfoapi.h`
+* 进程操作（权限问题）`OpenProcessToken` `LookupPrivilegeValue` `AdjustTokenPrivileges`
 
 #### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`

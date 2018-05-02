@@ -227,6 +227,8 @@ If the amount of elapsed time is unavailable, the function returns –1, cast as
 
 ## CPP 标准库时间
 ```cpp
+typedef ratio<1, 1000000000000000000000000LL> yocto;  // 有条件的支持
+typedef ratio<1, 1000000000000000000000LL> zepto;     // 有条件的支持
 typedef ratio<1, 1000000000000000000LL> atto;
 typedef ratio<1, 1000000000000000LL> femto;
 typedef ratio<1, 1000000000000LL> pico;
@@ -243,4 +245,6 @@ typedef ratio<1000000000, 1> giga;
 typedef ratio<1000000000000LL, 1> tera;
 typedef ratio<1000000000000000LL, 1> peta;
 typedef ratio<1000000000000000000LL, 1> exa;
+typedef ratio<1000000000000000000000LL, 1> zetta;     //有条件的支持
+typedef ratio<1000000000000000000000000LL, 1> yotta;  //有条件的支持
 ```
