@@ -47,6 +47,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 #### Windows 路径
 C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 
+#### Windows 工具
+* ProcessExplorer
+* ProcessMonitor
 
 #### Windows API
 * 错误码处理
