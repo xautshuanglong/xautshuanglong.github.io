@@ -1,7 +1,7 @@
 ---
 title: Hexo 命令集
 date: 2016-04-02 19:02:42
-categories: Git
+categories: Hexo
 tags: hexo
 toc: true
 ---
@@ -39,5 +39,10 @@ npm install hexo-renderer-stylus --save
 npm install hexo-server --save
 npm install hexo-tag-bootstrap --save
 ```
+
+{% alert warning %}
+如果出现不识别命令，尝试将全局路径 node_global 加入到环境变量，其中包含 hexo 和 hexo.cmd。
+{% endalert %}
+
 ### 参考网址
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
