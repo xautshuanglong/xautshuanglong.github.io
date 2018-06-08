@@ -32,6 +32,11 @@ toc: true
 {% btn http://www.runoob.com/csharp/csharp-tutorial.html 菜鸟教程【C&#35;】 danger %}
 {% btn https://msdn.microsoft.com/zh-cn/library/67ef8sbd(v=vs.90).aspx 编程指南【C&#35;】 danger %}
 
+### QT
+{% btn https://wizardforcel.gitbooks.io/qt-beginning/content/ 快速入门教程 primary %}
+{% btn https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/ QmlBook primary %}
+{% btn https://qtguide.ustclug.org/ QT编程指南 primary %}
+
 ### Golang
 {% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
 	
