@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shuanglong</title>
+  
+  <subtitle>严于律己 宽以待人</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xautshuanglong.github.io/"/>
+  <updated>2018-06-07T06:25:37.053Z</updated>
+  <id>https://xautshuanglong.github.io/</id>
+  
+  <author>
+    <name>JiangShuanglong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>内存池技术</title>
+    <link href="https://xautshuanglong.github.io/2018/04/17/CommonSense/MemoryPoolTechnique/"/>
+    <id>https://xautshuanglong.github.io/2018/04/17/CommonSense/MemoryPoolTechnique/</id>
+    <published>2018-04-17T08:24:33.000Z</published>
+    <updated>2018-06-07T06:25:37.053Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><a id="more"></a><h2 id="优势-及-缺陷"><a href="#优势-及-缺陷" class="headerlink" title="优势 及 缺陷"></a>优势 及 缺陷</h2><h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ul><li>原理上比<code>malloc</code>及<code>new</code>快</li><li>分配内存时不存在额外开销<code>overhead</code></li><li>几乎不存在内存碎片</li><li>无须逐个释放对象（释放整个池）</li></ul><h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><ul><li>需要事先知道对象大小</li><li>需要根据实际情况调节</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      内存宝贵 杜绝浪费
+    
+    </summary>
+    
+      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
+    
+    
+      <category term="MemPool" scheme="https://xautshuanglong.github.io/tags/MemPool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加密与解密</title>
+    <link href="https://xautshuanglong.github.io/2018/03/28/Algorithm/EncrytAndDecrypt/"/>
+    <id>https://xautshuanglong.github.io/2018/03/28/Algorithm/EncrytAndDecrypt/</id>
+    <published>2018-03-28T02:04:23.000Z</published>
+    <updated>2018-06-07T06:25:37.047Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h2 id="经典算法"><a href="#经典算法" class="headerlink" title="经典算法"></a>经典算法</h2><h3 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h3><p><a href="https://github.com/matt-wu/AES" target="_blank" rel="noopener">matt-wu/AES github</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;h2 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerlink&quot; title=&quot;分类&quot;&gt;&lt;/a&gt;分类&lt;/h2&gt;&lt;h2 id
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="https://xautshuanglong.github.io/categories/Algorithm/"/>
+    
+    
+      <category term="Encryption" scheme="https://xautshuanglong.github.io/tags/Encryption/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>导数与偏导数推导过程</title>
+    <link href="https://xautshuanglong.github.io/2018/03/27/Mathematic/DerivativeAndPartialDerivativeFormula/"/>
+    <id>https://xautshuanglong.github.io/2018/03/27/Mathematic/DerivativeAndPartialDerivativeFormula/</id>
+    <published>2018-03-27T04:07:06.000Z</published>
+    <updated>2018-06-07T06:25:37.057Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="导数与偏导数"><a href="#导数与偏导数" class="headerlink" title="导数与偏导数"></a>导数与偏导数</h2><h2 id="初等函数求导"><a href="#初等函数求导" class="headerlink" title="初等函数求导"></a>初等函数求导</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;导数与偏导数&quot;&gt;&lt;a href=&quot;#导数与偏导数&quot; class=&quot;headerlink&quot; title=&quot;导数与偏导数&quot;&gt;&lt;/a&gt;导数与偏导数&lt;/h2&gt;&lt;h2 id=&quot;初等函数求导&quot;&gt;&lt;a href=&quot;#初等函数求导&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+      <category term="Math" scheme="https://xautshuanglong.github.io/categories/Math/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_09_Iterators</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-09-Iterators/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-09-Iterators/</id>
+    <published>2018-01-11T02:20:39.000Z</published>
+    <updated>2018-06-07T06:25:37.051Z</updated>
+    
+    <summary type="html">
+    
+      Iterators 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_08_Deque</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/</id>
+    <published>2018-01-11T02:10:39.000Z</published>
+    <updated>2018-06-07T06:25:37.051Z</updated>
+    
+    <summary type="html">
+    
+      Deque 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_07_Queue</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-07-Queue/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-07-Queue/</id>
+    <published>2018-01-11T02:00:39.000Z</published>
+    <updated>2018-06-07T06:25:37.051Z</updated>
+    
+    <summary type="html">
+    
+      Queue 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_06_Stack</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</id>
+    <published>2018-01-11T01:50:39.000Z</published>
+    <updated>2018-06-07T06:25:37.050Z</updated>
+    
+    <summary type="html">
+    
+      Stack 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_05_Map</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/</id>
+    <published>2018-01-11T01:40:39.000Z</published>
+    <updated>2018-06-07T06:25:37.050Z</updated>
+    
+    <summary type="html">
+    
+      Map 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_04_Set</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-04-Set/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-04-Set/</id>
+    <published>2018-01-11T01:30:39.000Z</published>
+    <updated>2018-06-07T06:25:37.050Z</updated>
+    
+    <summary type="html">
+    
+      Set 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_03_List</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/</id>
+    <published>2018-01-11T01:20:39.000Z</published>
+    <updated>2018-06-07T06:25:37.050Z</updated>
+    
+    <summary type="html">
+    
+      List 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_02_Vector</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/</id>
+    <published>2018-01-11T01:10:39.000Z</published>
+    <updated>2018-06-07T06:25:37.049Z</updated>
+    
+    <summary type="html">
+    
+      Vector 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STL_Series_01_Array</title>
+    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/"/>
+    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</id>
+    <published>2018-01-11T01:00:39.000Z</published>
+    <updated>2018-06-07T06:25:37.049Z</updated>
+    
+    <summary type="html">
+    
+      Array 使用宜忌
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PortNumberRegistry端口号分配</title>
+    <link href="https://xautshuanglong.github.io/2017/03/05/CommonSense/PortNumberRegistry/"/>
+    <id>https://xautshuanglong.github.io/2017/03/05/CommonSense/PortNumberRegistry/</id>
+    <published>2017-03-05T12:30:59.000Z</published>
+    <updated>2018-06-07T06:25:37.053Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="端口号概述"><a href="#端口号概述" class="headerlink" title="端口号概述"></a>端口号概述</h2><p>在网络技术中，端口（Port）包括逻辑端口和物理端口两种类型。物理端口指的是物理存在的端口，如<code>ADSL Modem</code>、<code>集线器</code>、<code>交换机</code>、<code>路由器</code>上用于连接其他网络设备的接口，如<code>RJ-45端口</code>、<code>SC端口</code>等等。逻辑端口是指逻辑意义上用于区分服务的端口，如TCP/IP协议中的服务端口，端口号的范围从0到65535，比如用于浏览网页服务的80端口，用于FTP服务的21端口等。由于物理端口和逻辑端口数量较多，为了对端口进行区分，将每个端口进行了编号，这就是端口号。</p>]]></content>
+    
+    <summary type="html">
+    
+      端口包括物理端口和逻辑端口。物理端口是连接物理设备之间的接口，逻辑端口是逻辑上用于区分服务的端口。
+    
+    </summary>
+    
+      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
+    
+    
+      <category term="PortNumber" scheme="https://xautshuanglong.github.io/tags/PortNumber/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机中的时间</title>
+    <link href="https://xautshuanglong.github.io/2017/01/08/CommonSense/TimeAbout%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%96%E7%95%8C%E7%9A%84%E6%97%B6%E9%97%B4/"/>
+    <id>https://xautshuanglong.github.io/2017/01/08/CommonSense/TimeAbout计算机世界的时间/</id>
+    <published>2017-01-08T05:00:15.000Z</published>
+    <updated>2018-06-07T06:25:37.054Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="计算机计时原理"><a href="#计算机计时原理" class="headerlink" title="计算机计时原理"></a>计算机计时原理</h2><p><code>GMT</code>时间(<code>Greenwich Mean Time</code>)，即<code>格林威治标准时间</code>，正午太阳横穿格林威治子午线的时间。<br><code>UTC</code>时间(<code>Universal Time Coordinated</code>)，即<code>世界调整时间</code>，由原子钟计时，根据<code>GMT</code>校准后得到的时间。</p><p>自1924年2月5日开始，格林威治天文台每隔一小时会向全世界发放调时信息。</p><p><code>原子钟</code>是一种时钟，以原子共振频率标准来计算及保持时间的准确【电子转变能级时释放的精确微波信号】。原子钟是世界上已知最准确的时间测量和频率标准，也是国际时间和频率转换的标准。</p><a id="more"></a><h2 id="FILETIME与UNIX时间转换"><a href="#FILETIME与UNIX时间转换" class="headerlink" title="FILETIME与UNIX时间转换"></a>FILETIME与UNIX时间转换</h2><p>不同操作系统的计时起点：</p><ul><li>Linux/Unix&nbsp;&nbsp;1970-1-1 00:00:00 【考虑时区，北京时间：1970-1-1 08:00:00】</li><li>Windows&nbsp;&nbsp;&nbsp;&nbsp;1601-1-1 00:00:00 【11644473600LL seconds before Linux/Unix epoch】<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">FILETIME</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    DWORD dwLowDateTime;<span class="comment">// low 32 bits</span></span><br><span class="line">    DWORD dwHighDateTime;<span class="comment">// high 32 bits</span></span><br><span class="line">&#125;FILETIME, *PFILETIME, *LPFILETIME;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">union</span> _ULARGE_INTEGER</span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        DWORD LowPart;</span><br><span class="line">        DWORD HighPart;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        DWORD LowPart;</span><br><span class="line">        DWORD HighPart;</span><br><span class="line">    &#125;u;</span><br><span class="line">    ULONGLONG QuadPart;</span><br><span class="line">&#125;ULARGE_INTEGER, *PULARGE_INTEGER;</span><br><span class="line"></span><br><span class="line">FILETIME fileTime; <span class="comment">// 时钟嘀嗒，100ns，开始于 1601-01-01 00:00:00</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移位操作</span></span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ulongTime = fileTime.dwHighDateTime;</span><br><span class="line">ulongTime = ulongTime &lt;&lt; <span class="number">32</span> | fileTime.dwLowDateTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 官方推荐</span></span><br><span class="line">ULARGE_INTEGER ulargeTime;</span><br><span class="line">ulargeTime.HighPart = fileTime.dwHighDateTime;</span><br><span class="line">ulargeTime.LowPart = fileTime.dwLowDateTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转换</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> WINDOWS_TICK 10000000 <span class="comment">// 100ns=10^-7s</span></span></span><br><span class="line"><span class="comment">// 1601-01-01 00:00:00 与 1970-01-01 00:00:00 间隔的秒数</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SEC_TO_UNIX_EPOCH 11644473600LL </span></span><br><span class="line"><span class="keyword">time_t</span> unixTime1 = ulongTime / WINDOWS_TICK - SEC_TO_UNIX_EPOCH;</span><br><span class="line"><span class="keyword">time_t</span> unixTime2 = ulargeTime.QuadPart / WINDOWS_TICK - SEC_TO_UNIX_EPOCH;</span><br></pre></td></tr></table></figure></li></ul><h2 id="获取当前系统时间"><a href="#获取当前系统时间" class="headerlink" title="获取当前系统时间"></a>获取当前系统时间</h2><ul><li><p>time_t 时间戳，距离 1900-01-01 00:00:00 的秒数。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">time_t</span> time(<span class="keyword">time_t</span> *timer);</span><br><span class="line">timer --&gt; Pointer to the storage location <span class="keyword">for</span> time.</span><br><span class="line">Return Value --&gt; Return the time as seconds elapsed since midnight, January <span class="number">1</span>,<span class="number">1970</span>,</span><br><span class="line"><span class="keyword">or</span> <span class="number">-1</span> in the <span class="keyword">case</span> of an error.</span><br></pre></td></tr></table></figure></li><li><p>tm 精确到秒的时间结构体，需注意各成员的取值范围。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tm</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> tm_sec;     <span class="comment">// the number of seconds [0-59]</span></span><br><span class="line">    <span class="keyword">int</span> tm_min;     <span class="comment">// the number of minutes [0-59]</span></span><br><span class="line">    <span class="keyword">int</span> tm_hour;    <span class="comment">// the number of hours since midnight [0-23]</span></span><br><span class="line">    <span class="keyword">int</span> tm_mday;    <span class="comment">// indicate the day of the month [1-31]</span></span><br><span class="line">    <span class="keyword">int</span> tm_mon;     <span class="comment">// the number of months since January [0-11]</span></span><br><span class="line">    <span class="keyword">int</span> tm_year;    <span class="comment">// the number of years since 1900 [117 --&gt; 1900+117=2017]</span></span><br><span class="line">    <span class="keyword">int</span> tm_wday;    <span class="comment">// the number of days since Sundary [0-6]</span></span><br><span class="line">    <span class="keyword">int</span> tm_yday;    <span class="comment">// the number of days since January 1 [0-365]</span></span><br><span class="line">    <span class="keyword">int</span> tm_isdst;   <span class="comment">// daylight savings time [TRUE] and normal time [FALSE]</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">tm m_tmCurTime;</span><br><span class="line"><span class="keyword">time_t</span> m_tCurTime;</span><br><span class="line">time(&amp;m_tCurTime);<span class="comment">// 当前时间戳</span></span><br><span class="line"><span class="comment">// 根据当前所在时区(系统设置)转换为信息全面的结构 </span></span><br><span class="line">localtime_s(&amp;m_tmCurTime, &amp;m_tCurTime);</span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> timeZoneOffset;</span><br><span class="line"><span class="keyword">time_t</span> tempTime;</span><br><span class="line">_tzset();</span><br><span class="line">_get_timezone(&amp;timeZoneOffset);</span><br><span class="line">tempTime = m_tCurTime - timeZoneOffset;</span><br><span class="line">gmtime_s(&amp;m_tmCurTime, &amp;tempTimeOB);<span class="comment">// 标准时间，需要根据时区自行调整(参见后文 时区)</span></span><br></pre></td></tr></table></figure></li><li><p>SYSTEMTIME</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">SYSTEMTIME</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    WORD wYear;         <span class="comment">// The current year.</span></span><br><span class="line">    WORD wMonth;        <span class="comment">// The current month; January is 1.</span></span><br><span class="line">    WORD wDayOfWeek;    <span class="comment">// The current day of the week; Sunday is 0, Monday is 1, and so on.</span></span><br><span class="line">    WORD wDay;          <span class="comment">// The current day of the month.</span></span><br><span class="line">    WORD wHour;         <span class="comment">// The current hour.</span></span><br><span class="line">    WORD wMinute;       <span class="comment">// The current minute.</span></span><br><span class="line">    WORD wSecond;       <span class="comment">// The current second.</span></span><br><span class="line">    WORD wMilliseconds; <span class="comment">// The current millisecond.</span></span><br><span class="line">&#125; SYSTEMTIME, *PSYSTEMTIME, *LPSYSTEMTIME;</span><br><span class="line">SYSTEMTIME m_systemTime;</span><br><span class="line">::GetLocalTime(&amp;m_systemTime);</span><br><span class="line"><span class="keyword">char</span> timeBuffer[<span class="number">64</span>];</span><br><span class="line">sprintf_s(timeBuffer, <span class="string">"%4d-%02d-%02d %02d:%02d:%02d.%03d"</span>,</span><br><span class="line">    m_systemTime.wYear, m_systemTime.wMonth, m_systemTime.wDay,</span><br><span class="line">    m_systemTime.wHour, m_systemTime.wMinute, m_systemTime.wSecond, m_systemTime.wMilliseconds);</span><br></pre></td></tr></table></figure></li></ul><h2 id="时区与时间差"><a href="#时区与时间差" class="headerlink" title="时区与时间差"></a>时区与时间差</h2><ul><li><p>时差 UTC = LocalTime + Bias</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">time_t</span> timeTest;</span><br><span class="line">time(&amp;timeTest);</span><br><span class="line"></span><br><span class="line">tm gmTime;</span><br><span class="line">tm loTime;</span><br><span class="line">gmtime_s(&amp;gmTime, &amp;timeTest);</span><br><span class="line"><span class="keyword">time_t</span> gmt = mktime(&amp;gmTime);</span><br><span class="line">localtime_s(&amp;loTime, &amp;timeTest);</span><br><span class="line"><span class="keyword">time_t</span> lot = mktime(&amp;loTime);</span><br><span class="line"><span class="keyword">double</span> diff = difftime(gmt, lot);<span class="comment">// -28800.000000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> timeZone;</span><br><span class="line"><span class="comment">// The _get_timezone function retrieves the difference in seconds</span></span><br><span class="line"><span class="comment">// between UTC and local time as an integer.</span></span><br><span class="line"><span class="comment">// The default value is 28,800 seconds, for Pacific Standard Time (eight hours behind UTC).</span></span><br><span class="line"><span class="keyword">int</span> errorCode = _get_timezone(&amp;timeZone);<span class="comment">// -28800(28800)</span></span><br><span class="line"><span class="keyword">char</span> timeZoneName[<span class="number">64</span>];</span><br><span class="line"><span class="keyword">size_t</span> t;</span><br><span class="line">_get_tzname(&amp;t, timeZoneName, <span class="keyword">sizeof</span>(timeZoneName), <span class="number">0</span>);<span class="comment">// 中国标准时间(太平洋标准时间)</span></span><br><span class="line"><span class="comment">// 通过调整系统时间可知：</span></span><br><span class="line"><span class="comment">// 中国标准时间   = -28800</span></span><br><span class="line"><span class="comment">// 太平洋标准时间 =  28800</span></span><br><span class="line"><span class="comment">// _get_timezone  =  格林威治时间 - 本地时间</span></span><br></pre></td></tr></table></figure></li><li><p>获取时区相关信息</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// set time environment variables:</span></span><br><span class="line"><span class="comment">// assign values to three global variables:_daylignt,_timezone and _tzname</span></span><br><span class="line">_tzset();</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dayLightHours;     <span class="comment">// 以小时为单位的日光节约时间</span></span><br><span class="line"><span class="keyword">long</span> dayLightSeconds;  <span class="comment">// 以秒为单位的日光节约时间</span></span><br><span class="line"><span class="keyword">long</span> timeZone;         <span class="comment">// 秒数 = 格林威治时间 - 本地时间</span></span><br><span class="line"><span class="keyword">char</span> timeZoneName[<span class="number">64</span>]; <span class="comment">// 时区名称</span></span><br><span class="line"><span class="keyword">size_t</span> nameLen;        <span class="comment">// 时区名称长度，包括终结符</span></span><br><span class="line"></span><br><span class="line">_get_daylight(&amp;dayLightHours);<span class="comment">// daylight saving time offset in hours</span></span><br><span class="line">_get_dstbias(&amp;dayLightSeconds);<span class="comment">// daylight saving time offset in seconds </span></span><br><span class="line"><span class="keyword">int</span> errorCode = _get_timezone(&amp;timeZone);</span><br><span class="line">_get_tzname(&amp;nameLen, timeZoneName, <span class="keyword">sizeof</span>(timeZoneName), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// This structure specifies information specific to the time zone.</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">TIME_ZONE_INFORMATION</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    LONG Bias;</span><br><span class="line">    WCHAR StandardName[<span class="number">32</span>];</span><br><span class="line">    SYSTEMTIME StandardDate;</span><br><span class="line">    LONG StandardBias;</span><br><span class="line">    WCHAR DaylightName[<span class="number">32</span>];</span><br><span class="line">    SYSTEMTIME DaylightDate;</span><br><span class="line">    LONG DaylightBias;</span><br><span class="line">&#125; TIME_ZONE_INFORMATION;</span><br><span class="line">TIME_ZONE_INFORMATION timeZoneInfo;</span><br><span class="line">GetTimeZoneInformation(&amp;timeZoneInfo);</span><br></pre></td></tr></table></figure></li></ul><h2 id="精确计算时间差"><a href="#精确计算时间差" class="headerlink" title="精确计算时间差"></a>精确计算时间差</h2><ul><li><p>QueryPerformanceFrequency</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL <span class="title">QueryPerformanceFrequency</span><span class="params">(LARGE_INTEGER* lpFrequency)</span></span>;</span><br><span class="line">This function retrieves the frequency of the high-resolution performance counter</span><br><span class="line"><span class="keyword">if</span> one is provided by the OEM.</span><br><span class="line">lpFrequency --&gt; </span><br><span class="line">[out] Pointer to a variable that the function sets, in counts per second,</span><br><span class="line">to the current performance-counter frequency.</span><br><span class="line">If the installed hardware does <span class="keyword">not</span> support a high-resolution performance counter,</span><br><span class="line">the value passed back through <span class="keyword">this</span> pointer can be zero.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">TRUE indicates that a performance frequency value was successfully filed in.</span><br><span class="line">False indicates failure.</span><br></pre></td></tr></table></figure></li><li><p>QueryPerformanceCounter</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL <span class="title">QueryPerformanceCounter</span><span class="params">(LARGE_INTEGER* lpPerformanceCount)</span></span>;</span><br><span class="line">This function retrieves the current value of the high-resolution performance counter </span><br><span class="line"><span class="keyword">if</span> one is provided by the OEM.</span><br><span class="line">lpPerformanceCount --&gt; </span><br><span class="line">[in] Pointer to a variable that the function sets, in counts, </span><br><span class="line">to the current performance-counter value.</span><br><span class="line">If the installed hardware does <span class="keyword">not</span> support a high-resolution performance counter, </span><br><span class="line"><span class="keyword">this</span> parameter can be <span class="built_in">set</span> to zero.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">TRUE indicates that a performance counter value was successfully filled in.</span><br><span class="line">FALSE indicates failure.</span><br></pre></td></tr></table></figure></li><li><p>GetTickCount</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">DWORD WINAPI <span class="title">GetTickCount</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line">Retrieves the number of milliseconds that have elapsed since the system was started,</span><br><span class="line">up to <span class="number">49.7</span> days.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">The <span class="keyword">return</span> value is the number of milliseconds that have elapsed since the system was started.</span><br></pre></td></tr></table></figure></li><li><p>clock</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">clock_t</span> clock( <span class="keyword">void</span> );</span><br><span class="line">Calculates the wall-clock time used by the calling process.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">The elapsed wall-clock time since the start of the process</span><br><span class="line">(elapsed time in seconds times CLOCKS_PER_SEC).</span><br><span class="line">If the amount of elapsed time is unavailable, the function returns –<span class="number">1</span>, cast as a <span class="keyword">clock_t</span>.</span><br></pre></td></tr></table></figure></li></ul><h2 id="CPP-标准库时间"><a href="#CPP-标准库时间" class="headerlink" title="CPP 标准库时间"></a>CPP 标准库时间</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000000000000L</span>L&gt; yocto;  <span class="comment">// 有条件的支持</span></span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000000000L</span>L&gt; zepto;     <span class="comment">// 有条件的支持</span></span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000000L</span>L&gt; atto;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000L</span>L&gt; femto;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000L</span>L&gt; pico;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000</span>&gt; nano;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000</span>&gt; micro;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000</span>&gt; milli;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">100</span>&gt; centi;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">10</span>&gt; deci;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">10</span>, <span class="number">1</span>&gt; deca;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">100</span>, <span class="number">1</span>&gt; hecto;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000</span>, <span class="number">1</span>&gt; kilo;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000</span>, <span class="number">1</span>&gt; mega;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000</span>, <span class="number">1</span>&gt; giga;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000L</span>L, <span class="number">1</span>&gt; tera;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000L</span>L, <span class="number">1</span>&gt; peta;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000000L</span>L, <span class="number">1</span>&gt; exa;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000000000L</span>L, <span class="number">1</span>&gt; zetta;     <span class="comment">//有条件的支持</span></span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000000000000L</span>L, <span class="number">1</span>&gt; yotta;  <span class="comment">//有条件的支持</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      做专业的程序员
+    
+    </summary>
+    
+      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
+    
+    
+      <category term="Time" scheme="https://xautshuanglong.github.io/tags/Time/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ 11 中的新特性</title>
+    <link href="https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    <id>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/</id>
+    <published>2016-12-26T10:38:47.000Z</published>
+    <updated>2018-06-07T06:25:37.047Z</updated>
+    
+    <content type="html"><![CDATA[<p>C++ 11 新特性学习笔记：<br><code>default</code> 和 <code>delete</code> 修饰特殊成员函数。<br><a id="more"></a></p><h2 id="Defaulted-and-Deleted-function"><a href="#Defaulted-and-Deleted-function" class="headerlink" title="Defaulted and Deleted function"></a>Defaulted and Deleted function</h2><h2 id="Asynchronous-Programming"><a href="#Asynchronous-Programming" class="headerlink" title="Asynchronous Programming"></a>Asynchronous Programming</h2><div class="alert alert-warning"><i class="fa fa-bell"></i>  以下三点都满足时， std::future 析构可能导致阻塞：</div><p class="text-warning">1. 共享状态是在调用 std::async 时创建的；<br>2. 共享状态尚未处于 std::future_status::read 状态；<br>3. 被析构的当前对象持有共享状态的最后一个引用。<br></p><div class="alert alert-info"><i class="fa fa-info"></i>  获取 std::future 结果的方法：</div><p class="text-info">1. std::future::get()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成并返回异步执行结果。<br>2. std::future::wait()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成，无返回值。<br>3. std::future::wait_for()&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，超时等待异步操作完成，返回异步操作执行状态。<br>4. std::future::wait_until()&nbsp;&nbsp;阻塞当前线程，等待异步操作完成直到指定的时间点。<br></p><table><thead><tr><th style="text-align:left">Name</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left">future::get</td><td style="text-align:left">Retrieves the result that is stored in the associated asynchronous state.</td></tr><tr><td style="text-align:left">future::wait</td><td style="text-align:left">Blocks the current thread until the associated asynchronous state is ready.</td></tr><tr><td style="text-align:left">future::wait_for</td><td style="text-align:left">Blocks until the associated asynchronous state is ready <br>or until the specified time has elapsed.</td></tr><tr><td style="text-align:left">future::wait_until</td><td style="text-align:left">Blocks until the associated asynchronous state is ready or until a specified point in time.</td></tr></tbody></table><p><br></p><div class="alert alert-info"><i class="fa fa-info"></i>  与 std::future 相关的枚举类型：</div><ul><li>std::future_errc</li></ul><table><thead><tr><th style="text-align:left">label</th><th style="text-align:center">value</th><th style="text-align:left">description</th></tr></thead><tbody><tr><td style="text-align:left">broken_promise</td><td style="text-align:center">0</td><td style="text-align:left">The promise object with which the future shares its shared state was destroyed before being set a value or an exception.</td></tr><tr><td style="text-align:left">future_already_retrieved</td><td style="text-align:center">1</td><td style="text-align:left">A future object was already retrieved from this provider.</td></tr><tr><td style="text-align:left">promise_already_satisfied</td><td style="text-align:center">2</td><td style="text-align:left">The promise object was already set a value or exception.</td></tr><tr><td style="text-align:left">no_state</td><td style="text-align:center">3</td><td style="text-align:left">An operation attempted to access the shared state of an object with no shared state.</td></tr></tbody></table><ul><li>std::future_status</li></ul><table><thead><tr><th style="text-align:left">label</th><th style="text-align:center">value</th><th style="text-align:left">description</th></tr></thead><tbody><tr><td style="text-align:left">future_status::ready</td><td style="text-align:center">0</td><td style="text-align:left">The function returned because the shared state was ready.</td></tr><tr><td style="text-align:left">future_status::timeout</td><td style="text-align:center">1</td><td style="text-align:left">The function returned because the specified time was exhausted.</td></tr><tr><td style="text-align:left">future_status::deferred</td><td style="text-align:center">2</td><td style="text-align:left">The function returned because the shared state contains a deferred function (see std::async).</td></tr></tbody></table><ul><li>std::launch</li></ul><table><thead><tr><th style="text-align:left">label</th><th style="text-align:center">value</th><th style="text-align:left">description</th></tr></thead><tbody><tr><td style="text-align:left">launch::async</td><td style="text-align:center">0x1(vc)</td><td style="text-align:left">Asynchronous: The function is called asynchronously by a new thread and synchronizes its return with the point of access to the shared state.</td></tr><tr><td style="text-align:left">launch::deferred</td><td style="text-align:center">0x2(vc)</td><td style="text-align:left">Deferred: The function is called at the point of access to the shared state.</td></tr></tbody></table><h2 id="Reference-and-Forwarding"><a href="#Reference-and-Forwarding" class="headerlink" title="Reference and Forwarding"></a>Reference and Forwarding</h2><p><a href="http://www.cnblogs.com/jiayayao/p/6527713.html" target="_blank" rel="noopener">为什么C++11引入了std::ref？</a><br><a href="http://blog.csdn.net/zwvista/article/details/12306283" target="_blank" rel="noopener">C++11尝鲜：右值引用和转发型引用</a></p><h2 id="Lambda-Expression"><a href="#Lambda-Expression" class="headerlink" title="Lambda Expression"></a>Lambda Expression</h2><div class="alert alert-info"><i class="fa fa-info"></i>  Lambda 表达式中的闭包说明</div><table><thead><tr><th style="text-align:center">语法</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center"><code>[a, &amp;b]</code></td><td style="text-align:center">其中<code>a</code>以复制捕获，<code>b</code>以引用捕获</td></tr><tr><td style="text-align:center"><code>[this]</code></td><td style="text-align:center">以引用捕获当前对象(*this)</td></tr><tr><td style="text-align:center"><code>[&amp;]</code></td><td style="text-align:center">以引用捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td></tr><tr><td style="text-align:center"><code>[=]</code></td><td style="text-align:center">以复制捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td></tr><tr><td style="text-align:center"><code>[]</code></td><td style="text-align:center">不捕获</td></tr><tr><td style="text-align:center"><code>&amp;, x</code></td><td style="text-align:center"><code>x</code>显式的捕获，其他变量按引用捕获。</td></tr><tr><td style="text-align:center"><code>=, &amp;z</code></td><td style="text-align:center"><code>z</code>按引用捕获，其他变量按值捕获。</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      C++ 11 新加入的特性
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="C11" scheme="https://xautshuanglong.github.io/tags/C11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ 禁止某些操作的技巧</title>
+    <link href="https://xautshuanglong.github.io/2016/12/23/CPlusPlus/CPlusPlus%E7%A6%81%E6%AD%A2%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%9A%84%E6%8A%80%E5%B7%A7/"/>
+    <id>https://xautshuanglong.github.io/2016/12/23/CPlusPlus/CPlusPlus禁止某些操作的技巧/</id>
+    <published>2016-12-23T06:31:40.000Z</published>
+    <updated>2018-06-07T06:25:37.048Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>禁止构造：用于单例<br>禁止拷贝：保持唯一性<br>禁止继承：防止泛化<br><a id="more"></a></p></blockquote><h2 id="禁止构造"><a href="#禁止构造" class="headerlink" title="禁止构造"></a>禁止构造</h2><pre><code>深拷贝与浅拷贝的区别两个对象能够完全独立 --&gt; 深拷贝两个对象存在某种联系 --&gt; 浅拷贝</code></pre><ul><li>将构造函数声明为 <code>private</code>；</li><li>用 <code>delete</code> 标记，编译器不会合成默认成员。参考<a href="https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/">Defaulted &amp; Deleted</a></li></ul><h2 id="禁止拷贝-赋值"><a href="#禁止拷贝-赋值" class="headerlink" title="禁止拷贝/赋值"></a>禁止拷贝/赋值</h2><ul><li>将拷贝构造函数 与 operator= 均声明为 <code>private</code>；</li><li>用 <code>delete</code> 标记，编译器不会合成默认成员，参考<a href="https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/">Defaulted &amp; Deleted</a>；</li><li>不提供方法的实现，防止<code>friend</code>。</li></ul><pre><code>空类的默认成员有6个：</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Empty</span>&#123;</span>&#125;;</span><br><span class="line"></span><br><span class="line">Empty();                          <span class="comment">//默认构造函数</span></span><br><span class="line">~Empty();                         <span class="comment">//默认析构函数</span></span><br><span class="line">Empty(<span class="keyword">const</span> Empty &amp;);             <span class="comment">//默认拷贝构造</span></span><br><span class="line">Empty &amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> Empty &amp;); <span class="comment">//默认拷贝赋值运算符</span></span><br><span class="line">Empty * <span class="keyword">operator</span>&amp;();              <span class="comment">//取地址运算符</span></span><br><span class="line"><span class="keyword">const</span> Empty * <span class="keyword">operator</span>&amp;() <span class="keyword">const</span>;  <span class="comment">//取地址运算符 const</span></span><br></pre></td></tr></table></figure><pre><code>禁止拷贝/赋值示例   (可用于派生屏蔽拷贝构造和赋值操作的子类)</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DISABLE_COPY(Class) \</span></span><br><span class="line">Class(<span class="keyword">const</span> Class &amp;); \</span><br><span class="line">Class &amp;<span class="keyword">operator</span>=(<span class="keyword">const</span> Class &amp;)</span><br><span class="line"> </span><br><span class="line">class Widget  </span><br><span class="line">&#123;  </span><br><span class="line"><span class="keyword">public</span>:  </span><br><span class="line">    <span class="keyword">int</span>* pi;  </span><br><span class="line"><span class="keyword">private</span>:  </span><br><span class="line">DISABLE_COPY(Widget);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="禁止继承"><a href="#禁止继承" class="headerlink" title="禁止继承"></a>禁止继承</h2><ul><li>C++11 关键字 <code>sealed</code>；</li><li>C++11 关键字 <code>final</code>；</li><li>虚继承一个拥有私有构造函数的基类。</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SealedClass</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">SealedClass() &#123; &#125;;</span><br><span class="line"><span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">SealedClassTest</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SealedClassTest</span>:</span><span class="keyword">private</span> <span class="keyword">virtual</span> SealedClass</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">SealedClassTest();</span><br><span class="line">~SealedClassTest();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 企图继承 SealedClassTest 的类（通常不是 SealedClass 的有缘类），</span></span><br><span class="line"><span class="comment">// 在实例化时会因为无法访问 SealedClass 的默认构造函数而实例化失败，达到阻止继承的目的。</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      做专业的程序员
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WinApiCollection 常用 Windows API</title>
+    <link href="https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/"/>
+    <id>https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/</id>
+    <published>2016-12-18T07:11:47.000Z</published>
+    <updated>2018-06-07T06:25:37.051Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>经典 Windows API 用法说明，值得收藏···<br><a id="more"></a></p></blockquote><h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><h4 id="CopyFile"><a href="#CopyFile" class="headerlink" title="CopyFile"></a>CopyFile</h4><pre><code>BOOL WINAPI CopyFile(    _In_  LPCTSTR lpExistingFileName,    _In_  LPCTSTR lpNewFileName,    _In_  BOOL bFailIfExists);Copy an existing file to a new file.lpExistingFileName[in] --&gt; The name of existing file.lpNewFileName[in] --&gt; The name of new file.bFailIfExists[in] --&gt; If this parameter is TRUE and the new file specified by lpNewFileName already exist, the function fails. If this parameter is FALSE and the new file already exists, the function overwrites the existing file andd succeeds.</code></pre><h4 id="CreateDirectory"><a href="#CreateDirectory" class="headerlink" title="CreateDirectory"></a>CreateDirectory</h4><pre><code>BOOL CreateDirectory(    LPCTSTR lpPathName,    LPSECURITY_ATTRIBUTES lpSecurityAttributes );This function creates a new directory. If the underlying file system supports security on files and directories, the function applies a specified security descriptor to the new directory.lpPathName[in] --&gt; Long pointer to a null-terminated string that specified the path of the directory to be created.lpSecurityAttributes[in] --&gt; Ignored; set to NULL.</code></pre><h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><h4 id="DeleteFile"><a href="#DeleteFile" class="headerlink" title="DeleteFile"></a>DeleteFile</h4><pre><code>BOOL WINAPI DeleteFile(    _In_ LPCTSTR lpFileName);Deletes an existing file.lpFileName[in] --&gt; The name of file to be deleted.</code></pre><h3 id="M"><a href="#M" class="headerlink" title="M"></a>M</h3><h4 id="MoveFile"><a href="#MoveFile" class="headerlink" title="MoveFile"></a>MoveFile</h4><pre><code>BOOL WINAPI MoveFile(    _In_ LPCTSTR lpExistingFileName,    _In_ LPCTSTR lpNewFileName);Moves an existing file or a directory, including its children.lpExistingFileName[in] --&gt; The current name of the file or directory on the local computer.lpNewFileName[in] --&gt; The new name for the file or directory. The new file must not already exist.A new file may be on a different file system or drive. A new directory must be on the same drive. </code></pre><h3 id="R"><a href="#R" class="headerlink" title="R"></a>R</h3><h4 id="RemoveDirectory"><a href="#RemoveDirectory" class="headerlink" title="RemoveDirectory"></a>RemoveDirectory</h4><pre><code>BOOL RemoveDirectory(    LPCTSTR lpPathName);This function detetes an empty directory.lpPathName[in] --&gt; Pointer to a null-terminated string that specifies the path of the directory to be removed. The path must specify an empty directory, and the calling process must have delete access to the directory.</code></pre><h4 id="ReOpenFile"><a href="#ReOpenFile" class="headerlink" title="ReOpenFile"></a>ReOpenFile</h4><pre><code>HANDLE WINAPI ReOpenFile(    _In_  HANDLE hOriginalFile,    _In_  DWORD dwDesiredAccess,    _In_  DWORD dwShareMode,    _In_  DWORD dwFlags);Reopens the specified file system object with different access rights, sharing mode, and flas.hOriginalFile [in] --&gt; A handle to the object to be reopened. The object must have been created by the CreateFile function.dwDesiredAccess [in] --&gt; The required access to the object. For a list of values, see File Security and Access Rights. You cannot request an access mode that conflicts with the sharing mode specified in a previous open request whose handle is still open.If this parameter is zero (0), the application can query device attributes without accessing the device. This is useful if an application wants to determine the size of a floppy disk drive and the formats it supports without requiring a floppy in the drive.dwShareMode [in] --&gt; The sharing mode of the object. You cannot request a sharing mode that conflicts with the access mode specified in a previous open request whose handle is still open.If this parameter is zero (0) and CreateFile succeeds, the object cannot be shared and cannot be opened again until the handle is closed.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      实用 API，封装成工具库，以免忘记。
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="API" scheme="https://xautshuanglong.github.io/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>const用法总结</title>
+    <link href="https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const用法总结/</id>
+    <published>2016-11-27T05:41:23.000Z</published>
+    <updated>2018-06-07T06:25:37.051Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Const用法参考"><a href="#Const用法参考" class="headerlink" title="Const用法参考"></a>Const用法参考</h2><p><a href="http://www.cnblogs.com/wintergrass/archive/2011/04/15/2015020.html" target="_blank" rel="noopener">const用法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      const使用详解
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+      <category term="const" scheme="https://xautshuanglong.github.io/tags/const/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Temporary Record</title>
+    <link href="https://xautshuanglong.github.io/2016/11/18/TempRecord/"/>
+    <id>https://xautshuanglong.github.io/2016/11/18/TempRecord/</id>
+    <published>2016-11-18T13:12:47.000Z</published>
+    <updated>2018-06-07T06:25:37.061Z</updated>
+    
+    <content type="html"><![CDATA[<p>值得学习或巩固的知识点<br><a id="more"></a></p><h3 id="关于-C-11-新特性"><a href="#关于-C-11-新特性" class="headerlink" title="关于 C++11 新特性"></a>关于 C++11 新特性</h3><p><a href="https://www.ibm.com/developerworks/cn/aix/library/1212_lufang_c11new/" target="_blank" rel="noopener">defaulted 和 deleted 修饰函数</a><br><a href="https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/deleted_functions_in_c_11?lang=zh" target="_blank" rel="noopener">Deleted functions in C++11</a></p><p><a href="http://www.voidcn.com/blog/chj90220/article/p-6228769.html" target="_blank" rel="noopener">对象移动</a><br><a href="http://www.ibm.com/developerworks/cn/aix/library/1307_lisl_c11/" target="_blank" rel="noopener">右值引用与转移语义</a></p><p><a href="https://www.cnblogs.com/h46incon/archive/2013/06/02/3113737.html" target="_blank" rel="noopener">Range-based for 循环</a></p><h3 id="C-相关"><a href="#C-相关" class="headerlink" title="C# 相关"></a>C# 相关</h3><h4 id="C-WinForm-应用退出"><a href="#C-WinForm-应用退出" class="headerlink" title="C# WinForm 应用退出"></a>C# WinForm 应用退出</h4><p><a href="http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html" target="_blank" rel="noopener">C# WinForm程序退出的方法</a><br><a href="http://blog.csdn.net/yl2isoft/article/details/38168681" target="_blank" rel="noopener">C# — WinForm 退出方法总结</a><br><a href="http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html" target="_blank" rel="noopener">C# Enum,Int,String的互相转换 枚举转换</a></p><h4 id="C-dllimport-类型转换"><a href="#C-dllimport-类型转换" class="headerlink" title="C# dllimport 类型转换"></a>C# dllimport 类型转换</h4><p><a href="http://blog.chinaunix.net/uid-16685753-id-2738234.html" target="_blank" rel="noopener">C#调用dll时的类型转换总结</a><br><a href="http://www.cnblogs.com/Huayuan/archive/2012/07/05/2577439.html" target="_blank" rel="noopener">C#调用VC的DLL的接口函数参数类型转换一览表</a></p><h4 id="C-Windows-服务"><a href="#C-Windows-服务" class="headerlink" title="C# Windows 服务"></a>C# Windows 服务</h4><p><a href="http://www.cnblogs.com/gnielee/archive/2010/04/07/session0-isolation-part1.html" target="_blank" rel="noopener">穿透Session 0 隔离（一）</a><br><a href="http://www.cnblogs.com/gnielee/archive/2010/04/08/session0-isolation-part2.html" target="_blank" rel="noopener">穿透Session 0 隔离（二）</a></p><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><h4 id="查看-Windows-系统版本"><a href="#查看-Windows-系统版本" class="headerlink" title="查看 Windows 系统版本"></a>查看 Windows 系统版本</h4><p>命令行<br>winver<br>systeminfo<br>vmic <code>windows management instrumentation command-line</code></p><p>注册表<br>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion</p><h4 id="Windows-路径"><a href="#Windows-路径" class="headerlink" title="Windows 路径"></a>Windows 路径</h4><p>C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe</p><h4 id="Windows-工具"><a href="#Windows-工具" class="headerlink" title="Windows 工具"></a>Windows 工具</h4><ul><li>ProcessExplorer</li><li>ProcessMonitor</li></ul><h4 id="Windows-API"><a href="#Windows-API" class="headerlink" title="Windows API"></a>Windows API</h4><ul><li><p>错误码处理<br>  GetLastError、FormatMessage<br>  <a href="https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx</a><br>  <a href="https://msdn.microsoft.com/en-us/library/ms679351(v=VS.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/ms679351(v=VS.85).aspx</a><br>  <a href="http://www.cnblogs.com/greenerycn/archive/2010/08/30/hresult_and_win_error_codes.html" target="_blank" rel="noopener">HRESULT 与 Windows Error Codes</a><br>  <a href="http://zh.cppreference.com/w/cpp/error/exception" target="_blank" rel="noopener">C++异常继承关系</a></p></li><li><p>文件版本信息<br>  GetFileVersionInfoSizeEx、GetFileVersionInfoEx、VerQueryValue</p></li><li><p>获取 Windows 特殊目录<br>  SHGetFolderLocation<br>  SHGetFolderPath<br>  SHGetSpecialFolderLocation<br>  SHGetSpecialFolderPath </p></li><li>提高计时精度<br>  <code>NtSetTimerResolution</code> and <code>NtQueryTimerResolution</code>. All times are specifified in hundreds of nanoseconds.</li><li>Timer 定时器<br>  <code>SetTimer</code> 利用 Windows 窗口消息 WM_TIMER 实现。要用 <code>KillTimer</code> 销毁定时器。注：工作线程（非UI）无法使用。<br>  <code>WaitableTimer</code> 可以跨线程、进程使用。<code>CreateWaitableTimer</code>创建定时器对象，<code>SetWaitableTime</code>设置回调，<code>CloseHandle</code>销毁定时器。<br>  <code>TimerQueueTimer</code> 相当强大，多种工作模式，精度高。</li><li>键盘按键检测<br>  GetAsyncKeyState _kbhit</li><li>Microsoft Try-except Statement<br>  <a href="https://msdn.microsoft.com/en-us/library/s58ftw19&#40;v=vs.140&#41;.aspx" target="_blank" rel="noopener">try-except</a><br>  <a href="https://msdn.microsoft.com/en-us/library/s58ftw19(v=vs.140).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/s58ftw19(v=vs.140).aspx</a><br>  <a href="https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx" target="_blank" rel="noopener">try-final</a><br>  <a href="https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx</a></li><li>剪切板相关操作<br>  <code>GetClipboardData</code> <code>OpenClipboard</code> <code>GlobalLock</code> <code>GlobalUnlock</code></li><li>系统信息 <code>sysinfoapi.h</code></li><li>进程操作（权限问题）<code>OpenProcessToken</code> <code>LookupPrivilegeValue</code> <code>AdjustTokenPrivileges</code></li></ul><h4 id="Windows-Service"><a href="#Windows-Service" class="headerlink" title="Windows Service"></a>Windows Service</h4><ul><li>Related API：<code>OpenSCManager</code>、<code>CreateService</code>、<code>OpenService</code>、<code>ControlService</code>、<code>DeleteService</code>、<code>RegisterServiceCtrlHandler</code>、<code>SetServiceStatus</code>、<code>StartServiceCtrlDispatcher</code></li><li><a href="https://msdn.microsoft.com/EN-US/library/windows/desktop/bb540476&#40;v=vs.85&#41;.aspx" target="_blank" rel="noopener">Complete Service Sample</a></li></ul><h4 id="COM-编程"><a href="#COM-编程" class="headerlink" title="COM 编程"></a>COM 编程</h4><p>Component Object Model<br><a href="https://www.microsoft.com/com/default.mspx" target="_blank" rel="noopener">https://www.microsoft.com/com/default.mspx</a></p><h4 id="Microsoft-RPC"><a href="#Microsoft-RPC" class="headerlink" title="Microsoft RPC"></a>Microsoft RPC</h4><p>基于 命名管道 和 tcp/ip</p><ul><li><a href="https://www.ibm.com/developerworks/cn/aix/library/au-rpc_programming/" target="_blank" rel="noopener">RPC 编程</a></li><li><a href="http://www.cnblogs.com/wanghaiyang1930/p/4469222.html" target="_blank" rel="noopener">Windows RPC Demo实现</a></li></ul><h4 id="Thread-Pooling"><a href="#Thread-Pooling" class="headerlink" title="Thread Pooling"></a>Thread Pooling</h4><ul><li><a href="https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686756&#40;v=vs.85&#41;.aspx" target="_blank" rel="noopener">Thread Pools</a></li><li><a href="https://msdn.microsoft.com/EN-US/library/windows/desktop/ms684847&#40;v=vs.85&#41;.aspx" target="_blank" rel="noopener">Process and Thread Functions</a><br>  <code>QueueUserWorkItem</code></li></ul><h4 id="Synchronization-Functions"><a href="#Synchronization-Functions" class="headerlink" title="Synchronization Functions"></a>Synchronization Functions</h4><ul><li><a href="https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686360&#40;v=vs.85&#41;.aspx" target="_blank" rel="noopener">Synchroization Function</a><br>  <code>InterlockedIncrement</code> <code>InterlockedIncrement64</code></li></ul><h4 id="Unhandled-Exception"><a href="#Unhandled-Exception" class="headerlink" title="Unhandled Exception"></a>Unhandled Exception</h4><ul><li>SetUnhandledExceptionFilter : Enables an application to supersede(紧接着…) the top-level exception handler of each thread of a process.</li><li>_set_invalid_parameter_handler : Sets a function to be called when the CRT detects an invalid argument.</li><li>_set_purecall_handler : Sets the handler for a pure virtual function call.<br><code>RtlCaptureContext</code></li></ul><h3 id="需要总结内容"><a href="#需要总结内容" class="headerlink" title="需要总结内容"></a>需要总结内容</h3><h4 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h4><ul><li><a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/" target="_blank" rel="noopener">Google开源项目风格</a></li><li>初始化列表</li><li><a href="http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/" target="_blank" rel="noopener">STL 元素要求</a></li><li>CComPtr 用法OB总结</li><li>static 用法总结<br>  <a href="http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html" target="_blank" rel="noopener">static关键字详解</a><br>  <a href="http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html" target="_blank" rel="noopener">static作用</a></li><li>const 查看是否已完善</li><li>类型转换：<code>static_cast</code> <code>dynamic_cast</code> <code>const_cast</code> <code>reinterpret_cast</code> <a href="https://www.cnblogs.com/chio/archive/2007/07/18/822389.html" target="_blank" rel="noopener">参考</a></li><li>extern 用法总结<br>  <a href="http://blog.sina.com.cn/s/blog_74a459380101rjh4.html" target="_blank" rel="noopener">多个源文件共用一个全局变量</a><br>  <a href="http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html" target="_blank" rel="noopener">extern关键字详解</a><br>  <a href="http://blog.csdn.net/candyliuxj/article/details/7853938" target="_blank" rel="noopener">全局变量的声明和定义</a></li><li>inline 用法</li><li>explicit 用法</li><li>#pragma pack([show]|[push|pop][, identifier], n)</li><li>仿函数 <a href="http://blog.csdn.net/tianshuai1111/article/details/7687983" target="_blank" rel="noopener">【C++ STL】深入解析神秘的 — 仿函数</a></li><li>std::transform(retValue.begin(), retValue.end(), retValue.begin(), toupper);</li><li>类成员函数指针</li><li>重点 std::packaged_task std::future std::chrono</li><li>WinUI : SkinUI DirectUI DuiEngine(“svn checkout <a href="http://duiengine.googlecode.com/svn/trunk/" target="_blank" rel="noopener">http://duiengine.googlecode.com/svn/trunk/</a> duiengine-read-only”)</li><li>C++11 异步编程<br>  <a href="http://www.cnblogs.com/chengyuanchun/p/5394843.html" target="_blank" rel="noopener">深入浅出std::async</a><br>  <a href="http://www.cnblogs.com/qicosmos/p/3534211.html" target="_blank" rel="noopener">用C++11的std::async代替线程的创建</a><br>  <a href="http://cnodejs.org/topic/58ddd7a303d476b42d34c911" target="_blank" rel="noopener">协程概念</a></li><li>并发编程<br>自旋锁：<a href="http://blog.csdn.net/a675311/article/details/49096435" target="_blank" rel="noopener">自旋锁（spin lock）与互斥量的区别</a>, <a href="http://www.cnblogs.com/cposture/p/SpinLock.html" target="_blank" rel="noopener">【原创+整理】线程同步之详解自旋锁</a>, <a href="http://blog.csdn.net/sharemyfree/article/details/47338001" target="_blank" rel="noopener">C++11实现自旋锁</a></li><li><a href="https://www.byvoid.com/zhs/blog/string-hash-compare" target="_blank" rel="noopener">字符串 Hash 函数</a> <code>BKDRHash</code> <code>APHash</code> <code>DJBHash</code> <code>JSHash</code> <code>RSHash</code> <code>SDBMHash</code> <code>PJWHash</code> <code>ELFHash</code></li></ul><h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><ul><li>高性存储<br>  <a href="https://tech.meituan.com/disruptor.html" target="_blank" rel="noopener">高性能队列——Disruptor</a><br>  <a href="http://ifeve.com/disruptor/" target="_blank" rel="noopener">并发框架Disruptor译文</a></li></ul><h4 id="VisualStudio"><a href="#VisualStudio" class="headerlink" title="VisualStudio"></a>VisualStudio</h4><ul><li>VC 编译器参数设置<br><a href="http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/" target="_blank" rel="noopener">显示类内存布局</a></li><li>dllimport、dllexport<br><a href="http://blog.csdn.net/u010055724/article/details/51538686" target="_blank" rel="noopener">VS下 dllimport与dllexport作用与区别</a></li></ul><h4 id="BAT-批处理"><a href="#BAT-批处理" class="headerlink" title="BAT 批处理"></a>BAT 批处理</h4><p>  <a href="http://www.jb51.net/article/97588.htm" target="_blank" rel="noopener">DOS批处理中%~dp0等扩充变量语法详解</a></p><ul><li>系统应用：<code>shutdown</code>、<code>sc</code>、<code>reg</code>。</li></ul><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><ul><li><code>局部敏感哈希</code></li></ul><h3 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h3><h4 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h4><ul><li><a href="https://my.oschina.net/90888/blog/830379" target="_blank" rel="noopener">FTP协议（指令集）</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      临时记录，后续完善，以免忘记。
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CPlusPlus中的坑</title>
+    <link href="https://xautshuanglong.github.io/2016/11/04/CPlusPlus/CPlusPlus%E4%B8%AD%E7%9A%84%E5%9D%91/"/>
+    <id>https://xautshuanglong.github.io/2016/11/04/CPlusPlus/CPlusPlus中的坑/</id>
+    <published>2016-11-04T02:21:15.000Z</published>
+    <updated>2018-06-07T06:25:37.048Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>吃一堑 长一智<br>不要在同一个坑里挣扎<br><a id="more"></a></p></blockquote><h3 id="Visual-Studio-运行时库-Runtime-Library"><a href="#Visual-Studio-运行时库-Runtime-Library" class="headerlink" title="Visual Studio 运行时库(Runtime Library)"></a>Visual Studio 运行时库(<code>Runtime Library</code>)</h3><table><thead><tr><th style="text-align:center">类型</th><th style="text-align:center">简称</th><th style="text-align:center">含义</th><th style="text-align:center">对应的库</th><th style="text-align:center">备注</th></tr></thead><tbody><tr><td style="text-align:center">Single-Thread</td><td style="text-align:center">/ML</td><td style="text-align:center">Release版的单线程静态库</td><td style="text-align:center">libc.lib</td><td style="text-align:center">VS2003后被废弃</td></tr><tr><td style="text-align:center">Single-Thread Debug</td><td style="text-align:center">/MLd</td><td style="text-align:center">Debug版的单线程静态库</td><td style="text-align:center">libcd.lib</td><td style="text-align:center">VS2003后被废弃</td></tr><tr><td style="text-align:center">Multi-Thread</td><td style="text-align:center">/MT</td><td style="text-align:center">Release版的多线程静态库</td><td style="text-align:center">libcmt.lib</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Multi-Thread Debug</td><td style="text-align:center">/MTd</td><td style="text-align:center">Debug版的多线程静态库</td><td style="text-align:center">libcmtd.lib</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Multi-Thread DLL</td><td style="text-align:center">/MD</td><td style="text-align:center">Release版的多线程动态库</td><td style="text-align:center">msvcrt.lib<br>msvcrtxx.dll</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Multi-Thread DLL Debug</td><td style="text-align:center">/MDd</td><td style="text-align:center">Debug版的多线程动态库</td><td style="text-align:center">msvcrtd.lib<br>msvcrtxxd.dll</td><td style="text-align:center">&nbsp;</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      避免重复跳坑
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+  </entry>
+  
+</feed>
