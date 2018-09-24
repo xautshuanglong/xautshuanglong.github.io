@@ -2,7 +2,7 @@
 title: Markdown 语法笔记
 date: 2016-04-10 15:46:20
 categories: Hexo
-tags: MarkDown
+tags: Markdown
 ---
 
 ### 概述

@@ -2,7 +2,7 @@
 title: Hexo 命令集
 date: 2016-04-02 19:02:42
 categories: Hexo
-tags: hexo
+tags: Hexo
 toc: true
 ---
 
