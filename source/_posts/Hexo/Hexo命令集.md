@@ -25,6 +25,9 @@ npm install hexo --save
 npm install hexo-deployer-git --save
 npm install hexo-deployer-heroku --save
 npm install hexo-deployer-rsync --save
+npm install hexo-filter-flowchart --save
+npm install hexo-filter-sequence --save
+npm install hexo-filter-mermaid-diagrams --save
 npm install hexo-fs --save
 npm install hexo-generator-archive --save
 npm install hexo-generator-category --save
@@ -44,5 +47,19 @@ npm install hexo-tag-bootstrap --save
 如果出现不识别命令，尝试将全局路径 node_global 加入到环境变量，其中包含 hexo 和 hexo.cmd。
 {% endalert %}
 
+{% alert danger %}
+hexo-filter-mermaid-diagrams markdown渲染问题
+{% endalert %}
+ejs 渲染时将 `-->` 替换成 `-&gt`，导致`mermaid.min.js`无法识别该语法。
+将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）
+``` js
+return `${start}<pre class="mermaid">${content}</pre>${end}`;
+```
+替换为：
+``` js
+return `${start}<div class="mermaid">{% raw %}${content}{% endraw %}</div>${end}`;
+```
+
 ### 参考网址
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
+[mermaidjs.github.io](https://mermaidjs.github.io)
