@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2018-06-07T06:25:37.053Z</updated>
+  <updated>2018-09-25T06:59:02.327Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown流程图</title>
+    <link href="https://xautshuanglong.github.io/2018/09/24/Hexo/Markdown%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xautshuanglong.github.io/2018/09/24/Hexo/Markdown流程图笔记/</id>
+    <published>2018-09-24T08:04:36.000Z</published>
+    <updated>2018-09-25T06:59:02.327Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简单流程图元素表示"><a href="#简单流程图元素表示" class="headerlink" title="简单流程图元素表示"></a>简单流程图元素表示</h2><a id="more"></a><h3 id="1-Flowchart"><a href="#1-Flowchart" class="headerlink" title="1. Flowchart"></a>1. Flowchart</h3><div id="flowchart-0" class="flow-chart"></div><h3 id="2-Sequence"><a href="#2-Sequence" class="headerlink" title="2. Sequence"></a>2. Sequence</h3><div id="sequence-0"></div><h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><div class="mermaid">graph TD    A --> B    A --> C    B --> D    C --> D</div><div class="mermaid">graph TD    B["fa:fa-twitter for pease"]    B-->C[fa:fa-ban forbidden]    B-->D(fa:fa-spinner)    B-->E(A fa:fa-camera-retro perhaps?)</div><h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><div class="mermaid">sequenceDiagram    participant Alice    participant Bob    Alice->John: Hello John, how are you?    loop Healthcheck        John->John: Fight against hypochondria    end    Note right of John: Rational thoughts <br>prevail...    John-->Alice: Great!    John->Bob: How about you?    Bob-->John: Jolly good!</div><h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><div class="mermaid">gantt    dateFormat  YYYY-MM-DD    title Adding GANTT diagram functionality to mermaid    section A section    Completed task            :done,    des1, 2014-01-06,2014-01-08    Active task               :active,  des2, 2014-01-09, 3d    Future task               :         des3, after des2, 5d    Future task2              :         des4, after des3, 5d    section Critical tasks    Completed task in the critical line :crit, done, 2014-01-06,24h    Implement parser and jison          :crit, done, after des1, 2d    Create tests for parser             :crit, active, 3d    Future task in critical line        :crit, 5d    Create tests for renderer           :2d    Add to mermaid                      :1d</div><h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><div class="mermaid">classDiagram    Class01 &lt;|-- AVeryLongClass : Cool    Class03 *-- Class04    Class05 o-- Class06    Class07 .. Class08    Class09 --> C2 : Where am i?    Class09 --* C3    Class09 --|> Class07    Class07 : equals()    Class07 : Object[] elementData    Class01 : size()    Class01 : int chimp    Class01 : int gorilla    Class08 <--> C2 : Cool label</--></div><p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始e=>end: 登录io1=>inputoutput: 输入用户名密码sub1=>subroutine: 数据库查询子类cond=>condition: 是否有此用户cond2=>condition: 密码是否正确op=>operation: 读入用户信息st->io1->sub1->condcond(yes,right)->cond2cond(no)->io1(right)cond2(yes,right)->op->econd2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子participant 网页participant 商品详情服务器 as Aparticipant 商品价格服务器 as BNote over 网页:用户选择商品网页->A:查询A->B:查询B->B:查询DB并计算B-->A:返回A->A:获取其他信息A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;简单流程图元素表示&quot;&gt;&lt;a href=&quot;#简单流程图元素表示&quot; class=&quot;headerlink&quot; title=&quot;简单流程图元素表示&quot;&gt;&lt;/a&gt;简单流程图元素表示&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://xautshuanglong.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Markdown" scheme="https://xautshuanglong.github.io/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>内存池技术</title>
@@ -408,26 +430,6 @@
     <summary type="html">
     
       临时记录，后续完善，以免忘记。
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CPlusPlus中的坑</title>
-    <link href="https://xautshuanglong.github.io/2016/11/04/CPlusPlus/CPlusPlus%E4%B8%AD%E7%9A%84%E5%9D%91/"/>
-    <id>https://xautshuanglong.github.io/2016/11/04/CPlusPlus/CPlusPlus中的坑/</id>
-    <published>2016-11-04T02:21:15.000Z</published>
-    <updated>2018-06-07T06:25:37.048Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>吃一堑 长一智<br>不要在同一个坑里挣扎<br><a id="more"></a></p></blockquote><h3 id="Visual-Studio-运行时库-Runtime-Library"><a href="#Visual-Studio-运行时库-Runtime-Library" class="headerlink" title="Visual Studio 运行时库(Runtime Library)"></a>Visual Studio 运行时库(<code>Runtime Library</code>)</h3><table><thead><tr><th style="text-align:center">类型</th><th style="text-align:center">简称</th><th style="text-align:center">含义</th><th style="text-align:center">对应的库</th><th style="text-align:center">备注</th></tr></thead><tbody><tr><td style="text-align:center">Single-Thread</td><td style="text-align:center">/ML</td><td style="text-align:center">Release版的单线程静态库</td><td style="text-align:center">libc.lib</td><td style="text-align:center">VS2003后被废弃</td></tr><tr><td style="text-align:center">Single-Thread Debug</td><td style="text-align:center">/MLd</td><td style="text-align:center">Debug版的单线程静态库</td><td style="text-align:center">libcd.lib</td><td style="text-align:center">VS2003后被废弃</td></tr><tr><td style="text-align:center">Multi-Thread</td><td style="text-align:center">/MT</td><td style="text-align:center">Release版的多线程静态库</td><td style="text-align:center">libcmt.lib</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Multi-Thread Debug</td><td style="text-align:center">/MTd</td><td style="text-align:center">Debug版的多线程静态库</td><td style="text-align:center">libcmtd.lib</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Multi-Thread DLL</td><td style="text-align:center">/MD</td><td style="text-align:center">Release版的多线程动态库</td><td style="text-align:center">msvcrt.lib<br>msvcrtxx.dll</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Multi-Thread DLL Debug</td><td style="text-align:center">/MDd</td><td style="text-align:center">Debug版的多线程动态库</td><td style="text-align:center">msvcrtd.lib<br>msvcrtxxd.dll</td><td style="text-align:center">&nbsp;</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      避免重复跳坑
     
     </summary>
     

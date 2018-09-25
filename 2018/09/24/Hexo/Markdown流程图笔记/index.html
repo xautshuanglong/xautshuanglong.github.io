@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>内存池技术 | Shuanglong</title>
+  <title>Markdown流程图 | Shuanglong</title>
   <meta name="author" content="JiangShuanglong">
   
-  <meta name="description" content="内存宝贵 杜绝浪费">
+  <meta name="description" content="Descrition">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="内存池技术"/>
+  <meta property="og:title" content="Markdown流程图"/>
   <meta property="og:site_name" content="Shuanglong"/>
 
   
@@ -115,7 +115,7 @@ var _hmt = _hmt || [];
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 内存池技术</h1>
+			<h1 class="title title-inverse "> Markdown流程图</h1>
 		</div>		
 	
 
@@ -133,24 +133,90 @@ var _hmt = _hmt || [];
 
 	<!-- content -->
 	<div class="mypage">		
-	  
-		 <div class="alert alert-success description">
-			<i class="fa fa-info-circle"></i> <p>内存宝贵 杜绝浪费</p>
-			
-		 </div> <!-- alert -->
 	  		
 
-	  <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><a id="more"></a>
-<h2 id="优势-及-缺陷"><a href="#优势-及-缺陷" class="headerlink" title="优势 及 缺陷"></a>优势 及 缺陷</h2><h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><ul>
-<li>原理上比<code>malloc</code>及<code>new</code>快</li>
-<li>分配内存时不存在额外开销<code>overhead</code></li>
-<li>几乎不存在内存碎片</li>
-<li>无须逐个释放对象（释放整个池）</li>
-</ul>
-<h3 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h3><ul>
-<li>需要事先知道对象大小</li>
-<li>需要根据实际情况调节</li>
-</ul>
+	  <h2 id="简单流程图元素表示"><a href="#简单流程图元素表示" class="headerlink" title="简单流程图元素表示"></a>简单流程图元素表示</h2><a id="more"></a>
+<h3 id="1-Flowchart"><a href="#1-Flowchart" class="headerlink" title="1. Flowchart"></a>1. Flowchart</h3><div id="flowchart-0" class="flow-chart"></div>
+
+<h3 id="2-Sequence"><a href="#2-Sequence" class="headerlink" title="2. Sequence"></a>2. Sequence</h3><div id="sequence-0"></div>
+
+<h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><div class="mermaid">graph TD
+    A --> B
+    A --> C
+    B --> D
+    C --> D</div>
+
+<div class="mermaid">graph TD
+    B["fa:fa-twitter for pease"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner)
+    B-->E(A fa:fa-camera-retro perhaps?)</div>
+
+<h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><div class="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!</div>
+
+<h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><div class="mermaid">gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram functionality to mermaid
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d</div>
+
+<h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><div class="mermaid">classDiagram
+    Class01 &lt;|-- AVeryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --> C2 : Where am i?
+    Class09 --* C3
+    Class09 --|> Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 <--> C2 : Cool label</--></div>
+
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+e=>end: 登录
+io1=>inputoutput: 输入用户名密码
+sub1=>subroutine: 数据库查询子类
+cond=>condition: 是否有此用户
+cond2=>condition: 密码是否正确
+op=>operation: 读入用户信息
+st->io1->sub1->cond
+cond(yes,right)->cond2
+cond(no)->io1(right)
+cond2(yes,right)->op->e
+cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 	  
 	</div>
 
@@ -162,14 +228,14 @@ var _hmt = _hmt || [];
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2018/09/24/Hexo/Markdown流程图笔记/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2018/03/28/Algorithm/EncrytAndDecrypt/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2018/04/17/CommonSense/MemoryPoolTechnique/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -219,7 +285,7 @@ var _hmt = _hmt || [];
 		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
-		   issue_title: "内存池技术",
+		   issue_title: "Markdown流程图",
 		   issue_id: "undefined",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
@@ -240,7 +306,7 @@ var _hmt = _hmt || [];
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2018-04-17 
+	2018-09-24 
 	</div>
 	
 
@@ -251,7 +317,7 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/CommonSense/">CommonSense<span>5</span></a></li>
+    <li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
   </li>
 
     </ul>
@@ -264,7 +330,7 @@ var _hmt = _hmt || [];
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
+  <li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
     </ul>
 	</div>
 	
@@ -274,7 +340,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#简介"><span class="toc-article-text">简介</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#优势-及-缺陷"><span class="toc-article-text">优势 及 缺陷</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#优势"><span class="toc-article-text">优势</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#缺陷"><span class="toc-article-text">缺陷</span></a></li></ol></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#简单流程图元素表示"><span class="toc-article-text">简单流程图元素表示</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#1-Flowchart"><span class="toc-article-text">1. Flowchart</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#2-Sequence"><span class="toc-article-text">2. Sequence</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#3-Mermaid-Flowchart"><span class="toc-article-text">3. Mermaid Flowchart</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#4-Mermaid-Sequence"><span class="toc-article-text">4. Mermaid Sequence</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#5-Mermaid-Gantt"><span class="toc-article-text">5. Mermaid Gantt</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#6-Mermaid-Class"><span class="toc-article-text">6. Mermaid Class</span></a></li></ol></li></ol>
 		</div>
 	
 	</div>
@@ -357,6 +423,13 @@ var _hmt = _hmt || [];
 
 
 <!-- mermaid chart -->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 
 </body>

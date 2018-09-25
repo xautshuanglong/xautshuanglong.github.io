@@ -4,6 +4,108 @@
   
     
     <entry>
+      <title><![CDATA[Markdown流程图]]></title>
+      <url>https://xautshuanglong.github.io/2018/09/24/Hexo/Markdown%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="简单流程图元素表示"><a href="#简单流程图元素表示" class="headerlink" title="简单流程图元素表示"></a>简单流程图元素表示</h2><a id="more"></a>
+<h3 id="1-Flowchart"><a href="#1-Flowchart" class="headerlink" title="1. Flowchart"></a>1. Flowchart</h3><div id="flowchart-0" class="flow-chart"></div>
+
+<h3 id="2-Sequence"><a href="#2-Sequence" class="headerlink" title="2. Sequence"></a>2. Sequence</h3><div id="sequence-0"></div>
+
+<h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><div class="mermaid">graph TD
+    A --> B
+    A --> C
+    B --> D
+    C --> D</div>
+
+<div class="mermaid">graph TD
+    B["fa:fa-twitter for pease"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner)
+    B-->E(A fa:fa-camera-retro perhaps?)</div>
+
+<h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><div class="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!</div>
+
+<h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><div class="mermaid">gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram functionality to mermaid
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d</div>
+
+<h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><div class="mermaid">classDiagram
+    Class01 &lt;|-- AVeryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --> C2 : Where am i?
+    Class09 --* C3
+    Class09 --|> Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 <--> C2 : Cool label</--></div>
+
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+e=>end: 登录
+io1=>inputoutput: 输入用户名密码
+sub1=>subroutine: 数据库查询子类
+cond=>condition: 是否有此用户
+cond2=>condition: 密码是否正确
+op=>operation: 读入用户信息
+st->io1->sub1->cond
+cond(yes,right)->cond2
+cond(no)->io1(right)
+cond2(yes,right)->op->e
+cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Hexo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[内存池技术]]></title>
       <url>https://xautshuanglong.github.io/2018/04/17/CommonSense/MemoryPoolTechnique/</url>
       <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><a id="more"></a>
@@ -2141,9 +2243,9 @@ Handler.removeFilter() # 删除过滤器
         
         <tags>
             
-            <tag> log4py </tag>
-            
             <tag> Python </tag>
+            
+            <tag> log4py </tag>
             
         </tags>
         
@@ -2682,7 +2784,7 @@ Handler.removeFilter() # 删除过滤器
     
     <entry>
       <title><![CDATA[Markdown 语法笔记]]></title>
-      <url>https://xautshuanglong.github.io/2016/04/10/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
+      <url>https://xautshuanglong.github.io/2016/04/10/Hexo/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
 <ul>
 <li>宗旨 【实现易读易写】  </li>
@@ -2716,7 +2818,7 @@ Handler.removeFilter() # 删除过滤器
 </tr>
 <tr>
 <td style="text-align:center">内嵌</td>
-<td style="text-align:center">`内嵌`</td>
+<td style="text-align:center"><code>`内嵌`</code></td>
 <td style="text-align:center"><code>内嵌</code></td>
 </tr>
 <tr>
@@ -2797,7 +2899,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x78;&#106;&#115;&#x68;&#x75;&#x61;&#x6e;&#103;&#108;&#111;&#x6e;&#x67;&#x40;&#49;&#50;&#54;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#106;&#115;&#x68;&#x75;&#x61;&#x6e;&#103;&#108;&#111;&#x6e;&#x67;&#x40;&#49;&#50;&#54;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+</code></pre><p><a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x78;&#106;&#x73;&#104;&#x75;&#97;&#x6e;&#103;&#108;&#x6f;&#110;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#99;&#x6f;&#x6d;">&#x78;&#106;&#x73;&#104;&#x75;&#97;&#x6e;&#103;&#108;&#x6f;&#110;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
@@ -2869,14 +2971,14 @@ This is [an example][id] reference-style link.
       
         <categories>
             
-            <category> Web </category>
+            <category> Hexo </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> markdown </tag>
+            <tag> Markdown </tag>
             
         </tags>
         
@@ -2969,9 +3071,14 @@ This is [an example][id] reference-style link.
 </tr>
 </tbody>
 </table>
-<h3 id="相关-node-modules"><a href="#相关-node-modules" class="headerlink" title="相关 node_modules"></a>相关 node_modules</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令行工具，全局安装。</span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 页面生成所需模块，安装在站点目录下(仓库根目录)</span></span><br><span class="line">npm install hexo --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-fs --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-search --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-renderer-ejs --save</span><br><span class="line">npm install hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-stylus --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-tag-bootstrap --save</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="相关-node-modules"><a href="#相关-node-modules" class="headerlink" title="相关 node_modules"></a>相关 node_modules</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令行工具，全局安装。</span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 页面生成所需模块，安装在站点目录下(仓库根目录)</span></span><br><span class="line">npm install hexo --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-filter-flowchart --save</span><br><span class="line">npm install hexo-filter-sequence --save</span><br><span class="line">npm install hexo-filter-mermaid-diagrams --save</span><br><span class="line">npm install hexo-fs --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-search --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-renderer-ejs --save</span><br><span class="line">npm install hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-stylus --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-tag-bootstrap --save</span><br></pre></td></tr></table></figure>
 <div class="alert alert-warning"><i class="fa fa-bell"></i>  如果出现不识别命令，尝试将全局路径 node_global 加入到环境变量，其中包含 hexo 和 hexo.cmd。</div>
-<h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h3><p><a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="noopener">hexo常用命令笔记</a></p>
+<div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams markdown渲染问题</div>
+<p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class="mermaid"&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class="mermaid"&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure></p>
+<div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突</div>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将语句：</span></span><br><span class="line">Class01 &lt;|-- AVeryLongClass : Cool</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line">Class01 &amp;lt;|-- AVeryLongClass : Cool</span><br></pre></td></tr></table></figure>
+<h3 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h3><p><a href="https://segmentfault.com/a/1190000002632530" target="_blank" rel="noopener">hexo常用命令笔记</a><br><a href="https://mermaidjs.github.io" target="_blank" rel="noopener">mermaidjs.github.io</a></p>
 ]]></content>
       
         <categories>
@@ -2983,7 +3090,7 @@ This is [an example][id] reference-style link.
         
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
         </tags>
         
