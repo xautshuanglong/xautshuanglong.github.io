@@ -14,6 +14,7 @@ toc: true
 |new draft "title"|hexo new draft "title"|创建一篇新草稿|
 |publish [layout] "title"|hexo publish post "title"|发布一篇草稿 layout=post\page|
 
+<!-- More -->
 
 ### 相关 node_modules
 ```bash
@@ -50,14 +51,24 @@ npm install hexo-tag-bootstrap --save
 {% alert danger %}
 hexo-filter-mermaid-diagrams markdown渲染问题
 {% endalert %}
+
 ejs 渲染时将 `-->` 替换成 `-&gt`，导致`mermaid.min.js`无法识别该语法。
-将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）
 ``` js
+// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）
 return `${start}<pre class="mermaid">${content}</pre>${end}`;
-```
-替换为：
-``` js
+// 替换为：
 return `${start}<div class="mermaid">{% raw %}${content}{% endraw %}</div>${end}`;
+```
+
+{% alert danger %}
+hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突
+{% endalert %}
+
+``` js
+// 将语句：
+Class01 <|-- AVeryLongClass : Cool
+// 替换为：
+Class01 &lt;|-- AVeryLongClass : Cool
 ```
 
 ### 参考网址
