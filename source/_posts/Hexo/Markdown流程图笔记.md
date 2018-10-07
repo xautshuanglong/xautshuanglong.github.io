@@ -7,12 +7,28 @@ tags: Markdown
 toc: true
 ---
 
-## 简单流程图元素表示
+## 简单流程图示例
 
 <!-- More -->
 
 ### 1. Flowchart
 ``` flow
+st=>start: 开始
+e=>end: 登录
+io1=>inputoutput: 输入用户名密码
+sub1=>subroutine: 数据库查询子类
+cond=>condition: 是否有此用户
+cond2=>condition: 密码是否正确
+op=>operation: 读入用户信息
+st->io1->sub1->cond
+cond(yes,right)->cond2
+cond(no)->io1(right)
+cond2(yes,right)->op->e
+cond2(no)->io1
+```
+
+``` md
+---------- flow ----------
 st=>start: 开始
 e=>end: 登录
 io1=>inputoutput: 输入用户名密码
@@ -42,6 +58,21 @@ A->A:获取其他信息
 A-->网页:返回
 ```
 
+``` md
+---------- sequence ----------
+title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回
+```
+
 ### 3. Mermaid Flowchart
 ``` mermaid
 graph TD
@@ -51,7 +82,25 @@ graph TD
     C --> D
 ```
 
+``` md
+---------- mermaid ----------
+graph TD
+    A --> B
+    A --> C
+    B --> D
+    C --> D
+```
+
 ``` mermaid
+graph TD
+    B["fa:fa-twitter for pease"]
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner)
+    B-->E(A fa:fa-camera-retro perhaps?)
+```
+
+``` md
+---------- mermaid ----------
 graph TD
     B["fa:fa-twitter for pease"]
     B-->C[fa:fa-ban forbidden]
@@ -74,8 +123,42 @@ sequenceDiagram
     Bob-->John: Jolly good!
 ```
 
+``` md
+---------- mermaid ----------
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->John: Hello John, how are you?
+    loop Healthcheck
+        John->John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail...
+    John-->Alice: Great!
+    John->Bob: How about you?
+    Bob-->John: Jolly good!
+```
+
 ### 5. Mermaid Gantt
 ``` mermaid
+gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram functionality to mermaid
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2              :         des4, after des3, 5d
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d
+```
+
+``` md
+---------- mermaid ----------
 gantt
     dateFormat  YYYY-MM-DD
     title Adding GANTT diagram functionality to mermaid
@@ -111,3 +194,45 @@ classDiagram
     Class08 &lt;--> C2 : Cool label
 ```
 
+``` md
+---------- mermaid ----------
+classDiagram
+    Class01 &lt;|-- AVeryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --> C2 : Where am i?
+    Class09 --* C3
+    Class09 --|> Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 &lt;--> C2 : Cool label
+```
+
+## 编码注意事项
+
+{% alert danger %}
+hexo-filter-mermaid-diagrams markdown渲染问题
+{% endalert %}
+
+ejs 渲染时将 `-->` 替换成 `-&gt`，导致`mermaid.min.js`无法识别该语法。
+``` js
+// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）
+return `${start}<pre class="mermaid">${content}</pre>${end}`;
+// 替换为：
+return `${start}<div class="mermaid">{% raw %}${content}{% endraw %}</div>${end}`;
+```
+
+{% alert danger %}
+hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突
+{% endalert %}
+
+``` js
+// 将语句：
+Class01 <|-- AVeryLongClass : Cool
+// 替换为：
+Class01 &lt;|-- AVeryLongClass : Cool
+```
