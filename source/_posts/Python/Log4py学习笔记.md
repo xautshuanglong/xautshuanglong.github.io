@@ -71,7 +71,9 @@ Logging messages which are less severe than specified level will be ignored.
 |NOTSET|0|未置|
 
 ## Logging 模块实战
-1. 小例子
+
+### 1. 小例子
+
 ```bash
 # encoding:utf-8
 print("log4py testing")
@@ -88,7 +90,10 @@ log.error("Error Testing ...")
 log.fatal("Fatal Testing ...")
 log.critical("Critical Testing ...")
 ```
-2. 进阶例子
+
+### 2. 进阶例子
+
+
 ```bash
 # encoding:utf-8
 print("log4py testing")
@@ -130,7 +135,9 @@ log.critical("Critical Testing ...")
 
 logging.shutdown()# 更安全地退出
 ```
-3. 配置文件使用说明 
+
+### 3. 配置文件使用说明 
+
 ```bash
 	<< Log4pyConfig.py >>
 
@@ -213,7 +220,9 @@ datefmt=%H:%M:%S
 [formatter_rotateFmt]
 format=[ %(levelname)-8s ] %(asctime)s %(name)s %(message)s
 ```
-4. 字典配置说明
+
+### 4. 字典配置说明
+
 ```bash
 	<< Log4pyDictConfig.py >>
 # encoding:utf-8

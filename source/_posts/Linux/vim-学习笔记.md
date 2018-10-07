@@ -7,8 +7,11 @@ toc: true
 ---
 
 ## vim 常用命令图解
-![shuanglong](http://obcba9r77.bkt.clouddn.com/images/Linux/20160415_0.png)
+![20160415_0.png](http://obcba9r77.bkt.clouddn.com/images/Linux/20160415_0.png)
 <!--more-->
+
+![vi-vim-cheat-sheet-sch.gif](http://obcba9r77.bkt.clouddn.com/images/Linux/vi-vim-cheat-sheet-sch.gif)
+
 ## 命令（快捷键）详解
 	1. 编辑模式  
 
