@@ -205,3 +205,21 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeIgnore=['\.pyc$','\~$','\.swp$','\.o$','\.a$','\.so$']
 ```
 
+## vim 疑难
+
+### 换行符处理
+
+{% label 问题描述 danger %}
+vim 保存后整个文档都被标记为更改，差异对比显示每行末尾出现`^M`字样。
+
+{% label 问题根源 primary %}
+Unix 只需一个换行符(\n) `0A`，
+DOS/Windows 需要一个回车符加一个换行符(\r\n) `0D0A`。
+
+{% label 解决方案 success %}
+``` c
+:e ++ff=unix         /*设置 fileformats 为 unix，0D \r 被显示 ^M*/
+:%s/[^[:print]]$//g  /*清除行末不可打印字符但不限于 ^M*/
+:%s/[[:space]]*$//g  /*清楚行末空白字符*/
+:%s/\^M//g           /* ^M == Ctrl+v, Ctrl+m */
+```
