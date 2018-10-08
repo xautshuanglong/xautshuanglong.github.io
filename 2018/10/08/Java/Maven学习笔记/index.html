@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Markdown 语法笔记 | Shuanglong</title>
+  <title>Maven学习笔记 | Shuanglong</title>
   <meta name="author" content="JiangShuanglong">
   
   <meta name="description" content="Descrition">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Markdown 语法笔记"/>
+  <meta property="og:title" content="Maven学习笔记"/>
   <meta property="og:site_name" content="Shuanglong"/>
 
   
@@ -115,7 +115,7 @@ var _hmt = _hmt || [];
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> Markdown 语法笔记</h1>
+			<h1 class="title title-inverse "> Maven学习笔记</h1>
 		</div>		
 	
 
@@ -135,188 +135,17 @@ var _hmt = _hmt || [];
 	<div class="mypage">		
 	  		
 
-	  <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
-<ul>
-<li>宗旨 【实现易读易写】  </li>
-<li>兼容 【成为一种适用于网络的语言】  </li>
-</ul>
+	  <blockquote>
+<p>Maven 学习路上的点点滴滴</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">效果</th>
-<th style="text-align:center">语法格式</th>
-<th style="text-align:center">示例效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">加粗</td>
-<td style="text-align:center"><code>**加粗**</code></td>
-<td style="text-align:center"><strong>加粗</strong></td>
-</tr>
-<tr>
-<td style="text-align:center">斜体</td>
-<td style="text-align:center"><code>*斜体*</code></td>
-<td style="text-align:center"><em>斜体</em></td>
-</tr>
-<tr>
-<td style="text-align:center">删除线</td>
-<td style="text-align:center"><code>~~text~~</code></td>
-<td style="text-align:center"><del>text</del></td>
-</tr>
-<tr>
-<td style="text-align:center">内嵌</td>
-<td style="text-align:center"><code>`内嵌`</code></td>
-<td style="text-align:center"><code>内嵌</code></td>
-</tr>
-<tr>
-<td style="text-align:center">无序列表</td>
-<td style="text-align:center"><code>* 列表</code></td>
-<td style="text-align:center">行首（*后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">无序列表</td>
-<td style="text-align:center"><code>+ 列表</code></td>
-<td style="text-align:center">行首（+后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">无序列表</td>
-<td style="text-align:center"><code>- 列表</code></td>
-<td style="text-align:center">行首（-后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">有序列表</td>
-<td style="text-align:center"><code>1. 列表</code></td>
-<td style="text-align:center">行首（.后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">引用</td>
-<td style="text-align:center"><code>&gt; 引用</code></td>
-<td style="text-align:center">行首（&gt;后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">标题1</td>
-<td style="text-align:center"><code># 标题1</code></td>
-<td style="text-align:center">行首（#后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">标题2</td>
-<td style="text-align:center"><code>## 标题2</code></td>
-<td style="text-align:center">行首（#后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">标题3</td>
-<td style="text-align:center"><code>### 标题3</code></td>
-<td style="text-align:center">行首（#后有空格）</td>
-</tr>
-<tr>
-<td style="text-align:center">链接</td>
-<td style="text-align:center"><code>[百度](http://www.baidu.com &quot;百度&quot;)</code></td>
-<td style="text-align:center"><a href="http://www.baidu.com" title="百度" target="_blank" rel="noopener">百度</a>(标题双引号前有空格)</td>
-</tr>
-<tr>
-<td style="text-align:center">图片</td>
-<td style="text-align:center"><code>![alt](/css/images/favicon.ico)</code></td>
-<td style="text-align:center"><img src="/css/images/favicon.ico" alt="Alert"></td>
-</tr>
-</tbody>
-</table>
-<h3 id="几点说明"><a href="#几点说明" class="headerlink" title="几点说明"></a>几点说明</h3><ol>
-<li>关于有序列表，序号可以不按顺序标记，甚至可以相同。</li>
-<li>有序列表和无序列表混杂时，需用换行来区分。</li>
-<li>引用区块中可以嵌套列表。</li>
-<li>空格可以用 Tab 代替。</li>
-</ol>
-<h3 id="特殊语法"><a href="#特殊语法" class="headerlink" title="特殊语法"></a>特殊语法</h3><ul>
-<li>代码区块<br>行首4个空格，可用 Tab 代替，要注意 Tab 的长度（4个空格以上）。<br>将被解释成以下 html 格式：<pre><code>&lt;pre&gt;
-    &lt;code&gt;这是代码区块中的文字。&lt;/code&gt;
-&lt;/pre&gt;
-</code></pre>效果如下：<pre><code>这是代码区块中的文字。  
-</code></pre></li>
-<li>链接的几种实现  <ol>
-<li>内联式  <pre><code>This is [an example](/ &quot;home&quot;) inline link.
-</code></pre>This is <a href="/" title="home">an example</a> inline link.(可以使用相对路径)</li>
-<li>参考式<pre><code>[id]: / &quot;home&quot;.
-This is [an example][id] reference-style link.
-</code></pre> <em>注：[id]要在行首，可以有字母、数字、空白和标点符号，可以使用相对路径。</em><br>This is <a href="/" title="home">an example</a> reference-style link.</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p>自动链接  </p>
-<pre><code>&lt;http://www.baidu.com&gt;
-</code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
-<pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x78;&#x6a;&#x73;&#x68;&#117;&#x61;&#110;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#x6a;&#x73;&#x68;&#117;&#x61;&#110;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-</li>
-<li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
-<pre><code>*需要转换*
-\*不要转换\*
-</code></pre><p><em>需要转换</em><br>*不要转换*  </p>
-</li>
-</ul>
-<p><strong>需要转换的特殊字符如下所示：</strong>  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">符号</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">\</td>
-<td style="text-align:center">反斜线</td>
-</tr>
-<tr>
-<td style="text-align:center">`</td>
-<td style="text-align:center">反引号</td>
-</tr>
-<tr>
-<td style="text-align:center">*</td>
-<td style="text-align:center">星号</td>
-</tr>
-<tr>
-<td style="text-align:center">_</td>
-<td style="text-align:center">底线</td>
-</tr>
-<tr>
-<td style="text-align:center">{}</td>
-<td style="text-align:center">花括号</td>
-</tr>
-<tr>
-<td style="text-align:center">[]</td>
-<td style="text-align:center">方括号</td>
-</tr>
-<tr>
-<td style="text-align:center">()</td>
-<td style="text-align:center">括弧</td>
-</tr>
-<tr>
-<td style="text-align:center">#</td>
-<td style="text-align:center">井字号</td>
-</tr>
-<tr>
-<td style="text-align:center">+</td>
-<td style="text-align:center">加号</td>
-</tr>
-<tr>
-<td style="text-align:center">-</td>
-<td style="text-align:center">减号</td>
-</tr>
-<tr>
-<td style="text-align:center">.</td>
-<td style="text-align:center">英文句点</td>
-</tr>
-<tr>
-<td style="text-align:center">!</td>
-<td style="text-align:center">惊叹号</td>
-</tr>
-</tbody>
-</table>
-<p><strong>转义解决不了的字符</strong><br>如果碰见特殊字符，可以通过 <strong>Unicode</strong> 编码进行处理：<br>eg:在表格中插入<code>|</code>,可用 <code>&amp;#124;</code>.</p>
+<h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p>
+<h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
+<p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
 	  
 	</div>
 
@@ -328,14 +157,14 @@ This is [an example][id] reference-style link.
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2016/04/15/Linux/vim-学习笔记/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016/04/04/CPlusPlus/Log4cpp的编译与使用/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2018/09/24/Hexo/Markdown流程图笔记/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -385,7 +214,7 @@ This is [an example][id] reference-style link.
 		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
-		   issue_title: "Markdown 语法笔记",
+		   issue_title: "Maven学习笔记",
 		   issue_id: "undefined",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
@@ -406,7 +235,7 @@ This is [an example][id] reference-style link.
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-04-10 
+	2018-10-08 
 	</div>
 	
 
@@ -417,7 +246,7 @@ This is [an example][id] reference-style link.
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    <li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
+    <li><a href="/categories/Java/">Java<span>1</span></a></li>
   </li>
 
     </ul>
@@ -430,13 +259,18 @@ This is [an example][id] reference-style link.
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
+  <li><a href="/tags/Maven/">Maven<span>1</span></a></li>
     </ul>
 	</div>
 	
 
 	<!-- toc -->
 	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Maven-安装"><span class="toc-article-text">Maven 安装</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Maven-配置"><span class="toc-article-text">Maven 配置</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#使用外部Maven"><span class="toc-article-text">使用外部Maven</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#JRE-版本配置"><span class="toc-article-text">JRE 版本配置</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Maven-仓库"><span class="toc-article-text">Maven 仓库</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#远程-本地-仓库"><span class="toc-article-text">(远程/本地)仓库</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#国内高速镜像站"><span class="toc-article-text">国内高速镜像站</span></a></li></ol></li></ol>
+		</div>
 	
 	</div>
 	
