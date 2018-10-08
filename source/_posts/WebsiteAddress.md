@@ -88,6 +88,8 @@ toc: true
 ## Libraries
 {% btn https://curl.haxx.se/ Curl danger %}
 {% btn https://www.zlib.net Zlib danger %}
+{% btn https://xmlgraphics.apache.org/fop/resources.html Apache™&#32;FOP&#32;Project danger %}
+{% btn http://foa.sourceforge.net/download.html#example Formatting&#32;Objects&#32;Authoring danger %}
 
 ## 公共平台
 {% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
