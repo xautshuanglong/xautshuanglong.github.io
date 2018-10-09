@@ -91,6 +91,11 @@ toc: true
 {% btn https://xmlgraphics.apache.org/fop/resources.html Apache™&#32;FOP&#32;Project danger %}
 {% btn http://foa.sourceforge.net/download.html#example Formatting&#32;Objects&#32;Authoring danger %}
 
+{% btn https://gitlab.gnome.org/GNOME/libxml2/ gitlab&#32;libxml2 danger %}
+{% btn https://gitlab.gnome.org/GNOME/libxslt/ gitlab&#32;libxslt danger %}
+{% btn https://github.com/GNOME/libxml2 github&#32;libxml2 danger %}
+{% btn https://github.com/GNOME/libxslt github&#32;libxslt danger %}
+
 ## 公共平台
 {% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
 {% btn https://portal.qiniu.com/signin 七牛云存储 primary %}
