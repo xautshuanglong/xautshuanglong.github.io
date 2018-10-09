@@ -95,6 +95,9 @@ toc: true
 {% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
 {% btn https://portal.qiniu.com/signin 七牛云存储 primary %}
 
+## 文件编码格式
+{% btn https://blog.csdn.net/lamb7758/article/details/56015876 PDF&#32;文档结构说明 warning %}
+
 ## Host
 https://github.com/racaljk/hosts
 https://coding.net/u/scaffrey/p/hosts/git
