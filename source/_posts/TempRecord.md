@@ -149,6 +149,10 @@ https://www.microsoft.com/com/default.mspx
     [高性能队列——Disruptor](https://tech.meituan.com/disruptor.html)
 	[并发框架Disruptor译文](http://ifeve.com/disruptor/)
 
+#### XML
+* XML 解释器 `DOM` `SAX` `Xerces` `Castor`
+   [解析xml文件的几种方法和原理](https://blog.csdn.net/witsmakemen/article/details/6980424)
+
 #### VisualStudio
 * VC 编译器参数设置
   [显示类内存布局](http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/)

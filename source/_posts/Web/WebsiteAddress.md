@@ -90,6 +90,7 @@ toc: true
 {% btn https://www.zlib.net Zlib danger %}
 {% btn https://xmlgraphics.apache.org/fop/resources.html Apache™&#32;FOP&#32;Project danger %}
 {% btn http://foa.sourceforge.net/download.html#example Formatting&#32;Objects&#32;Authoring danger %}
+{% btn https://www.w3cschool.cn/xslfo XSL-FO教程 danger %}
 
 {% btn https://gitlab.gnome.org/GNOME/libxml2/ gitlab&#32;libxml2 danger %}
 {% btn https://gitlab.gnome.org/GNOME/libxslt/ gitlab&#32;libxslt danger %}
