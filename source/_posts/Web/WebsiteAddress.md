@@ -97,12 +97,15 @@ toc: true
 {% btn https://github.com/GNOME/libxml2 github&#32;libxml2 danger %}
 {% btn https://github.com/GNOME/libxslt github&#32;libxslt danger %}
 
+## NetworkProgram
+{% btn http://www.52im.net/thread-50-1-1.html 即时通讯网 primary %}
+
 ## 公共平台
-{% btn http://tongji.baidu.com/web/welcome/login 百度统计 primary %}
-{% btn https://portal.qiniu.com/signin 七牛云存储 primary %}
+{% btn http://tongji.baidu.com/web/welcome/login 百度统计 warning %}
+{% btn https://portal.qiniu.com/signin 七牛云存储 warning %}
 
 ## 文件编码格式
-{% btn https://blog.csdn.net/lamb7758/article/details/56015876 PDF&#32;文档结构说明 warning %}
+{% btn https://blog.csdn.net/lamb7758/article/details/56015876 PDF&#32;文档结构说明 danger %}
 
 ## Host
 https://github.com/racaljk/hosts
