@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2018-10-08T06:25:03.492Z</updated>
+  <updated>2018-10-26T10:43:33.977Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -17,13 +17,110 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>XML深入理解</title>
+    <link href="https://xautshuanglong.github.io/2018/10/26/Web/XML%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/"/>
+    <id>https://xautshuanglong.github.io/2018/10/26/Web/XML深入理解/</id>
+    <published>2018-10-26T07:33:26.000Z</published>
+    <updated>2018-10-26T10:43:33.977Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>XML 模型概念、编程操作。</p></blockquote><p><code>XML</code> 可扩展标记语言（EXtensible Markup Language），解析方法包括下面两种：<br><code>DOM</code>（Document Object Model）将XML文件保存为树的形式，操作简单，便于访问；<br><code>SAX</code>（Simple API for XML）速度快，不便于访问。</p><a id="more"></a><h2 id="XML-简介"><a href="#XML-简介" class="headerlink" title="XML 简介"></a>XML 简介</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;XML 模型概念、编程操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;XML&lt;/code&gt; 可扩展标记语言（EXtensible Markup Language），解析方法包括下面两种：&lt;br&gt;&lt;code&gt;DOM&lt;/code&gt;（Document Object Model）将XML文件保存为树的形式，操作简单，便于访问；&lt;br&gt;&lt;code&gt;SAX&lt;/code&gt;（Simple API for XML）速度快，不便于访问。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="https://xautshuanglong.github.io/categories/Web/"/>
+    
+    
+      <category term="XML" scheme="https://xautshuanglong.github.io/tags/XML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 关键字总结</title>
+    <link href="https://xautshuanglong.github.io/2018/10/22/Java/Java%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93/"/>
+    <id>https://xautshuanglong.github.io/2018/10/22/Java/Java关键字总结/</id>
+    <published>2018-10-22T04:19:25.000Z</published>
+    <updated>2018-10-26T10:43:36.063Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>记录 java 中的关键字用法</p></blockquote><a id="more"></a><h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><p><a href="https://www.cnblogs.com/dotgua/p/6357951.html" target="_blank" rel="noopener">final关键则的几种用法</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;记录 java 中的关键字用法&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://xautshuanglong.github.io/categories/Java/"/>
+    
+    
+      <category term="keywords" scheme="https://xautshuanglong.github.io/tags/keywords/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache FOP 学习笔记</title>
+    <link href="https://xautshuanglong.github.io/2018/10/10/Java/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xautshuanglong.github.io/2018/10/10/Java/ApacheFOP学习笔记/</id>
+    <published>2018-10-10T02:45:38.000Z</published>
+    <updated>2018-10-10T06:41:22.045Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.</p></blockquote><a id="more"></a><h2 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h2><h3 id="中文显示"><a href="#中文显示" class="headerlink" title="中文显示"></a>中文显示</h3><ol><li><p>自动检测系统字体库<br><code>fop.xconf</code>默认配置为自动检测。<br>注意使用正确的字体家族名称。（可使用 Windows 自带字体查看器查询）<br><img src="http://obcba9r77.bkt.clouddn.com/images/Linux/WinFontViewer.png" alt="WinFontViewer.png"></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fo:block</span> <span class="attr">color</span>=<span class="string">"green"</span> <span class="attr">font-family</span>=<span class="string">"华文行楷"</span>&gt;</span></span><br><span class="line">    Hello, <span class="tag">&lt;<span class="name">xsl:value-of</span> <span class="attr">select</span>=<span class="string">"name"</span>/&gt;</span>!</span><br><span class="line">    <span class="tag">&lt;<span class="name">fo:external-graphic</span> <span class="attr">src</span>=<span class="string">"asf-logo.png"</span>/&gt;</span></span><br><span class="line">    中文测试</span><br><span class="line"><span class="tag">&lt;/<span class="name">fo:block</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>添加自定义字体库<br>在配置文件中注册字体<code>fop.xconf</code><br>可以任意定义字体名称<code>font-triplet name=&quot;xxx&quot;</code> ，使用时与其保持一致即可。<code>font-family=&quot;xxx&quot;</code></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">kerning</span>=<span class="string">"yes"</span> <span class="attr">embed-url</span>=<span class="string">"HanBiaoLiXuKeShuFa.ttf"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font-triplet</span> <span class="attr">name</span>=<span class="string">"LiXuKeShuFa"</span> <span class="attr">style</span>=<span class="string">"normal"</span> <span class="attr">weight</span>=<span class="string">"normal"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol><p><a href="https://xmlgraphics.apache.org/fop/2.3/fonts.html" target="_blank" rel="noopener">Apache™ FOP: Fonts</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="https://xautshuanglong.github.io/categories/Java/"/>
+    
+    
+      <category term="FOP" scheme="https://xautshuanglong.github.io/tags/FOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XSL学习笔记</title>
+    <link href="https://xautshuanglong.github.io/2018/10/09/Web/XSL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xautshuanglong.github.io/2018/10/09/Web/XSL学习笔记/</id>
+    <published>2018-10-09T03:29:06.000Z</published>
+    <updated>2018-10-09T04:28:51.777Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>起始于 XSL，结束于 XSLT、XPath 以及 XSL-FO</p></blockquote><a id="more"></a><h2 id="Chrome-XSLT转换无效"><a href="#Chrome-XSLT转换无效" class="headerlink" title="Chrome XSLT转换无效"></a>Chrome XSLT转换无效</h2><p>xml xslt 参见 <a href="http://www.runoob.com/xsl/xsl-transformation.html" target="_blank" rel="noopener">菜鸟教程</a></p><p>教程示例显示正常（文件存于web服务器端）；<br>使用 IE 浏览器转换成功正常显示页面。</p><p>解决方案：命令行启动<code>chrome</code>并加上<code>--allow-file-access-from-files</code>参数。<br><strong><em>注意：终止所有已运行的<code>chrome</code>进程。</em></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;起始于 XSL，结束于 XSLT、XPath 以及 XSL-FO&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="https://xautshuanglong.github.io/categories/Web/"/>
+    
+    
+      <category term="xsl" scheme="https://xautshuanglong.github.io/tags/xsl/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Maven学习笔记</title>
     <link href="https://xautshuanglong.github.io/2018/10/08/Java/Maven%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://xautshuanglong.github.io/2018/10/08/Java/Maven学习笔记/</id>
     <published>2018-10-08T02:53:44.000Z</published>
     <updated>2018-10-08T06:25:03.492Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Maven 学习路上的点点滴滴</p></blockquote><a id="more"></a><h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p><h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure><p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p><h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Maven 学习路上的点点滴滴</p></blockquote><a id="more"></a><h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p><h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p><h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -353,92 +450,6 @@
     
     
       <category term="Time" scheme="https://xautshuanglong.github.io/tags/Time/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ 11 中的新特性</title>
-    <link href="https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/"/>
-    <id>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/</id>
-    <published>2016-12-26T10:38:47.000Z</published>
-    <updated>2018-06-07T06:25:37.047Z</updated>
-    
-    <content type="html"><![CDATA[<p>C++ 11 新特性学习笔记：<br><code>default</code> 和 <code>delete</code> 修饰特殊成员函数。<br><a id="more"></a></p><h2 id="Defaulted-and-Deleted-function"><a href="#Defaulted-and-Deleted-function" class="headerlink" title="Defaulted and Deleted function"></a>Defaulted and Deleted function</h2><h2 id="Asynchronous-Programming"><a href="#Asynchronous-Programming" class="headerlink" title="Asynchronous Programming"></a>Asynchronous Programming</h2><div class="alert alert-warning"><i class="fa fa-bell"></i>  以下三点都满足时， std::future 析构可能导致阻塞：</div><p class="text-warning">1. 共享状态是在调用 std::async 时创建的；<br>2. 共享状态尚未处于 std::future_status::read 状态；<br>3. 被析构的当前对象持有共享状态的最后一个引用。<br></p><div class="alert alert-info"><i class="fa fa-info"></i>  获取 std::future 结果的方法：</div><p class="text-info">1. std::future::get()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成并返回异步执行结果。<br>2. std::future::wait()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成，无返回值。<br>3. std::future::wait_for()&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，超时等待异步操作完成，返回异步操作执行状态。<br>4. std::future::wait_until()&nbsp;&nbsp;阻塞当前线程，等待异步操作完成直到指定的时间点。<br></p><table><thead><tr><th style="text-align:left">Name</th><th style="text-align:left">Description</th></tr></thead><tbody><tr><td style="text-align:left">future::get</td><td style="text-align:left">Retrieves the result that is stored in the associated asynchronous state.</td></tr><tr><td style="text-align:left">future::wait</td><td style="text-align:left">Blocks the current thread until the associated asynchronous state is ready.</td></tr><tr><td style="text-align:left">future::wait_for</td><td style="text-align:left">Blocks until the associated asynchronous state is ready <br>or until the specified time has elapsed.</td></tr><tr><td style="text-align:left">future::wait_until</td><td style="text-align:left">Blocks until the associated asynchronous state is ready or until a specified point in time.</td></tr></tbody></table><p><br></p><div class="alert alert-info"><i class="fa fa-info"></i>  与 std::future 相关的枚举类型：</div><ul><li>std::future_errc</li></ul><table><thead><tr><th style="text-align:left">label</th><th style="text-align:center">value</th><th style="text-align:left">description</th></tr></thead><tbody><tr><td style="text-align:left">broken_promise</td><td style="text-align:center">0</td><td style="text-align:left">The promise object with which the future shares its shared state was destroyed before being set a value or an exception.</td></tr><tr><td style="text-align:left">future_already_retrieved</td><td style="text-align:center">1</td><td style="text-align:left">A future object was already retrieved from this provider.</td></tr><tr><td style="text-align:left">promise_already_satisfied</td><td style="text-align:center">2</td><td style="text-align:left">The promise object was already set a value or exception.</td></tr><tr><td style="text-align:left">no_state</td><td style="text-align:center">3</td><td style="text-align:left">An operation attempted to access the shared state of an object with no shared state.</td></tr></tbody></table><ul><li>std::future_status</li></ul><table><thead><tr><th style="text-align:left">label</th><th style="text-align:center">value</th><th style="text-align:left">description</th></tr></thead><tbody><tr><td style="text-align:left">future_status::ready</td><td style="text-align:center">0</td><td style="text-align:left">The function returned because the shared state was ready.</td></tr><tr><td style="text-align:left">future_status::timeout</td><td style="text-align:center">1</td><td style="text-align:left">The function returned because the specified time was exhausted.</td></tr><tr><td style="text-align:left">future_status::deferred</td><td style="text-align:center">2</td><td style="text-align:left">The function returned because the shared state contains a deferred function (see std::async).</td></tr></tbody></table><ul><li>std::launch</li></ul><table><thead><tr><th style="text-align:left">label</th><th style="text-align:center">value</th><th style="text-align:left">description</th></tr></thead><tbody><tr><td style="text-align:left">launch::async</td><td style="text-align:center">0x1(vc)</td><td style="text-align:left">Asynchronous: The function is called asynchronously by a new thread and synchronizes its return with the point of access to the shared state.</td></tr><tr><td style="text-align:left">launch::deferred</td><td style="text-align:center">0x2(vc)</td><td style="text-align:left">Deferred: The function is called at the point of access to the shared state.</td></tr></tbody></table><h2 id="Reference-and-Forwarding"><a href="#Reference-and-Forwarding" class="headerlink" title="Reference and Forwarding"></a>Reference and Forwarding</h2><p><a href="http://www.cnblogs.com/jiayayao/p/6527713.html" target="_blank" rel="noopener">为什么C++11引入了std::ref？</a><br><a href="http://blog.csdn.net/zwvista/article/details/12306283" target="_blank" rel="noopener">C++11尝鲜：右值引用和转发型引用</a></p><h2 id="Lambda-Expression"><a href="#Lambda-Expression" class="headerlink" title="Lambda Expression"></a>Lambda Expression</h2><div class="alert alert-info"><i class="fa fa-info"></i>  Lambda 表达式中的闭包说明</div><table><thead><tr><th style="text-align:center">语法</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center"><code>[a, &amp;b]</code></td><td style="text-align:center">其中<code>a</code>以复制捕获，<code>b</code>以引用捕获</td></tr><tr><td style="text-align:center"><code>[this]</code></td><td style="text-align:center">以引用捕获当前对象(*this)</td></tr><tr><td style="text-align:center"><code>[&amp;]</code></td><td style="text-align:center">以引用捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td></tr><tr><td style="text-align:center"><code>[=]</code></td><td style="text-align:center">以复制捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td></tr><tr><td style="text-align:center"><code>[]</code></td><td style="text-align:center">不捕获</td></tr><tr><td style="text-align:center"><code>&amp;, x</code></td><td style="text-align:center"><code>x</code>显式的捕获，其他变量按引用捕获。</td></tr><tr><td style="text-align:center"><code>=, &amp;z</code></td><td style="text-align:center"><code>z</code>按引用捕获，其他变量按值捕获。</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      C++ 11 新加入的特性
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="C11" scheme="https://xautshuanglong.github.io/tags/C11/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ 禁止某些操作的技巧</title>
-    <link href="https://xautshuanglong.github.io/2016/12/23/CPlusPlus/CPlusPlus%E7%A6%81%E6%AD%A2%E6%9F%90%E4%BA%9B%E6%93%8D%E4%BD%9C%E7%9A%84%E6%8A%80%E5%B7%A7/"/>
-    <id>https://xautshuanglong.github.io/2016/12/23/CPlusPlus/CPlusPlus禁止某些操作的技巧/</id>
-    <published>2016-12-23T06:31:40.000Z</published>
-    <updated>2018-06-07T06:25:37.048Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>禁止构造：用于单例<br>禁止拷贝：保持唯一性<br>禁止继承：防止泛化<br><a id="more"></a></p></blockquote><h2 id="禁止构造"><a href="#禁止构造" class="headerlink" title="禁止构造"></a>禁止构造</h2><pre><code>深拷贝与浅拷贝的区别两个对象能够完全独立 --&gt; 深拷贝两个对象存在某种联系 --&gt; 浅拷贝</code></pre><ul><li>将构造函数声明为 <code>private</code>；</li><li>用 <code>delete</code> 标记，编译器不会合成默认成员。参考<a href="https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/">Defaulted &amp; Deleted</a></li></ul><h2 id="禁止拷贝-赋值"><a href="#禁止拷贝-赋值" class="headerlink" title="禁止拷贝/赋值"></a>禁止拷贝/赋值</h2><ul><li>将拷贝构造函数 与 operator= 均声明为 <code>private</code>；</li><li>用 <code>delete</code> 标记，编译器不会合成默认成员，参考<a href="https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11新特性/">Defaulted &amp; Deleted</a>；</li><li>不提供方法的实现，防止<code>friend</code>。</li></ul><pre><code>空类的默认成员有6个：</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Empty</span>&#123;</span>&#125;;</span><br><span class="line"></span><br><span class="line">Empty();                          <span class="comment">//默认构造函数</span></span><br><span class="line">~Empty();                         <span class="comment">//默认析构函数</span></span><br><span class="line">Empty(<span class="keyword">const</span> Empty &amp;);             <span class="comment">//默认拷贝构造</span></span><br><span class="line">Empty &amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> Empty &amp;); <span class="comment">//默认拷贝赋值运算符</span></span><br><span class="line">Empty * <span class="keyword">operator</span>&amp;();              <span class="comment">//取地址运算符</span></span><br><span class="line"><span class="keyword">const</span> Empty * <span class="keyword">operator</span>&amp;() <span class="keyword">const</span>;  <span class="comment">//取地址运算符 const</span></span><br></pre></td></tr></table></figure><pre><code>禁止拷贝/赋值示例   (可用于派生屏蔽拷贝构造和赋值操作的子类)</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DISABLE_COPY(Class) \</span></span><br><span class="line">Class(<span class="keyword">const</span> Class &amp;); \</span><br><span class="line">Class &amp;<span class="keyword">operator</span>=(<span class="keyword">const</span> Class &amp;)</span><br><span class="line"> </span><br><span class="line">class Widget  </span><br><span class="line">&#123;  </span><br><span class="line"><span class="keyword">public</span>:  </span><br><span class="line">    <span class="keyword">int</span>* pi;  </span><br><span class="line"><span class="keyword">private</span>:  </span><br><span class="line">DISABLE_COPY(Widget);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="禁止继承"><a href="#禁止继承" class="headerlink" title="禁止继承"></a>禁止继承</h2><ul><li>C++11 关键字 <code>sealed</code>；</li><li>C++11 关键字 <code>final</code>；</li><li>虚继承一个拥有私有构造函数的基类。</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SealedClass</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">SealedClass() &#123; &#125;;</span><br><span class="line"><span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">SealedClassTest</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SealedClassTest</span>:</span><span class="keyword">private</span> <span class="keyword">virtual</span> SealedClass</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">SealedClassTest();</span><br><span class="line">~SealedClassTest();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 企图继承 SealedClassTest 的类（通常不是 SealedClass 的有缘类），</span></span><br><span class="line"><span class="comment">// 在实例化时会因为无法访问 SealedClass 的默认构造函数而实例化失败，达到阻止继承的目的。</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      做专业的程序员
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>WinApiCollection 常用 Windows API</title>
-    <link href="https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/"/>
-    <id>https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/</id>
-    <published>2016-12-18T07:11:47.000Z</published>
-    <updated>2018-06-07T06:25:37.051Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>经典 Windows API 用法说明，值得收藏···<br><a id="more"></a></p></blockquote><h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><h4 id="CopyFile"><a href="#CopyFile" class="headerlink" title="CopyFile"></a>CopyFile</h4><pre><code>BOOL WINAPI CopyFile(    _In_  LPCTSTR lpExistingFileName,    _In_  LPCTSTR lpNewFileName,    _In_  BOOL bFailIfExists);Copy an existing file to a new file.lpExistingFileName[in] --&gt; The name of existing file.lpNewFileName[in] --&gt; The name of new file.bFailIfExists[in] --&gt; If this parameter is TRUE and the new file specified by lpNewFileName already exist, the function fails. If this parameter is FALSE and the new file already exists, the function overwrites the existing file andd succeeds.</code></pre><h4 id="CreateDirectory"><a href="#CreateDirectory" class="headerlink" title="CreateDirectory"></a>CreateDirectory</h4><pre><code>BOOL CreateDirectory(    LPCTSTR lpPathName,    LPSECURITY_ATTRIBUTES lpSecurityAttributes );This function creates a new directory. If the underlying file system supports security on files and directories, the function applies a specified security descriptor to the new directory.lpPathName[in] --&gt; Long pointer to a null-terminated string that specified the path of the directory to be created.lpSecurityAttributes[in] --&gt; Ignored; set to NULL.</code></pre><h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><h4 id="DeleteFile"><a href="#DeleteFile" class="headerlink" title="DeleteFile"></a>DeleteFile</h4><pre><code>BOOL WINAPI DeleteFile(    _In_ LPCTSTR lpFileName);Deletes an existing file.lpFileName[in] --&gt; The name of file to be deleted.</code></pre><h3 id="M"><a href="#M" class="headerlink" title="M"></a>M</h3><h4 id="MoveFile"><a href="#MoveFile" class="headerlink" title="MoveFile"></a>MoveFile</h4><pre><code>BOOL WINAPI MoveFile(    _In_ LPCTSTR lpExistingFileName,    _In_ LPCTSTR lpNewFileName);Moves an existing file or a directory, including its children.lpExistingFileName[in] --&gt; The current name of the file or directory on the local computer.lpNewFileName[in] --&gt; The new name for the file or directory. The new file must not already exist.A new file may be on a different file system or drive. A new directory must be on the same drive. </code></pre><h3 id="R"><a href="#R" class="headerlink" title="R"></a>R</h3><h4 id="RemoveDirectory"><a href="#RemoveDirectory" class="headerlink" title="RemoveDirectory"></a>RemoveDirectory</h4><pre><code>BOOL RemoveDirectory(    LPCTSTR lpPathName);This function detetes an empty directory.lpPathName[in] --&gt; Pointer to a null-terminated string that specifies the path of the directory to be removed. The path must specify an empty directory, and the calling process must have delete access to the directory.</code></pre><h4 id="ReOpenFile"><a href="#ReOpenFile" class="headerlink" title="ReOpenFile"></a>ReOpenFile</h4><pre><code>HANDLE WINAPI ReOpenFile(    _In_  HANDLE hOriginalFile,    _In_  DWORD dwDesiredAccess,    _In_  DWORD dwShareMode,    _In_  DWORD dwFlags);Reopens the specified file system object with different access rights, sharing mode, and flas.hOriginalFile [in] --&gt; A handle to the object to be reopened. The object must have been created by the CreateFile function.dwDesiredAccess [in] --&gt; The required access to the object. For a list of values, see File Security and Access Rights. You cannot request an access mode that conflicts with the sharing mode specified in a previous open request whose handle is still open.If this parameter is zero (0), the application can query device attributes without accessing the device. This is useful if an application wants to determine the size of a floppy disk drive and the formats it supports without requiring a floppy in the drive.dwShareMode [in] --&gt; The sharing mode of the object. You cannot request a sharing mode that conflicts with the access mode specified in a previous open request whose handle is still open.If this parameter is zero (0) and CreateFile succeeds, the object cannot be shared and cannot be opened again until the handle is closed.</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      实用 API，封装成工具库，以免忘记。
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="API" scheme="https://xautshuanglong.github.io/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>const用法总结</title>
-    <link href="https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/"/>
-    <id>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const用法总结/</id>
-    <published>2016-11-27T05:41:23.000Z</published>
-    <updated>2018-06-07T06:25:37.051Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Const用法参考"><a href="#Const用法参考" class="headerlink" title="Const用法参考"></a>Const用法参考</h2><p><a href="http://www.cnblogs.com/wintergrass/archive/2011/04/15/2015020.html" target="_blank" rel="noopener">const用法</a></p>]]></content>
-    
-    <summary type="html">
-    
-      const使用详解
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="const" scheme="https://xautshuanglong.github.io/tags/const/"/>
     
   </entry>
   

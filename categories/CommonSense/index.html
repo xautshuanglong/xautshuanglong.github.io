@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <title>CommonSense | Shuanglong</title>
@@ -12,10 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Shuanglong"/>
+  <meta property="og:site_name" content="Shuanglong">
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content="undefined">
   
 
   
@@ -64,7 +64,7 @@ var _hmt = _hmt || [];
 
 
 </head>
-
+</html>
  <body>  
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -223,7 +223,7 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-05-24 </div>
-			<div class="article-title"><a href="/2016/05/24/CommonSense/字符编码/" >字符编码</a></div>						
+			<div class="article-title"><a href="/2016/05/24/CommonSense/字符编码/">字符编码</a></div>						
 		</h3>
 	
 
@@ -236,7 +236,7 @@ var _hmt = _hmt || [];
 <h3 id="2-MBCS"><a href="#2-MBCS" class="headerlink" title="2. MBCS"></a>2. MBCS</h3><p><code>MBCS</code>(Multi-Byte Character Set)是一种多字节编码。目前大多使用双字节编码，所以也叫<code>DBCS</code>(Double-Byte Character Byte)。<code>MBCS</code>并不是某一种特定的编码，Windows 中根据设定的区域不同，指代不同的编码。而Linux里无法使用MBCS作为编码。Windows中，微软使用<code>ANSI</code>来代表<code>MBCS</code>，在简体中文Windows默认的区域设定里，指代GBK。<br>如GBxxx、BIGxxx等，都是多字节字符编码，他们的规则是：如果第一个字节是\x80以下，则仍然表示ASCII字符；如果是\x80以上，则跟下一个字节一起（共两个字节）表示一个字符，然后跳过下一个字节，继续往下判断。<br>IBM发明了一个叫Code Page的概念，将这些编码都收入囊中并分配页码，GBK是第936页，也就是CP936。所以，也可以使用CP936表示GBK。</p>
 <h3 id="3-Unicode"><a href="#3-Unicode" class="headerlink" title="3. Unicode"></a>3. Unicode</h3><p><code>UCS</code>(Unicode Character Set)还仅仅是字符对应码位的一张表而已，比如<code>汉</code>这个字的码位是<code>6C49</code>。字符具体如何传输和储存则是由<code>UTF</code>(UCS Transformation Format)来负责。<br>Unicode标准<code>UCS-2</code>使用两个字节表示一个字符，<code>UCS-4</code>标准，使用4个字节表示一个字符。<br>最初，使用<code>UCS</code>的码位来保存，这就是<code>UTF-16</code>，比如，<code>汉</code>直接使用\x6C\x49保存(<code>UTF-16-BE</code>)，或是倒过来使用\x49\x6C保存(<code>UTF-16-LE</code>)。但英文字母只需要一个字节就能保存，变成了两个字节，空间消耗大了一倍，于是<code>UTF-8</code>横空出世。<br><code>BOM</code>(Byte Order Mark),文件编码方式。<br>
 	
-	</div>
+	</p></div>
   <a type="button" href="/2016/05/24/CommonSense/字符编码/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
@@ -263,7 +263,7 @@ var _hmt = _hmt || [];
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control">
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -283,7 +283,7 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
 		
-			<li><a href="/categories/Java/">Java<span>1</span></a></li>
+			<li><a href="/categories/Java/">Java<span>3</span></a></li>
 		
 			<li><a href="/categories/Libraries/">Libraries<span>1</span></a></li>
 		
@@ -291,13 +291,13 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/Math/">Math<span>3</span></a></li>
 		
-			<li><a href="/categories/Network/">Network<span>1</span></a></li>
+			<li><a href="/categories/Network/">Network<span>2</span></a></li>
 		
 			<li><a href="/categories/Python/">Python<span>3</span></a></li>
 		
 			<li><a href="/categories/VisualStudio/">VisualStudio<span>1</span></a></li>
 		
-			<li><a href="/categories/Web/">Web<span>2</span></a></li>
+			<li><a href="/categories/Web/">Web<span>3</span></a></li>
 		
 		</ul>
 	</div>
@@ -308,48 +308,48 @@ var _hmt = _hmt || [];
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
+			<li><a href="/tags/Python/">Python<span>3</span></a></li>
 		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
 		
-			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
-		
-			<li><a href="/tags/vim/">vim<span>1</span></a></li>
-		
-			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
-		
-			<li><a href="/tags/PortNumber/">PortNumber<span>1</span></a></li>
-		
-			<li><a href="/tags/VC/">VC<span>1</span></a></li>
-		
-			<li><a href="/tags/API/">API<span>1</span></a></li>
+			<li><a href="/tags/XML/">XML<span>1</span></a></li>
 		
 			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
 		
-			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
-		
-			<li><a href="/tags/shell/">shell<span>1</span></a></li>
+			<li><a href="/tags/xsl/">xsl<span>1</span></a></li>
 		
 			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>3</span></a></li>
+			<li><a href="/tags/const/">const<span>1</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
 		
-			<li><a href="/tags/signal/">signal<span>1</span></a></li>
-		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
 		
 			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
 		
-			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
+			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
+		
+			<li><a href="/tags/socket/">socket<span>1</span></a></li>
+		
+			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
+		
+			<li><a href="/tags/Time/">Time<span>1</span></a></li>
+		
+			<li><a href="/tags/signal/">signal<span>1</span></a></li>
+		
+			<li><a href="/tags/API/">API<span>1</span></a></li>
+		
+			<li><a href="/tags/VC/">VC<span>1</span></a></li>
 		
 			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
 		
-			<li><a href="/tags/C11/">C11<span>1</span></a></li>
+			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+		
+			<li><a href="/tags/shell/">shell<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>25</span></a></li>
+		   <li><a href="/tags">...<span>29</span></a></li>
 		 
 		</ul>
 	</div>
@@ -362,23 +362,23 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2018/10/08/Java/Maven学习笔记/" ><i class="fa fa-file-o"></i>Maven学习笔记</a>
+        <a href="/2018/10/26/Web/XML深入理解/"><i class="fa fa-file-o"></i>XML深入理解</a>
       </li>
     
       <li>
-        <a href="/2018/09/24/Hexo/Markdown流程图笔记/" ><i class="fa fa-file-o"></i>Markdown流程图</a>
+        <a href="/2018/10/22/Java/Java关键字总结/"><i class="fa fa-file-o"></i>Java 关键字总结</a>
       </li>
     
       <li>
-        <a href="/2018/04/17/CommonSense/MemoryPoolTechnique/"  title="内存宝贵 杜绝浪费" ><i class="fa fa-file-o"></i>内存池技术</a>
+        <a href="/2018/10/10/Java/ApacheFOP学习笔记/"><i class="fa fa-file-o"></i>Apache FOP 学习笔记</a>
       </li>
     
       <li>
-        <a href="/2018/03/28/Algorithm/EncrytAndDecrypt/" ><i class="fa fa-file-o"></i>加密与解密</a>
+        <a href="/2018/10/09/Web/XSL学习笔记/"><i class="fa fa-file-o"></i>XSL学习笔记</a>
       </li>
     
       <li>
-        <a href="/2018/03/27/Mathematic/DerivativeAndPartialDerivativeFormula/" ><i class="fa fa-file-o"></i>导数与偏导数推导过程</a>
+        <a href="/2018/10/08/Java/Maven学习笔记/"><i class="fa fa-file-o"></i>Maven学习笔记</a>
       </li>
     
   </ul>
@@ -390,13 +390,13 @@ var _hmt = _hmt || [];
 	<h4>链接</h4>
 	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank" ]);"="">Freemind</a></li>
 	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/xautshuanglong" title="Shuanglong Github account." target="_blank"]);">Shuanglong Github</a></li>
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/xautshuanglong" title="Shuanglong Github account." target="_blank" ]);"="">Shuanglong Github</a></li>
 	
-		<li><i class="fa fa-twitter"></i><a href="https://twitter.com/xautshuanglong" title="Shuanglong Twitter account." target="_blank"]);">Twitter</a></li>
+		<li><i class="fa fa-twitter"></i><a href="https://twitter.com/xautshuanglong" title="Shuanglong Twitter account." target="_blank" ]);"="">Twitter</a></li>
 	
-		<li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/shuanglong.jiang" title="Shuanglong Facebook account." target="_blank"]);">Facebook</a></li>
+		<li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/shuanglong.jiang" title="Shuanglong Facebook account." target="_blank" ]);"="">Facebook</a></li>
 	
 	</ul>
 </div>
@@ -426,7 +426,7 @@ var _hmt = _hmt || [];
 
 	<div class="widget">
 		<h4>微博</h4>
-		<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=9&isTitle=1&noborder=0&isWeibo=1&isFans=1&uid=1842612703&verifier=50cadd0e&dpc=1"></iframe>
+		<iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=9&isTitle=1&noborder=0&isWeibo=1&isFans=1&uid=1842612703&verifier=50cadd0e&dpc=1"></iframe>
 
 	</div>
 
@@ -438,7 +438,7 @@ var _hmt = _hmt || [];
 
 
 
-
+</div>
 	</div>
   </div>
   <div class="container-narrow">

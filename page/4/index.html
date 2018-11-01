@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <title>第 4 页 | Shuanglong</title>
@@ -12,10 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Shuanglong"/>
+  <meta property="og:site_name" content="Shuanglong">
 
   
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content="undefined">
   
 
   
@@ -64,7 +64,7 @@ var _hmt = _hmt || [];
 
 
 </head>
-
+</html>
  <body>  
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -137,8 +137,113 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-07-01 </div>
+			<div class="article-title"><a href="/2016/07/01/VisualStudio/SDL安全开发生命周期/">SDL 安全开发生命周期</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="一、关于SDL"><a href="#一、关于SDL" class="headerlink" title="一、关于SDL"></a>一、关于SDL</h2><p>安全开发生命周期<code>Security Development Lifecycle</code></p>
+<p>早期版本中对于不安全的函数会给出警告提示，通常在函数后加上<code>_s</code>表示该函数的安全版本。</p>
+<p>忽略安全检查：</p>
+<ul>
+<li>方法一：使用安全版本的函数<code>_s</code>，如<code>scanf_s</code>、<code>strncopy_s</code>等。</li>
+<li>方法二：_CRT_SECURE_NO_WARNINGS。源码顶端添加<code>#define _CRT_SECURE_NO_WARNINGS</code>或<br>项目属性 -&gt; 配置属性 -&gt; c/c++ -&gt; 预处理器 -&gt; 预处理器定义 -&gt; <code>_CRT_SECURE_NO_WARNINGS</code></li>
+<li>方法三：关闭<code>SDL</code>检查(VS2015)<br>项目属性 -&gt; 配置属性 -&gt; C/C++ -&gt; SDL检查 -&gt; 否</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2016/07/01/VisualStudio/SDL安全开发生命周期/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-06-30 </div>
+			<div class="article-title"><a href="/2016/06/30/3D基础/">3D基础</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="常用公式"><a href="#常用公式" class="headerlink" title="常用公式"></a>常用公式</h2><p>开启 3D 之旅<br>
+	
+	</p></div>
+  <a type="button" href="/2016/06/30/3D基础/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-06-23 </div>
+			<div class="article-title"><a href="/2016/06/23/CPlusPlus/CPlusPlus访问权限及继承方式/" title="做专业的程序员">C++ 访问权限及继承方式</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h2><p><code>c++</code>用三个关键字设置成员的访问权限：<code>public</code>、<code>private</code>、<code>protected</code>。</p>
+<ul>
+<li>public：可以被任意实例对象访问；</li>
+<li>protected：只允许子类及本类的成员函数访问；</li>
+<li>private：只允许本类的成员函数访问。</li>
+</ul>
+	
+	</div>
+  <a type="button" href="/2016/06/23/CPlusPlus/CPlusPlus访问权限及继承方式/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-06-16 </div>
+			<div class="article-title"><a href="/2016/06/16/Network/TCP-IP学习笔记/">TCP/IP 学习笔记</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="TCP-IP-参考模型"><a href="#TCP-IP-参考模型" class="headerlink" title="TCP/IP 参考模型"></a>TCP/IP 参考模型</h2><p><code>TCP/IP</code>参考模型是计算机网络的祖父<code>ARPANET</code>和其后继的因特网使用的参考模型。<code>ARPANET</code>是由美国国防部DoD（U.S.Department of Defense）赞助的研究网络。逐渐地它通过租用的电话线连结了数百所大学和政府部门。当无线网络和卫星出现以后，现有的协议在和它们相连的时候出现了问题，所以需要一种新的参考体系结构。这个体系结构在它的两个主要协议出现以后，被称为TCP/IP参考模型（TCP/IP reference model）。<br>由于国防部担心他们一些重要的主机、路由器和互联网关可能会突然崩溃，所以网络必须实现的另一目标是网络不受子网硬件损失的影响，已经建立的会话不会被取消，而且整个体系结构必须相当灵活。<br>
+	
+	</p></div>
+  <a type="button" href="/2016/06/16/Network/TCP-IP学习笔记/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-06-06 </div>
-			<div class="article-title"><a href="/2016/06/06/Linux/Linux信号/" >Linux 信号及其处理</a></div>						
+			<div class="article-title"><a href="/2016/06/06/Linux/Linux信号/">Linux 信号及其处理</a></div>						
 		</h3>
 	
 
@@ -154,7 +259,7 @@ var _hmt = _hmt || [];
 <li>第二种方法，忽略某个信号，对该信号不做任何处理，就像未发生过一样；</li>
 <li>第三种方法，对该信号的处理保留系统默认值，对大部分信号的缺省操作是使进程终止。
 	
-	</div>
+	</li></ul></div>
   <a type="button" href="/2016/06/06/Linux/Linux信号/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
@@ -166,7 +271,7 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-05-24 </div>
-			<div class="article-title"><a href="/2016/05/24/CommonSense/字符编码/" >字符编码</a></div>						
+			<div class="article-title"><a href="/2016/05/24/CommonSense/字符编码/">字符编码</a></div>						
 		</h3>
 	
 
@@ -179,7 +284,7 @@ var _hmt = _hmt || [];
 <h3 id="2-MBCS"><a href="#2-MBCS" class="headerlink" title="2. MBCS"></a>2. MBCS</h3><p><code>MBCS</code>(Multi-Byte Character Set)是一种多字节编码。目前大多使用双字节编码，所以也叫<code>DBCS</code>(Double-Byte Character Byte)。<code>MBCS</code>并不是某一种特定的编码，Windows 中根据设定的区域不同，指代不同的编码。而Linux里无法使用MBCS作为编码。Windows中，微软使用<code>ANSI</code>来代表<code>MBCS</code>，在简体中文Windows默认的区域设定里，指代GBK。<br>如GBxxx、BIGxxx等，都是多字节字符编码，他们的规则是：如果第一个字节是\x80以下，则仍然表示ASCII字符；如果是\x80以上，则跟下一个字节一起（共两个字节）表示一个字符，然后跳过下一个字节，继续往下判断。<br>IBM发明了一个叫Code Page的概念，将这些编码都收入囊中并分配页码，GBK是第936页，也就是CP936。所以，也可以使用CP936表示GBK。</p>
 <h3 id="3-Unicode"><a href="#3-Unicode" class="headerlink" title="3. Unicode"></a>3. Unicode</h3><p><code>UCS</code>(Unicode Character Set)还仅仅是字符对应码位的一张表而已，比如<code>汉</code>这个字的码位是<code>6C49</code>。字符具体如何传输和储存则是由<code>UTF</code>(UCS Transformation Format)来负责。<br>Unicode标准<code>UCS-2</code>使用两个字节表示一个字符，<code>UCS-4</code>标准，使用4个字节表示一个字符。<br>最初，使用<code>UCS</code>的码位来保存，这就是<code>UTF-16</code>，比如，<code>汉</code>直接使用\x6C\x49保存(<code>UTF-16-BE</code>)，或是倒过来使用\x49\x6C保存(<code>UTF-16-LE</code>)。但英文字母只需要一个字节就能保存，变成了两个字节，空间消耗大了一倍，于是<code>UTF-8</code>横空出世。<br><code>BOM</code>(Byte Order Mark),文件编码方式。<br>
 	
-	</div>
+	</p></div>
   <a type="button" href="/2016/05/24/CommonSense/字符编码/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
@@ -216,7 +321,7 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-05-09 </div>
-			<div class="article-title"><a href="/2016/05/09/CPlusPlus/stringstream陷阱/" >stringstream 陷阱</a></div>						
+			<div class="article-title"><a href="/2016/05/09/CPlusPlus/stringstream陷阱/">stringstream 陷阱</a></div>						
 		</h3>
 	
 
@@ -244,7 +349,7 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-05-08 </div>
-			<div class="article-title"><a href="/2016/05/08/WebsiteAddress/" title="值得收藏的学习网站">网址收集</a></div>						
+			<div class="article-title"><a href="/2016/05/08/Web/WebsiteAddress/" title="值得收藏的学习网站">网址收集</a></div>						
 		</h3>
 	
 
@@ -255,8 +360,8 @@ var _hmt = _hmt || [];
 	
 		<h2 id="ProgramLanguage"><a href="#ProgramLanguage" class="headerlink" title="ProgramLanguage"></a>ProgramLanguage</h2><p>值得收藏的学习网址,每天进步一点点。<br>
 	
-	</div>
-  <a type="button" href="/2016/05/08/WebsiteAddress/#more" class="btn btn-default more">阅读此文</a>
+	</p></div>
+  <a type="button" href="/2016/05/08/Web/WebsiteAddress/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -298,118 +403,8 @@ for value in sorted(set(list)):
     print value
 </code></pre>
 	
-	</div>
+	</li></ul></div>
   <a type="button" href="/2016/05/06/Python/Python小技巧/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-05-03 </div>
-			<div class="article-title"><a href="/2016/05/03/Python/Log4py学习笔记/" >Log4py 学习笔记</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Python-日志模块-logging-简介"><a href="#Python-日志模块-logging-简介" class="headerlink" title="Python 日志模块 logging 简介"></a>Python 日志模块 logging 简介</h2><p>logging分为4模块：loggers,handlers,filters,and formatters.</p>
-<ul>
-<li>loggers: 提供应用程序调用的接口</li>
-<li>handlers: 把日志发送到指定的位置</li>
-<li>filters: 过滤日志信息</li>
-<li>formatters: 格式化输出日志
-	
-	</div>
-  <a type="button" href="/2016/05/03/Python/Log4py学习笔记/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-22 </div>
-			<div class="article-title"><a href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/" >Apache配置多个虚拟主机 (Windows)</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Windows下为Apache配置多个虚拟主机"><a href="#Windows下为Apache配置多个虚拟主机" class="headerlink" title="Windows下为Apache配置多个虚拟主机"></a>Windows下为Apache配置多个虚拟主机</h3><h5 id="修改Apache配置文件-安装目录下conf-httpd-conf"><a href="#修改Apache配置文件-安装目录下conf-httpd-conf" class="headerlink" title="修改Apache配置文件(安装目录下conf/httpd.conf)"></a>修改Apache配置文件(安装目录下conf/httpd.conf)</h5><ol>
-<li><p>添加将要监听的端口号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Listen: Allows you to bind Apache to specific IP addresses and/or</span></span><br><span class="line"><span class="comment"># ports, instead of the default. See also the &lt;VirtualHost&gt;</span></span><br><span class="line"><span class="comment"># directive.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Change this to Listen on specific IP addresses as shown below to </span></span><br><span class="line"><span class="comment"># prevent Apache from glomming onto all bound IP addresses.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#Listen 12.34.56.78:80</span></span><br><span class="line">Listen 80</span><br><span class="line">Listen 8080</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置虚拟主机的属性</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:8080&gt;</span><br><span class="line">    ServerAdmin ericjiang</span><br><span class="line">    <span class="comment">#网站文件存放的根目录</span></span><br><span class="line">    DocumentRoot E:/VirtualHost/Client</span><br><span class="line">    <span class="comment">#域名</span></span><br><span class="line">    ServerName http://www.phpcms.com/</span><br><span class="line">    ErrorLog logs/<span class="built_in">test</span>-error.log</span><br><span class="line">    CustomLog logs/<span class="built_in">test</span>-access.log common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-	
-	</div>
-  <a type="button" href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-15 </div>
-			<div class="article-title"><a href="/2016/04/15/Linux/vim-学习笔记/" >vim 学习笔记</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p><img src="http://obcba9r77.bkt.clouddn.com/images/Linux/20160415_0.png" alt="20160415_0.png"><br>
-	
-	</div>
-  <a type="button" href="/2016/04/15/Linux/vim-学习笔记/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-10 </div>
-			<div class="article-title"><a href="/2016/04/10/Hexo/Markdown语法笔记/" >Markdown 语法笔记</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
-<ul>
-<li>宗旨 【实现易读易写】  </li>
-<li>兼容 【成为一种适用于网络的语言】  </li>
-</ul>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2016/04/10/Hexo/Markdown语法笔记/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -450,7 +445,7 @@ for value in sorted(set(list)):
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control">
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -470,7 +465,7 @@ for value in sorted(set(list)):
 		
 			<li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
 		
-			<li><a href="/categories/Java/">Java<span>1</span></a></li>
+			<li><a href="/categories/Java/">Java<span>3</span></a></li>
 		
 			<li><a href="/categories/Libraries/">Libraries<span>1</span></a></li>
 		
@@ -478,13 +473,13 @@ for value in sorted(set(list)):
 		
 			<li><a href="/categories/Math/">Math<span>3</span></a></li>
 		
-			<li><a href="/categories/Network/">Network<span>1</span></a></li>
+			<li><a href="/categories/Network/">Network<span>2</span></a></li>
 		
 			<li><a href="/categories/Python/">Python<span>3</span></a></li>
 		
 			<li><a href="/categories/VisualStudio/">VisualStudio<span>1</span></a></li>
 		
-			<li><a href="/categories/Web/">Web<span>2</span></a></li>
+			<li><a href="/categories/Web/">Web<span>3</span></a></li>
 		
 		</ul>
 	</div>
@@ -495,48 +490,48 @@ for value in sorted(set(list)):
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/API/">API<span>1</span></a></li>
+			<li><a href="/tags/Time/">Time<span>1</span></a></li>
 		
-			<li><a href="/tags/shell/">shell<span>1</span></a></li>
+			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
+		
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
+		
+			<li><a href="/tags/keywords/">keywords<span>1</span></a></li>
 		
 			<li><a href="/tags/Python/">Python<span>3</span></a></li>
 		
 			<li><a href="/tags/signal/">signal<span>1</span></a></li>
 		
-			<li><a href="/tags/VC/">VC<span>1</span></a></li>
-		
 			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
 		
-			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
+			<li><a href="/tags/API/">API<span>1</span></a></li>
+		
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
 		
 			<li><a href="/tags/vim/">vim<span>1</span></a></li>
 		
-			<li><a href="/tags/C11/">C11<span>1</span></a></li>
+			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
 		
 			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
 		
-			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
+			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/C11/">C11<span>1</span></a></li>
 		
-			<li><a href="/tags/PortNumber/">PortNumber<span>1</span></a></li>
-		
-			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
-		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
-		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+			<li><a href="/tags/XML/">XML<span>1</span></a></li>
 		
 			<li><a href="/tags/socket/">socket<span>1</span></a></li>
 		
-			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
+			<li><a href="/tags/VC/">VC<span>1</span></a></li>
 		
-			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
+			<li><a href="/tags/shell/">shell<span>1</span></a></li>
 		
-			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
+			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>25</span></a></li>
+		   <li><a href="/tags">...<span>29</span></a></li>
 		 
 		</ul>
 	</div>
@@ -549,23 +544,23 @@ for value in sorted(set(list)):
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2018/10/08/Java/Maven学习笔记/" ><i class="fa fa-file-o"></i>Maven学习笔记</a>
+        <a href="/2018/10/26/Web/XML深入理解/"><i class="fa fa-file-o"></i>XML深入理解</a>
       </li>
     
       <li>
-        <a href="/2018/09/24/Hexo/Markdown流程图笔记/" ><i class="fa fa-file-o"></i>Markdown流程图</a>
+        <a href="/2018/10/22/Java/Java关键字总结/"><i class="fa fa-file-o"></i>Java 关键字总结</a>
       </li>
     
       <li>
-        <a href="/2018/04/17/CommonSense/MemoryPoolTechnique/"  title="内存宝贵 杜绝浪费" ><i class="fa fa-file-o"></i>内存池技术</a>
+        <a href="/2018/10/10/Java/ApacheFOP学习笔记/"><i class="fa fa-file-o"></i>Apache FOP 学习笔记</a>
       </li>
     
       <li>
-        <a href="/2018/03/28/Algorithm/EncrytAndDecrypt/" ><i class="fa fa-file-o"></i>加密与解密</a>
+        <a href="/2018/10/09/Web/XSL学习笔记/"><i class="fa fa-file-o"></i>XSL学习笔记</a>
       </li>
     
       <li>
-        <a href="/2018/03/27/Mathematic/DerivativeAndPartialDerivativeFormula/" ><i class="fa fa-file-o"></i>导数与偏导数推导过程</a>
+        <a href="/2018/10/08/Java/Maven学习笔记/"><i class="fa fa-file-o"></i>Maven学习笔记</a>
       </li>
     
   </ul>
@@ -577,13 +572,13 @@ for value in sorted(set(list)):
 	<h4>链接</h4>
 	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank" ]);"="">Freemind</a></li>
 	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/xautshuanglong" title="Shuanglong Github account." target="_blank"]);">Shuanglong Github</a></li>
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/xautshuanglong" title="Shuanglong Github account." target="_blank" ]);"="">Shuanglong Github</a></li>
 	
-		<li><i class="fa fa-twitter"></i><a href="https://twitter.com/xautshuanglong" title="Shuanglong Twitter account." target="_blank"]);">Twitter</a></li>
+		<li><i class="fa fa-twitter"></i><a href="https://twitter.com/xautshuanglong" title="Shuanglong Twitter account." target="_blank" ]);"="">Twitter</a></li>
 	
-		<li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/shuanglong.jiang" title="Shuanglong Facebook account." target="_blank"]);">Facebook</a></li>
+		<li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/shuanglong.jiang" title="Shuanglong Facebook account." target="_blank" ]);"="">Facebook</a></li>
 	
 	</ul>
 </div>
@@ -613,7 +608,7 @@ for value in sorted(set(list)):
 
 	<div class="widget">
 		<h4>微博</h4>
-		<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=9&isTitle=1&noborder=0&isWeibo=1&isFans=1&uid=1842612703&verifier=50cadd0e&dpc=1"></iframe>
+		<iframe width="100%" height="550" class="share_self" frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=9&isTitle=1&noborder=0&isWeibo=1&isFans=1&uid=1842612703&verifier=50cadd0e&dpc=1"></iframe>
 
 	</div>
 

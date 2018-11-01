@@ -4,6 +4,116 @@
   
     
     <entry>
+      <title><![CDATA[XML深入理解]]></title>
+      <url>https://xautshuanglong.github.io/2018/10/26/Web/XML%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>XML 模型概念、编程操作。</p>
+</blockquote>
+<p><code>XML</code> 可扩展标记语言（EXtensible Markup Language），解析方法包括下面两种：<br><code>DOM</code>（Document Object Model）将XML文件保存为树的形式，操作简单，便于访问；<br><code>SAX</code>（Simple API for XML）速度快，不便于访问。</p>
+<a id="more"></a>
+<h2 id="XML-简介"><a href="#XML-简介" class="headerlink" title="XML 简介"></a>XML 简介</h2>]]></content>
+      
+        <categories>
+            
+            <category> Web </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> XML </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java 关键字总结]]></title>
+      <url>https://xautshuanglong.github.io/2018/10/22/Java/Java%E5%85%B3%E9%94%AE%E5%AD%97%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>记录 java 中的关键字用法</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><p><a href="https://www.cnblogs.com/dotgua/p/6357951.html" target="_blank" rel="noopener">final关键则的几种用法</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> keywords </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Apache FOP 学习笔记]]></title>
+      <url>https://xautshuanglong.github.io/2018/10/10/Java/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h2><h3 id="中文显示"><a href="#中文显示" class="headerlink" title="中文显示"></a>中文显示</h3><ol>
+<li><p>自动检测系统字体库<br><code>fop.xconf</code>默认配置为自动检测。<br>注意使用正确的字体家族名称。（可使用 Windows 自带字体查看器查询）<br><img src="http://obcba9r77.bkt.clouddn.com/images/Linux/WinFontViewer.png" alt="WinFontViewer.png"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fo:block</span> <span class="attr">color</span>=<span class="string">"green"</span> <span class="attr">font-family</span>=<span class="string">"华文行楷"</span>&gt;</span></span><br><span class="line">    Hello, <span class="tag">&lt;<span class="name">xsl:value-of</span> <span class="attr">select</span>=<span class="string">"name"</span>/&gt;</span>!</span><br><span class="line">    <span class="tag">&lt;<span class="name">fo:external-graphic</span> <span class="attr">src</span>=<span class="string">"asf-logo.png"</span>/&gt;</span></span><br><span class="line">    中文测试</span><br><span class="line"><span class="tag">&lt;/<span class="name">fo:block</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加自定义字体库<br>在配置文件中注册字体<code>fop.xconf</code><br>可以任意定义字体名称<code>font-triplet name=&quot;xxx&quot;</code> ，使用时与其保持一致即可。<code>font-family=&quot;xxx&quot;</code></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">kerning</span>=<span class="string">"yes"</span> <span class="attr">embed-url</span>=<span class="string">"HanBiaoLiXuKeShuFa.ttf"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font-triplet</span> <span class="attr">name</span>=<span class="string">"LiXuKeShuFa"</span> <span class="attr">style</span>=<span class="string">"normal"</span> <span class="attr">weight</span>=<span class="string">"normal"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="https://xmlgraphics.apache.org/fop/2.3/fonts.html" target="_blank" rel="noopener">Apache™ FOP: Fonts</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Java </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> FOP </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[XSL学习笔记]]></title>
+      <url>https://xautshuanglong.github.io/2018/10/09/Web/XSL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>起始于 XSL，结束于 XSLT、XPath 以及 XSL-FO</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Chrome-XSLT转换无效"><a href="#Chrome-XSLT转换无效" class="headerlink" title="Chrome XSLT转换无效"></a>Chrome XSLT转换无效</h2><p>xml xslt 参见 <a href="http://www.runoob.com/xsl/xsl-transformation.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+<p>教程示例显示正常（文件存于web服务器端）；<br>使用 IE 浏览器转换成功正常显示页面。</p>
+<p>解决方案：命令行启动<code>chrome</code>并加上<code>--allow-file-access-from-files</code>参数。<br><strong><em>注意：终止所有已运行的<code>chrome</code>进程。</em></strong></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Web </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> xsl </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Maven学习笔记]]></title>
       <url>https://xautshuanglong.github.io/2018/10/08/Java/Maven%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -12,11 +122,11 @@
 <a id="more"></a>
 <h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p>
 <h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p>
-<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -883,6 +993,9 @@ opened again until the handle is closed.
 <h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h4><ul>
 <li>高性存储<br>  <a href="https://tech.meituan.com/disruptor.html" target="_blank" rel="noopener">高性能队列——Disruptor</a><br>  <a href="http://ifeve.com/disruptor/" target="_blank" rel="noopener">并发框架Disruptor译文</a></li>
 </ul>
+<h4 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h4><ul>
+<li>XML 解释器 <code>DOM</code> <code>SAX</code> <code>Xerces</code> <code>Castor</code><br> <a href="https://blog.csdn.net/witsmakemen/article/details/6980424" target="_blank" rel="noopener">解析xml文件的几种方法和原理</a></li>
+</ul>
 <h4 id="VisualStudio"><a href="#VisualStudio" class="headerlink" title="VisualStudio"></a>VisualStudio</h4><ul>
 <li>VC 编译器参数设置<br><a href="http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/" target="_blank" rel="noopener">显示类内存布局</a></li>
 <li>dllimport、dllexport<br><a href="http://blog.csdn.net/u010055724/article/details/51538686" target="_blank" rel="noopener">VS下 dllimport与dllexport作用与区别</a></li>
@@ -1272,7 +1385,7 @@ opened again until the handle is closed.
       
         <categories>
             
-            <category> Web </category>
+            <category> Network </category>
             
         </categories>
         
@@ -1975,7 +2088,7 @@ x = MyClass(110,&quot;Shuang&quot;)
     
     <entry>
       <title><![CDATA[网址收集]]></title>
-      <url>https://xautshuanglong.github.io/2016/05/08/WebsiteAddress/</url>
+      <url>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</url>
       <content type="html"><![CDATA[<h2 id="ProgramLanguage"><a href="#ProgramLanguage" class="headerlink" title="ProgramLanguage"></a>ProgramLanguage</h2><p>值得收藏的学习网址,每天进步一点点。<br><a id="more"></a></p>
 <h3 id="C-C"><a href="#C-C" class="headerlink" title="C/C++"></a>C/C++</h3><a class="btn btn-success" href="http://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">菜鸟教程【C++】</a>
 <a class="btn btn-success" href="http://www.cplusplus.com/reference" target="_blank" rel="noopener">CPlusPlus</a>
@@ -2006,6 +2119,8 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://www.zybuluo.com/yangfch3/note/167490" target="_blank" rel="noopener">HTTP详解</a>
 <a class="btn btn-danger" href="https://hit-alibaba.github.io/interview" target="_blank" rel="noopener">面试复习</a>
 <a class="btn btn-danger" href="http://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html" target="_blank" rel="noopener">Socket编程</a>
+<a class="btn btn-danger" href="https://webrtc.org/native-code/native-apis/" target="_blank" rel="noopener">WebRTC&#32;Native&#32;API</a>
+<a class="btn btn-danger" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" target="_blank" rel="noopener">WebRTC&#32;API&#32;doc&#32;zh-CN</a>
 <h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><a class="btn btn-info" href="http://www.runoob.com/java/java-tutorial.html" target="_blank" rel="noopener">菜鸟教程【Java】</a>
 <a class="btn btn-info" href="http://wiki.jikexueyuan.com/list/java/" target="_blank" rel="noopener">极客学院【Java】</a>
 <a class="btn btn-info" href="https://quanke.gitbooks.io/think-in-java/content/" target="_blank" rel="noopener">Thinking&#32;In&#32;Java【Gitbooks】</a>
@@ -2014,6 +2129,8 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-info" href="http://wiki.jikexueyuan.com/project/java-concurrent/" target="_blank" rel="noopener">Java&#32;并发和多线程</a>
 <a class="btn btn-info" href="http://wiki.jikexueyuan.com/project/java-reflection/" target="_blank" rel="noopener">Java&#32;反射机制</a>
 <a class="btn btn-info" href="http://wiki.jikexueyuan.com/project/spring/" target="_blank" rel="noopener">Spring&#32;教程</a>
+<a class="btn btn-info" href="http://www.vogella.com/tutorials/EclipseMemoryAnalyzer/article.html" target="_blank" rel="noopener">MAT&#32;Tutorial</a>
+<a class="btn btn-info" href="http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.mat.ui.help%2Fgettingstarted%2Fbasictutorial.html&cp=49_1_0" target="_blank" rel="noopener">MAT&#32;Basic&#32;Tutorial</a>
 <h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><a class="btn btn-success" href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" target="_blank" rel="noopener">菜鸟教程【Android】</a>
 <a class="btn btn-success" href="http://waylenw.github.io/android-dev-teacher" target="_blank" rel="noopener">Android教程集锦</a>
 <a class="btn btn-success" href="http://wiki.jikexueyuan.com/project/jni-ndk-developer-guide/ndkoverview.html" target="_blank" rel="noopener">Android&#32;NDK&#32;简介</a>
@@ -2022,14 +2139,21 @@ x = MyClass(110,&quot;Shuang&quot;)
 <h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><a class="btn btn-warning" href="https://github.com/xautshuanglong" target="_blank" rel="noopener">My&#32;Github</a>
 <a class="btn btn-warning" href="https://github.com/vim-scripts/" target="_blank" rel="noopener">Vim&#32;Plugin</a>
 <a class="btn btn-warning" href="https://github.com/yangyangwithgnu/use_vim_as_ide" target="_blank" rel="noopener">Vim配置</a>
-<a class="btn btn-warning" href="http://geek.csdn.net/news/detail/51628" target="_blank" rel="noopener">优秀大数据项目</a>
+<a class="btn btn-warning" href="https://www.bbsmax.com/A/q4zVWNmxJK/" target="_blank" rel="noopener">优秀大数据项目</a>
 <a class="btn btn-warning" href="https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md" target="_blank" rel="noopener">EbookFoundation电子书+公开课</a>
 <h2 id="Libraries"><a href="#Libraries" class="headerlink" title="Libraries"></a>Libraries</h2><a class="btn btn-danger" href="https://curl.haxx.se/" target="_blank" rel="noopener">Curl</a>
 <a class="btn btn-danger" href="https://www.zlib.net" target="_blank" rel="noopener">Zlib</a>
 <a class="btn btn-danger" href="https://xmlgraphics.apache.org/fop/resources.html" target="_blank" rel="noopener">Apache™&#32;FOP&#32;Project</a>
 <a class="btn btn-danger" href="http://foa.sourceforge.net/download.html#example" target="_blank" rel="noopener">Formatting&#32;Objects&#32;Authoring</a>
-<h2 id="公共平台"><a href="#公共平台" class="headerlink" title="公共平台"></a>公共平台</h2><a class="btn btn-primary" href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="noopener">百度统计</a>
-<a class="btn btn-primary" href="https://portal.qiniu.com/signin" target="_blank" rel="noopener">七牛云存储</a>
+<a class="btn btn-danger" href="https://www.w3cschool.cn/xslfo" target="_blank" rel="noopener">XSL-FO教程</a>
+<a class="btn btn-danger" href="https://gitlab.gnome.org/GNOME/libxml2/" target="_blank" rel="noopener">gitlab&#32;libxml2</a>
+<a class="btn btn-danger" href="https://gitlab.gnome.org/GNOME/libxslt/" target="_blank" rel="noopener">gitlab&#32;libxslt</a>
+<a class="btn btn-danger" href="https://github.com/GNOME/libxml2" target="_blank" rel="noopener">github&#32;libxml2</a>
+<a class="btn btn-danger" href="https://github.com/GNOME/libxslt" target="_blank" rel="noopener">github&#32;libxslt</a>
+<h2 id="NetworkProgram"><a href="#NetworkProgram" class="headerlink" title="NetworkProgram"></a>NetworkProgram</h2><a class="btn btn-primary" href="http://www.52im.net/thread-50-1-1.html" target="_blank" rel="noopener">即时通讯网</a>
+<h2 id="公共平台"><a href="#公共平台" class="headerlink" title="公共平台"></a>公共平台</h2><a class="btn btn-warning" href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="noopener">百度统计</a>
+<a class="btn btn-warning" href="https://portal.qiniu.com/signin" target="_blank" rel="noopener">七牛云存储</a>
+<h2 id="文件编码格式"><a href="#文件编码格式" class="headerlink" title="文件编码格式"></a>文件编码格式</h2><a class="btn btn-danger" href="https://blog.csdn.net/lamb7758/article/details/56015876" target="_blank" rel="noopener">PDF&#32;文档结构说明</a>
 <h2 id="Host"><a href="#Host" class="headerlink" title="Host"></a>Host</h2><p><a href="https://github.com/racaljk/hosts" target="_blank" rel="noopener">https://github.com/racaljk/hosts</a><br><a href="https://coding.net/u/scaffrey/p/hosts/git" target="_blank" rel="noopener">https://coding.net/u/scaffrey/p/hosts/git</a></p>
 <h2 id="简历"><a href="#简历" class="headerlink" title="简历"></a>简历</h2><p><a href="http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm" target="_blank" rel="noopener">简历吸引力</a><br><a href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">freemind theme参考</a><br><a href="http://hahack.com/" target="_blank" rel="noopener">Frermind作者</a></p>
 <p>b2838f4995da0fbde755ea5edf2047db62effd4f</p>
@@ -2277,9 +2401,9 @@ Handler.removeFilter() # 删除过滤器
         
         <tags>
             
-            <tag> log4py </tag>
-            
             <tag> Python </tag>
+            
+            <tag> log4py </tag>
             
         </tags>
         
@@ -2312,8 +2436,8 @@ Handler.removeFilter() # 删除过滤器
     <entry>
       <title><![CDATA[vim 学习笔记]]></title>
       <url>https://xautshuanglong.github.io/2016/04/15/Linux/vim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p><img src="http://obcba9r77.bkt.clouddn.com/images/Linux/20160415_0.png" alt="20160415_0.png"><br><a id="more"></a></p>
-<p><img src="http://obcba9r77.bkt.clouddn.com/images/Linux/vi-vim-cheat-sheet-sch.gif" alt="vi-vim-cheat-sheet-sch.gif"></p>
+      <content type="html"><![CDATA[<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p><img src="/images/Linux/20160415_0.png" alt="20160415_0.png"><br><a id="more"></a></p>
+<p><img src="/images/Linux/vi-vim-cheat-sheet-sch.gif" alt="vi-vim-cheat-sheet-sch.gif"></p>
 <h2 id="命令（快捷键）详解"><a href="#命令（快捷键）详解" class="headerlink" title="命令（快捷键）详解"></a>命令（快捷键）详解</h2><pre><code>1. 编辑模式  
 </code></pre><table>
 <thead>
@@ -2940,7 +3064,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x78;&#x6a;&#x73;&#x68;&#117;&#x61;&#110;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;">&#x78;&#x6a;&#x73;&#x68;&#117;&#x61;&#110;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+</code></pre><p><a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#120;&#106;&#115;&#104;&#117;&#97;&#110;&#x67;&#108;&#111;&#x6e;&#103;&#x40;&#x31;&#50;&#x36;&#x2e;&#x63;&#111;&#109;">&#120;&#106;&#115;&#104;&#117;&#97;&#110;&#x67;&#108;&#111;&#x6e;&#103;&#x40;&#x31;&#50;&#x36;&#x2e;&#x63;&#111;&#109;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
