@@ -1,8 +1,7 @@
 ---
 title: Apache FOP 学习笔记
 date: 2018-10-10 10:45:38
-categories: Libraries
-feature: /images/Libraries/apache-fop-logo.jpg
+categories: Java
 tags: FOP
 toc: true
 ---
