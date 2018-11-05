@@ -2,6 +2,7 @@
 title: XML深入理解
 date: 2018-10-26 15:33:26
 categories: Web
+feature: /images/Web/xml_mark.jpg
 tags: XML
 toc: true
 ---
