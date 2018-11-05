@@ -2,13 +2,19 @@
 title: vim 学习笔记
 date: 2016-04-15 14:02:32
 categories: Linux
+description: 记录 vim 的使用方法及技巧
+feature: /images/Linux/vim_logo.png
 tags: [vim]
 toc: true
 ---
 
 ## vim 常用命令图解
-![20160415_0.png](/images/Linux/20160415_0.png)
+
+图文并茂地记录 `vim` 各模式下的操作方法及相应快捷键，附带 `vim` 地配制方法及插件安装。
+
 <!--more-->
+
+![20160415_0.png](/images/Linux/20160415_0.png)
 
 ![vi-vim-cheat-sheet-sch.gif](/images/Linux/vi-vim-cheat-sheet-sch.gif)
 
