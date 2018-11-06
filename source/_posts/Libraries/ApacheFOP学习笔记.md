@@ -36,3 +36,11 @@ toc: true
 
 [Apache™ FOP: Fonts](https://xmlgraphics.apache.org/fop/2.3/fonts.html)
 
+## 推荐用法
+
+### 应用集成
+[Apache™ FOP: Embedding](https://xmlgraphics.apache.org/fop/2.3/embedding.html "How to Embed FOP in a Java application")
+
+### 事件处理
+[Apache™ FOP: Events/Processing Feedback](https://xmlgraphics.apache.org/fop/2.3/events.html)
+
