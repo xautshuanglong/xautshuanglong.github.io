@@ -137,6 +137,72 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-05-08 </div>
+			<div class="article-title"><a href="/2016/05/08/Web/WebsiteAddress/" title="值得收藏的学习网站">网址收集</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="ProgramLanguage"><a href="#ProgramLanguage" class="headerlink" title="ProgramLanguage"></a>ProgramLanguage</h2><p>值得收藏的学习网址,每天进步一点点。<br>
+	
+	</p></div>
+  <a type="button" href="/2016/05/08/Web/WebsiteAddress/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-06 </div>
+			<div class="article-title"><a href="/2016/05/06/Python/Python小技巧/" title="小技巧">Python 小技巧</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Python-中的小技巧"><a href="#Python-中的小技巧" class="headerlink" title="Python 中的小技巧"></a>Python 中的小技巧</h2><h3 id="1-循环技巧-Looping-Techniques"><a href="#1-循环技巧-Looping-Techniques" class="headerlink" title="1. 循环技巧(Looping Techniques)"></a>1. 循环技巧(Looping Techniques)</h3><ul>
+<li><h4 id="在字典中循环"><a href="#在字典中循环" class="headerlink" title="在字典中循环"></a>在字典中循环</h4>关键字和对应的值可以用<code>iteritems()</code>方法同时解读出来。<pre><code>dict = {&apos;key0&apos;:&apos;value0&apos;,&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;}
+for key,value in dict.iteritems():
+    print key,value
+</code></pre></li>
+<li><h4 id="在序列中循环"><a href="#在序列中循环" class="headerlink" title="在序列中循环"></a>在序列中循环</h4>索引位置和对应的值可以用<code>enumerate()</code>方法同时得到。<pre><code>list = [&apos;value0&apos;,&apos;value1&apos;,&apos;value2&apos;]
+for index,value in enumerate(list):
+    print index,value
+</code></pre></li>
+<li><h4 id="同时循环多个序列"><a href="#同时循环多个序列" class="headerlink" title="同时循环多个序列"></a>同时循环多个序列</h4>同时循环两个或更多的序列，可以使用<code>zip()</code>整体打包。<pre><code>questions = [&apos;name&apos;,&apos;quest&apos;,&apos;favorite color&apos;]
+answer = [&apos;eric&apos;,&apos;the holy grail&apos;,&apos;blue&apos;]
+for q,a in zip(questions,answer):
+    print &apos;What is your {0}? It is {1}.&apos;.format(q,a)
+</code></pre></li>
+<li><h4 id="逆向循环序列"><a href="#逆向循环序列" class="headerlink" title="逆向循环序列"></a>逆向循环序列</h4>需要逆向循环序列的话，先正向定位序列，然后调用<code>reversed()</code>函数。<pre><code>for i in reversed(xrange(1,10,2)):
+    print i
+</code></pre></li>
+<li><h4 id="排序后循环"><a href="#排序后循环" class="headerlink" title="排序后循环"></a>排序后循环</h4><code>sorted()</code>函数，不改动原序列，生成一个新的已排序的序列。<pre><code>list = [&apos;value2&apos;,&apos;value1&apos;,&apos;value0&apos;]
+for value in sorted(set(list)):
+    print value
+</code></pre>
+	
+	</li></ul></div>
+  <a type="button" href="/2016/05/06/Python/Python小技巧/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-05-03 </div>
 			<div class="article-title"><a href="/2016/05/03/Python/Log4py学习笔记/">Log4py 学习笔记</a></div>						
 		</h3>
@@ -197,7 +263,7 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-04-15 </div>
-			<div class="article-title"><a href="/2016/04/15/Linux/vim-学习笔记/">vim 学习笔记</a></div>						
+			<div class="article-title"><a href="/2016/04/15/Linux/vim-学习笔记/" title="记录 vim 的使用方法及技巧">vim 学习笔记</a></div>						
 		</h3>
 	
 
@@ -205,10 +271,15 @@ var _hmt = _hmt || [];
 			  <div class="entry">
   <div class="row">
 	
+           
+              <div class="thumbnail"><a href="/2016/04/15/Linux/vim-学习笔记/"><img src="/images/Linux/vim_logo.png" alt="vim 学习笔记" class="nofancybox"></a>
+           
+		</div>
 	
-		<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p><img src="/images/Linux/20160415_0.png" alt="20160415_0.png"><br>
 	
-	</p></div>
+		<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p>图文并茂地记录 <code>vim</code> 各模式下的操作方法及相应快捷键，附带 <code>vim</code> 地配制方法及插件安装。</p>
+	
+	</div>
   <a type="button" href="/2016/04/15/Linux/vim-学习笔记/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
@@ -248,7 +319,7 @@ var _hmt = _hmt || [];
 	<!-- display as entry -->	
 		<h3 class="title">
 			<div class="date"> 2016-04-04 </div>
-			<div class="article-title"><a href="/2016/04/04/CPlusPlus/Log4cpp的编译与使用/">Log4cpp的编译与使用</a></div>						
+			<div class="article-title"><a href="/2016/04/04/Libraries/Log4cpp的编译与使用/">Log4cpp的编译与使用</a></div>						
 		</h3>
 	
 
@@ -260,7 +331,7 @@ var _hmt = _hmt || [];
 		<h3 id="Log4cpp-介绍"><a href="#Log4cpp-介绍" class="headerlink" title="Log4cpp 介绍"></a>Log4cpp 介绍</h3><h5 id="log4cpp-编译"><a href="#log4cpp-编译" class="headerlink" title="log4cpp 编译"></a>log4cpp 编译</h5><h5 id="log4cpp-使用"><a href="#log4cpp-使用" class="headerlink" title="log4cpp 使用"></a>log4cpp 使用</h5>
 	
 	</div>
-  <a type="button" href="/2016/04/04/CPlusPlus/Log4cpp的编译与使用/#more" class="btn btn-default more">阅读此文</a>
+  <a type="button" href="/2016/04/04/Libraries/Log4cpp的编译与使用/#more" class="btn btn-default more">阅读此文</a>
 </div>
 
            
@@ -406,13 +477,13 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/CPP/">CPP<span>18</span></a></li>
 		
-			<li><a href="/categories/CommonSense/">CommonSense<span>5</span></a></li>
+			<li><a href="/categories/CommonSense/">CommonSense<span>6</span></a></li>
 		
 			<li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
 		
-			<li><a href="/categories/Java/">Java<span>3</span></a></li>
+			<li><a href="/categories/Java/">Java<span>2</span></a></li>
 		
-			<li><a href="/categories/Libraries/">Libraries<span>1</span></a></li>
+			<li><a href="/categories/Libraries/">Libraries<span>3</span></a></li>
 		
 			<li><a href="/categories/Linux/">Linux<span>3</span></a></li>
 		
@@ -435,48 +506,48 @@ var _hmt = _hmt || [];
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/C11/">C11<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
-		
-			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
-		
-			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
-		
-			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
-		
-			<li><a href="/tags/Python/">Python<span>3</span></a></li>
-		
-			<li><a href="/tags/keywords/">keywords<span>1</span></a></li>
-		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
-		
 			<li><a href="/tags/signal/">signal<span>1</span></a></li>
-		
-			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
-		
-			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
-		
-			<li><a href="/tags/API/">API<span>1</span></a></li>
-		
-			<li><a href="/tags/socket/">socket<span>1</span></a></li>
-		
-			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
-		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
 		
 			<li><a href="/tags/xsl/">xsl<span>1</span></a></li>
 		
+			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
+		
+			<li><a href="/tags/C11/">C11<span>1</span></a></li>
+		
+			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+		
 			<li><a href="/tags/Time/">Time<span>1</span></a></li>
 		
-			<li><a href="/tags/shell/">shell<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
+		
+			<li><a href="/tags/API/">API<span>1</span></a></li>
+		
+			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
 		
 			<li><a href="/tags/VC/">VC<span>1</span></a></li>
 		
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
 		
-		   <li><a href="/tags">...<span>29</span></a></li>
+			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
+		
+			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
+		
+			<li><a href="/tags/const/">const<span>1</span></a></li>
+		
+			<li><a href="/tags/vim/">vim<span>1</span></a></li>
+		
+			<li><a href="/tags/XML/">XML<span>1</span></a></li>
+		
+			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
+		
+			<li><a href="/tags/PortNumber/">PortNumber<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>3</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>30</span></a></li>
 		 
 		</ul>
 	</div>
@@ -489,6 +560,14 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2018/11/05/CommonSense/PictureFormatIntroduction/"><i class="fa fa-file-o"></i>几种图片格式介绍</a>
+      </li>
+    
+      <li>
+        <a href="/2018/11/05/Libraries/MuPDF使用说明/" title="MuPDF is an open source software framework for viewing and converting PDF, XPS, and E-book documents."><i class="fa fa-file-o"></i>MuPDF使用说明</a>
+      </li>
+    
+      <li>
         <a href="/2018/10/26/Web/XML深入理解/"><i class="fa fa-file-o"></i>XML深入理解</a>
       </li>
     
@@ -497,15 +576,7 @@ var _hmt = _hmt || [];
       </li>
     
       <li>
-        <a href="/2018/10/10/Java/ApacheFOP学习笔记/"><i class="fa fa-file-o"></i>Apache FOP 学习笔记</a>
-      </li>
-    
-      <li>
-        <a href="/2018/10/09/Web/XSL学习笔记/"><i class="fa fa-file-o"></i>XSL学习笔记</a>
-      </li>
-    
-      <li>
-        <a href="/2018/10/08/Java/Maven学习笔记/"><i class="fa fa-file-o"></i>Maven学习笔记</a>
+        <a href="/2018/10/10/Libraries/ApacheFOP学习笔记/"><i class="fa fa-file-o"></i>Apache FOP 学习笔记</a>
       </li>
     
   </ul>

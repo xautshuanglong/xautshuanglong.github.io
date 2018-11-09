@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title><![CDATA[几种图片格式介绍]]></title>
+      <url>https://xautshuanglong.github.io/2018/11/05/CommonSense/PictureFormatIntroduction/</url>
+      <content type="html"><![CDATA[<p><code>BMP</code><br>Bitmap 是 Windows 操作系统中的标准图像文件格式：DDB 设备相关位图；DIB 设备无关位图。<br><code>PNG</code><br>Portable Network Graphics 便携式网络图形是一种无损压缩的图形格式。<br><code>JPEG</code><br>Joint Photographic Expert Group 联合图像专家小组的缩写，是第一个国际图像压缩标准。<br><code>GIF</code><br>Graphics Interchange Format 图像互换格式，是一种基于 LZW 算法的连续色调的无损压缩格式。<br><code>XPM</code><br>X PixMap 是一种基于 ASCII 编码的图像格式，在 X Windows 中应用广泛。</p>
+<a id="more"></a>
+<h2 id="BMP"><a href="#BMP" class="headerlink" title="BMP"></a>BMP</h2><h2 id="PNG"><a href="#PNG" class="headerlink" title="PNG"></a>PNG</h2><h2 id="JPEG"><a href="#JPEG" class="headerlink" title="JPEG"></a>JPEG</h2><h2 id="GIF"><a href="#GIF" class="headerlink" title="GIF"></a>GIF</h2><h2 id="XPM"><a href="#XPM" class="headerlink" title="XPM"></a>XPM</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* XPM */</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> *xpmFile[] =</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"value string"</span>, <span class="comment">// width height numcolors chars_per_pixel x_hotspot y_hotspot XPMEXT</span></span><br><span class="line">    <span class="string">"colors string"</span>, <span class="comment">// #开头表示十六进制RGB  %开头表示十六进制HSV</span></span><br><span class="line">    <span class="string">"pixels string"</span>,</span><br><span class="line">    <span class="string">"other string"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Colors String 构成：颜色索引<code>character</code>，关键字<code>key</code>，颜色值<code>color</code>。</p>
+<h3 id="颜色索引"><a href="#颜色索引" class="headerlink" title="颜色索引"></a>颜色索引</h3><p>字符串 NONE，表示该颜色是透明色。</p>
+<h3 id="颜色关键字"><a href="#颜色关键字" class="headerlink" title="颜色关键字"></a>颜色关键字</h3><ul>
+<li>m: 单色</li>
+<li>s: 符号名称</li>
+<li>g4: 4级灰度</li>
+<li>g: 灰度</li>
+<li>c: 彩色</li>
+</ul>
+<h3 id="颜色值"><a href="#颜色值" class="headerlink" title="颜色值"></a>颜色值</h3><ul>
+<li># 开头的十六进制数表示 RGB 空间颜色值</li>
+<li>% 开头的十六进制数表示 HSV 空间颜色值</li>
+</ul>
+<p>Pixels 部分表示实际的像素，采用调色板中定义的索引，由等同于图像高度的行组成。<br>Extension 部分可以自己定义一些图像附加信息，可单行亦可多行。</p>
+<p>example:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* XPM */</span> </span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> * plaid[] =</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* plaid pixmap */</span></span><br><span class="line">    <span class="comment">/* width height ncolors chars_per_pixel */</span></span><br><span class="line">    <span class="string">"22 22 4 2 0 0 XPMEXT"</span>,</span><br><span class="line">    </span><br><span class="line">　　<span class="comment">/* colors */</span></span><br><span class="line">    <span class="string">"  c red m white s light_color"</span>,</span><br><span class="line">    <span class="string">"Y c green m black s ines_in_mix"</span>,</span><br><span class="line">    <span class="string">"+ c yellow m white s lines_in_dark "</span>,</span><br><span class="line">    <span class="string">"x m black s dark_color "</span>,</span><br><span class="line"></span><br><span class="line">　  <span class="comment">/* pixels */</span></span><br><span class="line">　  <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">"Y Y Y Y Y x Y Y Y Y Y + x + x + x + x + x + "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">"XPMEXT ext1 data1"</span>,</span><br><span class="line">    <span class="string">"XPMEXT ext2"</span>,</span><br><span class="line">    <span class="string">"data2_1"</span>,</span><br><span class="line">    <span class="string">"data2_2"</span>, </span><br><span class="line">    <span class="string">"XPMEXT ext3"</span>,</span><br><span class="line">    <span class="string">"data3"</span>,</span><br><span class="line">    <span class="string">"XPMEXT"</span>,</span><br><span class="line">    <span class="string">"data4"</span>,</span><br><span class="line">    <span class="string">"XPMENDEXT"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> CommonSense </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[MuPDF使用说明]]></title>
+      <url>https://xautshuanglong.github.io/2018/11/05/Libraries/MuPDF%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<p>MuPDF 是一个预览和转换<code>PDF</code>、<code>XPS</code>、<code>E-book</code>的开源软件框架，提供多平台的预览器、命令行工具和应用开发库。<br><a id="more"></a></p>
+<h2 id="相关依赖库"><a href="#相关依赖库" class="headerlink" title="相关依赖库"></a>相关依赖库</h2><p><img src="/images/Libraries/MuPDFgreek_thirdpart_libs.png" alt="Thirdpart libraries used by MuPDF"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Libraries </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> pdf </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[XML深入理解]]></title>
       <url>https://xautshuanglong.github.io/2018/10/26/Web/XML%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -55,7 +109,7 @@
     
     <entry>
       <title><![CDATA[Apache FOP 学习笔记]]></title>
-      <url>https://xautshuanglong.github.io/2018/10/10/Java/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <url>https://xautshuanglong.github.io/2018/10/10/Libraries/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<blockquote>
 <p>Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.</p>
 </blockquote>
@@ -69,11 +123,13 @@
 </li>
 </ol>
 <p><a href="https://xmlgraphics.apache.org/fop/2.3/fonts.html" target="_blank" rel="noopener">Apache™ FOP: Fonts</a></p>
+<h2 id="推荐用法"><a href="#推荐用法" class="headerlink" title="推荐用法"></a>推荐用法</h2><h3 id="应用集成"><a href="#应用集成" class="headerlink" title="应用集成"></a>应用集成</h3><p><a href="https://xmlgraphics.apache.org/fop/2.3/embedding.html" title="How to Embed FOP in a Java application" target="_blank" rel="noopener">Apache™ FOP: Embedding</a></p>
+<h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><p><a href="https://xmlgraphics.apache.org/fop/2.3/events.html" target="_blank" rel="noopener">Apache™ FOP: Events/Processing Feedback</a></p>
 ]]></content>
       
         <categories>
             
-            <category> Java </category>
+            <category> Libraries </category>
             
         </categories>
         
@@ -2107,6 +2163,7 @@ x = MyClass(110,&quot;Shuang&quot;)
 <h3 id="QT"><a href="#QT" class="headerlink" title="QT"></a>QT</h3><a class="btn btn-primary" href="https://wizardforcel.gitbooks.io/qt-beginning/content/" target="_blank" rel="noopener">快速入门教程</a>
 <a class="btn btn-primary" href="https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/" target="_blank" rel="noopener">QmlBook</a>
 <a class="btn btn-primary" href="https://qtguide.ustclug.org/" target="_blank" rel="noopener">QT编程指南</a>
+<a class="btn btn-primary" href="https://blog.csdn.net/feiyangqingyun/article/category/6600909" target="_blank" rel="noopener">QT&#32;自定义控件参考</a>
 <h3 id="Golang"><a href="#Golang" class="headerlink" title="Golang"></a>Golang</h3><a class="btn btn-info" href="https://docs.ruanjiadeng.com/gopl-zh/index.html" target="_blank" rel="noopener">Go语言基础</a>
 <h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><a class="btn btn-success" href="http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/" target="_blank" rel="noopener">Mathjax初级</a>
 <a class="btn btn-success" href="http://mlworks.cn/posts/introduction-to-mathjax-and-latex-expression/" target="_blank" rel="noopener">Mathjax与LaTex公式简介</a>
@@ -2436,7 +2493,9 @@ Handler.removeFilter() # 删除过滤器
     <entry>
       <title><![CDATA[vim 学习笔记]]></title>
       <url>https://xautshuanglong.github.io/2016/04/15/Linux/vim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p><img src="/images/Linux/20160415_0.png" alt="20160415_0.png"><br><a id="more"></a></p>
+      <content type="html"><![CDATA[<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p>图文并茂地记录 <code>vim</code> 各模式下的操作方法及相应快捷键，附带 <code>vim</code> 地配制方法及插件安装。</p>
+<a id="more"></a>
+<p><img src="/images/Linux/20160415_0.png" alt="20160415_0.png"></p>
 <p><img src="/images/Linux/vi-vim-cheat-sheet-sch.gif" alt="vi-vim-cheat-sheet-sch.gif"></p>
 <h2 id="命令（快捷键）详解"><a href="#命令（快捷键）详解" class="headerlink" title="命令（快捷键）详解"></a>命令（快捷键）详解</h2><pre><code>1. 编辑模式  
 </code></pre><table>
@@ -3151,7 +3210,7 @@ This is [an example][id] reference-style link.
     
     <entry>
       <title><![CDATA[Log4cpp的编译与使用]]></title>
-      <url>https://xautshuanglong.github.io/2016/04/04/CPlusPlus/Log4cpp%E7%9A%84%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+      <url>https://xautshuanglong.github.io/2016/04/04/Libraries/Log4cpp%E7%9A%84%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<h3 id="Log4cpp-介绍"><a href="#Log4cpp-介绍" class="headerlink" title="Log4cpp 介绍"></a>Log4cpp 介绍</h3><h5 id="log4cpp-编译"><a href="#log4cpp-编译" class="headerlink" title="log4cpp 编译"></a>log4cpp 编译</h5><h5 id="log4cpp-使用"><a href="#log4cpp-使用" class="headerlink" title="log4cpp 使用"></a>log4cpp 使用</h5>]]></content>
       
         <categories>
