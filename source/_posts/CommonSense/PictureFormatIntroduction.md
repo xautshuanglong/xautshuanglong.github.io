@@ -19,6 +19,14 @@ X PixMap 是一种基于 ASCII 编码的图像格式，在 X Windows 中应用�
 
 <!-- More -->
 
+## BMP
+
+## PNG
+
+## JPEG
+
+## GIF
+
 ## XPM
 ``` c
 /* XPM */
@@ -30,13 +38,25 @@ static char *xpmFile[] =
     "other string"
 }
 ```
+Colors String 构成：颜色索引`character`，关键字`key`，颜色值`color`。
 
-颜色关键字：
-m: 单色
-s: 符号名称
-g4: 4级灰度
-g: 灰度
-c: 彩色
+### 颜色索引
+字符串 NONE，表示该颜色是透明色。
+
+### 颜色关键字
+- m: 单色
+- s: 符号名称
+- g4: 4级灰度
+- g: 灰度
+- c: 彩色
+
+### 颜色值
+- \# 开头的十六进制数表示 RGB 空间颜色值
+- % 开头的十六进制数表示 HSV 空间颜色值
+
+Pixels 部分表示实际的像素，采用调色板中定义的索引，由等同于图像高度的行组成。
+Extension 部分可以自己定义一些图像附加信息，可单行亦可多行。
+
 example:
 ``` c
 /* XPM */ 
