@@ -36,6 +36,7 @@ toc: true
 {% btn https://wizardforcel.gitbooks.io/qt-beginning/content/ 快速入门教程 primary %}
 {% btn https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/ QmlBook primary %}
 {% btn https://qtguide.ustclug.org/ QT编程指南 primary %}
+{% btn https://blog.csdn.net/feiyangqingyun/article/category/6600909 QT&#32;自定义控件参考 primary %}
 
 ### Golang
 {% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
