@@ -108,6 +108,8 @@ toc: true
 ## 公共平台
 {% btn http://tongji.baidu.com/web/welcome/login 百度统计 warning %}
 {% btn https://portal.qiniu.com/signin 七牛云存储 warning %}
+{% btn https://console.cloud.tencent.com/cvm/index 腾讯云控制台 warning %}
+{% btn https://ecs.console.aliyun.com/#/home 阿里云控制台 warning %}
 
 ## 文件编码格式
 {% btn https://blog.csdn.net/lamb7758/article/details/56015876 PDF&#32;文档结构说明 danger %}
