@@ -47,6 +47,7 @@ toc: true
 
 ### Linux
 {% btn https://linux.cn/ Linux中国-开源社区 primary %}
+{% btn http://man.linuxde.net/ Linux&#32;命令大全在线 primary %}
 
 ### MySQL
 {% btn http://www.runoob.com/mysql/mysql-tutorial.html 菜鸟教程【MySQL】 info %}
