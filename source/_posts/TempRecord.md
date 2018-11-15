@@ -114,7 +114,7 @@ https://www.microsoft.com/com/default.mspx
 `RtlCaptureContext`
 
 ### 需要总结内容
-#### C++ 
+#### C/C++ 
 * [Google开源项目风格](http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/)
 * 初始化列表
 * [STL 元素要求](http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/)
@@ -152,6 +152,9 @@ https://www.microsoft.com/com/default.mspx
 #### XML
 * XML 解释器 `DOM` `SAX` `Xerces` `Castor`
    [解析xml文件的几种方法和原理](https://blog.csdn.net/witsmakemen/article/details/6980424)
+
+#### PDF
+* 几个 PDF 软件库：`xpdf`，`poppler`，`mupdf`。
 
 #### VisualStudio
 * VC 编译器参数设置
