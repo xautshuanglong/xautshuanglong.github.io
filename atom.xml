@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2018-11-08T02:07:29.465Z</updated>
+  <updated>2018-11-15T03:10:38.130Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git实用技巧</title>
+    <link href="https://xautshuanglong.github.io/2018/11/15/CommonSense/Git%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>https://xautshuanglong.github.io/2018/11/15/CommonSense/Git实用技巧/</id>
+    <published>2018-11-15T03:05:20.000Z</published>
+    <updated>2018-11-15T03:10:38.130Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="中文显示问题"><a href="#中文显示问题" class="headerlink" title="中文显示问题"></a>中文显示问题</h2><p>git status 列举文件名含有中文时，无法正常显示：(文件名编码格式 与 git diff 不一致)<br>git config –global core.quotepath false</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;中文显示问题&quot;&gt;&lt;a href=&quot;#中文显示问题&quot; class=&quot;headerlink&quot; title=&quot;中文显示问题&quot;&gt;&lt;/a&gt;中文显示问题&lt;/h2&gt;&lt;p&gt;git status 列举文件名含有中文时，无法正常显示：(文件名编码格式 与 git diff 不一致)&lt;
+      
+    
+    </summary>
+    
+      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
+    
+    
+      <category term="git" scheme="https://xautshuanglong.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>几种图片格式介绍</title>
@@ -421,26 +446,6 @@
     <summary type="html">
     
       Vector 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_01_Array</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</id>
-    <published>2018-01-11T01:00:39.000Z</published>
-    <updated>2018-06-07T06:25:37.049Z</updated>
-    
-    <summary type="html">
-    
-      Array 使用宜忌
     
     </summary>
     

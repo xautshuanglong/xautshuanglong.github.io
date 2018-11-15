@@ -137,6 +137,34 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-05-09 </div>
+			<div class="article-title"><a href="/2016/05/09/CPlusPlus/stringstream陷阱/">stringstream 陷阱</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="stringstream-陷阱"><a href="#stringstream-陷阱" class="headerlink" title="stringstream 陷阱"></a>stringstream 陷阱</h2><p>stringstream 对象的构造和析构是非常耗 CPU 时间的。<br>如果打算在多次转换中使用同一个 stringstream 对象（效率高），那么最好每次转换前使用 clear() 方法。<br>注意：</p>
+<ul>
+<li>clear() 清空的是 stream 的状态，如：错误状态。</li>
+<li>.str(“”),才能正确清空 stringstream。</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2016/05/09/CPlusPlus/stringstream陷阱/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-05-08 </div>
 			<div class="article-title"><a href="/2016/05/08/Web/WebsiteAddress/" title="值得收藏的学习网站">网址收集</a></div>						
 		</h3>
@@ -477,7 +505,7 @@ for value in sorted(set(list)):
 		
 			<li><a href="/categories/CPP/">CPP<span>18</span></a></li>
 		
-			<li><a href="/categories/CommonSense/">CommonSense<span>6</span></a></li>
+			<li><a href="/categories/CommonSense/">CommonSense<span>7</span></a></li>
 		
 			<li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
 		
@@ -506,48 +534,48 @@ for value in sorted(set(list)):
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/signal/">signal<span>1</span></a></li>
+			<li><a href="/tags/vim/">vim<span>1</span></a></li>
 		
 			<li><a href="/tags/xsl/">xsl<span>1</span></a></li>
 		
-			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
-		
-			<li><a href="/tags/C11/">C11<span>1</span></a></li>
-		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
-		
-			<li><a href="/tags/Time/">Time<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
 			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
-		
-			<li><a href="/tags/API/">API<span>1</span></a></li>
-		
-			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
-		
-			<li><a href="/tags/VC/">VC<span>1</span></a></li>
-		
-			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
-		
-			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
-		
-			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
-		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
-		
-			<li><a href="/tags/vim/">vim<span>1</span></a></li>
 		
 			<li><a href="/tags/XML/">XML<span>1</span></a></li>
 		
-			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
+			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
 		
-			<li><a href="/tags/PortNumber/">PortNumber<span>1</span></a></li>
+			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+		
+			<li><a href="/tags/socket/">socket<span>1</span></a></li>
 		
 			<li><a href="/tags/Python/">Python<span>3</span></a></li>
 		
+			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
 		
-		   <li><a href="/tags">...<span>30</span></a></li>
+			<li><a href="/tags/signal/">signal<span>1</span></a></li>
+		
+			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
+		
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
+		
+			<li><a href="/tags/shell/">shell<span>1</span></a></li>
+		
+			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
+		
+			<li><a href="/tags/Time/">Time<span>1</span></a></li>
+		
+			<li><a href="/tags/API/">API<span>1</span></a></li>
+		
+			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>31</span></a></li>
 		 
 		</ul>
 	</div>
@@ -558,6 +586,10 @@ for value in sorted(set(list)):
 <div class="widget">
   <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2018/11/15/CommonSense/Git实用技巧/"><i class="fa fa-file-o"></i>Git实用技巧</a>
+      </li>
     
       <li>
         <a href="/2018/11/05/CommonSense/PictureFormatIntroduction/"><i class="fa fa-file-o"></i>几种图片格式介绍</a>
@@ -573,10 +605,6 @@ for value in sorted(set(list)):
     
       <li>
         <a href="/2018/10/22/Java/Java关键字总结/"><i class="fa fa-file-o"></i>Java 关键字总结</a>
-      </li>
-    
-      <li>
-        <a href="/2018/10/10/Libraries/ApacheFOP学习笔记/"><i class="fa fa-file-o"></i>Apache FOP 学习笔记</a>
       </li>
     
   </ul>
