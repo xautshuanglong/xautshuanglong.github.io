@@ -144,6 +144,9 @@ https://www.microsoft.com/com/default.mspx
 * 高性存储
     [高性能队列——Disruptor](https://tech.meituan.com/disruptor.html)
 	[并发框架Disruptor译文](http://ifeve.com/disruptor/)
+* 文本格式化
+    FOP xml、xslt、xpath、xsl-fo，文档格式化
+    FreeMarker 模板引擎
 
 ### XML
 * XML 解释器 `DOM` `SAX` `Xerces` `Castor`
