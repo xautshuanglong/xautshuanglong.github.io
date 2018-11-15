@@ -9,49 +9,45 @@ toc: true
 值得学习或巩固的知识点
 <!-- More -->
 
-### 关于 C++11 新特性
+## 关于 C++11 新特性
 [defaulted 和 deleted 修饰函数](https://www.ibm.com/developerworks/cn/aix/library/1212_lufang_c11new/)
 [Deleted functions in C++11](https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/deleted_functions_in_c_11?lang=zh)
-
 [对象移动](http://www.voidcn.com/blog/chj90220/article/p-6228769.html)
 [右值引用与转移语义](http://www.ibm.com/developerworks/cn/aix/library/1307_lisl_c11/)
-
 [Range-based for 循环](https://www.cnblogs.com/h46incon/archive/2013/06/02/3113737.html)
 
-### C# 相关
-
-#### C# WinForm 应用退出
+## C# 相关
+### C# WinForm 应用退出
 [C# WinForm程序退出的方法](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
 [C# — WinForm 退出方法总结](http://blog.csdn.net/yl2isoft/article/details/38168681)
 [C# Enum,Int,String的互相转换 枚举转换](http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html)
 
-#### C# dllimport 类型转换
+### C# dllimport 类型转换
 [C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
 [C#调用VC的DLL的接口函数参数类型转换一览表](http://www.cnblogs.com/Huayuan/archive/2012/07/05/2577439.html)
 
-#### C# Windows 服务
+### C# Windows 服务
 [穿透Session 0 隔离（一）](http://www.cnblogs.com/gnielee/archive/2010/04/07/session0-isolation-part1.html)
 [穿透Session 0 隔离（二）](http://www.cnblogs.com/gnielee/archive/2010/04/08/session0-isolation-part2.html)
 
-### Windows
-#### 查看 Windows 系统版本
+## Windows
+### 查看 Windows 系统版本
 
 命令行
 winver
 systeminfo
 vmic `windows management instrumentation command-line`
-
 注册表
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
 
-#### Windows 路径
+### Windows 路径
 C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 
-#### Windows 工具
+### Windows 工具
 * ProcessExplorer
 * ProcessMonitor
 
-#### Windows API
+### Windows API
 * 错误码处理
     GetLastError、FormatMessage
     https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
@@ -85,36 +81,36 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 系统信息 `sysinfoapi.h`
 * 进程操作（权限问题）`OpenProcessToken` `LookupPrivilegeValue` `AdjustTokenPrivileges`
 
-#### Windows Service
+### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
 * [Complete Service Sample](https://msdn.microsoft.com/EN-US/library/windows/desktop/bb540476&#40;v=vs.85&#41;.aspx)
 
-#### COM 编程
+### COM 编程
 Component Object Model
 https://www.microsoft.com/com/default.mspx
 
-#### Microsoft RPC
+### Microsoft RPC
 基于 命名管道 和 tcp/ip
 * [RPC 编程](https://www.ibm.com/developerworks/cn/aix/library/au-rpc_programming/)
 * [Windows RPC Demo实现](http://www.cnblogs.com/wanghaiyang1930/p/4469222.html)
 
-#### Thread Pooling
+### Thread Pooling
 * [Thread Pools](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686756&#40;v=vs.85&#41;.aspx)
 * [Process and Thread Functions](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms684847&#40;v=vs.85&#41;.aspx)
     `QueueUserWorkItem`
 
-#### Synchronization Functions
+### Synchronization Functions
 * [Synchroization Function](https://msdn.microsoft.com/EN-US/library/windows/desktop/ms686360&#40;v=vs.85&#41;.aspx)
 	`InterlockedIncrement` `InterlockedIncrement64`
 
-#### Unhandled Exception
+### Unhandled Exception
 * SetUnhandledExceptionFilter : Enables an application to supersede(紧接着...) the top-level exception handler of each thread of a process.
 * _set_invalid_parameter_handler : Sets a function to be called when the CRT detects an invalid argument.
 * _set_purecall_handler : Sets the handler for a pure virtual function call.
 `RtlCaptureContext`
 
-### 需要总结内容
-#### C/C++ 
+## 需要总结内容
+### C/C++ 
 * [Google开源项目风格](http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/)
 * 初始化列表
 * [STL 元素要求](http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/)
@@ -144,34 +140,34 @@ https://www.microsoft.com/com/default.mspx
   自旋锁：[自旋锁（spin lock）与互斥量的区别](http://blog.csdn.net/a675311/article/details/49096435), [【原创+整理】线程同步之详解自旋锁](http://www.cnblogs.com/cposture/p/SpinLock.html), [C++11实现自旋锁](http://blog.csdn.net/sharemyfree/article/details/47338001)
 * [字符串 Hash 函数](https://www.byvoid.com/zhs/blog/string-hash-compare) `BKDRHash` `APHash` `DJBHash` `JSHash` `RSHash` `SDBMHash` `PJWHash` `ELFHash`
 
-#### Java
+### Java
 * 高性存储
     [高性能队列——Disruptor](https://tech.meituan.com/disruptor.html)
 	[并发框架Disruptor译文](http://ifeve.com/disruptor/)
 
-#### XML
+### XML
 * XML 解释器 `DOM` `SAX` `Xerces` `Castor`
    [解析xml文件的几种方法和原理](https://blog.csdn.net/witsmakemen/article/details/6980424)
 
-#### PDF
+### PDF
 * 几个 PDF 软件库：`xpdf`，`poppler`，`mupdf`。
 
-#### VisualStudio
+### VisualStudio
 * VC 编译器参数设置
   [显示类内存布局](http://www.zyh1690.org/d1reportsingleclasslayout-msvc%E6%B1%87%E7%BC%96/)
 * dllimport、dllexport
   [VS下 dllimport与dllexport作用与区别](http://blog.csdn.net/u010055724/article/details/51538686)
 
-#### BAT 批处理
+### BAT 批处理
   [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
 
 * 系统应用：`shutdown`、`sc`、`reg`。
 
-### 算法
+## 算法
 * `局部敏感哈希`
 
-### 网络协议
+## 网络协议
 
-#### FTP
+### FTP
 * [FTP协议（指令集）](https://my.oschina.net/90888/blog/830379)
 
