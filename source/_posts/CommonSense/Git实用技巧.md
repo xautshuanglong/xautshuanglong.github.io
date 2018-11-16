@@ -2,6 +2,7 @@
 title: Git实用技巧
 date: 2018-11-15 11:05:20
 categories: CommonSense
+feature: /images/CommonSense/Git_logo.png
 tags: git
 ---
 
