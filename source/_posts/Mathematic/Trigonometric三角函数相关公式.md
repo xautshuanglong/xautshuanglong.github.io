@@ -1,7 +1,7 @@
 ---
 title: 三角函数常用公式集锦
 date: 2016-07-20 18:31:43
-categories: Math
+categories: Mathematic
 mathjax: true
 tags: Trigonometric
 toc: true

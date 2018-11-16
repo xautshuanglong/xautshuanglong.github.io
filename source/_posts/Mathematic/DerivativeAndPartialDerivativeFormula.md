@@ -1,7 +1,7 @@
 ---
 title: 导数与偏导数推导过程
 date: 2018-03-27 12:07:06
-categories: Math
+categories: Mathematic
 tags:
 toc: true
 ---
