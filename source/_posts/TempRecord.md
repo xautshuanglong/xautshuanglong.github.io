@@ -174,3 +174,19 @@ https://www.microsoft.com/com/default.mspx
 ### FTP
 * [FTP协议（指令集）](https://my.oschina.net/90888/blog/830379)
 
+## 性能分析
+* VTune
+  [Intel VTune Get Started](https://software.intel.com/en-us/vtune/documentation/get-started)
+* 值得参考的内容内容
+  [动态追踪技术漫谈](https://openresty.org/posts/dynamic-tracing/)
+  [内核探测工具 Systemtap 简介](http://www.cnblogs.com/hazir/p/systemtap_introduction.html)
+  [Ubuntu官网 wiki-Systemtap](https://wiki.ubuntu.com/Kernel/Systemtap)
+  [在 Ubuntu12.04 上安装 Systemtap](http://www.linuxdiyf.com/linux/26714.html)
+  [Linux 下的一个全新的性能测量和调试诊断工具 Systemtap](https://www.ibm.com/developerworks/cn/linux/l-cn-systemtap3/index.html)
+  [Java 火焰图](https://colobu.com/2016/08/10/Java-Flame-Graphs/)
+  [白话火焰图](https://huoding.com/2016/08/18/531)
+  [Go 代码调优利器-火焰图](https://lihaoquan.me/2017/1/1/Profiling-and-Optimizing-Go-using-go-torch.html)
+  [开源项目之调试 Python 应用生成性能 CPU 火焰图](http://xiaorui.cc/2015/10/22/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E4%B9%8B%E8%B0%83%E8%AF%95python%E5%BA%94%E7%94%A8%E7%94%9F%E6%88%90%E6%80%A7%E8%83%BDcpu%E7%81%AB%E7%84%B0%E5%9B%BE/)
+  [使用火焰图做性能分析](http://neoremind.com/2017/09/%E4%BD%BF%E7%94%A8%E7%81%AB%E7%84%B0%E5%9B%BE%E5%81%9A%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/)
+  [如何读懂火焰图](http://www.ruanyifeng.com/blog/2017/09/flame-graph.html)
+  [linux 下用火焰图进行性能分析](https://blog.csdn.net/gatieme/article/details/78885908)

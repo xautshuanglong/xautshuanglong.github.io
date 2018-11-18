@@ -109,6 +109,9 @@ toc: true
 {% btn http://priede.bf.lu.lv/ftp/pub/RakstuDarbi/pdf/MuPDF/mupdf_explored.pdf MuPDF&#32;Explored&#32;2017-3-32 danger %}
 {% btn https://pymupdf.readthedocs.io/en/latest/ PyMuPDF&#32;Document danger %}
 
+[//]: # (内存泄漏检测)
+{% btn https://github.com/KindDragon/vld Visual&#32;Leak&#32;Detector danger %}
+
 [^_^]: # (特殊注释)
 [commont]: # (啰嗦注释)
 [commont]: <> (啰嗦注释)
