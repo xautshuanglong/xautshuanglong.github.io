@@ -82,8 +82,12 @@ toc: true
 {% btn http://wiki.jikexueyuan.com/project/jni-ndk-developer-guide/ndkoverview.html Android&#32;NDK&#32;简介 success %}
 {% btn http://www.androidchina.net/1992.html Android&#32;UI&#32;开源框架 success %}
 
+### UML
+{% btn http://staruml.io/ StartUML primary %}
+{% btn https://docs.staruml.io/ StartUML&#32;GitBook primary %}
+
 ### D3D
-{% btn http://shiba.hpe.sh.cn/jiaoyanzu/WULI/Soft/NotXNA 【图形编程&#32;&&#32;其他】 primary %}
+{% btn http://shiba.hpe.sh.cn/jiaoyanzu/WULI/Soft/NotXNA 【图形编程&#32;&&#32;其他】 info %}
 
 ## Github
 {% btn https://github.com/xautshuanglong My&#32;Github warning %}

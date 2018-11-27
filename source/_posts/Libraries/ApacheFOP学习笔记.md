@@ -17,7 +17,7 @@ toc: true
 1. 自动检测系统字体库
    `fop.xconf`默认配置为自动检测。
    注意使用正确的字体家族名称。（可使用 Windows 自带字体查看器查询）
-![WinFontViewer.png](http://obcba9r77.bkt.clouddn.com/images/Linux/WinFontViewer.png)
+![WinFontViewer.png](/images/Libraries/WinFontViewer.png)
 ``` xml
 <fo:block color="green" font-family="华文行楷">
     Hello, <xsl:value-of select="name"/>!
