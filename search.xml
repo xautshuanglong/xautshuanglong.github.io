@@ -4,9 +4,31 @@
   
     
     <entry>
+      <title><![CDATA[TransformationMatrix变换矩阵]]></title>
+      <url>https://xautshuanglong.github.io/2018/11/16/Mathematic/TransformationMatrix%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5/</url>
+      <content type="html"><![CDATA[<p>奇妙数学世界</p>
+<a id="more"></a>
+]]></content>
+      
+        <categories>
+            
+            <category> Mathematic </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> matrix </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Git实用技巧]]></title>
       <url>https://xautshuanglong.github.io/2018/11/15/CommonSense/Git%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-      <content type="html"><![CDATA[<h2 id="中文显示问题"><a href="#中文显示问题" class="headerlink" title="中文显示问题"></a>中文显示问题</h2><p>git status 列举文件名含有中文时，无法正常显示：(文件名编码格式 与 git diff 不一致)<br>git config –global core.quotepath false</p>
+      <content type="html"><![CDATA[<h2 id="中文显示问题"><a href="#中文显示问题" class="headerlink" title="中文显示问题"></a>中文显示问题</h2><p>git status 列举文件名含有中文时，无法正常显示：(文件名编码格式 与 git diff 不一致)<br>git config --global core.guotepath false</p>
 ]]></content>
       
         <categories>
@@ -199,11 +221,11 @@
 <a id="more"></a>
 <h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p>
 <h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
 <p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p>
-<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -393,7 +415,7 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
       
         <categories>
             
-            <category> Math </category>
+            <category> Mathematic </category>
             
         </categories>
         
@@ -1066,6 +1088,7 @@ opened again until the handle is closed.
 </ul>
 <h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><ul>
 <li>高性存储<br>  <a href="https://tech.meituan.com/disruptor.html" target="_blank" rel="noopener">高性能队列——Disruptor</a><br>  <a href="http://ifeve.com/disruptor/" target="_blank" rel="noopener">并发框架Disruptor译文</a></li>
+<li>文本格式化<br>  FOP xml、xslt、xpath、xsl-fo，文档格式化<br>  FreeMarker 模板引擎</li>
 </ul>
 <h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3><ul>
 <li>XML 解释器 <code>DOM</code> <code>SAX</code> <code>Xerces</code> <code>Castor</code><br> <a href="https://blog.csdn.net/witsmakemen/article/details/6980424" target="_blank" rel="noopener">解析xml文件的几种方法和原理</a></li>
@@ -1339,7 +1362,7 @@ opened again until the handle is closed.
       
         <categories>
             
-            <category> Math </category>
+            <category> Mathematic </category>
             
         </categories>
         
@@ -1382,7 +1405,7 @@ opened again until the handle is closed.
     
     <entry>
       <title><![CDATA[3D基础]]></title>
-      <url>https://xautshuanglong.github.io/2016/06/30/3D%E5%9F%BA%E7%A1%80/</url>
+      <url>https://xautshuanglong.github.io/2016/06/30/Mathematic/3D%E5%9F%BA%E7%A1%80/</url>
       <content type="html"><![CDATA[<h2 id="常用公式"><a href="#常用公式" class="headerlink" title="常用公式"></a>常用公式</h2><p>开启 3D 之旅<br><a id="more"></a></p>
 <p>$$<br>Q = [x, y, z, w]^T = [u_x sin(\frac{\theta}{2}), u_y sin(\frac{\theta}{2}), u_z sin(\frac{\theta}{2}), cos(\frac{\theta}{2})]^T<br>$$</p>
 <p>$$<br>\frac{\partial u}{\partial t} = h^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)<br>$$</p>
@@ -1395,7 +1418,7 @@ opened again until the handle is closed.
       
         <categories>
             
-            <category> Math </category>
+            <category> Mathematic </category>
             
         </categories>
         
@@ -2229,6 +2252,9 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://gitlab.gnome.org/GNOME/libxslt/" target="_blank" rel="noopener">gitlab&#32;libxslt</a>
 <a class="btn btn-danger" href="https://github.com/GNOME/libxml2" target="_blank" rel="noopener">github&#32;libxml2</a>
 <a class="btn btn-danger" href="https://github.com/GNOME/libxslt" target="_blank" rel="noopener">github&#32;libxslt</a>
+<a class="btn btn-danger" href="https://mupdf.com/docs/index.html" target="_blank" rel="noopener">MuPDF&#32;Official</a>
+<a class="btn btn-danger" href="http://priede.bf.lu.lv/ftp/pub/RakstuDarbi/pdf/MuPDF/mupdf_explored.pdf" target="_blank" rel="noopener">MuPDF&#32;Explored&#32;2017-3-32</a>
+<a class="btn btn-danger" href="https://pymupdf.readthedocs.io/en/latest/" target="_blank" rel="noopener">PyMuPDF&#32;Document</a>
 <h2 id="NetworkProgram"><a href="#NetworkProgram" class="headerlink" title="NetworkProgram"></a>NetworkProgram</h2><a class="btn btn-primary" href="http://www.52im.net/thread-50-1-1.html" target="_blank" rel="noopener">即时通讯网</a>
 <h2 id="公共平台"><a href="#公共平台" class="headerlink" title="公共平台"></a>公共平台</h2><a class="btn btn-warning" href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="noopener">百度统计</a>
 <a class="btn btn-warning" href="https://portal.qiniu.com/signin" target="_blank" rel="noopener">七牛云存储</a>
@@ -2482,9 +2508,9 @@ Handler.removeFilter() # 删除过滤器
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> log4py </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -3147,7 +3173,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#120;&#106;&#115;&#104;&#117;&#97;&#110;&#x67;&#108;&#111;&#x6e;&#103;&#x40;&#x31;&#50;&#x36;&#x2e;&#x63;&#111;&#109;">&#120;&#106;&#115;&#104;&#117;&#97;&#110;&#x67;&#108;&#111;&#x6e;&#103;&#x40;&#x31;&#50;&#x36;&#x2e;&#x63;&#111;&#109;</a></p>
+</code></pre><p><a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#120;&#x6a;&#115;&#104;&#x75;&#97;&#110;&#103;&#x6c;&#x6f;&#x6e;&#x67;&#64;&#49;&#x32;&#54;&#x2e;&#x63;&#x6f;&#109;">&#120;&#x6a;&#115;&#104;&#x75;&#97;&#110;&#103;&#x6c;&#x6f;&#x6e;&#x67;&#64;&#49;&#x32;&#54;&#x2e;&#x63;&#x6f;&#109;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*

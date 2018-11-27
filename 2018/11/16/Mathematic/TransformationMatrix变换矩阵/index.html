@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>3D基础 | Shuanglong</title>
+  <title>TransformationMatrix变换矩阵 | Shuanglong</title>
   <meta name="author" content="JiangShuanglong">
   
   <meta name="description" content="Descrition">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="3D基础">
+  <meta property="og:title" content="TransformationMatrix变换矩阵">
   <meta property="og:site_name" content="Shuanglong">
 
   
@@ -115,7 +115,7 @@ var _hmt = _hmt || [];
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> 3D基础</h1>
+			<h1 class="title title-inverse "> TransformationMatrix变换矩阵</h1>
 		</div>		
 	
 
@@ -135,14 +135,8 @@ var _hmt = _hmt || [];
 	<div class="mypage">		
 	  		
 
-	  <h2 id="常用公式"><a href="#常用公式" class="headerlink" title="常用公式"></a>常用公式</h2><p>开启 3D 之旅<br><a id="more"></a></p>
-<p>$$<br>Q = [x, y, z, w]^T = [u_x sin(\frac{\theta}{2}), u_y sin(\frac{\theta}{2}), u_z sin(\frac{\theta}{2}), cos(\frac{\theta}{2})]^T<br>$$</p>
-<p>$$<br>\frac{\partial u}{\partial t} = h^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}\right)<br>$$</p>
-<p>$$<br>\sum(x)<br>$$</p>
-<p>$$<br>J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}<br>$$</p>
-<p>$$<br>f(x)=\left\{<br>\begin{align}<br>x &amp; = \cos(t) \\<br>y &amp; = \sin(t) \\<br>z &amp; = \frac xy<br>\end{align}<br>\right\}.<br>$$</p>
-<p>$$<br>F^{HLLC}=\left\{<br>\begin{array}{rcl}<br>F_L       &amp;      &amp; {0      &lt;      S_L} \\<br>F^*_L     &amp;      &amp; {S_L \leq 0 &lt; S_M} \\<br>F^*_R     &amp;      &amp; {S_M \leq 0 &lt; S_R} \\<br>F_R       &amp;      &amp; {S_R \leq 0}<br>\end{array}<br>\right\}<br>$$</p>
-<p>$$<br>f(x)=<br>\begin{cases}<br>0&amp; \text{x=0} \\<br>1&amp; \text{x!=0}<br>\end{cases}<br>$$</p>
+	  <p>奇妙数学世界</p>
+<a id="more"></a>
 	  
 	</div>
 
@@ -154,14 +148,14 @@ var _hmt = _hmt || [];
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2016/07/01/VisualStudio/SDL安全开发生命周期/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016/06/23/CPlusPlus/CPlusPlus访问权限及继承方式/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2018/11/15/CommonSense/Git实用技巧/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -211,7 +205,7 @@ var _hmt = _hmt || [];
 		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
-		   issue_title: "3D基础",
+		   issue_title: "TransformationMatrix变换矩阵",
 		   issue_id: "undefined",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
@@ -232,7 +226,7 @@ var _hmt = _hmt || [];
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-06-30 
+	2018-11-16 
 	</div>
 	
 
@@ -243,7 +237,7 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/Math/">Math<span>3</span></a></li>
+    </li><li><a href="/categories/Mathematic/">Mathematic<span>4</span></a></li>
   
 
     </ul>
@@ -252,9 +246,22 @@ var _hmt = _hmt || [];
 
 	<!-- tags -->
 	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/matrix/">matrix<span>1</span></a></li>
+    </ul>
+	</div>
+	
 
 	<!-- toc -->
 	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			
+		</div>
 	
 	</div>
 	
