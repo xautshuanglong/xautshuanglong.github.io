@@ -26,7 +26,7 @@ code {
   margin: 0 2px;
   font-size: 90%;
   text-shadow: 0 1px #fff;  
-  word-break: break-all;
+/*  word-break: break-all; */
   word-wrap: break-word;
   white-space: normal;
 }

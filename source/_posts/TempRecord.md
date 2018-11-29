@@ -80,6 +80,8 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
     `GetClipboardData` `OpenClipboard` `GlobalLock` `GlobalUnlock`
 * 系统信息 `sysinfoapi.h`
 * 进程操作（权限问题）`OpenProcessToken` `LookupPrivilegeValue` `AdjustTokenPrivileges`
+* 网络操作 `InternetAttemptConnect` `InternetCheckConnection` `InternetQueryOption` `InternetGetConnectedState`
+    [WinINet Functions](https://docs.microsoft.com/zh-cn/windows/desktop/WinInet/wininet-functions)
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
