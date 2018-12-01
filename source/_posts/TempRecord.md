@@ -52,8 +52,8 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
     GetLastError、FormatMessage
     https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
     https://msdn.microsoft.com/en-us/library/ms679351(v=VS.85).aspx
-	[HRESULT 与 Windows Error Codes](http://www.cnblogs.com/greenerycn/archive/2010/08/30/hresult_and_win_error_codes.html)
-	[C++异常继承关系](http://zh.cppreference.com/w/cpp/error/exception)
+  [HRESULT 与 Windows Error Codes](http://www.cnblogs.com/greenerycn/archive/2010/08/30/hresult_and_win_error_codes.html)
+  [C++异常继承关系](http://zh.cppreference.com/w/cpp/error/exception)
 
 * 文件版本信息
     GetFileVersionInfoSizeEx、GetFileVersionInfoEx、VerQueryValue
@@ -72,16 +72,16 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 键盘按键检测
     GetAsyncKeyState _kbhit
 * Microsoft Try-except Statement
-    [try-except](https://msdn.microsoft.com/en-us/library/s58ftw19&#40;v=vs.140&#41;.aspx)
-    <https://msdn.microsoft.com/en-us/library/s58ftw19(v=vs.140).aspx>
-    [try-final](https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx)
-	<https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx>
+  [try-except](https://msdn.microsoft.com/en-us/library/s58ftw19&#40;v=vs.140&#41;.aspx)
+  <https://msdn.microsoft.com/en-us/library/s58ftw19(v=vs.140).aspx>
+  [try-final](https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx)
+  <https://msdn.microsoft.com/en-us/library/9xtt5hxz.aspx>
 * 剪切板相关操作
     `GetClipboardData` `OpenClipboard` `GlobalLock` `GlobalUnlock`
 * 系统信息 `sysinfoapi.h`
 * 进程操作（权限问题）`OpenProcessToken` `LookupPrivilegeValue` `AdjustTokenPrivileges`
 * 网络操作 `InternetAttemptConnect` `InternetCheckConnection` `InternetQueryOption` `InternetGetConnectedState`
-    [WinINet Functions](https://docs.microsoft.com/zh-cn/windows/desktop/WinInet/wininet-functions)
+  [WinINet Functions](https://docs.microsoft.com/zh-cn/windows/desktop/WinInet/wininet-functions)
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
@@ -118,14 +118,14 @@ https://www.microsoft.com/com/default.mspx
 * [STL 元素要求](http://jimmyleeee.blog.163.com/blog/static/930961820097510528758/)
 * CComPtr 用法OB总结
 * static 用法总结
-    [static关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html)
-    [static作用](http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html)
+  [static关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777441.html)
+  [static作用](http://www.cnblogs.com/stoneJin/archive/2011/09/21/2183313.html)
 * const 查看是否已完善
 * 类型转换：`static_cast` `dynamic_cast` `const_cast` `reinterpret_cast` [参考](https://www.cnblogs.com/chio/archive/2007/07/18/822389.html)
 * extern 用法总结
-    [多个源文件共用一个全局变量](http://blog.sina.com.cn/s/blog_74a459380101rjh4.html)
-    [extern关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
-    [全局变量的声明和定义](http://blog.csdn.net/candyliuxj/article/details/7853938)
+  [多个源文件共用一个全局变量](http://blog.sina.com.cn/s/blog_74a459380101rjh4.html)
+  [extern关键字详解](http://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777431.html)
+  [全局变量的声明和定义](http://blog.csdn.net/candyliuxj/article/details/7853938)
 * inline 用法
 * explicit 用法
 * #pragma pack([show]|[push|pop][, identifier], n)
@@ -135,24 +135,26 @@ https://www.microsoft.com/com/default.mspx
 * 重点 std::packaged_task std::future std::chrono
 * WinUI : SkinUI DirectUI DuiEngine("svn checkout http://duiengine.googlecode.com/svn/trunk/ duiengine-read-only")
 * C++11 异步编程
-    [深入浅出std::async](http://www.cnblogs.com/chengyuanchun/p/5394843.html)
-	[用C++11的std::async代替线程的创建](http://www.cnblogs.com/qicosmos/p/3534211.html)
-	[协程概念](http://cnodejs.org/topic/58ddd7a303d476b42d34c911)
+  [深入浅出std::async](http://www.cnblogs.com/chengyuanchun/p/5394843.html)
+  [用C++11的std::async代替线程的创建](http://www.cnblogs.com/qicosmos/p/3534211.html)
+  [协程概念](http://cnodejs.org/topic/58ddd7a303d476b42d34c911)
 * 并发编程
   自旋锁：[自旋锁（spin lock）与互斥量的区别](http://blog.csdn.net/a675311/article/details/49096435), [【原创+整理】线程同步之详解自旋锁](http://www.cnblogs.com/cposture/p/SpinLock.html), [C++11实现自旋锁](http://blog.csdn.net/sharemyfree/article/details/47338001)
 * [字符串 Hash 函数](https://www.byvoid.com/zhs/blog/string-hash-compare) `BKDRHash` `APHash` `DJBHash` `JSHash` `RSHash` `SDBMHash` `PJWHash` `ELFHash`
 
 ### Java
 * 高性存储
-    [高性能队列——Disruptor](https://tech.meituan.com/disruptor.html)
-	[并发框架Disruptor译文](http://ifeve.com/disruptor/)
+  [高性能队列——Disruptor](https://tech.meituan.com/disruptor.html)
+  [并发框架Disruptor译文](http://ifeve.com/disruptor/)
 * 文本格式化
     FOP xml、xslt、xpath、xsl-fo，文档格式化
     FreeMarker 模板引擎
+* GC 算法相关
+  [GC的三大基础算法](https://segmentfault.com/a/1190000004665100)
 
 ### XML
 * XML 解释器 `DOM` `SAX` `Xerces` `Castor`
-   [解析xml文件的几种方法和原理](https://blog.csdn.net/witsmakemen/article/details/6980424)
+  [解析xml文件的几种方法和原理](https://blog.csdn.net/witsmakemen/article/details/6980424)
 
 ### PDF
 * 几个 PDF 软件库：`xpdf`，`poppler`，`mupdf`。
