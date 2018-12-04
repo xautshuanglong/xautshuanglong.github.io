@@ -85,6 +85,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * `DIA` `Debug Interface Access SDK`，访问存储在PDB（Program Database）文件中信息的库。
   VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。
   [官方参考](https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015)
+* `PDH` `Performance Data Helper` 微软性能数据助手，如同性能监视器记录数据。[PDH header](https://docs.microsoft.com/en-us/windows/desktop/api/pdh/)
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
