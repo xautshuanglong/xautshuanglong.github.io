@@ -39,7 +39,7 @@ toc: true
 {% btn https://blog.csdn.net/feiyangqingyun/article/category/6600909 QT&#32;自定义控件参考 primary %}
 
 ### Golang
-{% btn https://docs.ruanjiadeng.com/gopl-zh/index.html Go语言基础 info %}
+{% btn http://www.runoob.com/go/go-tutorial.html Go&#32;菜鸟教程 info %}
 	
 ### Hexo
 {% btn http://www.gsgundam.com/2015-02-26-mathjax-mathematical-expressions/ Mathjax初级 success %}
