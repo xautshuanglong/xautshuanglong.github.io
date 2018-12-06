@@ -82,7 +82,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 进程操作（权限问题）`OpenProcessToken` `LookupPrivilegeValue` `AdjustTokenPrivileges`
 * 网络操作 `InternetAttemptConnect` `InternetCheckConnection` `InternetQueryOption` `InternetGetConnectedState`
   [WinINet Functions](https://docs.microsoft.com/zh-cn/windows/desktop/WinInet/wininet-functions)
-
+  [IP Helper Functions](https://docs.microsoft.com/zh-cn/windows/desktop/IpHlp/ip-helper-functions)
 * `DIA` `Debug Interface Access SDK`，访问存储在PDB（Program Database）文件中信息的库。
   VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。
   [官方参考](https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015)
