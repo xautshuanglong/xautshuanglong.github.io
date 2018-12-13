@@ -133,6 +133,54 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2018-12-13 </div>
+			<div class="article-title"><a href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/" title="由 VLD 引发的对静态变量初始化顺序的思考">静态变量的初始化与释放</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote>
+<p><strong>前情提要：</strong><br>VLD要记录每次的内存分配，它通过Windows提供的分配钩子allocation hooks来监视调试堆内存的分配。它是一个用户自定义的回调函数，在每次从堆中分配内存之前被调用，在初始化是VLD使用_CrtSetAllocation注册这个钩子函数。 全局变量在程序初始化时就初始化，如果将VLD作为一个全局变量就可以与程序一起启动，但是C/C++并没有约定全局变量初始化的顺序，如果其它全局变量的构造函数中有内存分配则可能无法检测到。<br><a href="https://blog.csdn.net/fan_hai_ping/article/details/8023433" target="_blank" rel="noopener">https://blog.csdn.net/fan_hai_ping/article/details/8023433</a> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> init_seg(&#123; compiler | lib | user | <span class="meta-string">"section-name"</span> [, func-name]&#125; )</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017</a></p>
+<p><a href="http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html" target="_blank" rel="noopener">http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html</a></p>
+
+	
+	</div>
+  <a type="button" href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2018-11-30 </div>
+			<div class="article-title"><a href="/2018/11/30/CommonSense/ReferenceCount关于引用计数/">关于引用计数</a></div>						
+		</h3>
+	
+
+
+		     <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h2><p>引用计数是计算机编程语言中的一种内存管理技术，是指将资源（可以是对象、内存或磁盘空间等等）的被引用次数保存起来，当被引用次数变为零时就将其释放的过程。<br>使用引用计数技术可以实现自动资源管理的目的，同时引用计数还可以指使用引用计数技术回收未使用资源的垃圾回收算法。<br>当创建一个对象的实例并在堆上申请内存时，对象的引用计数就为1，在其他对象中需要持有这个对象时，就需要把该对象的引用计数加1，需要释放一个对象时，就将该对象的引用计数减1，直至对象的引用计数为0，对象的内存会被立刻释放。</p>
+	
+	</div>
+  <a type="button" href="/2018/11/30/CommonSense/ReferenceCount关于引用计数/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+	       
+		     
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2018-11-15 </div>
 			<div class="article-title"><a href="/2018/11/15/CommonSense/Git实用技巧/">Git实用技巧</a></div>						
 		</h3>
@@ -141,6 +189,11 @@ var _hmt = _hmt || [];
 
 		     <div class="entry">
   <div class="row">
+	
+           
+              <div class="thumbnail"><a href="/2018/11/15/CommonSense/Git实用技巧/"><img src="/images/CommonSense/Git_logo.png" alt="Git实用技巧" class="nofancybox"></a>
+           
+		</div>
 	
 	
 		<h2 id="中文显示问题"><a href="#中文显示问题" class="headerlink" title="中文显示问题"></a>中文显示问题</h2><p>git status 列举文件名含有中文时，无法正常显示：(文件名编码格式 与 git diff 不一致)<br>git config --global core.guotepath false</p>
@@ -327,7 +380,7 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/CPP/">CPP<span>18</span></a></li>
 		
-			<li><a href="/categories/CommonSense/">CommonSense<span>7</span></a></li>
+			<li><a href="/categories/CommonSense/">CommonSense<span>9</span></a></li>
 		
 			<li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
 		
@@ -339,9 +392,11 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/Mathematic/">Mathematic<span>4</span></a></li>
 		
-			<li><a href="/categories/Network/">Network<span>2</span></a></li>
+			<li><a href="/categories/Network/">Network<span>3</span></a></li>
 		
 			<li><a href="/categories/Python/">Python<span>3</span></a></li>
+		
+			<li><a href="/categories/UML/">UML<span>1</span></a></li>
 		
 			<li><a href="/categories/VisualStudio/">VisualStudio<span>1</span></a></li>
 		
@@ -356,48 +411,48 @@ var _hmt = _hmt || [];
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
-		
-			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
-		
-			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
-		
-			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
-		
-			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
+			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
 		
 			<li><a href="/tags/C11/">C11<span>1</span></a></li>
 		
-			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
+			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
 		
-			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
+			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
 		
-			<li><a href="/tags/signal/">signal<span>1</span></a></li>
+			<li><a href="/tags/API/">API<span>1</span></a></li>
 		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
+			<li><a href="/tags/static/">static<span>1</span></a></li>
 		
-			<li><a href="/tags/STL/">STL<span>9</span></a></li>
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
 		
 			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
 		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
+			<li><a href="/tags/socket/">socket<span>2</span></a></li>
 		
-			<li><a href="/tags/vim/">vim<span>1</span></a></li>
+			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
 		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
-		
-			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
-		
-			<li><a href="/tags/XML/">XML<span>1</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
 		
 			<li><a href="/tags/VC/">VC<span>1</span></a></li>
 		
-			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+			<li><a href="/tags/Python/">Python<span>3</span></a></li>
+		
+			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+		
+			<li><a href="/tags/PortNumber/">PortNumber<span>1</span></a></li>
+		
+			<li><a href="/tags/shell/">shell<span>1</span></a></li>
+		
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
+		
+			<li><a href="/tags/XML/">XML<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>32</span></a></li>
+		   <li><a href="/tags">...<span>34</span></a></li>
 		 
 		</ul>
 	</div>
@@ -410,23 +465,23 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2018/11/16/Mathematic/TransformationMatrix变换矩阵/"><i class="fa fa-file-o"></i>TransformationMatrix变换矩阵</a>
+        <a href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/" title="由 VLD 引发的对静态变量初始化顺序的思考"><i class="fa fa-file-o"></i>静态变量的初始化与释放</a>
       </li>
     
       <li>
-        <a href="/2018/11/15/CommonSense/Git实用技巧/"><i class="fa fa-file-o"></i>Git实用技巧</a>
+        <a href="/2018/12/01/Network/SocketOptions选项说明/"><i class="fa fa-file-o"></i>Socket 选项说明</a>
       </li>
     
       <li>
-        <a href="/2018/11/05/CommonSense/PictureFormatIntroduction/"><i class="fa fa-file-o"></i>几种图片格式介绍</a>
+        <a href="/2018/11/30/CommonSense/ReferenceCount关于引用计数/"><i class="fa fa-file-o"></i>关于引用计数</a>
       </li>
     
       <li>
-        <a href="/2018/11/05/Libraries/MuPDF使用说明/" title="MuPDF is an open source software framework for viewing and converting PDF, XPS, and E-book documents."><i class="fa fa-file-o"></i>MuPDF使用说明</a>
+        <a href="/2018/11/27/UML/StarUML使用教程/"><i class="fa fa-file-o"></i>StarUML 使用教程</a>
       </li>
     
       <li>
-        <a href="/2018/10/26/Web/XML深入理解/"><i class="fa fa-file-o"></i>XML深入理解</a>
+        <a href="/2018/11/16/Mathematic/TransformationMatrix变换矩阵/" title="用数学描述世界"><i class="fa fa-file-o"></i>TransformationMatrix变换矩阵</a>
       </li>
     
   </ul>

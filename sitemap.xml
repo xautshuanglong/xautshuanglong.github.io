@@ -2,6 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xautshuanglong.github.io/2016/04/10/Hexo/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2018-12-13T11:18:26.650Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/12/13/CommonSense/StaticVariables%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E9%87%8A%E6%94%BE/</loc>
+    
+    <lastmod>2018-12-13T11:18:24.992Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/11/18/TempRecord/</loc>
+    
+    <lastmod>2018-12-13T07:20:16.102Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</loc>
+    
+    <lastmod>2018-12-06T01:53:01.251Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/12/01/Network/SocketOptions%E9%80%89%E9%A1%B9%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2018-12-04T06:35:25.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/11/30/CommonSense/ReferenceCount%E5%85%B3%E4%BA%8E%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0/</loc>
+    
+    <lastmod>2018-11-30T08:18:48.047Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/10/10/Libraries/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2018-11-27T06:44:40.203Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/11/27/UML/StarUML%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2018-11-27T06:36:53.763Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/11/16/Mathematic/TransformationMatrix%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5/</loc>
+    
+    <lastmod>2018-11-19T12:39:57.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/11/15/CommonSense/Git%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    
+    <lastmod>2018-11-19T12:39:57.474Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xautshuanglong.github.io/2016/06/30/Mathematic/3D%E5%9F%BA%E7%A1%80/</loc>
     
     <lastmod>2018-11-16T07:17:56.422Z</lastmod>
@@ -23,34 +93,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/11/16/Mathematic/TransformationMatrix%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5/</loc>
-    
-    <lastmod>2018-11-16T07:07:28.286Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</loc>
-    
-    <lastmod>2018-11-16T06:56:53.986Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2016/11/18/TempRecord/</loc>
-    
-    <lastmod>2018-11-16T03:06:41.729Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2018/11/15/CommonSense/Git%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    
-    <lastmod>2018-11-16T03:06:41.729Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2016/04/15/Linux/vim-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2018-11-13T02:42:14.448Z</lastmod>
@@ -61,13 +103,6 @@
     <loc>https://xautshuanglong.github.io/2018/11/05/CommonSense/PictureFormatIntroduction/</loc>
     
     <lastmod>2018-11-08T02:07:29.465Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2018/10/10/Libraries/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2018-11-06T09:17:42.064Z</lastmod>
     
   </url>
   
@@ -128,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/05/03/Python/Log4py%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2018-10-08T01:29:00.154Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2018/09/24/Hexo/Markdown%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2018-10-08T01:29:00.154Z</lastmod>
@@ -142,9 +170,9 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/04/10/Hexo/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://xautshuanglong.github.io/2016/05/03/Python/Log4py%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     
-    <lastmod>2018-09-25T07:27:43.869Z</lastmod>
+    <lastmod>2018-10-08T01:29:00.154Z</lastmod>
     
   </url>
   
@@ -219,7 +247,7 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2017/01/08/CommonSense/TimeAbout%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%96%E7%95%8C%E7%9A%84%E6%97%B6%E9%97%B4/</loc>
+    <loc>https://xautshuanglong.github.io/2016/08/25/CommonSense/RTTI%E7%90%86%E8%A7%A3/</loc>
     
     <lastmod>2018-06-07T06:25:37.054Z</lastmod>
     
@@ -233,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/08/25/CommonSense/RTTI%E7%90%86%E8%A7%A3/</loc>
+    <loc>https://xautshuanglong.github.io/2017/01/08/CommonSense/TimeAbout%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%96%E7%95%8C%E7%9A%84%E6%97%B6%E9%97%B4/</loc>
     
     <lastmod>2018-06-07T06:25:37.054Z</lastmod>
     
@@ -254,13 +282,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/05/09/CPlusPlus/stringstream%E9%99%B7%E9%98%B1/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.052Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2016/04/02/CPlusPlus/%E5%85%B3%E4%BA%8Elog4cpp%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</loc>
     
     <lastmod>2018-06-07T06:25:37.052Z</lastmod>
@@ -268,21 +289,14 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-09-Iterators/</loc>
+    <loc>https://xautshuanglong.github.io/2016/05/09/CPlusPlus/stringstream%E9%99%B7%E9%98%B1/</loc>
     
-    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
+    <lastmod>2018-06-07T06:25:37.052Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/</loc>
     
     <lastmod>2018-06-07T06:25:37.051Z</lastmod>
     
@@ -296,6 +310,13 @@
   </url>
   
   <url>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-09-Iterators/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2018-06-07T06:25:37.051Z</lastmod>
@@ -303,21 +324,14 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/</loc>
     
-    <lastmod>2018-06-07T06:25:37.050Z</lastmod>
+    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.050Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</loc>
     
     <lastmod>2018-06-07T06:25:37.050Z</lastmod>
     
@@ -331,7 +345,21 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
     
@@ -345,7 +373,7 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
     
@@ -366,14 +394,14 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    <loc>https://xautshuanglong.github.io/2018/03/28/Algorithm/EncrytAndDecrypt/</loc>
     
     <lastmod>2018-06-07T06:25:37.047Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/03/28/Algorithm/EncrytAndDecrypt/</loc>
+    <loc>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
     
     <lastmod>2018-06-07T06:25:37.047Z</lastmod>
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2018-11-16T07:07:28.286Z</updated>
+  <updated>2018-12-13T11:18:24.992Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -17,17 +17,145 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>静态变量的初始化与释放</title>
+    <link href="https://xautshuanglong.github.io/2018/12/13/CommonSense/StaticVariables%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E9%87%8A%E6%94%BE/"/>
+    <id>https://xautshuanglong.github.io/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/</id>
+    <published>2018-12-13T07:22:46.000Z</published>
+    <updated>2018-12-13T11:18:24.992Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>前情提要：</strong><br>VLD要记录每次的内存分配，它通过Windows提供的分配钩子allocation hooks来监视调试堆内存的分配。它是一个用户自定义的回调函数，在每次从堆中分配内存之前被调用，在初始化是VLD使用_CrtSetAllocation注册这个钩子函数。 全局变量在程序初始化时就初始化，如果将VLD作为一个全局变量就可以与程序一起启动，但是C/C++并没有约定全局变量初始化的顺序，如果其它全局变量的构造函数中有内存分配则可能无法检测到。<br><a href="https://blog.csdn.net/fan_hai_ping/article/details/8023433" target="_blank" rel="noopener">https://blog.csdn.net/fan_hai_ping/article/details/8023433</a> </p></blockquote><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> init_seg(&#123; compiler | lib | user | <span class="meta-string">"section-name"</span> [, func-name]&#125; )</span></span><br></pre></td></tr></table></figure><p><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017</a></p><p><a href="http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html" target="_blank" rel="noopener">http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      由 VLD 引发的对静态变量初始化顺序的思考
+    
+    </summary>
+    
+      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
+    
+    
+      <category term="static" scheme="https://xautshuanglong.github.io/tags/static/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Socket 选项说明</title>
+    <link href="https://xautshuanglong.github.io/2018/12/01/Network/SocketOptions%E9%80%89%E9%A1%B9%E8%AF%B4%E6%98%8E/"/>
+    <id>https://xautshuanglong.github.io/2018/12/01/Network/SocketOptions选项说明/</id>
+    <published>2018-12-01T13:45:47.000Z</published>
+    <updated>2018-12-04T06:35:25.446Z</updated>
+    
+    <content type="html"><![CDATA[<p>Socket 是应用层和传输层之间的一个抽象层，<br>有很多选项可对其进行控制：</p><table><thead><tr><th style="text-align:left"></th><th style="text-align:left"></th></tr></thead><tbody><tr><td style="text-align:left"><code>SO_DEBUG</code></td><td style="text-align:left"><code>SO_OOBINLINE</code></td></tr><tr><td style="text-align:left"><code>SO_REUSEADDR</code></td><td style="text-align:left"><code>SO_LINGER</code></td></tr><tr><td style="text-align:left"><code>SO_TYPE</code></td><td style="text-align:left"><code>SO_RCVLOWAT</code></td></tr><tr><td style="text-align:left"><code>SO_ERROR</code></td><td style="text-align:left"><code>SO_SNDLOWAT</code></td></tr><tr><td style="text-align:left"><code>SO_DONTROUTE</code></td><td style="text-align:left"><code>SO_RCVTIMEO</code></td></tr><tr><td style="text-align:left"><code>SO_RCVBUF</code></td><td style="text-align:left"><code>SO_SNDtIMEO</code></td></tr><tr><td style="text-align:left"><code>SO_SNDBUF</code></td><td style="text-align:left"><code>TCP_MAXSEG</code></td></tr><tr><td style="text-align:left"><code>SO_KEEPALIVE</code></td><td style="text-align:left"><code>TCP_NODELAY</code></td></tr></tbody></table><a id="more"></a><h2 id="Socket-选项简要列表"><a href="#Socket-选项简要列表" class="headerlink" title="Socket 选项简要列表"></a>Socket 选项简要列表</h2><table><thead><tr><th style="text-align:center">Level</th><th style="text-align:left">Option Name</th><th style="text-align:left">数据类型</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:center"></td><td style="text-align:left">SO_DEBUG</td><td style="text-align:left">int</td><td style="text-align:left">打开调试信息</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_REUSEADDR</td><td style="text-align:left">int</td><td style="text-align:left">重用本地地址</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_TYPE</td><td style="text-align:left">int</td><td style="text-align:left">获取 socket 类型</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_ERROR</td><td style="text-align:left">int</td><td style="text-align:left">获取并清除 socket 错误状态</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_DONTROUTE</td><td style="text-align:left">int</td><td style="text-align:left">不查看路由表，直接发送给局域网内主机。</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_RCVBUF</td><td style="text-align:left">int</td><td style="text-align:left">TCP 接受缓冲区大小</td></tr><tr><td style="text-align:center">SOL_SOCKET 通用选项</td><td style="text-align:left">SO_SNDBUF</td><td style="text-align:left">int</td><td style="text-align:left">TCP 发送缓冲区大小</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_KEEPALIVE</td><td style="text-align:left">int</td><td style="text-align:left">发送周期性保活报文以维持连接</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_OOBINLINE</td><td style="text-align:left">int</td><td style="text-align:left"></td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_LINGER</td><td style="text-align:left">linger</td><td style="text-align:left">若有数据待发送。则延迟关闭。</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_RCVLOWAT</td><td style="text-align:left">int</td><td style="text-align:left">TCP 接受缓冲区低水位标记</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_SNDLOWAT</td><td style="text-align:left">int</td><td style="text-align:left">TCP 发送缓冲区高水位标记</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_RCVTIMEO</td><td style="text-align:left">timeval</td><td style="text-align:left">接收数据超时</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">SO_SNDTIMEO</td><td style="text-align:left">timeval</td><td style="text-align:left">发送数据超时</td></tr><tr><td style="text-align:center">IPPROTO_IP IPV4选项</td><td style="text-align:left">IP_TOS</td><td style="text-align:left">int</td><td style="text-align:left">服务类型</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">IP_TTL</td><td style="text-align:left">int</td><td style="text-align:left">存活时间</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">IPV6_NEXTHOP</td><td style="text-align:left">socketaddr</td><td style="text-align:left">下一跳 IP 地址</td></tr><tr><td style="text-align:center">IPPROTO_IPV6 IPV6选项</td><td style="text-align:left">IPV6_RECVPKTINFO</td><td style="text-align:left">int</td><td style="text-align:left">接收分组信息</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">IPV6_DONTFRAGi</td><td style="text-align:left">int</td><td style="text-align:left">禁止分片</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">IPV6_RECVTCLASS</td><td style="text-align:left">int</td><td style="text-align:left">接收通信类型</td></tr><tr><td style="text-align:center">IPPROTO_TCP TCP选项</td><td style="text-align:left">TCP_MAXSEG</td><td style="text-align:left">int</td><td style="text-align:left">TCP 最大报文段大小</td></tr><tr><td style="text-align:center"></td><td style="text-align:left">TCP_NODELAY</td><td style="text-align:left">int</td><td style="text-align:left">禁止 Nagle 算法</td></tr></tbody></table><h2 id="Socket-选项详细说明"><a href="#Socket-选项详细说明" class="headerlink" title="Socket 选项详细说明"></a>Socket 选项详细说明</h2><h3 id="SO-DEBUG"><a href="#SO-DEBUG" class="headerlink" title="SO_DEBUG"></a>SO_DEBUG</h3><h3 id="SO-REUSEADDR"><a href="#SO-REUSEADDR" class="headerlink" title="SO_REUSEADDR"></a>SO_REUSEADDR</h3><h3 id="SO-TYPE"><a href="#SO-TYPE" class="headerlink" title="SO_TYPE"></a>SO_TYPE</h3><h3 id="SO-ERROR"><a href="#SO-ERROR" class="headerlink" title="SO_ERROR"></a>SO_ERROR</h3><h3 id="SO-DONTROUTE"><a href="#SO-DONTROUTE" class="headerlink" title="SO_DONTROUTE"></a>SO_DONTROUTE</h3><h3 id="SO-RCVBUF"><a href="#SO-RCVBUF" class="headerlink" title="SO_RCVBUF"></a>SO_RCVBUF</h3><h3 id="SO-SNDBUF"><a href="#SO-SNDBUF" class="headerlink" title="SO_SNDBUF"></a>SO_SNDBUF</h3><h3 id="SO-KEEPALIVE"><a href="#SO-KEEPALIVE" class="headerlink" title="SO_KEEPALIVE"></a>SO_KEEPALIVE</h3><h3 id="SO-OOBINLINE"><a href="#SO-OOBINLINE" class="headerlink" title="SO_OOBINLINE"></a>SO_OOBINLINE</h3><h3 id="SO-LINGER"><a href="#SO-LINGER" class="headerlink" title="SO_LINGER"></a>SO_LINGER</h3><h3 id="SO-RCVLOWAT"><a href="#SO-RCVLOWAT" class="headerlink" title="SO_RCVLOWAT"></a>SO_RCVLOWAT</h3><h3 id="SO-SNDLOWAT"><a href="#SO-SNDLOWAT" class="headerlink" title="SO_SNDLOWAT"></a>SO_SNDLOWAT</h3><h3 id="SO-RCVTIMEO"><a href="#SO-RCVTIMEO" class="headerlink" title="SO_RCVTIMEO"></a>SO_RCVTIMEO</h3><h3 id="SO-SNDTIMEO"><a href="#SO-SNDTIMEO" class="headerlink" title="SO_SNDTIMEO"></a>SO_SNDTIMEO</h3><h3 id="IP-TOS"><a href="#IP-TOS" class="headerlink" title="IP_TOS"></a>IP_TOS</h3><h3 id="IP-TTL"><a href="#IP-TTL" class="headerlink" title="IP_TTL"></a>IP_TTL</h3><h3 id="IPV6-NEXTHOP"><a href="#IPV6-NEXTHOP" class="headerlink" title="IPV6_NEXTHOP"></a>IPV6_NEXTHOP</h3><h3 id="IPV6-RECVPKTINFO"><a href="#IPV6-RECVPKTINFO" class="headerlink" title="IPV6_RECVPKTINFO"></a>IPV6_RECVPKTINFO</h3><h3 id="IPV6-DONTFRAG"><a href="#IPV6-DONTFRAG" class="headerlink" title="IPV6_DONTFRAG"></a>IPV6_DONTFRAG</h3><h3 id="IPV6-RECVTCLASS"><a href="#IPV6-RECVTCLASS" class="headerlink" title="IPV6_RECVTCLASS"></a>IPV6_RECVTCLASS</h3><h3 id="TCP-MAXSEG"><a href="#TCP-MAXSEG" class="headerlink" title="TCP_MAXSEG"></a>TCP_MAXSEG</h3><h3 id="TCP-NODELAY"><a href="#TCP-NODELAY" class="headerlink" title="TCP_NODELAY"></a>TCP_NODELAY</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Socket 是应用层和传输层之间的一个抽象层，&lt;br&gt;有很多选项可对其进行控制：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_DEBUG&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_OOBINLINE&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_REUSEADDR&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_LINGER&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_TYPE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_RCVLOWAT&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_ERROR&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_SNDLOWAT&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_DONTROUTE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_RCVTIMEO&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_RCVBUF&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_SNDtIMEO&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_SNDBUF&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;TCP_MAXSEG&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;SO_KEEPALIVE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;&lt;code&gt;TCP_NODELAY&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+    
+    </summary>
+    
+      <category term="Network" scheme="https://xautshuanglong.github.io/categories/Network/"/>
+    
+    
+      <category term="socket" scheme="https://xautshuanglong.github.io/tags/socket/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于引用计数</title>
+    <link href="https://xautshuanglong.github.io/2018/11/30/CommonSense/ReferenceCount%E5%85%B3%E4%BA%8E%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0/"/>
+    <id>https://xautshuanglong.github.io/2018/11/30/CommonSense/ReferenceCount关于引用计数/</id>
+    <published>2018-11-30T03:07:50.000Z</published>
+    <updated>2018-11-30T08:18:48.047Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h2><p>引用计数是计算机编程语言中的一种内存管理技术，是指将资源（可以是对象、内存或磁盘空间等等）的被引用次数保存起来，当被引用次数变为零时就将其释放的过程。<br>使用引用计数技术可以实现自动资源管理的目的，同时引用计数还可以指使用引用计数技术回收未使用资源的垃圾回收算法。<br>当创建一个对象的实例并在堆上申请内存时，对象的引用计数就为1，在其他对象中需要持有这个对象时，就需要把该对象的引用计数加1，需要释放一个对象时，就将该对象的引用计数减1，直至对象的引用计数为0，对象的内存会被立刻释放。</p><a id="more"></a><p><a href="https://zh.wikipedia.org/wiki/%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0" target="_blank" rel="noopener">引用计数 wiki</a></p><h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><p>垃圾回收（英语：Garbage Collection，缩写为GC），在计算机科学中是一种自动的存储器管理机制。当一个计算机上的动态存储器不再需要时，就应该予以释放，以让出存储器，这种存储器资源管理，称为垃圾回收。<br><a href="https://zh.wikipedia.org/wiki/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8" target="_blank" rel="noopener">垃圾回收不（计算机科学）</a>)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;引用计数&quot;&gt;&lt;a href=&quot;#引用计数&quot; class=&quot;headerlink&quot; title=&quot;引用计数&quot;&gt;&lt;/a&gt;引用计数&lt;/h2&gt;&lt;p&gt;引用计数是计算机编程语言中的一种内存管理技术，是指将资源（可以是对象、内存或磁盘空间等等）的被引用次数保存起来，当被引用次数变为零时就将其释放的过程。&lt;br&gt;使用引用计数技术可以实现自动资源管理的目的，同时引用计数还可以指使用引用计数技术回收未使用资源的垃圾回收算法。&lt;br&gt;当创建一个对象的实例并在堆上申请内存时，对象的引用计数就为1，在其他对象中需要持有这个对象时，就需要把该对象的引用计数加1，需要释放一个对象时，就将该对象的引用计数减1，直至对象的引用计数为0，对象的内存会被立刻释放。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>StarUML 使用教程</title>
+    <link href="https://xautshuanglong.github.io/2018/11/27/UML/StarUML%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>https://xautshuanglong.github.io/2018/11/27/UML/StarUML使用教程/</id>
+    <published>2018-11-27T05:24:58.000Z</published>
+    <updated>2018-11-27T06:36:53.763Z</updated>
+    
+    <content type="html"><![CDATA[<p>可视化编程</p><a id="more"></a><h2 id="科学使用方法"><a href="#科学使用方法" class="headerlink" title="科学使用方法"></a>科学使用方法</h2><p>StarUML 是用 nodejs 写的（<a href="https://github.com/electron/electron" target="_blank" rel="noopener">Electron框架</a>），新版本中源代码采用 asar 工具打包，无法直接看到 <code>LicenseManagerDomain.js</code>。</p><ol><li><p>安装 asar</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g asar</span><br></pre></td></tr></table></figure></li><li><p>解压 app.asar</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 找到 StartUML 安装目录下 resources/app.asar， 默认安装路径为 C:\Program Files\StarUML</span><br><span class="line">app extract app.asar</span><br></pre></td></tr></table></figure></li><li><p>修改 JavaScript 源码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 修改前</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="keyword">this</span>.validate().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, () =&gt; &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">false</span>)</span><br><span class="line">    UnregisteredDialog.showDialog()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改后</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="keyword">this</span>.validate().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, () =&gt; &#123;</span><br><span class="line">    <span class="comment">//setStatus(this, false)</span></span><br><span class="line">    <span class="comment">//UnregisteredDialog.showDialog()</span></span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>打包 app.asar</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asar pack app app.asar</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;可视化编程&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="UML" scheme="https://xautshuanglong.github.io/categories/UML/"/>
+    
+    
+      <category term="uml" scheme="https://xautshuanglong.github.io/tags/uml/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TransformationMatrix变换矩阵</title>
     <link href="https://xautshuanglong.github.io/2018/11/16/Mathematic/TransformationMatrix%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5/"/>
     <id>https://xautshuanglong.github.io/2018/11/16/Mathematic/TransformationMatrix变换矩阵/</id>
     <published>2018-11-16T07:02:55.000Z</published>
-    <updated>2018-11-16T07:07:28.286Z</updated>
+    <updated>2018-11-19T12:39:57.475Z</updated>
     
-    <content type="html"><![CDATA[<p>奇妙数学世界</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>奇妙数学世界</p><a id="more"></a><p><a href="https://blog.csdn.net/csxiaoshui/article/details/65446125" target="_blank" rel="noopener">旋转变换</a><br><a href="https://zh.wikipedia.org/wiki/%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener">旋转矩阵 Wiki</a></p><h2 id="二维旋转"><a href="#二维旋转" class="headerlink" title="二维旋转"></a>二维旋转</h2><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    cos\theta &amp; -sin\theta \\<br>    sin\theta &amp;  cos\theta \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>\end {bmatrix}<br>$$</p><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    cos\theta &amp; -sin\theta &amp; 0 \\<br>    sin\theta &amp;  cos\theta &amp; 0 \\<br>    0         &amp;  0         &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    1 \\<br>\end {bmatrix}<br>$$</p><h2 id="三维旋转"><a href="#三维旋转" class="headerlink" title="三维旋转"></a>三维旋转</h2><h3 id="绕-x-轴的旋转"><a href="#绕-x-轴的旋转" class="headerlink" title="绕 x 轴的旋转"></a>绕 x 轴的旋转</h3><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    z’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    1 &amp; 0         &amp;  0         &amp; 0 \\<br>    0 &amp; cos\theta &amp; -sin\theta &amp; 0 \\<br>    0 &amp; sin\theta &amp;  cos\theta &amp; 0 \\<br>    0 &amp; 0         &amp;  0         &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    z \\<br>    1 \\<br>\end {bmatrix}<br>$$</p><h3 id="绕-y-轴的旋转"><a href="#绕-y-轴的旋转" class="headerlink" title="绕 y 轴的旋转"></a>绕 y 轴的旋转</h3><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    z’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>     cos\theta &amp; 0 &amp; sin\theta &amp; 0 \\<br>     0         &amp; 1 &amp; 0         &amp; 0 \\<br>    -sin\theta &amp; 0 &amp; cos\theta &amp; 0 \\<br>     0         &amp; 0 &amp; 0         &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    z \\<br>    1 \\<br>\end {bmatrix}<br>$$</p><h3 id="绕-z-轴的旋转"><a href="#绕-z-轴的旋转" class="headerlink" title="绕 z 轴的旋转"></a>绕 z 轴的旋转</h3><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    z’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    cos\theta &amp; -sin\theta &amp; 0 &amp; 0 \\<br>    sin\theta &amp;  cos\theta &amp; 0 &amp; 0 \\<br>    0         &amp;  0         &amp; 1 &amp; 0 \\<br>    0         &amp;  0         &amp; 0 &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    z \\<br>    1 \\<br>\end {bmatrix}<br>$$</p><h2 id="Mathjax-矩阵语法"><a href="#Mathjax-矩阵语法" class="headerlink" title="Mathjax 矩阵语法"></a>Mathjax 矩阵语法</h2><p>$$<br>\begin {matrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {matrix}<br>$$</p><p>$$<br>\begin {bmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {bmatrix}<br>$$</p><p>$$<br>\begin {Bmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {Bmatrix}<br>$$</p><p>$$<br>\begin {vmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {vmatrix}<br>$$</p><p>$$<br>\begin {Vmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {Vmatrix}<br>$$</p><p>$$<br>\begin {bmatrix}<br>     1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\<br>     1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\<br>     \vdots  &amp; \vdots&amp; \vdots &amp; \ddots &amp; \vdots \\<br>     1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n<br>\end {bmatrix}<br>$$</p><p>$$<br>\left [<br>    \begin {array} {cc|c}<br>      1 &amp; 2 &amp; 3 \\<br>      4 &amp; 5 &amp; 6 \\<br>    \end {array}<br>\right ]<br>$$</p><p>行内小矩阵测试： $\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$ $\bigl[ \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr]$ $\bigl\{ \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr\}$</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;奇妙数学世界&lt;/p&gt;
+      用数学描述世界
     
     </summary>
     
@@ -43,7 +171,7 @@
     <link href="https://xautshuanglong.github.io/2018/11/15/CommonSense/Git%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>https://xautshuanglong.github.io/2018/11/15/CommonSense/Git实用技巧/</id>
     <published>2018-11-15T03:05:20.000Z</published>
-    <updated>2018-11-16T03:06:41.729Z</updated>
+    <updated>2018-11-19T12:39:57.474Z</updated>
     
     <content type="html"><![CDATA[<h2 id="中文显示问题"><a href="#中文显示问题" class="headerlink" title="中文显示问题"></a>中文显示问题</h2><p>git status 列举文件名含有中文时，无法正常显示：(文件名编码格式 与 git diff 不一致)<br>git config --global core.guotepath false</p>]]></content>
     
@@ -159,9 +287,9 @@
     <link href="https://xautshuanglong.github.io/2018/10/10/Libraries/ApacheFOP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://xautshuanglong.github.io/2018/10/10/Libraries/ApacheFOP学习笔记/</id>
     <published>2018-10-10T02:45:38.000Z</published>
-    <updated>2018-11-06T09:17:42.064Z</updated>
+    <updated>2018-11-27T06:44:40.203Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.</p></blockquote><a id="more"></a><h2 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h2><h3 id="中文显示"><a href="#中文显示" class="headerlink" title="中文显示"></a>中文显示</h3><ol><li><p>自动检测系统字体库<br><code>fop.xconf</code>默认配置为自动检测。<br>注意使用正确的字体家族名称。（可使用 Windows 自带字体查看器查询）<br><img src="http://obcba9r77.bkt.clouddn.com/images/Linux/WinFontViewer.png" alt="WinFontViewer.png"></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fo:block</span> <span class="attr">color</span>=<span class="string">"green"</span> <span class="attr">font-family</span>=<span class="string">"华文行楷"</span>&gt;</span></span><br><span class="line">    Hello, <span class="tag">&lt;<span class="name">xsl:value-of</span> <span class="attr">select</span>=<span class="string">"name"</span>/&gt;</span>!</span><br><span class="line">    <span class="tag">&lt;<span class="name">fo:external-graphic</span> <span class="attr">src</span>=<span class="string">"asf-logo.png"</span>/&gt;</span></span><br><span class="line">    中文测试</span><br><span class="line"><span class="tag">&lt;/<span class="name">fo:block</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>添加自定义字体库<br>在配置文件中注册字体<code>fop.xconf</code><br>可以任意定义字体名称<code>font-triplet name=&quot;xxx&quot;</code> ，使用时与其保持一致即可。<code>font-family=&quot;xxx&quot;</code></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">kerning</span>=<span class="string">"yes"</span> <span class="attr">embed-url</span>=<span class="string">"HanBiaoLiXuKeShuFa.ttf"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font-triplet</span> <span class="attr">name</span>=<span class="string">"LiXuKeShuFa"</span> <span class="attr">style</span>=<span class="string">"normal"</span> <span class="attr">weight</span>=<span class="string">"normal"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol><p><a href="https://xmlgraphics.apache.org/fop/2.3/fonts.html" target="_blank" rel="noopener">Apache™ FOP: Fonts</a></p><h2 id="推荐用法"><a href="#推荐用法" class="headerlink" title="推荐用法"></a>推荐用法</h2><h3 id="应用集成"><a href="#应用集成" class="headerlink" title="应用集成"></a>应用集成</h3><p><a href="https://xmlgraphics.apache.org/fop/2.3/embedding.html" title="How to Embed FOP in a Java application" target="_blank" rel="noopener">Apache™ FOP: Embedding</a></p><h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><p><a href="https://xmlgraphics.apache.org/fop/2.3/events.html" target="_blank" rel="noopener">Apache™ FOP: Events/Processing Feedback</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.</p></blockquote><a id="more"></a><h2 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h2><h3 id="中文显示"><a href="#中文显示" class="headerlink" title="中文显示"></a>中文显示</h3><ol><li><p>自动检测系统字体库<br><code>fop.xconf</code>默认配置为自动检测。<br>注意使用正确的字体家族名称。（可使用 Windows 自带字体查看器查询）<br><img src="/images/Libraries/WinFontViewer.png" alt="WinFontViewer.png"></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fo:block</span> <span class="attr">color</span>=<span class="string">"green"</span> <span class="attr">font-family</span>=<span class="string">"华文行楷"</span>&gt;</span></span><br><span class="line">    Hello, <span class="tag">&lt;<span class="name">xsl:value-of</span> <span class="attr">select</span>=<span class="string">"name"</span>/&gt;</span>!</span><br><span class="line">    <span class="tag">&lt;<span class="name">fo:external-graphic</span> <span class="attr">src</span>=<span class="string">"asf-logo.png"</span>/&gt;</span></span><br><span class="line">    中文测试</span><br><span class="line"><span class="tag">&lt;/<span class="name">fo:block</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>添加自定义字体库<br>在配置文件中注册字体<code>fop.xconf</code><br>可以任意定义字体名称<code>font-triplet name=&quot;xxx&quot;</code> ，使用时与其保持一致即可。<code>font-family=&quot;xxx&quot;</code></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">kerning</span>=<span class="string">"yes"</span> <span class="attr">embed-url</span>=<span class="string">"HanBiaoLiXuKeShuFa.ttf"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font-triplet</span> <span class="attr">name</span>=<span class="string">"LiXuKeShuFa"</span> <span class="attr">style</span>=<span class="string">"normal"</span> <span class="attr">weight</span>=<span class="string">"normal"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ol><p><a href="https://xmlgraphics.apache.org/fop/2.3/fonts.html" target="_blank" rel="noopener">Apache™ FOP: Fonts</a></p><h2 id="推荐用法"><a href="#推荐用法" class="headerlink" title="推荐用法"></a>推荐用法</h2><h3 id="应用集成"><a href="#应用集成" class="headerlink" title="应用集成"></a>应用集成</h3><p><a href="https://xmlgraphics.apache.org/fop/2.3/embedding.html" title="How to Embed FOP in a Java application" target="_blank" rel="noopener">Apache™ FOP: Embedding</a></p><h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><p><a href="https://xmlgraphics.apache.org/fop/2.3/events.html" target="_blank" rel="noopener">Apache™ FOP: Events/Processing Feedback</a></p>]]></content>
     
     <summary type="html">
     
@@ -209,7 +337,7 @@
     <published>2018-10-08T02:53:44.000Z</published>
     <updated>2018-10-08T06:25:03.492Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Maven 学习路上的点点滴滴</p></blockquote><a id="more"></a><h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p><h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure><p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p><h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>Maven 学习路上的点点滴滴</p></blockquote><a id="more"></a><h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p><h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p><h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -368,86 +496,6 @@
     <summary type="html">
     
       Queue 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_06_Stack</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</id>
-    <published>2018-01-11T01:50:39.000Z</published>
-    <updated>2018-06-07T06:25:37.050Z</updated>
-    
-    <summary type="html">
-    
-      Stack 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_05_Map</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/</id>
-    <published>2018-01-11T01:40:39.000Z</published>
-    <updated>2018-06-07T06:25:37.050Z</updated>
-    
-    <summary type="html">
-    
-      Map 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_04_Set</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-04-Set/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-04-Set/</id>
-    <published>2018-01-11T01:30:39.000Z</published>
-    <updated>2018-06-07T06:25:37.050Z</updated>
-    
-    <summary type="html">
-    
-      Set 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_03_List</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/</id>
-    <published>2018-01-11T01:20:39.000Z</published>
-    <updated>2018-06-07T06:25:37.050Z</updated>
-    
-    <summary type="html">
-    
-      List 使用宜忌
     
     </summary>
     

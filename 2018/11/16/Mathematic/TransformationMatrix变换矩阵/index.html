@@ -6,7 +6,7 @@
   <title>TransformationMatrix变换矩阵 | Shuanglong</title>
   <meta name="author" content="JiangShuanglong">
   
-  <meta name="description" content="Descrition">
+  <meta name="description" content="用数学描述世界">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -133,10 +133,29 @@ var _hmt = _hmt || [];
 
 	<!-- content -->
 	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>用数学描述世界</p>
+			
+		 </div> <!-- alert -->
 	  		
 
 	  <p>奇妙数学世界</p>
 <a id="more"></a>
+<p><a href="https://blog.csdn.net/csxiaoshui/article/details/65446125" target="_blank" rel="noopener">旋转变换</a><br><a href="https://zh.wikipedia.org/wiki/%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5" target="_blank" rel="noopener">旋转矩阵 Wiki</a></p>
+<h2 id="二维旋转"><a href="#二维旋转" class="headerlink" title="二维旋转"></a>二维旋转</h2><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    cos\theta &amp; -sin\theta \\<br>    sin\theta &amp;  cos\theta \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>\end {bmatrix}<br>$$</p>
+<p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    cos\theta &amp; -sin\theta &amp; 0 \\<br>    sin\theta &amp;  cos\theta &amp; 0 \\<br>    0         &amp;  0         &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    1 \\<br>\end {bmatrix}<br>$$</p>
+<h2 id="三维旋转"><a href="#三维旋转" class="headerlink" title="三维旋转"></a>三维旋转</h2><h3 id="绕-x-轴的旋转"><a href="#绕-x-轴的旋转" class="headerlink" title="绕 x 轴的旋转"></a>绕 x 轴的旋转</h3><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    z’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    1 &amp; 0         &amp;  0         &amp; 0 \\<br>    0 &amp; cos\theta &amp; -sin\theta &amp; 0 \\<br>    0 &amp; sin\theta &amp;  cos\theta &amp; 0 \\<br>    0 &amp; 0         &amp;  0         &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    z \\<br>    1 \\<br>\end {bmatrix}<br>$$</p>
+<h3 id="绕-y-轴的旋转"><a href="#绕-y-轴的旋转" class="headerlink" title="绕 y 轴的旋转"></a>绕 y 轴的旋转</h3><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    z’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>     cos\theta &amp; 0 &amp; sin\theta &amp; 0 \\<br>     0         &amp; 1 &amp; 0         &amp; 0 \\<br>    -sin\theta &amp; 0 &amp; cos\theta &amp; 0 \\<br>     0         &amp; 0 &amp; 0         &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    z \\<br>    1 \\<br>\end {bmatrix}<br>$$</p>
+<h3 id="绕-z-轴的旋转"><a href="#绕-z-轴的旋转" class="headerlink" title="绕 z 轴的旋转"></a>绕 z 轴的旋转</h3><p>$$<br>\begin {bmatrix}<br>    x’ \\<br>    y’ \\<br>    z’ \\<br>    1  \\<br>\end {bmatrix}<br>=<br>\begin {bmatrix}<br>    cos\theta &amp; -sin\theta &amp; 0 &amp; 0 \\<br>    sin\theta &amp;  cos\theta &amp; 0 &amp; 0 \\<br>    0         &amp;  0         &amp; 1 &amp; 0 \\<br>    0         &amp;  0         &amp; 0 &amp; 1 \\<br>\end {bmatrix}<br>\cdot<br>\begin {bmatrix}<br>    x \\<br>    y \\<br>    z \\<br>    1 \\<br>\end {bmatrix}<br>$$</p>
+<h2 id="Mathjax-矩阵语法"><a href="#Mathjax-矩阵语法" class="headerlink" title="Mathjax 矩阵语法"></a>Mathjax 矩阵语法</h2><p>$$<br>\begin {matrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {matrix}<br>$$</p>
+<p>$$<br>\begin {bmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {bmatrix}<br>$$</p>
+<p>$$<br>\begin {Bmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {Bmatrix}<br>$$</p>
+<p>$$<br>\begin {vmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {vmatrix}<br>$$</p>
+<p>$$<br>\begin {Vmatrix}<br>    1 &amp; x &amp; x^2 \\<br>    1 &amp; y &amp; y^2 \\<br>    1 &amp; z &amp; z^2 \\<br>\end {Vmatrix}<br>$$</p>
+<p>$$<br>\begin {bmatrix}<br>     1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n \\<br>     1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\<br>     \vdots  &amp; \vdots&amp; \vdots &amp; \ddots &amp; \vdots \\<br>     1 &amp; a_m &amp; a_m^2 &amp; \cdots &amp; a_m^n<br>\end {bmatrix}<br>$$</p>
+<p>$$<br>\left [<br>    \begin {array} {cc|c}<br>      1 &amp; 2 &amp; 3 \\<br>      4 &amp; 5 &amp; 6 \\<br>    \end {array}<br>\right ]<br>$$</p>
+<p>行内小矩阵测试： $\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$ $\bigl[ \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr]$ $\bigl\{ \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr\}$</p>
 	  
 	</div>
 
@@ -148,9 +167,9 @@ var _hmt = _hmt || [];
 	<div class="pagination">
 <ul class="pagination">
 	 
-		
-          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-        
+				
+    	<li class="prev"><a href="/2018/11/27/UML/StarUML使用教程/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
@@ -260,7 +279,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#二维旋转"><span class="toc-article-text">二维旋转</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#三维旋转"><span class="toc-article-text">三维旋转</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#绕-x-轴的旋转"><span class="toc-article-text">绕 x 轴的旋转</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#绕-y-轴的旋转"><span class="toc-article-text">绕 y 轴的旋转</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#绕-z-轴的旋转"><span class="toc-article-text">绕 z 轴的旋转</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Mathjax-矩阵语法"><span class="toc-article-text">Mathjax 矩阵语法</span></a></li></ol>
 		</div>
 	
 	</div>
