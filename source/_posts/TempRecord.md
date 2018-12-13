@@ -87,6 +87,8 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
   VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。
   [官方参考](https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015)
 * `PDH` `Performance Data Helper` 微软性能数据助手，如同性能监视器记录数据。[PDH header](https://docs.microsoft.com/en-us/windows/desktop/api/pdh/)
+* 关于进程退出检测
+  `std::atexit` 注册进程退出时调用的函数（可注册多个函数，后注册者先调用。）
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
