@@ -113,6 +113,8 @@ toc: true
 {% btn https://mupdf.com/docs/index.html MuPDF&#32;Official danger %}
 {% btn http://priede.bf.lu.lv/ftp/pub/RakstuDarbi/pdf/MuPDF/mupdf_explored.pdf MuPDF&#32;Explored&#32;2017-3-32 danger %}
 {% btn https://pymupdf.readthedocs.io/en/latest/ PyMuPDF&#32;Document danger %}
+{% btn https://github.com/sumatrapdfreader/sumatrapdf SumatraPDF danger %}
+{% btn https://www.sumatrapdfreader.org/free-pdf-reader.html SumatraPDF&#32;Official danger %}
 
 [//]: # (内存泄漏检测)
 {% btn https://github.com/KindDragon/vld Visual&#32;Leak&#32;Detector danger %}
