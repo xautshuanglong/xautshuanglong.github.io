@@ -86,6 +86,11 @@ toc: true
 {% btn http://staruml.io/ StartUML primary %}
 {% btn https://docs.staruml.io/ StartUML&#32;GitBook primary %}
 
+### LUA
+{% btn https://www.lua.org/download.html LUA&#32;官网网站 warning %}
+{% btn http://www.runoob.com/lua/lua-tutorial.html LUA&#32;菜鸟教程 warning %}
+{% btn https://www.yiibai.com/lua/lua_overview.html LUA&#32;易百教程 warning %}
+
 ### D3D
 {% btn http://shiba.hpe.sh.cn/jiaoyanzu/WULI/Soft/NotXNA 【图形编程&#32;&&#32;其他】 info %}
 
