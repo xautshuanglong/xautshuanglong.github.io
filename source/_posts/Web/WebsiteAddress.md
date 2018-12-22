@@ -147,7 +147,7 @@ https://coding.net/u/scaffrey/p/hosts/git
 ## 简历
 [简历吸引力](http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm)
 [freemind theme参考](http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/)
-[Frermind作者](http://hahack.com/)
+[Freemind作者](https://www.hahack.com/)
 
 b2838f4995da0fbde755ea5edf2047db62effd4f
 
