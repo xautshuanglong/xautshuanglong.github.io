@@ -58,3 +58,23 @@ tag: (0x0008,0x0052)
 | Study Root Query/Retrieve | `Study Level` <br> `Series Level` <br> `Composite Object Instance Level` |
 | Patient/Study Root Query/Retrieve | `Patient Level` <br> `Study Level` |
 
+DCMTK 源码中定义的等级：(dcmqrdbi.h)
+`PATIENT_LEVEL`
+`STUDY_LEVEL`
+`SERIES_LEVEL`
+`IMAGE_LEVEL`
+
+``` c
+enum DB_LEVEL
+{
+    /// DICOM Q/R patient level
+    PATIENT_LEVEL,
+    /// DICOM Q/R study level
+    STUDY_LEVEL,
+    /// DICOM Q/R series level
+    SERIE_LEVEL,
+    /// DICOM Q/R instance level
+    IMAGE_LEVEL
+};
+```
+
