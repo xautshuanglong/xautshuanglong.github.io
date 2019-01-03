@@ -11,6 +11,7 @@ toc: true
 值得收藏的学习网址,每天进步一点点。
 <!--more-->
 ### C/C++
+{% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 success %}
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
 {% btn http://www.cplusplus.com/reference CPlusPlus success %}
 {% btn http://zh.cppreference.com/w/c C&#32;参考手册 success %}
@@ -18,9 +19,6 @@ toc: true
 {% btn http://classfoo.com/ccby/article/acZKb CPP&#32;参考网址 success %}
 {% btn https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/ C++并发编程【Gitbooks】 success %}
 {% btn http://zh.highscore.de/cpp/boost/ Boost&#32;C++&#32;库 success %}
-
-### C
-{% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 primary %}
 
 ### Python
 {% btn https://www.python.org/ 官方文档 warning %}
