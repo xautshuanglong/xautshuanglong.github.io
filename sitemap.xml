@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xautshuanglong.github.io/2018/12/27/CPlusPlus/FormatString%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    
+    <lastmod>2019-01-14T10:20:00.174Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</loc>
+    
+    <lastmod>2019-01-03T07:19:31.776Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/12/25/DICOM/ConquestDicomServer%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2018-12-28T07:04:52.420Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/12/25/DICOM/DCMTK%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/</loc>
+    
+    <lastmod>2018-12-27T07:55:52.796Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xautshuanglong.github.io/2016/04/10/Hexo/Markdown%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2018-12-13T11:18:26.650Z</lastmod>
@@ -19,13 +47,6 @@
     <loc>https://xautshuanglong.github.io/2016/11/18/TempRecord/</loc>
     
     <lastmod>2018-12-13T07:20:16.102Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</loc>
-    
-    <lastmod>2018-12-06T01:53:01.251Z</lastmod>
     
   </url>
   
@@ -247,13 +268,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/08/25/CommonSense/RTTI%E7%90%86%E8%A7%A3/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.054Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2016/05/24/CommonSense/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</loc>
     
     <lastmod>2018-06-07T06:25:37.054Z</lastmod>
@@ -268,14 +282,21 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/04/17/CommonSense/MemoryPoolTechnique/</loc>
+    <loc>https://xautshuanglong.github.io/2016/08/25/CommonSense/RTTI%E7%90%86%E8%A7%A3/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.054Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2017/03/05/CommonSense/PortNumberRegistry/</loc>
     
     <lastmod>2018-06-07T06:25:37.053Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2017/03/05/CommonSense/PortNumberRegistry/</loc>
+    <loc>https://xautshuanglong.github.io/2018/04/17/CommonSense/MemoryPoolTechnique/</loc>
     
     <lastmod>2018-06-07T06:25:37.053Z</lastmod>
     
@@ -296,14 +317,7 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-07-Queue/</loc>
+    <loc>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2018-06-07T06:25:37.051Z</lastmod>
     
@@ -317,13 +331,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/</loc>
     
     <lastmod>2018-06-07T06:25:37.051Z</lastmod>
@@ -331,7 +338,28 @@
   </url>
   
   <url>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-07-Queue/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/12/18/CPlusPlus/WinApiCollection/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</loc>
     
     <lastmod>2018-06-07T06:25:37.050Z</lastmod>
     
@@ -352,13 +380,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.050Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
@@ -366,14 +387,14 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/06/23/CPlusPlus/CPlusPlus%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E5%8F%8A%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</loc>
+    <loc>https://xautshuanglong.github.io/2016/06/23/CPlusPlus/CPlusPlus%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E5%8F%8A%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
     

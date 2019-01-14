@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2018-12-13T11:18:24.992Z</updated>
+  <updated>2019-01-14T10:20:00.174Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C/C++ 格式化字符串</title>
+    <link href="https://xautshuanglong.github.io/2018/12/27/CPlusPlus/FormatString%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>https://xautshuanglong.github.io/2018/12/27/CPlusPlus/FormatString格式化字符串/</id>
+    <published>2018-12-27T02:30:50.000Z</published>
+    <updated>2019-01-14T10:20:00.174Z</updated>
+    
+    <content type="html"><![CDATA[<p>格式化字符串有讲究</p><a id="more"></a><h2 id="输出格式化"><a href="#输出格式化" class="headerlink" title="输出格式化"></a>输出格式化</h2><h2 id="读取格式化"><a href="#读取格式化" class="headerlink" title="读取格式化"></a>读取格式化</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从字符串读取格式化输入</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sscanf</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span></span><br></pre></td></tr></table></figure><p>str    – 这是 C 字符串，是函数检索数据的源。<br>format – 这是 C 字符串，包含了以下各项中的一个或多个：空格字符、非空格字符 和 format 说明符。</p><p>format 说明符形式为 <code>[=%[*][width][modifiers]type=]</code>，具体讲解如下：  </p><table><thead><tr><th style="text-align:center">参数</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:center">*</td><td style="text-align:left">数据从 stream 中读取，但可以被忽略，不存储在对应的变量中。</td></tr><tr><td style="text-align:center">width</td><td style="text-align:left">指定读取的最大字符数</td></tr><tr><td style="text-align:center">modifiers</td><td style="text-align:left">类型修饰符，不同于 type 中的内容：<br><code>F</code>远指针、<code>N</code>近指针、<code>h</code>有/无符短整型、<code>l</code>有/无符长整型、<code>L</code>长双精度。</td></tr></tbody></table><p>type 类型说明符</p><table><thead><tr><th style="text-align:center">说明符</th><th style="text-align:left">描述</th><th style="text-align:center">参数类型</th></tr></thead><tbody><tr><td style="text-align:center">c</td><td style="text-align:left">单个字符。若 width 不为 1，读取 width 个字符。</td><td style="text-align:center">char*</td></tr><tr><td style="text-align:center">d</td><td style="text-align:left">十进制整数：数字前面的 <code>+</code>/<code>-</code>号是可选的。</td><td style="text-align:center">int*</td></tr><tr><td style="text-align:center">e,E,f,g,G</td><td style="text-align:left">浮点数：一个小数点<code>.</code>、一个可选<code>+</code>/<code>-</code>号、一个可选后置字符<code>e</code>/<code>E</code>、一个十进制数字。</td><td style="text-align:center">float*</td></tr><tr><td style="text-align:center">i</td><td style="text-align:left">一个整数。</td><td style="text-align:center">int*</td></tr><tr><td style="text-align:center">o</td><td style="text-align:left">八进制整数。</td></tr><tr><td style="text-align:center">s</td><td style="text-align:left">字符串。读取连续字符，知道遇见空白字符（空白、换行、制表符）。</td><td style="text-align:center">char*</td></tr><tr><td style="text-align:center">u</td><td style="text-align:left">无符号十进制整数。</td><td style="text-align:center">unsigned int *</td></tr><tr><td style="text-align:center">x,X</td><td style="text-align:left">十六进制整数。</td><td style="text-align:center">int*</td></tr><tr><td style="text-align:center">p</td><td style="text-align:left">一个指针。</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">n</td><td style="text-align:left">一个等于读取字符数量的整数。</td><td style="text-align:center">int*</td></tr><tr><td style="text-align:center">[]</td><td style="text-align:left">一个字符集。</td><td style="text-align:center">-</td></tr><tr><td style="text-align:center">%</td><td style="text-align:left">一个精度符号</td><td style="text-align:center">-</td></tr></tbody></table><p>经典示例：</p><ol><li><code>%s</code> 输入字符串，末尾追加 ‘\0’；</li><li><code>%ns</code> n为整数，读入字符串最长不超过n，末尾追加 ‘\0’；</li><li><code>%nf</code> 读入浮点数，最多n位整数，多于n自动截断；</li><li><code>%n[a-z]</code> 读入最多n个字符，直到遇见非<code>a-z</code>的字符;</li><li><code>%[^=]</code> 读入任意多的字符，直到遇见<code>=</code>停止；</li><li><code>%n[^=]</code> 读入<code>=</code>前最多n个字符。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      那些年被遗忘的细节
+    
+    </summary>
+    
+      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DCMTK 编译与调试</title>
+    <link href="https://xautshuanglong.github.io/2018/12/25/DICOM/DCMTK%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/"/>
+    <id>https://xautshuanglong.github.io/2018/12/25/DICOM/DCMTK编译与调试/</id>
+    <published>2018-12-25T06:33:27.000Z</published>
+    <updated>2018-12-27T07:55:52.796Z</updated>
+    
+    <content type="html"><![CDATA[<p>CMake 生成 VS 解决方案使用绝对路径留下的痛</p><a id="more"></a><h2 id="CMake-DCMTK"><a href="#CMake-DCMTK" class="headerlink" title="CMake DCMTK"></a>CMake DCMTK</h2><ul><li>指定安装路径，打包头文件及依赖库；</li><li>支持库：xml、png、tiff、openssl、iconv、zlib；</li><li>绝对路径问题。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CMake 生成 VS 解决方案使用绝对路径留下的痛&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DICOM" scheme="https://xautshuanglong.github.io/categories/DICOM/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DCMTK + Conquest DICOM Server 环境测试</title>
+    <link href="https://xautshuanglong.github.io/2018/12/25/DICOM/ConquestDicomServer%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%B5%8B%E8%AF%95/"/>
+    <id>https://xautshuanglong.github.io/2018/12/25/DICOM/ConquestDicomServer环境搭建及测试/</id>
+    <published>2018-12-25T06:32:20.000Z</published>
+    <updated>2018-12-28T07:04:52.420Z</updated>
+    
+    <content type="html"><![CDATA[<p>更进一步</p><a id="more"></a><h2 id="Conquest-服务器安装"><a href="#Conquest-服务器安装" class="headerlink" title="Conquest 服务器安装"></a>Conquest 服务器安装</h2><h2 id="DCMTK-测试"><a href="#DCMTK-测试" class="headerlink" title="DCMTK 测试"></a>DCMTK 测试</h2><p>命令参数示例：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询检索测试</span></span><br><span class="line">findscu.exe -v -aet DebugTest -aec MGIUSDICOM -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 上句使用默认查询模型: -W Worklist 其他可选性: -P patient -S study -O patient/study except worklist </span></span><br><span class="line"><span class="comment">// 是引用 -P 或 -S 或 -O 时需要指定查询等级(0x0008, 0x0052)，否则服务器无法正确处理。</span></span><br><span class="line"><span class="comment">// Patient Root Query/Retrieve          : Patient Level, Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Study Root Query/Retrieve            : Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Patient/Study Only Query/Retrieve    : Patient Level, Study Level.</span></span><br><span class="line">findscu.exe -v -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0x0008</span>,<span class="number">0x0052</span>=<span class="string">"STUDY"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询指定属性列表</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0010</span>,<span class="number">0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k <span class="number">0008</span>,<span class="number">0020</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>d=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">0010</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>e=<span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 为何 RadiAnt 能同时检索 STUDY 和 IMAGE ？ tag: (0020,1208) DCM_NumberOfStudyRelatedInstances</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k PatientID -k StudyInstanceUID -k SeriesInstanceUID -k SeriesNumber -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// Qt Demo 中使用</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName=<span class="string">"HEAD EXP2"</span> -k <span class="string">"QueryRetrieveLevel=STUDY"</span> -k PatientID -k StudyInstanceUID -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// 拉取测试</span></span><br><span class="line">getscu.exe -v +v -aet DebugTest -aec MGIUSDICOM -pdu <span class="number">32768</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 存储测试</span></span><br><span class="line">storescu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span> ./dicom_package.dcm</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移动/转存测试</span></span><br><span class="line">storescp.exe -v +v -pdu <span class="number">32768</span> <span class="number">5680</span></span><br><span class="line">movescu.exe -v -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br></pre></td></tr></table></figure></p><p>注意事项：</p><ul><li>movescu.exe 测试时需 storescp.exe 配合。<br>【C-MOVE 请求发出后，服务端反向建立连接发送 C-STORE 请求】</li><li>PDU<code>Protocol Data Unit</code> 小于服务端时，数据传输异常。<br>【通过 -pdu 调整最大 pdu】</li></ul><h2 id="关键知识点"><a href="#关键知识点" class="headerlink" title="关键知识点"></a>关键知识点</h2><p>Query/Retrieve 信息模型的分层结构</p><ul><li>Patient Root Query/Retrieve 信息模型</li><li>Study Root Query/Retrieve 信息模型</li><li>Patient/Study Root Query/Retrieve 信息模型</li></ul><p>每种信息模型按照分层的形式进行组织，DICOM 标准根据实体-关系模型（Entity-Relation Model）将其分为不同级别，由 Query/Retrieve Level 属性指明所请求的级别。<br>tag: (0x0008,0x0052)</p><table><thead><tr><th style="text-align:center">信息模型</th><th style="text-align:left">等级</th></tr></thead><tbody><tr><td style="text-align:center">Patient Root Query/Retrieve</td><td style="text-align:left"><code>Patient Level</code> <br> <code>Study Level</code> <br> <code>Series Level</code> <br> <code>Composite Object Instance Level</code></td></tr><tr><td style="text-align:center">Study Root Query/Retrieve</td><td style="text-align:left"><code>Study Level</code> <br> <code>Series Level</code> <br> <code>Composite Object Instance Level</code></td></tr><tr><td style="text-align:center">Patient/Study Root Query/Retrieve</td><td style="text-align:left"><code>Patient Level</code> <br> <code>Study Level</code></td></tr></tbody></table><p>DCMTK 源码中定义的等级：(dcmqrdbi.h)<br><code>PATIENT_LEVEL</code><br><code>STUDY_LEVEL</code><br><code>SERIES_LEVEL</code><br><code>IMAGE_LEVEL</code></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> DB_LEVEL</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/// DICOM Q/R patient level</span></span><br><span class="line">    PATIENT_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R study level</span></span><br><span class="line">    STUDY_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R series level</span></span><br><span class="line">    SERIE_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R instance level</span></span><br><span class="line">    IMAGE_LEVEL</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;更进一步&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DICOM" scheme="https://xautshuanglong.github.io/categories/DICOM/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>静态变量的初始化与释放</title>
@@ -443,66 +503,6 @@
     
       <category term="Mathematic" scheme="https://xautshuanglong.github.io/categories/Mathematic/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_09_Iterators</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-09-Iterators/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-09-Iterators/</id>
-    <published>2018-01-11T02:20:39.000Z</published>
-    <updated>2018-06-07T06:25:37.051Z</updated>
-    
-    <summary type="html">
-    
-      Iterators 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_08_Deque</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/</id>
-    <published>2018-01-11T02:10:39.000Z</published>
-    <updated>2018-06-07T06:25:37.051Z</updated>
-    
-    <summary type="html">
-    
-      Deque 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STL_Series_07_Queue</title>
-    <link href="https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-07-Queue/"/>
-    <id>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-07-Queue/</id>
-    <published>2018-01-11T02:00:39.000Z</published>
-    <updated>2018-06-07T06:25:37.051Z</updated>
-    
-    <summary type="html">
-    
-      Queue 使用宜忌
-    
-    </summary>
-    
-      <category term="CPP" scheme="https://xautshuanglong.github.io/categories/CPP/"/>
-    
-    
-      <category term="STL" scheme="https://xautshuanglong.github.io/tags/STL/"/>
     
   </entry>
   

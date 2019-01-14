@@ -137,6 +137,84 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-07-20 </div>
+			<div class="article-title"><a href="/2016/07/20/Mathematic/Trigonometric三角函数相关公式/">三角函数常用公式集锦</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote>
+<p>欢迎来到三角函数世界<br>
+	
+	</p></blockquote></div>
+  <a type="button" href="/2016/07/20/Mathematic/Trigonometric三角函数相关公式/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-07-01 </div>
+			<div class="article-title"><a href="/2016/07/01/VisualStudio/SDL安全开发生命周期/">SDL 安全开发生命周期</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="一、关于SDL"><a href="#一、关于SDL" class="headerlink" title="一、关于SDL"></a>一、关于SDL</h2><p>安全开发生命周期<code>Security Development Lifecycle</code></p>
+<p>早期版本中对于不安全的函数会给出警告提示，通常在函数后加上<code>_s</code>表示该函数的安全版本。</p>
+<p>忽略安全检查：</p>
+<ul>
+<li>方法一：使用安全版本的函数<code>_s</code>，如<code>scanf_s</code>、<code>strncopy_s</code>等。</li>
+<li>方法二：_CRT_SECURE_NO_WARNINGS。源码顶端添加<code>#define _CRT_SECURE_NO_WARNINGS</code>或<br>项目属性 -&gt; 配置属性 -&gt; c/c++ -&gt; 预处理器 -&gt; 预处理器定义 -&gt; <code>_CRT_SECURE_NO_WARNINGS</code></li>
+<li>方法三：关闭<code>SDL</code>检查(VS2015)<br>项目属性 -&gt; 配置属性 -&gt; C/C++ -&gt; SDL检查 -&gt; 否</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2016/07/01/VisualStudio/SDL安全开发生命周期/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-06-30 </div>
+			<div class="article-title"><a href="/2016/06/30/Mathematic/3D基础/">3D基础</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="常用公式"><a href="#常用公式" class="headerlink" title="常用公式"></a>常用公式</h2><p>开启 3D 之旅<br>
+	
+	</p></div>
+  <a type="button" href="/2016/06/30/Mathematic/3D基础/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-06-23 </div>
 			<div class="article-title"><a href="/2016/06/23/CPlusPlus/CPlusPlus访问权限及继承方式/" title="做专业的程序员">C++ 访问权限及继承方式</a></div>						
 		</h3>
@@ -312,108 +390,6 @@ var _hmt = _hmt || [];
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-05-06 </div>
-			<div class="article-title"><a href="/2016/05/06/Python/Python小技巧/" title="小技巧">Python 小技巧</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Python-中的小技巧"><a href="#Python-中的小技巧" class="headerlink" title="Python 中的小技巧"></a>Python 中的小技巧</h2><h3 id="1-循环技巧-Looping-Techniques"><a href="#1-循环技巧-Looping-Techniques" class="headerlink" title="1. 循环技巧(Looping Techniques)"></a>1. 循环技巧(Looping Techniques)</h3><ul>
-<li><h4 id="在字典中循环"><a href="#在字典中循环" class="headerlink" title="在字典中循环"></a>在字典中循环</h4>关键字和对应的值可以用<code>iteritems()</code>方法同时解读出来。<pre><code>dict = {&apos;key0&apos;:&apos;value0&apos;,&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;}
-for key,value in dict.iteritems():
-    print key,value
-</code></pre></li>
-<li><h4 id="在序列中循环"><a href="#在序列中循环" class="headerlink" title="在序列中循环"></a>在序列中循环</h4>索引位置和对应的值可以用<code>enumerate()</code>方法同时得到。<pre><code>list = [&apos;value0&apos;,&apos;value1&apos;,&apos;value2&apos;]
-for index,value in enumerate(list):
-    print index,value
-</code></pre></li>
-<li><h4 id="同时循环多个序列"><a href="#同时循环多个序列" class="headerlink" title="同时循环多个序列"></a>同时循环多个序列</h4>同时循环两个或更多的序列，可以使用<code>zip()</code>整体打包。<pre><code>questions = [&apos;name&apos;,&apos;quest&apos;,&apos;favorite color&apos;]
-answer = [&apos;eric&apos;,&apos;the holy grail&apos;,&apos;blue&apos;]
-for q,a in zip(questions,answer):
-    print &apos;What is your {0}? It is {1}.&apos;.format(q,a)
-</code></pre></li>
-<li><h4 id="逆向循环序列"><a href="#逆向循环序列" class="headerlink" title="逆向循环序列"></a>逆向循环序列</h4>需要逆向循环序列的话，先正向定位序列，然后调用<code>reversed()</code>函数。<pre><code>for i in reversed(xrange(1,10,2)):
-    print i
-</code></pre></li>
-<li><h4 id="排序后循环"><a href="#排序后循环" class="headerlink" title="排序后循环"></a>排序后循环</h4><code>sorted()</code>函数，不改动原序列，生成一个新的已排序的序列。<pre><code>list = [&apos;value2&apos;,&apos;value1&apos;,&apos;value0&apos;]
-for value in sorted(set(list)):
-    print value
-</code></pre>
-	
-	</li></ul></div>
-  <a type="button" href="/2016/05/06/Python/Python小技巧/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-05-03 </div>
-			<div class="article-title"><a href="/2016/05/03/Python/Log4py学习笔记/">Log4py 学习笔记</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="Python-日志模块-logging-简介"><a href="#Python-日志模块-logging-简介" class="headerlink" title="Python 日志模块 logging 简介"></a>Python 日志模块 logging 简介</h2><p>logging分为4模块：loggers,handlers,filters,and formatters.</p>
-<ul>
-<li>loggers: 提供应用程序调用的接口</li>
-<li>handlers: 把日志发送到指定的位置</li>
-<li>filters: 过滤日志信息</li>
-<li>formatters: 格式化输出日志
-	
-	</li></ul></div>
-  <a type="button" href="/2016/05/03/Python/Log4py学习笔记/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-22 </div>
-			<div class="article-title"><a href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/">Apache配置多个虚拟主机 (Windows)</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Windows下为Apache配置多个虚拟主机"><a href="#Windows下为Apache配置多个虚拟主机" class="headerlink" title="Windows下为Apache配置多个虚拟主机"></a>Windows下为Apache配置多个虚拟主机</h3><h5 id="修改Apache配置文件-安装目录下conf-httpd-conf"><a href="#修改Apache配置文件-安装目录下conf-httpd-conf" class="headerlink" title="修改Apache配置文件(安装目录下conf/httpd.conf)"></a>修改Apache配置文件(安装目录下conf/httpd.conf)</h5><ol>
-<li><p>添加将要监听的端口号</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Listen: Allows you to bind Apache to specific IP addresses and/or</span></span><br><span class="line"><span class="comment"># ports, instead of the default. See also the &lt;VirtualHost&gt;</span></span><br><span class="line"><span class="comment"># directive.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Change this to Listen on specific IP addresses as shown below to </span></span><br><span class="line"><span class="comment"># prevent Apache from glomming onto all bound IP addresses.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#Listen 12.34.56.78:80</span></span><br><span class="line">Listen 80</span><br><span class="line">Listen 8080</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置虚拟主机的属性</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:8080&gt;</span><br><span class="line">    ServerAdmin ericjiang</span><br><span class="line">    <span class="comment">#网站文件存放的根目录</span></span><br><span class="line">    DocumentRoot E:/VirtualHost/Client</span><br><span class="line">    <span class="comment">#域名</span></span><br><span class="line">    ServerName http://www.phpcms.com/</span><br><span class="line">    ErrorLog logs/<span class="built_in">test</span>-error.log</span><br><span class="line">    CustomLog logs/<span class="built_in">test</span>-access.log common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-	
-	</div>
-  <a type="button" href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -464,9 +440,11 @@ for value in sorted(set(list)):
 		
 			<li><a href="/categories/Algorithm/">Algorithm<span>1</span></a></li>
 		
-			<li><a href="/categories/CPP/">CPP<span>18</span></a></li>
+			<li><a href="/categories/CPP/">CPP<span>19</span></a></li>
 		
 			<li><a href="/categories/CommonSense/">CommonSense<span>9</span></a></li>
+		
+			<li><a href="/categories/DICOM/">DICOM<span>2</span></a></li>
 		
 			<li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
 		
@@ -475,6 +453,8 @@ for value in sorted(set(list)):
 			<li><a href="/categories/Libraries/">Libraries<span>3</span></a></li>
 		
 			<li><a href="/categories/Linux/">Linux<span>3</span></a></li>
+		
+			<li><a href="/categories/Math/">Math<span>0</span></a></li>
 		
 			<li><a href="/categories/Mathematic/">Mathematic<span>4</span></a></li>
 		
@@ -497,45 +477,45 @@ for value in sorted(set(list)):
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/C11/">C11<span>1</span></a></li>
-		
-			<li><a href="/tags/uml/">uml<span>1</span></a></li>
-		
 			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
-		
-			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
-		
-			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
-		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
-		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
-		
-			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
-		
-			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
-		
-			<li><a href="/tags/Time/">Time<span>1</span></a></li>
-		
-			<li><a href="/tags/shell/">shell<span>1</span></a></li>
 		
 			<li><a href="/tags/git/">git<span>1</span></a></li>
 		
-			<li><a href="/tags/signal/">signal<span>1</span></a></li>
-		
-			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
-		
-			<li><a href="/tags/xsl/">xsl<span>1</span></a></li>
-		
-			<li><a href="/tags/socket/">socket<span>2</span></a></li>
+			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
 		
 			<li><a href="/tags/vim/">vim<span>1</span></a></li>
 		
+			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
+		
+			<li><a href="/tags/signal/">signal<span>1</span></a></li>
+		
+			<li><a href="/tags/API/">API<span>1</span></a></li>
+		
+			<li><a href="/tags/uml/">uml<span>1</span></a></li>
+		
+			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
+		
+			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
+		
+			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
+		
+			<li><a href="/tags/XML/">XML<span>1</span></a></li>
+		
+			<li><a href="/tags/xsl/">xsl<span>1</span></a></li>
+		
 			<li><a href="/tags/Python/">Python<span>3</span></a></li>
 		
-			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
+		
+			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
+		
+			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
+		
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
+		
+			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
+		
+			<li><a href="/tags/Time/">Time<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>34</span></a></li>
@@ -551,23 +531,23 @@ for value in sorted(set(list)):
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2018/12/27/CPlusPlus/FormatString格式化字符串/" title="那些年被遗忘的细节"><i class="fa fa-file-o"></i>C/C++ 格式化字符串</a>
+      </li>
+    
+      <li>
+        <a href="/2018/12/25/DICOM/DCMTK编译与调试/"><i class="fa fa-file-o"></i>DCMTK 编译与调试</a>
+      </li>
+    
+      <li>
+        <a href="/2018/12/25/DICOM/ConquestDicomServer环境搭建及测试/"><i class="fa fa-file-o"></i>DCMTK + Conquest DICOM Serv...</a>
+      </li>
+    
+      <li>
         <a href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/" title="由 VLD 引发的对静态变量初始化顺序的思考"><i class="fa fa-file-o"></i>静态变量的初始化与释放</a>
       </li>
     
       <li>
         <a href="/2018/12/01/Network/SocketOptions选项说明/"><i class="fa fa-file-o"></i>Socket 选项说明</a>
-      </li>
-    
-      <li>
-        <a href="/2018/11/30/CommonSense/ReferenceCount关于引用计数/"><i class="fa fa-file-o"></i>关于引用计数</a>
-      </li>
-    
-      <li>
-        <a href="/2018/11/27/UML/StarUML使用教程/"><i class="fa fa-file-o"></i>StarUML 使用教程</a>
-      </li>
-    
-      <li>
-        <a href="/2018/11/16/Mathematic/TransformationMatrix变换矩阵/" title="用数学描述世界"><i class="fa fa-file-o"></i>TransformationMatrix变换矩阵</a>
       </li>
     
   </ul>
@@ -634,7 +614,7 @@ for value in sorted(set(list)):
   </div>
   <div class="container-narrow">
   <footer> <p>
-  &copy; 2018 JiangShuanglong
+  &copy; 2019 JiangShuanglong
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

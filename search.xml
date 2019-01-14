@@ -4,6 +4,201 @@
   
     
     <entry>
+      <title><![CDATA[C/C++ 格式化字符串]]></title>
+      <url>https://xautshuanglong.github.io/2018/12/27/CPlusPlus/FormatString%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+      <content type="html"><![CDATA[<p>格式化字符串有讲究</p>
+<a id="more"></a>
+<h2 id="输出格式化"><a href="#输出格式化" class="headerlink" title="输出格式化"></a>输出格式化</h2><h2 id="读取格式化"><a href="#读取格式化" class="headerlink" title="读取格式化"></a>读取格式化</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从字符串读取格式化输入</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sscanf</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str, <span class="keyword">const</span> <span class="keyword">char</span> *format, ...)</span></span></span><br></pre></td></tr></table></figure>
+<p>str    – 这是 C 字符串，是函数检索数据的源。<br>format – 这是 C 字符串，包含了以下各项中的一个或多个：空格字符、非空格字符 和 format 说明符。</p>
+<p>format 说明符形式为 <code>[=%[*][width][modifiers]type=]</code>，具体讲解如下：  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:left">数据从 stream 中读取，但可以被忽略，不存储在对应的变量中。</td>
+</tr>
+<tr>
+<td style="text-align:center">width</td>
+<td style="text-align:left">指定读取的最大字符数</td>
+</tr>
+<tr>
+<td style="text-align:center">modifiers</td>
+<td style="text-align:left">类型修饰符，不同于 type 中的内容：<br><code>F</code>远指针、<code>N</code>近指针、<code>h</code>有/无符短整型、<code>l</code>有/无符长整型、<code>L</code>长双精度。</td>
+</tr>
+</tbody>
+</table>
+<p>type 类型说明符</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">说明符</th>
+<th style="text-align:left">描述</th>
+<th style="text-align:center">参数类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:left">单个字符。若 width 不为 1，读取 width 个字符。</td>
+<td style="text-align:center">char*</td>
+</tr>
+<tr>
+<td style="text-align:center">d</td>
+<td style="text-align:left">十进制整数：数字前面的 <code>+</code>/<code>-</code>号是可选的。</td>
+<td style="text-align:center">int*</td>
+</tr>
+<tr>
+<td style="text-align:center">e,E,f,g,G</td>
+<td style="text-align:left">浮点数：一个小数点<code>.</code>、一个可选<code>+</code>/<code>-</code>号、一个可选后置字符<code>e</code>/<code>E</code>、一个十进制数字。</td>
+<td style="text-align:center">float*</td>
+</tr>
+<tr>
+<td style="text-align:center">i</td>
+<td style="text-align:left">一个整数。</td>
+<td style="text-align:center">int*</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:left">八进制整数。</td>
+</tr>
+<tr>
+<td style="text-align:center">s</td>
+<td style="text-align:left">字符串。读取连续字符，知道遇见空白字符（空白、换行、制表符）。</td>
+<td style="text-align:center">char*</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">无符号十进制整数。</td>
+<td style="text-align:center">unsigned int *</td>
+</tr>
+<tr>
+<td style="text-align:center">x,X</td>
+<td style="text-align:left">十六进制整数。</td>
+<td style="text-align:center">int*</td>
+</tr>
+<tr>
+<td style="text-align:center">p</td>
+<td style="text-align:left">一个指针。</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">n</td>
+<td style="text-align:left">一个等于读取字符数量的整数。</td>
+<td style="text-align:center">int*</td>
+</tr>
+<tr>
+<td style="text-align:center">[]</td>
+<td style="text-align:left">一个字符集。</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:left">一个精度符号</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
+<p>经典示例：</p>
+<ol>
+<li><code>%s</code> 输入字符串，末尾追加 ‘\0’；</li>
+<li><code>%ns</code> n为整数，读入字符串最长不超过n，末尾追加 ‘\0’；</li>
+<li><code>%nf</code> 读入浮点数，最多n位整数，多于n自动截断；</li>
+<li><code>%n[a-z]</code> 读入最多n个字符，直到遇见非<code>a-z</code>的字符;</li>
+<li><code>%[^=]</code> 读入任意多的字符，直到遇见<code>=</code>停止；</li>
+<li><code>%n[^=]</code> 读入<code>=</code>前最多n个字符。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> CPP </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[DCMTK 编译与调试]]></title>
+      <url>https://xautshuanglong.github.io/2018/12/25/DICOM/DCMTK%E7%BC%96%E8%AF%91%E4%B8%8E%E8%B0%83%E8%AF%95/</url>
+      <content type="html"><![CDATA[<p>CMake 生成 VS 解决方案使用绝对路径留下的痛</p>
+<a id="more"></a>
+<h2 id="CMake-DCMTK"><a href="#CMake-DCMTK" class="headerlink" title="CMake DCMTK"></a>CMake DCMTK</h2><ul>
+<li>指定安装路径，打包头文件及依赖库；</li>
+<li>支持库：xml、png、tiff、openssl、iconv、zlib；</li>
+<li>绝对路径问题。</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> DICOM </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[DCMTK + Conquest DICOM Server 环境测试]]></title>
+      <url>https://xautshuanglong.github.io/2018/12/25/DICOM/ConquestDicomServer%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%B5%8B%E8%AF%95/</url>
+      <content type="html"><![CDATA[<p>更进一步</p>
+<a id="more"></a>
+<h2 id="Conquest-服务器安装"><a href="#Conquest-服务器安装" class="headerlink" title="Conquest 服务器安装"></a>Conquest 服务器安装</h2><h2 id="DCMTK-测试"><a href="#DCMTK-测试" class="headerlink" title="DCMTK 测试"></a>DCMTK 测试</h2><p>命令参数示例：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询检索测试</span></span><br><span class="line">findscu.exe -v -aet DebugTest -aec MGIUSDICOM -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 上句使用默认查询模型: -W Worklist 其他可选性: -P patient -S study -O patient/study except worklist </span></span><br><span class="line"><span class="comment">// 是引用 -P 或 -S 或 -O 时需要指定查询等级(0x0008, 0x0052)，否则服务器无法正确处理。</span></span><br><span class="line"><span class="comment">// Patient Root Query/Retrieve          : Patient Level, Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Study Root Query/Retrieve            : Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Patient/Study Only Query/Retrieve    : Patient Level, Study Level.</span></span><br><span class="line">findscu.exe -v -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0x0008</span>,<span class="number">0x0052</span>=<span class="string">"STUDY"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询指定属性列表</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0010</span>,<span class="number">0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k <span class="number">0008</span>,<span class="number">0020</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>d=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">0010</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>e=<span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 为何 RadiAnt 能同时检索 STUDY 和 IMAGE ？ tag: (0020,1208) DCM_NumberOfStudyRelatedInstances</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k PatientID -k StudyInstanceUID -k SeriesInstanceUID -k SeriesNumber -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// Qt Demo 中使用</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName=<span class="string">"HEAD EXP2"</span> -k <span class="string">"QueryRetrieveLevel=STUDY"</span> -k PatientID -k StudyInstanceUID -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// 拉取测试</span></span><br><span class="line">getscu.exe -v +v -aet DebugTest -aec MGIUSDICOM -pdu <span class="number">32768</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 存储测试</span></span><br><span class="line">storescu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span> ./dicom_package.dcm</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移动/转存测试</span></span><br><span class="line">storescp.exe -v +v -pdu <span class="number">32768</span> <span class="number">5680</span></span><br><span class="line">movescu.exe -v -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br></pre></td></tr></table></figure></p>
+<p>注意事项：</p>
+<ul>
+<li>movescu.exe 测试时需 storescp.exe 配合。<br>【C-MOVE 请求发出后，服务端反向建立连接发送 C-STORE 请求】</li>
+<li>PDU<code>Protocol Data Unit</code> 小于服务端时，数据传输异常。<br>【通过 -pdu 调整最大 pdu】</li>
+</ul>
+<h2 id="关键知识点"><a href="#关键知识点" class="headerlink" title="关键知识点"></a>关键知识点</h2><p>Query/Retrieve 信息模型的分层结构</p>
+<ul>
+<li>Patient Root Query/Retrieve 信息模型</li>
+<li>Study Root Query/Retrieve 信息模型</li>
+<li>Patient/Study Root Query/Retrieve 信息模型</li>
+</ul>
+<p>每种信息模型按照分层的形式进行组织，DICOM 标准根据实体-关系模型（Entity-Relation Model）将其分为不同级别，由 Query/Retrieve Level 属性指明所请求的级别。<br>tag: (0x0008,0x0052)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">信息模型</th>
+<th style="text-align:left">等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Patient Root Query/Retrieve</td>
+<td style="text-align:left"><code>Patient Level</code> <br> <code>Study Level</code> <br> <code>Series Level</code> <br> <code>Composite Object Instance Level</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Study Root Query/Retrieve</td>
+<td style="text-align:left"><code>Study Level</code> <br> <code>Series Level</code> <br> <code>Composite Object Instance Level</code></td>
+</tr>
+<tr>
+<td style="text-align:center">Patient/Study Root Query/Retrieve</td>
+<td style="text-align:left"><code>Patient Level</code> <br> <code>Study Level</code></td>
+</tr>
+</tbody>
+</table>
+<p>DCMTK 源码中定义的等级：(dcmqrdbi.h)<br><code>PATIENT_LEVEL</code><br><code>STUDY_LEVEL</code><br><code>SERIES_LEVEL</code><br><code>IMAGE_LEVEL</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> DB_LEVEL</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/// DICOM Q/R patient level</span></span><br><span class="line">    PATIENT_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R study level</span></span><br><span class="line">    STUDY_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R series level</span></span><br><span class="line">    SERIE_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R instance level</span></span><br><span class="line">    IMAGE_LEVEL</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> DICOM </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[静态变量的初始化与释放]]></title>
       <url>https://xautshuanglong.github.io/2018/12/13/CommonSense/StaticVariables%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E9%87%8A%E6%94%BE/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -2502,14 +2697,14 @@ x = MyClass(110,&quot;Shuang&quot;)
       <title><![CDATA[网址收集]]></title>
       <url>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</url>
       <content type="html"><![CDATA[<h2 id="ProgramLanguage"><a href="#ProgramLanguage" class="headerlink" title="ProgramLanguage"></a>ProgramLanguage</h2><p>值得收藏的学习网址,每天进步一点点。<br><a id="more"></a></p>
-<h3 id="C-C"><a href="#C-C" class="headerlink" title="C/C++"></a>C/C++</h3><a class="btn btn-success" href="http://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">菜鸟教程【C++】</a>
+<h3 id="C-C"><a href="#C-C" class="headerlink" title="C/C++"></a>C/C++</h3><a class="btn btn-success" href="http://www.runoob.com/cprogramming/c-tutorial.html" target="_blank" rel="noopener">菜鸟教程【C】</a>
+<a class="btn btn-success" href="http://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank" rel="noopener">菜鸟教程【C++】</a>
 <a class="btn btn-success" href="http://www.cplusplus.com/reference" target="_blank" rel="noopener">CPlusPlus</a>
 <a class="btn btn-success" href="http://zh.cppreference.com/w/c" target="_blank" rel="noopener">C&#32;参考手册</a>
 <a class="btn btn-success" href="http://zh.cppreference.com/w/cpp" target="_blank" rel="noopener">CPP&#32;参考手册</a>
 <a class="btn btn-success" href="http://classfoo.com/ccby/article/acZKb" target="_blank" rel="noopener">CPP&#32;参考网址</a>
 <a class="btn btn-success" href="https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/" target="_blank" rel="noopener">C++并发编程【Gitbooks】</a>
 <a class="btn btn-success" href="http://zh.highscore.de/cpp/boost/" target="_blank" rel="noopener">Boost&#32;C++&#32;库</a>
-<h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><a class="btn btn-primary" href="http://www.runoob.com/cprogramming/c-tutorial.html" target="_blank" rel="noopener">菜鸟教程【C】</a>
 <h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><a class="btn btn-warning" href="https://www.python.org/" target="_blank" rel="noopener">官方文档</a>
 <a class="btn btn-warning" href="http://www.pythondoc.com/" target="_blank" rel="noopener">官方教程</a>
 <a class="btn btn-warning" href="http://www.runoob.com/python/python-tutorial.html" target="_blank" rel="noopener">菜鸟教程【Python】</a>
@@ -2546,12 +2741,16 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-info" href="http://wiki.jikexueyuan.com/project/spring/" target="_blank" rel="noopener">Spring&#32;教程</a>
 <a class="btn btn-info" href="http://www.vogella.com/tutorials/EclipseMemoryAnalyzer/article.html" target="_blank" rel="noopener">MAT&#32;Tutorial</a>
 <a class="btn btn-info" href="http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.mat.ui.help%2Fgettingstarted%2Fbasictutorial.html&cp=49_1_0" target="_blank" rel="noopener">MAT&#32;Basic&#32;Tutorial</a>
+<a class="btn btn-info" href="https://www.yiibai.com/guava/" target="_blank" rel="noopener">Guava&#32;教程</a>
 <h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><a class="btn btn-success" href="http://www.runoob.com/w3cnote/android-tutorial-intro.html" target="_blank" rel="noopener">菜鸟教程【Android】</a>
 <a class="btn btn-success" href="http://waylenw.github.io/android-dev-teacher" target="_blank" rel="noopener">Android教程集锦</a>
 <a class="btn btn-success" href="http://wiki.jikexueyuan.com/project/jni-ndk-developer-guide/ndkoverview.html" target="_blank" rel="noopener">Android&#32;NDK&#32;简介</a>
 <a class="btn btn-success" href="http://www.androidchina.net/1992.html" target="_blank" rel="noopener">Android&#32;UI&#32;开源框架</a>
 <h3 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h3><a class="btn btn-primary" href="http://staruml.io/" target="_blank" rel="noopener">StartUML</a>
 <a class="btn btn-primary" href="https://docs.staruml.io/" target="_blank" rel="noopener">StartUML&#32;GitBook</a>
+<h3 id="LUA"><a href="#LUA" class="headerlink" title="LUA"></a>LUA</h3><a class="btn btn-warning" href="https://www.lua.org/download.html" target="_blank" rel="noopener">LUA&#32;官网网站</a>
+<a class="btn btn-warning" href="http://www.runoob.com/lua/lua-tutorial.html" target="_blank" rel="noopener">LUA&#32;菜鸟教程</a>
+<a class="btn btn-warning" href="https://www.yiibai.com/lua/lua_overview.html" target="_blank" rel="noopener">LUA&#32;易百教程</a>
 <h3 id="D3D"><a href="#D3D" class="headerlink" title="D3D"></a>D3D</h3><a class="btn btn-info" href="http://shiba.hpe.sh.cn/jiaoyanzu/WULI/Soft/NotXNA" target="_blank" rel="noopener">【图形编程&#32;&&#32;其他】</a>
 <h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><a class="btn btn-warning" href="https://github.com/xautshuanglong" target="_blank" rel="noopener">My&#32;Github</a>
 <a class="btn btn-warning" href="https://github.com/vim-scripts/" target="_blank" rel="noopener">Vim&#32;Plugin</a>
@@ -2570,6 +2769,8 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://mupdf.com/docs/index.html" target="_blank" rel="noopener">MuPDF&#32;Official</a>
 <a class="btn btn-danger" href="http://priede.bf.lu.lv/ftp/pub/RakstuDarbi/pdf/MuPDF/mupdf_explored.pdf" target="_blank" rel="noopener">MuPDF&#32;Explored&#32;2017-3-32</a>
 <a class="btn btn-danger" href="https://pymupdf.readthedocs.io/en/latest/" target="_blank" rel="noopener">PyMuPDF&#32;Document</a>
+<a class="btn btn-danger" href="https://github.com/sumatrapdfreader/sumatrapdf" target="_blank" rel="noopener">SumatraPDF</a>
+<a class="btn btn-danger" href="https://www.sumatrapdfreader.org/free-pdf-reader.html" target="_blank" rel="noopener">SumatraPDF&#32;Official</a>
 <a class="btn btn-danger" href="https://github.com/KindDragon/vld" target="_blank" rel="noopener">Visual&#32;Leak&#32;Detector</a>
 <h2 id="NetworkProgram"><a href="#NetworkProgram" class="headerlink" title="NetworkProgram"></a>NetworkProgram</h2><a class="btn btn-primary" href="http://www.52im.net/thread-50-1-1.html" target="_blank" rel="noopener">即时通讯网</a>
 <h2 id="公共平台"><a href="#公共平台" class="headerlink" title="公共平台"></a>公共平台</h2><a class="btn btn-warning" href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="noopener">百度统计</a>
@@ -2578,7 +2779,7 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-warning" href="https://ecs.console.aliyun.com/#/home" target="_blank" rel="noopener">阿里云控制台</a>
 <h2 id="文件编码格式"><a href="#文件编码格式" class="headerlink" title="文件编码格式"></a>文件编码格式</h2><a class="btn btn-danger" href="https://blog.csdn.net/lamb7758/article/details/56015876" target="_blank" rel="noopener">PDF&#32;文档结构说明</a>
 <h2 id="Host"><a href="#Host" class="headerlink" title="Host"></a>Host</h2><p><a href="https://github.com/racaljk/hosts" target="_blank" rel="noopener">https://github.com/racaljk/hosts</a><br><a href="https://coding.net/u/scaffrey/p/hosts/git" target="_blank" rel="noopener">https://coding.net/u/scaffrey/p/hosts/git</a></p>
-<h2 id="简历"><a href="#简历" class="headerlink" title="简历"></a>简历</h2><p><a href="http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm" target="_blank" rel="noopener">简历吸引力</a><br><a href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">freemind theme参考</a><br><a href="http://hahack.com/" target="_blank" rel="noopener">Frermind作者</a></p>
+<h2 id="简历"><a href="#简历" class="headerlink" title="简历"></a>简历</h2><p><a href="http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm" target="_blank" rel="noopener">简历吸引力</a><br><a href="http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">freemind theme参考</a><br><a href="https://www.hahack.com/" target="_blank" rel="noopener">Freemind作者</a></p>
 <p>b2838f4995da0fbde755ea5edf2047db62effd4f</p>
 ]]></content>
       
@@ -3489,7 +3690,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x78;&#106;&#x73;&#104;&#x75;&#97;&#110;&#x67;&#x6c;&#x6f;&#110;&#103;&#x40;&#x31;&#50;&#54;&#x2e;&#99;&#111;&#x6d;">&#x78;&#106;&#x73;&#104;&#x75;&#97;&#110;&#x67;&#x6c;&#x6f;&#110;&#103;&#x40;&#x31;&#50;&#54;&#x2e;&#99;&#111;&#x6d;</a></p>
+</code></pre><p><a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#120;&#x6a;&#x73;&#x68;&#117;&#97;&#x6e;&#x67;&#108;&#111;&#110;&#x67;&#x40;&#49;&#50;&#54;&#46;&#x63;&#111;&#109;">&#120;&#x6a;&#x73;&#x68;&#117;&#97;&#x6e;&#x67;&#108;&#111;&#110;&#x67;&#x40;&#49;&#50;&#54;&#46;&#x63;&#111;&#109;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
