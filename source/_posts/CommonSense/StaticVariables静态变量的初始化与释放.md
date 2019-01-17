@@ -14,6 +14,9 @@ toc: true
 ``` c
 #pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )
 ```
+
+*注*：子模块（动态链接库）中包含 vld.h 并正确配置 vld lib 才能暴露子模块中的内存泄漏问题。
+
 https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017
 
 http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html
