@@ -159,6 +159,10 @@ https://www.microsoft.com/com/default.mspx
 * GC 算法相关
   [GC的三大基础算法](https://segmentfault.com/a/1190000004665100)
 
+### Python
+* 经典示例
+  [CPython解释器支持的线程和进程](https://www.cnblogs.com/wangkc/p/7122120.html)
+
 ### XML
 * XML 解释器 `DOM` `SAX` `Xerces` `Castor`
   [解析xml文件的几种方法和原理](https://blog.csdn.net/witsmakemen/article/details/6980424)
@@ -184,6 +188,10 @@ https://www.microsoft.com/com/default.mspx
 
 ### FTP
 * [FTP协议（指令集）](https://my.oschina.net/90888/blog/830379)
+
+### ICMP
+* [ICMP协议a](https://www.cnblogs.com/jingmoxukong/p/3811262.html)
+* [ICMP Type 对应表](https://www.cnblogs.com/itcomputer/p/4939399.html)
 
 ## 性能分析
 * VTune
