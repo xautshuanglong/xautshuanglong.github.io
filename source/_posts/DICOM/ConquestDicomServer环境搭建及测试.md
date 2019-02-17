@@ -46,14 +46,18 @@ storescu.exe -v -aet DebugTest -aec MGIUSDICOM 192.168.28.128 5678 ./dicom_packa
 // 移动/转存测试
 storescp.exe -v +v -pdu 32768 5680
 movescu.exe -v -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
+movescu.exe -v +P -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
 ```
 
 注意事项：
 * movescu.exe 测试时需 storescp.exe 配合。
- 【C-MOVE 请求发出后，服务端反向建立连接发送 C-STORE 请求】
+ 【`C-MOVE` 请求发出后，服务端反向建立连接发送 `C-STORE` 请求】
+* movescu.exe 也可以自己作为 StoreSCP，这样就不需要启动 storescp.exe 来处理 `C-STORE` 请求。
+ 【 -P 参数用于设置监听端口，来响应新的 TCP 连接】
 * PDU`Protocol Data Unit` 小于服务端时，数据传输异常。
- 【通过 -pdu 调整最大 pdu】
-
+ 【通过 -pdu 调整 pdu 的最大值】
+* `C-GET` 与 `C-MOVE` 的最大不同点
+ 【`C-GET` 在同一关联中处理 `C-STORE`，而 `C-MOVE` 需要建立新的关联，并在新的关联中处理 `C-STORE`】
 
 ## 关键知识点
 

@@ -11,6 +11,7 @@ toc: true
 值得收藏的学习网址,每天进步一点点。
 <!--more-->
 ### C/C++
+{% btn http://www.runoob.com/cprogramming/c-tutorial.html 菜鸟教程【C】 success %}
 {% btn http://www.runoob.com/cplusplus/cpp-tutorial.html 菜鸟教程【C++】 success %}
 {% btn http://www.cplusplus.com/reference CPlusPlus success %}
 {% btn http://zh.cppreference.com/w/c C&#32;参考手册 success %}
@@ -25,6 +26,7 @@ toc: true
 {% btn http://www.pythondoc.com/ 官方教程 warning %}
 {% btn http://www.runoob.com/python/python-tutorial.html 菜鸟教程【Python】 warning %}
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
+{% btn https://docs.python.org/zh-cn/3.7/c-api/index.html Python/C&#32;参考手册 warning %}
 
 ### C&#35;
 {% btn http://www.runoob.com/csharp/csharp-tutorial.html 菜鸟教程【C&#35;】 danger %}
