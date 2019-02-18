@@ -169,6 +169,8 @@ https://www.microsoft.com/com/default.mspx
 
 ### PDF
 * 几个 PDF 软件库：`xpdf`，`poppler`，`mupdf`。
+* [PDF 阅读器开发参考](https://blog.csdn.net/baihacker/article/details/36965841)
+* [MuPDF 参考 xiangxw/mupdf-qt](https://github.com/xiangxw/mupdf-qt)
 
 ### VisualStudio
 * VC 编译器参数设置
