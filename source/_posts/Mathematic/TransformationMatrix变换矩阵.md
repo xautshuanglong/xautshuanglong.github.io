@@ -16,7 +16,65 @@ toc: true
 [旋转变换](https://blog.csdn.net/csxiaoshui/article/details/65446125)
 [旋转矩阵 Wiki](https://zh.wikipedia.org/wiki/%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5)
 
+## 二维平移
+$$
+\begin{cases}
+x' = x + t_x \\\\
+y' = y + t_y \\\\
+\end{cases}
+$$
+
+$$
+\begin {bmatrix}
+    x' \\\\
+    y' \\\\
+    1  \\\\
+\end {bmatrix}
+=
+\begin {bmatrix}
+    1 & 0 & t_x \\\\
+    0 & 1 & t_y \\\\
+    0 & 0 & 1  \\\\
+\end {bmatrix}
+\cdot
+\begin {bmatrix}
+    x \\\\
+    y \\\\
+    1 \\\\
+\end {bmatrix}
+$$
+
+## 二维缩放
+$$
+\begin{cases}
+x' = x \cdot s_x \\\\
+y' = y \cdot s_y \\\\
+\end{cases}
+$$
+
+$$
+\begin {bmatrix}
+    x' \\\\
+    y' \\\\
+    1  \\\\
+\end {bmatrix}
+=
+\begin {bmatrix}
+    s_x & 0   & 0 \\\\
+    0   & s_y & 0 \\\\
+    0   & 0   & 1 \\\\
+\end {bmatrix}
+\cdot
+\begin {bmatrix}
+    x \\\\
+    y \\\\
+    1 \\\\
+\end {bmatrix}
+$$
+
 ## 二维旋转
+
+### 绕原点旋转
 
 $$
 \begin {bmatrix}
@@ -54,6 +112,51 @@ $$
     1 \\\\
 \end {bmatrix}
 $$
+
+### 绕任意点旋转
+
+1. 将旋转点移动到原点处
+1. 执行绕原点的旋转
+1. 再将旋转点移回原来的位置
+
+$$
+\begin{align}
+M & = 
+\begin {bmatrix}
+    1 & 0 & tx \\\\
+    0 & 1 & ty \\\\
+    0 & 0 & 1  \\\\
+\end {bmatrix}
+\cdot 
+\begin {bmatrix}
+    cos\theta & -sin\theta & 0 \\\\
+    sin\theta &  cos\theta & 0 \\\\
+    0         &  0         & 1 \\\\
+\end {bmatrix}
+\cdot
+\begin {bmatrix}
+    1 & 0 & -tx \\\\
+    0 & 1 & -ty \\\\
+    0 & 0 &  1  \\\\
+\end {bmatrix} \\\\
+& = 
+\begin {bmatrix}
+    cos\theta & -sin\theta & (1-cos\theta) \cdot tx + ty \cdot sin\theta \\\\
+    sin\theta &  cos\theta & (1-cos\theta) \cdot ty - tx \cdot sin\theta \\\\
+    0         &  0         & 1 \\\\
+\end {bmatrix}
+\end{align}
+$$
+
+## 二维复合变换
+变换顺序：缩放 -> 旋转 -> 平移。
+
+1. 缩放不改变原点和轴向；
+1. 旋转不改变原点，但改变轴向；
+1. 平移不改变轴向，但改变原点。
+
+缩放不能再旋转之后，且缩放和旋转不能在平移之后。
+https://blog.csdn.net/zsq306650083/article/details/50561857
 
 ## 三维旋转
 
