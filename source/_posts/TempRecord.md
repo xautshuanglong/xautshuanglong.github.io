@@ -195,6 +195,9 @@ https://www.microsoft.com/com/default.mspx
 * [ICMP协议a](https://www.cnblogs.com/jingmoxukong/p/3811262.html)
 * [ICMP Type 对应表](https://www.cnblogs.com/itcomputer/p/4939399.html)
 
+### PXE
+* PXE 网络装机环境搭建：`DHCP`，`TFTP`，`HTTP`。
+
 ## 性能分析
 * VTune
   [Intel VTune Get Started](https://software.intel.com/en-us/vtune/documentation/get-started)
