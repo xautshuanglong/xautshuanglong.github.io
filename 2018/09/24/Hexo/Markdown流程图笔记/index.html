@@ -206,7 +206,17 @@ var _hmt = _hmt || [];
 <p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class="mermaid"&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class="mermaid"&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure></p>
 <div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将语句：</span></span><br><span class="line">Class01 &lt;|-- AVeryLongClass : Cool</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line">Class01 &amp;lt;|-- AVeryLongClass : Cool</span><br></pre></td></tr></table></figure>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
 e=>end: 登录
 io1=>inputoutput: 输入用户名密码
 sub1=>subroutine: 数据库查询子类
@@ -217,17 +227,7 @@ st->io1->sub1->cond
 cond(yes,right)->cond2
 cond(no)->io1(right)
 cond2(yes,right)->op->e
-cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
-participant 网页
-participant 商品详情服务器 as A
-participant 商品价格服务器 as B
-Note over 网页:用户选择商品
-网页->A:查询
-A->B:查询
-B->B:查询DB并计算
-B-->A:返回
-A->A:获取其他信息
-A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 	  
 	</div>
 
