@@ -154,6 +154,19 @@ toc: true
 https://github.com/racaljk/hosts
 https://coding.net/u/scaffrey/p/hosts/git
 
+## Google 镜像站
+[Google IPV6](https://ipv6.google-api.ac.cn/)
+[谷歌学术](https://x.glgoo.top/scholar?hl=zh-CN&as_sdt=0,5)
+[学术搜索](https://a.glgoo.top/)
+[学术搜索](https://b.glgoo.top/)
+[学术搜索](https://c.glgoo.top/)
+[学术搜索](https://f.glgoo.top/)
+[维基百科](https://wiwiwiki.kfd.me/wiki/Wikipedia:%E9%A6%96%E9%A1%B5)
+http://google.gdsnet.cn/
+https://kfd.me/
+https://g.kfd.me/
+国外服务器：https://www.vultr.com/pricing/
+
 ## 简历
 [简历吸引力](http://gb.cri.cn/44011/2014/01/23/7171s4400715.htm)
 [freemind theme参考](http://baoxiehao.com/2014/05/17/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/)
