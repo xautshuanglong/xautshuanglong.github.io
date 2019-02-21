@@ -83,6 +83,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * 网络操作 `InternetAttemptConnect` `InternetCheckConnection` `InternetQueryOption` `InternetGetConnectedState`
   [WinINet Functions](https://docs.microsoft.com/zh-cn/windows/desktop/WinInet/wininet-functions)
   [IP Helper Functions](https://docs.microsoft.com/zh-cn/windows/desktop/IpHlp/ip-helper-functions)
+  UDP 也可用 connect 操作，好处多多：绑定 IP，无需频繁建立与断开连接，拒绝第三方数据报干扰。
 * `DIA` `Debug Interface Access SDK`，访问存储在PDB（Program Database）文件中信息的库。
   VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。
   [官方参考](https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015)
