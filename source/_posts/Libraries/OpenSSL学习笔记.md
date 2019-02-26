@@ -33,6 +33,101 @@ toc: true
 链式根需要受到链接的 CA 支配，无法控制 root 用户，一旦root CA 停业，就会受到巨大的牵连。
 根证书和中间证书过期的话，中间根必须在根证书之前，增加工作难度。
 
+## 颁发实战
+1. 配置文件
+``` C
+[ca]
+default_ca=CA_default
+
+[CA_default]
+policy=policy_match
+new_certs_dir=newcerts
+database=index.txt
+default_md=default
+serial=serial.txt
+default_days=3650
+
+[policy_match]
+countryName=match
+stateOrProvinceName=match
+organizationName=match
+organizationalUnitName=optional
+commonName=supplied
+emailAddress=optional
+
+[policy_anything]
+countryName=optional
+stateOrProvinceName=optional
+localityName=optional
+organizationName=optional
+organizationalUnitName=optional
+commonName=supplied
+emailAddress=optional
+
+[test]
+countryName=CN
+stateOrProvinceName=GuangDong
+organizationName=BGI
+organizationalUnitName=MGIUS
+commonName=MGIUSDICOM
+emailAddress=jiangchuanbiao@genomics.cn
+
+[req]
+default_bits=1024
+default_keyfile=private_key.pem
+distinguished_name=req_distinguished_name
+attributtes=req_attributes
+
+[req_distinguished_name]
+countryName=Country Name (2 letter code)
+countryName_min=2
+countryName_max=2
+stateOrProvinceName=State or Province Name (full name)
+localityName=Locality Name (eg, city)
+organizationName=Organization Name (eg, company)
+organizationalUnitName=Organizational Unit Name (eg, section)
+commonName=Common Name (eg. YOUR name)
+commonName_max=64
+emailAddress=Email Address
+emailAddress_max=40
+
+[req_attributes]
+challengePassword=A challenge password
+challengePassword_min=4
+challengePassword_max=20
+unstructuredName=An optional company name
+```
+
+1. 自签名
+``` C
+# 1.生成私钥
+$ openssl genrsa -out server.key 2048
+
+# 2.生成 CSR (Certificate Signing Request)
+$ openssl req -subj "/C=CN/ST=GD/L=Shenzhen/O=Self/OU=ShuanglongTest/CN=Shuanglong/emailAddress=xjshuanglong@126.com" -new -key server.key -out server.csr
+
+# 3.生成自签名证书
+$ openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt
+```
+
+2. 私有 CA 签名
+``` C
+# 1.创建 CA 私钥
+$ openssl genrsa -out ca.key 2048
+
+# 2.生成 CA 的自签名证书
+$ openssl req -subj "/C=CN/ST=Tianjin/L=Tianjin/O=Mocha/OU=Mocha Software/CN=Server CA/emailAddress=test@mochasoft.com.cn" -new -x509 -days 3650 -key ca.key -out ca.crt
+
+# 3.生成需要颁发证书的私钥
+$ openssl genrsa -out server.key 2048
+
+# 4.生成要颁发证书的证书签名请求，证书签名请求当中的 Common Name 必须区别于 CA 的证书里面的 Common Name
+$ openssl req -subj "/C=CN/ST=Tianjin/L=Tianjin/O=Mocha/OU=Mocha Software/CN=test2.sslpoc.com/emailAddress=test@mochasoft.com.cn" -new -key server.key -out server.csr
+
+# 5.用 2 创建的 CA 证书给 4 生成的 签名请求 进行签名
+$ openssl x509 -req -days 3650 -in server.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out server.crt
+```
+
 ## 编程模式
 * 建立 SSL 上下文环境后使用 BIO 进行通信
 * 基于已建立的 Socket 连接创建 SSL 上下文环境
@@ -49,6 +144,17 @@ toc: true
    DcmTLSConnection 用于 SSL 连接握手、重协商、请求认证、读写数据、关闭连接。
 
    思考结果：为确保 SSL 上下文环境只初始化一次，要么使全局/静态用标志位，要么干脆将上下文换件封装成静态方法，可与 SSL 通信环境同处一个类，也可分开各自为政。
+
+1. 命令行卡死 （Windows + GitBash）
+   执行命令 `openssl genrsa -des3 -out test.key 2048` 后，进程假死，无法执行后续操作，只有结束当前进程。
+   在 windows 命令行中执行，会提示输入密码。
+   此时可通过传入参数传递密码，而不是通过标准输入传入密码。
+   `openssl genrsa -des3 -passout pass:mima -out test.key 2048`
+   验证密码正确性：`openssl rsa -in test.key -check`，根据提示输入密码短语。
+   ***注：***使用 CMD，GitBash 似乎无效即使加入 `-passout pass:mima`。
+
+1. GitBash 执行 DCMTK 测试程序时出现卡死
+   通过任务管理器杀死 DCMTK 测试程序，GitBash 恢复命令行模式，即可继续操作。
 
 ## 参考网址
 https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html
