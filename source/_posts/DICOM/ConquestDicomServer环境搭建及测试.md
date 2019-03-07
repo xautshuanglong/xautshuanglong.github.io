@@ -59,7 +59,7 @@ movescu.exe -v +P -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k 0x0010,0x0010
 * `C-GET` 与 `C-MOVE` 的最大不同点
  【`C-GET` 在同一关联中处理 `C-STORE`，而 `C-MOVE` 需要建立新的关联，并在新的关联中处理 `C-STORE`】
 
-## 关键知识点
+## Query/Retrieve 信息模型
 
 Query/Retrieve 信息模型的分层结构
 
@@ -95,4 +95,29 @@ enum DB_LEVEL
     IMAGE_LEVEL
 };
 ```
+
+## 消息服务元素
+
+* DIMSE：DICOM Message Service Element（DICOM 消息服务元素）
+* DIMSE-C：DICOM Message Service Element-Composite（复合 DICOM 消息服务元素）
+* DIMSE-N：DICOM Message Service Element-Normalized（标准化的 DICOM 消息服务元素）
+
+| 元素类型 |   描述   |
+|:--------:|:--------:|
+| C-ECHO   | 回显服务，验证两端通信是否成功。 |
+| C-FIND   | 查询服务，查询满足条件的一组属性的复合 SOP 实例。 |
+| C-GET    | 获取服务，查询并返回满足条件的一组属性的复合 SOP 实例，仅限同一实体，触发 C-STORE，同一个 Association。 |
+| C-MOVE   | 转移服务，查询并取回满足条件的一组属性的复合 SOP 实例，同一或多个应用实体，触发 C-STORE，不同 Association。 |
+| C-STORE  | 存储服务，存储一个复合 SOP 实例。 |
+| C-CANCEL | 取消服务，取消之前发出的请求。 |
+
+
+| 元素类型 |   描述   |
+|:--------:|:--------:|
+| N-EVENT-REPORT | 报告一个事件 |
+| N-SET    | 请求属性值修改 |
+| N-GET    | 取回属性值 |
+| N-ACTION | 请求一个操作 |
+| N-CREATE | 请求创建新的托管 SOP 实例 |
+| N-DELETE | 请求删除一个托管 SOP 实例 |
 

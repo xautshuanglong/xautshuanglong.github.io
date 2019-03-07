@@ -47,4 +47,10 @@ Docker 介绍
 #  newgrp docker # 更细 docker 用户组，同上解决加入 docker 组后不生效
    ```
 
+## Docker MySQL
+1. 目前官方 MySQL 镜像中的 MySQL 版本已升级到 8.0，默认密码插件由 `mysql_native_password` 改为 `caching_sha2_password`。
+   解决方案：修改数据库默认授权方式；或者升级客户端支持`caching_sha2_password`，如：Navicat12.0.28 及更新版本。
+
+1. MySQL 8.0 之后函数有所改动，password 生成密码对应密文不再适用。
+   修改密码方式：`alter user 'root'@'localhost' IDENTIFIED BY 'new_password';`。
 
