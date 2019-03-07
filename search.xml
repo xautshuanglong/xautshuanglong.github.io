@@ -4,6 +4,72 @@
   
     
     <entry>
+      <title><![CDATA[Docker环境搭建记录]]></title>
+      <url>https://xautshuanglong.github.io/2019/02/28/Docker/Docker%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<p>Docker 介绍</p>
+<a id="more"></a>
+<h2 id="Ubuntu-Docker-安装过程"><a href="#Ubuntu-Docker-安装过程" class="headerlink" title="Ubuntu Docker 安装过程"></a>Ubuntu Docker 安装过程</h2><p>参考网址：</p>
+<ol>
+<li><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank" rel="noopener">Docker官方教程</a></li>
+<li><p><a href="http://www.runoob.com/docker/ubuntu-docker-install.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+</li>
+<li><p>AliYun 镜像站安装 docker</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加 GPG 秘钥和软件源</span></span><br><span class="line">curl -fsSL https:<span class="comment">//mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span></span><br><span class="line">sudo add-apt-repository <span class="string">"deb [arch=amd64] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br><span class="line">sudo systemctl enable docker</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo docker run hello-world</span><br><span class="line"></span><br><span class="line">sudo groupadd docker</span><br><span class="line">sudo usermod -aG docker $USER</span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="管理-Docker-容器"><a href="#管理-Docker-容器" class="headerlink" title="管理 Docker 容器"></a>管理 Docker 容器</h2><ol>
+<li>新装 Docker 后普通用户无权限访问 Docker 服务<br>官方解释：Docker 的守护进程绑定了 Unix socket 而不是 TCP 端口。默认情况下，Unix socket 属于 root 用户，Docker 守护进程总是以 root 用户运行。<br>处理方案：<br>（1） 使用 sudo 获取管理员权限；<br>（2） 创建 docker 用户并加入 docker 用户组。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   sudo groupadd docker # 提示 docker 组已存在</span><br><span class="line">   sudo usermod -aG docker $USER # 把当前用户添加到 docker 组</span><br><span class="line"><span class="meta">#  sudo gpasswd -a $USER docker # 效果同上</span></span><br><span class="line">   sudo systemctl restart docker # 重启 docker 服务</span><br><span class="line">   docker iamges # 测试权限，如果不成功，尝试登出后重新登录该用户</span><br><span class="line"><span class="meta">#  newgrp docker # 更细 docker 用户组，同上解决加入 docker 组后不生效</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Docker-MySQL"><a href="#Docker-MySQL" class="headerlink" title="Docker MySQL"></a>Docker MySQL</h2><ol>
+<li><p>目前官方 MySQL 镜像中的 MySQL 版本已升级到 8.0，默认密码插件由 <code>mysql_native_password</code> 改为 <code>caching_sha2_password</code>。<br>解决方案：修改数据库默认授权方式；或者升级客户端支持<code>caching_sha2_password</code>，如：Navicat12.0.28 及更新版本。</p>
+</li>
+<li><p>MySQL 8.0 之后函数有所改动，password 生成密码对应密文不再适用。<br>修改密码方式：<code>alter user &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;new_password&#39;;</code>。</p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Docker </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[QT疑难杂症]]></title>
+      <url>https://xautshuanglong.github.io/2019/02/28/Qt/QT%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</url>
+      <content type="html"><![CDATA[<p>即使伤痕累累，也要负重前行。</p>
+<a id="more"></a>
+<h2 id="运行调试"><a href="#运行调试" class="headerlink" title="运行调试"></a>运行调试</h2><ol>
+<li>通过 QtCreator 运行时总是 <code>Crash</code>，调试时总是报 <code>the cdb process terminated</code>。<br>请确认直接运行 EXE 是否正常，通常会缺失各种 DLL，除 Qt 依赖模块外是否存在其他依赖的 DLL。<br>如果能正常运行（不缺失 DLL 的情况下）通过 QtCreator 也应该能运行。<br>缺失 DLL 或 DLL 的 Debug / Release 不匹配都会导致调试异常。其次，要保证 CDB 调试器配置正确。</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> QT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> qt </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[OpenSSL 学习笔记]]></title>
       <url>https://xautshuanglong.github.io/2019/02/22/Libraries/OpenSSL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>通信安全</p>
@@ -231,7 +297,7 @@
 <li>PDU<code>Protocol Data Unit</code> 小于服务端时，数据传输异常。<br>【通过 -pdu 调整 pdu 的最大值】</li>
 <li><code>C-GET</code> 与 <code>C-MOVE</code> 的最大不同点<br>【<code>C-GET</code> 在同一关联中处理 <code>C-STORE</code>，而 <code>C-MOVE</code> 需要建立新的关联，并在新的关联中处理 <code>C-STORE</code>】</li>
 </ul>
-<h2 id="关键知识点"><a href="#关键知识点" class="headerlink" title="关键知识点"></a>关键知识点</h2><p>Query/Retrieve 信息模型的分层结构</p>
+<h2 id="Query-Retrieve-信息模型"><a href="#Query-Retrieve-信息模型" class="headerlink" title="Query/Retrieve 信息模型"></a>Query/Retrieve 信息模型</h2><p>Query/Retrieve 信息模型的分层结构</p>
 <ul>
 <li>Patient Root Query/Retrieve 信息模型</li>
 <li>Study Root Query/Retrieve 信息模型</li>
@@ -262,6 +328,79 @@
 </table>
 <p>DCMTK 源码中定义的等级：(dcmqrdbi.h)<br><code>PATIENT_LEVEL</code><br><code>STUDY_LEVEL</code><br><code>SERIES_LEVEL</code><br><code>IMAGE_LEVEL</code></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> DB_LEVEL</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/// DICOM Q/R patient level</span></span><br><span class="line">    PATIENT_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R study level</span></span><br><span class="line">    STUDY_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R series level</span></span><br><span class="line">    SERIE_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R instance level</span></span><br><span class="line">    IMAGE_LEVEL</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="消息服务元素"><a href="#消息服务元素" class="headerlink" title="消息服务元素"></a>消息服务元素</h2><ul>
+<li>DIMSE：DICOM Message Service Element（DICOM 消息服务元素）</li>
+<li>DIMSE-C：DICOM Message Service Element-Composite（复合 DICOM 消息服务元素）</li>
+<li>DIMSE-N：DICOM Message Service Element-Normalized（标准化的 DICOM 消息服务元素）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元素类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C-ECHO</td>
+<td style="text-align:center">回显服务，验证两端通信是否成功。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-FIND</td>
+<td style="text-align:center">查询服务，查询满足条件的一组属性的复合 SOP 实例。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-GET</td>
+<td style="text-align:center">获取服务，查询并返回满足条件的一组属性的复合 SOP 实例，仅限同一实体，触发 C-STORE，同一个 Association。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-MOVE</td>
+<td style="text-align:center">转移服务，查询并取回满足条件的一组属性的复合 SOP 实例，同一或多个应用实体，触发 C-STORE，不同 Association。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-STORE</td>
+<td style="text-align:center">存储服务，存储一个复合 SOP 实例。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-CANCEL</td>
+<td style="text-align:center">取消服务，取消之前发出的请求。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元素类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">N-EVENT-REPORT</td>
+<td style="text-align:center">报告一个事件</td>
+</tr>
+<tr>
+<td style="text-align:center">N-SET</td>
+<td style="text-align:center">请求属性值修改</td>
+</tr>
+<tr>
+<td style="text-align:center">N-GET</td>
+<td style="text-align:center">取回属性值</td>
+</tr>
+<tr>
+<td style="text-align:center">N-ACTION</td>
+<td style="text-align:center">请求一个操作</td>
+</tr>
+<tr>
+<td style="text-align:center">N-CREATE</td>
+<td style="text-align:center">请求创建新的托管 SOP 实例</td>
+</tr>
+<tr>
+<td style="text-align:center">N-DELETE</td>
+<td style="text-align:center">请求删除一个托管 SOP 实例</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
       
         <categories>
@@ -908,7 +1047,17 @@
 <p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class="mermaid"&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class="mermaid"&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure></p>
 <div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将语句：</span></span><br><span class="line">Class01 &lt;|-- AVeryLongClass : Cool</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line">Class01 &amp;lt;|-- AVeryLongClass : Cool</span><br></pre></td></tr></table></figure>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
 e=>end: 登录
 io1=>inputoutput: 输入用户名密码
 sub1=>subroutine: 数据库查询子类
@@ -919,17 +1068,7 @@ st->io1->sub1->cond
 cond(yes,right)->cond2
 cond(no)->io1(right)
 cond2(yes,right)->op->e
-cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
-participant 网页
-participant 商品详情服务器 as A
-participant 商品价格服务器 as B
-Note over 网页:用户选择商品
-网页->A:查询
-A->B:查询
-B->B:查询DB并计算
-B-->A:返回
-A->A:获取其他信息
-A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 ]]></content>
       
         <categories>
@@ -3805,7 +3944,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x78;&#x6a;&#x73;&#104;&#x75;&#x61;&#x6e;&#103;&#x6c;&#111;&#110;&#103;&#x40;&#49;&#x32;&#x36;&#x2e;&#x63;&#111;&#x6d;">&#x78;&#x6a;&#x73;&#104;&#x75;&#x61;&#x6e;&#103;&#x6c;&#111;&#110;&#103;&#x40;&#49;&#x32;&#x36;&#x2e;&#x63;&#111;&#x6d;</a></p>
+</code></pre><p><a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#120;&#x6a;&#115;&#x68;&#117;&#97;&#110;&#103;&#108;&#111;&#110;&#103;&#64;&#x31;&#50;&#54;&#46;&#x63;&#111;&#x6d;">&#120;&#x6a;&#115;&#x68;&#117;&#97;&#110;&#103;&#108;&#111;&#110;&#103;&#64;&#x31;&#50;&#54;&#46;&#x63;&#111;&#x6d;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*

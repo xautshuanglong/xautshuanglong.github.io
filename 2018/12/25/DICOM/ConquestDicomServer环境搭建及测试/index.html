@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
 <li>PDU<code>Protocol Data Unit</code> 小于服务端时，数据传输异常。<br>【通过 -pdu 调整 pdu 的最大值】</li>
 <li><code>C-GET</code> 与 <code>C-MOVE</code> 的最大不同点<br>【<code>C-GET</code> 在同一关联中处理 <code>C-STORE</code>，而 <code>C-MOVE</code> 需要建立新的关联，并在新的关联中处理 <code>C-STORE</code>】</li>
 </ul>
-<h2 id="关键知识点"><a href="#关键知识点" class="headerlink" title="关键知识点"></a>关键知识点</h2><p>Query/Retrieve 信息模型的分层结构</p>
+<h2 id="Query-Retrieve-信息模型"><a href="#Query-Retrieve-信息模型" class="headerlink" title="Query/Retrieve 信息模型"></a>Query/Retrieve 信息模型</h2><p>Query/Retrieve 信息模型的分层结构</p>
 <ul>
 <li>Patient Root Query/Retrieve 信息模型</li>
 <li>Study Root Query/Retrieve 信息模型</li>
@@ -176,6 +176,79 @@ var _hmt = _hmt || [];
 </table>
 <p>DCMTK 源码中定义的等级：(dcmqrdbi.h)<br><code>PATIENT_LEVEL</code><br><code>STUDY_LEVEL</code><br><code>SERIES_LEVEL</code><br><code>IMAGE_LEVEL</code></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> DB_LEVEL</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/// DICOM Q/R patient level</span></span><br><span class="line">    PATIENT_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R study level</span></span><br><span class="line">    STUDY_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R series level</span></span><br><span class="line">    SERIE_LEVEL,</span><br><span class="line">    <span class="comment">/// DICOM Q/R instance level</span></span><br><span class="line">    IMAGE_LEVEL</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="消息服务元素"><a href="#消息服务元素" class="headerlink" title="消息服务元素"></a>消息服务元素</h2><ul>
+<li>DIMSE：DICOM Message Service Element（DICOM 消息服务元素）</li>
+<li>DIMSE-C：DICOM Message Service Element-Composite（复合 DICOM 消息服务元素）</li>
+<li>DIMSE-N：DICOM Message Service Element-Normalized（标准化的 DICOM 消息服务元素）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元素类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">C-ECHO</td>
+<td style="text-align:center">回显服务，验证两端通信是否成功。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-FIND</td>
+<td style="text-align:center">查询服务，查询满足条件的一组属性的复合 SOP 实例。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-GET</td>
+<td style="text-align:center">获取服务，查询并返回满足条件的一组属性的复合 SOP 实例，仅限同一实体，触发 C-STORE，同一个 Association。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-MOVE</td>
+<td style="text-align:center">转移服务，查询并取回满足条件的一组属性的复合 SOP 实例，同一或多个应用实体，触发 C-STORE，不同 Association。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-STORE</td>
+<td style="text-align:center">存储服务，存储一个复合 SOP 实例。</td>
+</tr>
+<tr>
+<td style="text-align:center">C-CANCEL</td>
+<td style="text-align:center">取消服务，取消之前发出的请求。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元素类型</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">N-EVENT-REPORT</td>
+<td style="text-align:center">报告一个事件</td>
+</tr>
+<tr>
+<td style="text-align:center">N-SET</td>
+<td style="text-align:center">请求属性值修改</td>
+</tr>
+<tr>
+<td style="text-align:center">N-GET</td>
+<td style="text-align:center">取回属性值</td>
+</tr>
+<tr>
+<td style="text-align:center">N-ACTION</td>
+<td style="text-align:center">请求一个操作</td>
+</tr>
+<tr>
+<td style="text-align:center">N-CREATE</td>
+<td style="text-align:center">请求创建新的托管 SOP 实例</td>
+</tr>
+<tr>
+<td style="text-align:center">N-DELETE</td>
+<td style="text-align:center">请求删除一个托管 SOP 实例</td>
+</tr>
+</tbody>
+</table>
 	  
 	</div>
 
@@ -291,7 +364,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Conquest-服务器安装"><span class="toc-article-text">Conquest 服务器安装</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#DCMTK-测试"><span class="toc-article-text">DCMTK 测试</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#关键知识点"><span class="toc-article-text">关键知识点</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Conquest-服务器安装"><span class="toc-article-text">Conquest 服务器安装</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#DCMTK-测试"><span class="toc-article-text">DCMTK 测试</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Query-Retrieve-信息模型"><span class="toc-article-text">Query/Retrieve 信息模型</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#消息服务元素"><span class="toc-article-text">消息服务元素</span></a></li></ol>
 		</div>
 	
 	</div>
