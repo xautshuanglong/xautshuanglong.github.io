@@ -38,7 +38,7 @@ findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost 5678 -k PatientName -
 findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost 5678 -k PatientName="HEAD EXP2" -k "QueryRetrieveLevel=STUDY" -k PatientID -k StudyInstanceUID -k NumberOfStudyRelatedInstances
 
 // 拉取测试
-getscu.exe -v +v -aet DebugTest -aec MGIUSDICOM -pdu 32768 -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
+getscu.exe -v -aet DebugTest -aec MGIUSDICOM -pdu 32768 -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
 
 // 存储测试
 storescu.exe -v -aet DebugTest -aec MGIUSDICOM 192.168.28.128 5678 ./dicom_package.dcm

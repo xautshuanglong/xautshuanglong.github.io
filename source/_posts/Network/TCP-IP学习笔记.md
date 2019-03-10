@@ -36,7 +36,7 @@ toc: true
 
 ## 模型比较
 
-<table> <tr><th>OSI 七层模型</th><th>TCP/IP 四层模型</th><th>网络协议</th></tr> <tr><td>应用层</td><td rowspan="3">应用层</td><td rowspan="3">HTTP、HTTPS、FTP、Telnet、NFS、SMTP、DNS、DHCP、TFTP、WWW。</td></tr> <tr><td>表示层</td></tr><tr><td>会话层</td></tr><tr><td>传输层</td><td>传输层</td><td>TCP、UDP</td></tr><tr><td>网络层</td><td>网际层</td><td>IP、ICMP、IGMP、RIP。</td></tr><tr><td>数据链路层</td><td rowspan="2">网络接口</td><td>PPP、ARP、RARP。</td></tr><tr><td>物理层</td><td>RJ-45、IEEE802.3、EIA/TIA RS232。</td></tr></table>
+<table><tr><th>OSI 七层模型</th><th>TCP/IP 四层模型</th><th>网络协议</th></tr> <tr><td>应用层</td><td rowspan="3">应用层</td><td rowspan="3">HTTP、HTTPS、FTP、Telnet、<br>NFS、SMTP、DNS、DHCP、TFTP、WWW。</td></tr> <tr><td>表示层</td></tr><tr><td>会话层</td></tr><tr><td>传输层</td><td>传输层</td><td>TCP、UDP</td></tr><tr><td>网络层</td><td>网际层</td><td>IP、ICMP、IGMP、RIP。</td></tr><tr><td>数据链路层</td><td rowspan="2">网络接口</td><td>PPP、ARP、RARP。</td></tr><tr><td>物理层</td><td>RJ-45、IEEE802.3、EIA/TIA RS232。</td></tr></table>
 
 ### 共同点
 1. `OSI`参考模型和`TCP/IP`参考模型都采用了层次结构的概念。
