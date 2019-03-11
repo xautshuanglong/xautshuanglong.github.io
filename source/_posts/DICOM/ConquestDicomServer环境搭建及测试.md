@@ -44,9 +44,9 @@ getscu.exe -v -aet DebugTest -aec MGIUSDICOM -pdu 32768 -k 0x0010,0x0010="HEAD E
 storescu.exe -v -aet DebugTest -aec MGIUSDICOM 192.168.28.128 5678 ./dicom_package.dcm
 
 // 移动/转存测试
-storescp.exe -v +v -pdu 32768 5680
+storescp.exe -v -pdu 32768 5680
 movescu.exe -v -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
-movescu.exe -v +P -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
+movescu.exe -v +P 5680 -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k 0x0010,0x0010="HEAD EXP2" 192.168.28.128 5678
 ```
 
 注意事项：
