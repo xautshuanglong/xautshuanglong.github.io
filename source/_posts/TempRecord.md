@@ -148,6 +148,7 @@ https://www.microsoft.com/com/default.mspx
   [协程概念](http://cnodejs.org/topic/58ddd7a303d476b42d34c911)
 * 并发编程
   自旋锁：[自旋锁（spin lock）与互斥量的区别](http://blog.csdn.net/a675311/article/details/49096435), [【原创+整理】线程同步之详解自旋锁](http://www.cnblogs.com/cposture/p/SpinLock.html), [C++11实现自旋锁](http://blog.csdn.net/sharemyfree/article/details/47338001)
+* 并行计算库 `TBB` 和 `PPL`
 * [字符串 Hash 函数](https://www.byvoid.com/zhs/blog/string-hash-compare) `BKDRHash` `APHash` `DJBHash` `JSHash` `RSHash` `SDBMHash` `PJWHash` `ELFHash`
 * window 内存泄漏检测：`VLD`、`_CrtDumpMemoryLeaks`、`_CrtMemCheckpoint`、`_CrtMemDifference`。
 * 变量存储期：自动、静态、线程、分配。
