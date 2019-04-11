@@ -152,6 +152,7 @@ https://www.microsoft.com/com/default.mspx
 * [字符串 Hash 函数](https://www.byvoid.com/zhs/blog/string-hash-compare) `BKDRHash` `APHash` `DJBHash` `JSHash` `RSHash` `SDBMHash` `PJWHash` `ELFHash`
 * window 内存泄漏检测：`VLD`、`_CrtDumpMemoryLeaks`、`_CrtMemCheckpoint`、`_CrtMemDifference`。
 * 变量存储期：自动、静态、线程、分配。
+* 仿 QFile QFileInfo 封装文件操作
 
 ### Java
 * 高性存储
