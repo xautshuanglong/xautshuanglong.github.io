@@ -193,6 +193,9 @@ https://www.microsoft.com/com/default.mspx
 
 ## 网络协议
 
+### Tools
+* Windows CMD：`ping`、`netstat`、`arp`、`tracert`、`route`、`nbtstat`、`telnet`。
+
 ### FTP
 * [FTP协议（指令集）](https://my.oschina.net/90888/blog/830379)
 
