@@ -137,6 +137,57 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-06-16 </div>
+			<div class="article-title"><a href="/2016/06/16/Network/TCP-IP学习笔记/">TCP/IP 学习笔记</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="TCP-IP-参考模型"><a href="#TCP-IP-参考模型" class="headerlink" title="TCP/IP 参考模型"></a>TCP/IP 参考模型</h2><p><code>TCP/IP</code>参考模型是计算机网络的祖父<code>ARPANET</code>和其后继的因特网使用的参考模型。<code>ARPANET</code>是由美国国防部DoD（U.S.Department of Defense）赞助的研究网络。逐渐地它通过租用的电话线连结了数百所大学和政府部门。当无线网络和卫星出现以后，现有的协议在和它们相连的时候出现了问题，所以需要一种新的参考体系结构。这个体系结构在它的两个主要协议出现以后，被称为TCP/IP参考模型（TCP/IP reference model）。<br>由于国防部担心他们一些重要的主机、路由器和互联网关可能会突然崩溃，所以网络必须实现的另一目标是网络不受子网硬件损失的影响，已经建立的会话不会被取消，而且整个体系结构必须相当灵活。<br>
+	
+	</p></div>
+  <a type="button" href="/2016/06/16/Network/TCP-IP学习笔记/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-06-06 </div>
+			<div class="article-title"><a href="/2016/06/06/Linux/Linux信号/">Linux 信号及其处理</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Linux-信号"><a href="#Linux-信号" class="headerlink" title="Linux 信号"></a>Linux 信号</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>软中断信号（<code>signal</code>，简称为信号）用来通知进程发生了异步事件。进程之间可以互相通过系统调用kill发送软中断信号。内核也可以因为内部事件而给进程发送信号，通知进程发生了某个事件。<br><strong>注意：信号只是用来通知某进程发生了某事件，并不给进程传递任何数据。</strong></p>
+<p>收到信号的进程对各种信号有不同处理方法：</p>
+<ul>
+<li>第一种方法，类似中断的处理程序，对于需要处理的信号，进程可以指定处理函数，由该函数处理；</li>
+<li>第二种方法，忽略某个信号，对该信号不做任何处理，就像未发生过一样；</li>
+<li>第三种方法，对该信号的处理保留系统默认值，对大部分信号的缺省操作是使进程终止。
+	
+	</li></ul></div>
+  <a type="button" href="/2016/06/06/Linux/Linux信号/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-05-24 </div>
 			<div class="article-title"><a href="/2016/05/24/CommonSense/字符编码/">字符编码</a></div>						
 		</h3>
@@ -363,57 +414,6 @@ for value in sorted(set(list)):
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-10 </div>
-			<div class="article-title"><a href="/2016/04/10/Hexo/Markdown语法笔记/">Markdown 语法笔记</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
-<ul>
-<li>宗旨 【实现易读易写】  </li>
-<li>兼容 【成为一种适用于网络的语言】  </li>
-</ul>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2016/04/10/Hexo/Markdown语法笔记/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-04 </div>
-			<div class="article-title"><a href="/2016/04/04/Libraries/Log4cpp的编译与使用/">Log4cpp的编译与使用</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Log4cpp-介绍"><a href="#Log4cpp-介绍" class="headerlink" title="Log4cpp 介绍"></a>Log4cpp 介绍</h3><h5 id="log4cpp-编译"><a href="#log4cpp-编译" class="headerlink" title="log4cpp 编译"></a>log4cpp 编译</h5><h5 id="log4cpp-使用"><a href="#log4cpp-使用" class="headerlink" title="log4cpp 使用"></a>log4cpp 使用</h5>
-	
-	</div>
-  <a type="button" href="/2016/04/04/Libraries/Log4cpp的编译与使用/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -476,7 +476,7 @@ for value in sorted(set(list)):
 		
 			<li><a href="/categories/Java/">Java<span>2</span></a></li>
 		
-			<li><a href="/categories/Libraries/">Libraries<span>4</span></a></li>
+			<li><a href="/categories/Libraries/">Libraries<span>5</span></a></li>
 		
 			<li><a href="/categories/Linux/">Linux<span>3</span></a></li>
 		
@@ -484,7 +484,7 @@ for value in sorted(set(list)):
 		
 			<li><a href="/categories/Network/">Network<span>3</span></a></li>
 		
-			<li><a href="/categories/Python/">Python<span>3</span></a></li>
+			<li><a href="/categories/Python/">Python<span>4</span></a></li>
 		
 			<li><a href="/categories/QT/">QT<span>1</span></a></li>
 		
@@ -503,48 +503,48 @@ for value in sorted(set(list)):
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/static/">static<span>1</span></a></li>
-		
-			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
-		
-			<li><a href="/tags/shell/">shell<span>1</span></a></li>
-		
-			<li><a href="/tags/partition/">partition<span>1</span></a></li>
-		
-			<li><a href="/tags/VC/">VC<span>1</span></a></li>
-		
-			<li><a href="/tags/XML/">XML<span>1</span></a></li>
-		
-			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
-		
-			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
-		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
-		
-			<li><a href="/tags/const/">const<span>1</span></a></li>
-		
-			<li><a href="/tags/keywords/">keywords<span>1</span></a></li>
-		
-			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
-		
-			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
-		
-			<li><a href="/tags/Time/">Time<span>1</span></a></li>
+			<li><a href="/tags/C11/">C11<span>1</span></a></li>
 		
 			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
 		
-			<li><a href="/tags/C11/">C11<span>1</span></a></li>
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
 		
-			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
+			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
 		
-			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
+			<li><a href="/tags/cpprest/">cpprest<span>1</span></a></li>
 		
-			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
+			<li><a href="/tags/Time/">Time<span>1</span></a></li>
+		
+			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
 		
 			<li><a href="/tags/socket/">socket<span>2</span></a></li>
 		
+			<li><a href="/tags/Python/">Python<span>3</span></a></li>
 		
-		   <li><a href="/tags">...<span>38</span></a></li>
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
+		
+			<li><a href="/tags/partition/">partition<span>1</span></a></li>
+		
+			<li><a href="/tags/TensorFlow/">TensorFlow<span>1</span></a></li>
+		
+			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/docker/">docker<span>1</span></a></li>
+		
+			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
+		
+			<li><a href="/tags/XML/">XML<span>1</span></a></li>
+		
+			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
+		
+			<li><a href="/tags/vim/">vim<span>1</span></a></li>
+		
+			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>40</span></a></li>
 		 
 		</ul>
 	</div>
@@ -557,6 +557,14 @@ for value in sorted(set(list)):
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2019/03/31/Libraries/MicrosoftCppRestSDK笔记/"><i class="fa fa-file-o"></i>MicrosoftCppRestSDK笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2019/03/13/Python/Anaconda配置教程/"><i class="fa fa-file-o"></i>Anaconda配置教程</a>
+      </li>
+    
+      <li>
         <a href="/2019/02/28/Docker/Docker环境搭建记录/"><i class="fa fa-file-o"></i>Docker环境搭建记录</a>
       </li>
     
@@ -566,14 +574,6 @@ for value in sorted(set(list)):
     
       <li>
         <a href="/2019/02/22/Libraries/OpenSSL学习笔记/"><i class="fa fa-file-o"></i>OpenSSL 学习笔记</a>
-      </li>
-    
-      <li>
-        <a href="/2019/02/18/CommonSense/DiskPartition硬盘分区原理/"><i class="fa fa-file-o"></i>硬盘分区原理</a>
-      </li>
-    
-      <li>
-        <a href="/2018/12/27/CPlusPlus/FormatString格式化字符串/" title="那些年被遗忘的细节"><i class="fa fa-file-o"></i>C/C++ 格式化字符串</a>
       </li>
     
   </ul>

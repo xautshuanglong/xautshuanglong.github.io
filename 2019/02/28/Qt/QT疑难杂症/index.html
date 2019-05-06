@@ -138,7 +138,15 @@ var _hmt = _hmt || [];
 	  <p>即使伤痕累累，也要负重前行。</p>
 <a id="more"></a>
 <h2 id="运行调试"><a href="#运行调试" class="headerlink" title="运行调试"></a>运行调试</h2><ol>
-<li>通过 QtCreator 运行时总是 <code>Crash</code>，调试时总是报 <code>the cdb process terminated</code>。<br>请确认直接运行 EXE 是否正常，通常会缺失各种 DLL，除 Qt 依赖模块外是否存在其他依赖的 DLL。<br>如果能正常运行（不缺失 DLL 的情况下）通过 QtCreator 也应该能运行。<br>缺失 DLL 或 DLL 的 Debug / Release 不匹配都会导致调试异常。其次，要保证 CDB 调试器配置正确。</li>
+<li><p>通过 QtCreator 运行时总是 <code>Crash</code>，调试时总是报 <code>the cdb process terminated</code>。<br>请确认直接运行 EXE 是否正常，通常会缺失各种 DLL，除 Qt 依赖模块外是否存在其他依赖的 DLL。<br>如果能正常运行（不缺失 DLL 的情况下）通过 QtCreator 也应该能运行。<br>缺失 DLL 或 DLL 的 Debug / Release 不匹配都会导致调试异常。其次，要保证 CDB 调试器配置正确。</p>
+</li>
+<li><p>连接信号与槽后，不触发槽函数。</p>
+<ul>
+<li>确认连接函数返回值是否为真；</li>
+<li>类是否继承自 QObject 或其子类，并确保 Q_OBJECT 没有遗漏</li>
+<li>信号函数如果含有自定义类型，该类型需要声明为元对象类型，并注册运行时类型。<code>Q_DECLARE_METATYPE(CustomType)</code> <code>qRegisterMetaType&lt;CustomType&gt;(&quot;CustomType&quot;)</code></li>
+</ul>
+</li>
 </ol>
 	  
 	</div>

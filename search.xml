@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title><![CDATA[MicrosoftCppRestSDK笔记]]></title>
+      <url>https://xautshuanglong.github.io/2019/03/31/Libraries/MicrosoftCppRestSDK%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>REST SDK</p>
+<a id="more"></a>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li><p>CMake 如何识别 vcpkg 安装的库路径？<br>命令行添加参数 <code>-DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake</code><br>GUI 点击 “Add Entry”:<br>名称为：<code>CMAKE_TOOLCHAIN_FILE</code><br>值为：<code>/path/to/vcpkg/scripts/buildsystems/vcpkg.cmake</code><br>参考：<a href="https://github.com/Microsoft/cpprestsdk/wiki/How-to-build-for-Windows" target="_blank" rel="noopener">Microsoft/cpprestsdk WIKI</a></p>
+</li>
+<li><p>vcpkg 安装的依赖库如何指定平台工具集？<br>默认情况下 VS2017 会使用 visual studio 2017(v141)，一种可行的修改途径是，在 <code>{VCPKG_ROOT}\triplets\x64-windows.cmake</code> 中设置环境变量：<br><code>set(VCPKG_TARGET_ARCHITECTURE x64)</code><br><code>set(VCPKG_CRT_LINKAGE dynamic)</code><br><code>set(VCPKG_LIBRARY_LINKAGE dynamic)</code><br><code>set(VCPKG_PLATFORM_TOOLSET v140)</code></p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Libraries </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> cpprest </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Anaconda配置教程]]></title>
+      <url>https://xautshuanglong.github.io/2019/03/13/Python/Anaconda%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</url>
+      <content type="html"><![CDATA[<p>起点</p>
+<a id="more"></a>
+]]></content>
+      
+        <categories>
+            
+            <category> Python </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> TensorFlow </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Docker环境搭建记录]]></title>
       <url>https://xautshuanglong.github.io/2019/02/28/Docker/Docker%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<p>Docker 介绍</p>
@@ -50,7 +100,15 @@
       <content type="html"><![CDATA[<p>即使伤痕累累，也要负重前行。</p>
 <a id="more"></a>
 <h2 id="运行调试"><a href="#运行调试" class="headerlink" title="运行调试"></a>运行调试</h2><ol>
-<li>通过 QtCreator 运行时总是 <code>Crash</code>，调试时总是报 <code>the cdb process terminated</code>。<br>请确认直接运行 EXE 是否正常，通常会缺失各种 DLL，除 Qt 依赖模块外是否存在其他依赖的 DLL。<br>如果能正常运行（不缺失 DLL 的情况下）通过 QtCreator 也应该能运行。<br>缺失 DLL 或 DLL 的 Debug / Release 不匹配都会导致调试异常。其次，要保证 CDB 调试器配置正确。</li>
+<li><p>通过 QtCreator 运行时总是 <code>Crash</code>，调试时总是报 <code>the cdb process terminated</code>。<br>请确认直接运行 EXE 是否正常，通常会缺失各种 DLL，除 Qt 依赖模块外是否存在其他依赖的 DLL。<br>如果能正常运行（不缺失 DLL 的情况下）通过 QtCreator 也应该能运行。<br>缺失 DLL 或 DLL 的 Debug / Release 不匹配都会导致调试异常。其次，要保证 CDB 调试器配置正确。</p>
+</li>
+<li><p>连接信号与槽后，不触发槽函数。</p>
+<ul>
+<li>确认连接函数返回值是否为真；</li>
+<li>类是否继承自 QObject 或其子类，并确保 Q_OBJECT 没有遗漏</li>
+<li>信号函数如果含有自定义类型，该类型需要声明为元对象类型，并注册运行时类型。<code>Q_DECLARE_METATYPE(CustomType)</code> <code>qRegisterMetaType&lt;CustomType&gt;(&quot;CustomType&quot;)</code></li>
+</ul>
+</li>
 </ol>
 ]]></content>
       
@@ -273,6 +331,11 @@
 <li>支持库：xml、png、tiff、openssl、iconv、zlib；</li>
 <li>绝对路径问题。</li>
 </ul>
+<h2 id="疑难杂症"><a href="#疑难杂症" class="headerlink" title="疑难杂症"></a>疑难杂症</h2><ol>
+<li>VLD 检查出 log4cplus 内存泄漏<br>现象描述：单线模式（主线程）下通过 DCMTK 中的 log4cplus 输出日志没有检测出内存泄漏，但在多线程环境下，就会出现内存泄漏，大致如下：</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">---------- Block <span class="number">936</span> at <span class="number">0x00000000002672F0</span>: <span class="number">522</span> bytes ----------</span><br><span class="line">  CRT Alloc ID: <span class="number">381092</span></span><br><span class="line">  Leak Hash: <span class="number">0xE89898E0</span>, Count: <span class="number">1</span>, Total <span class="number">522</span> bytes</span><br><span class="line">  Call Stack (TID 5948):</span><br><span class="line">    ucrtbased.dll!<span class="built_in">malloc</span>()</span><br><span class="line">    <span class="keyword">operator</span> <span class="keyword">new</span>[]()</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::reserve() + <span class="number">0xA</span> bytes</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::resize()</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::OFVector&lt;<span class="keyword">char</span>&gt;()</span><br><span class="line">    dcmtk::log4cplus::helpers::snprintf_buf::snprintf_buf()</span><br><span class="line">    dcmtk::log4cplus::internal::per_thread_data::per_thread_data() + <span class="number">0x13</span> bytes</span><br><span class="line">    dcmtk::log4cplus::internal::alloc_ptd() + <span class="number">0x21</span> bytes</span><br><span class="line">    dcmtk::log4cplus::internal::get_ptd() + <span class="number">0x5</span> bytes</span><br><span class="line">    dcmtk::log4cplus::detail::get_macro_body_oss() + <span class="number">0x7</span> bytes</span><br><span class="line">    DicomSCU::InitNetwork() + <span class="number">0x36</span> bytes</span><br><span class="line">    DicomSCU::PerformEcho() + <span class="number">0x15</span> bytes</span><br><span class="line">    DicomSCU::ExcuteOperation() + <span class="number">0x12</span> bytes</span><br><span class="line">    DicomExecutor::run() + <span class="number">0x1C</span> bytes</span><br><span class="line">    Qt5Cored.dll!QBitArray::size() + <span class="number">0x99D40</span> bytes</span><br><span class="line">    Qt5Cored.dll!QBitArray::size() + <span class="number">0xA2BBB</span> bytes</span><br><span class="line">    kernel32.dll!BaseThreadInitThunk() + <span class="number">0xD</span> bytes</span><br><span class="line">    ntdll.dll!RtlUserThreadStart() + <span class="number">0x1D</span> bytes</span><br></pre></td></tr></table></figure>
+<p>   解决方案：log4cplus 采用线程局部变量存储多线程中的日志记录，局部变量只在线程中起作用，所以在线程退出时需要主动清理线程局部变量。<code>dcmtk::log4cplus::threadCleanup()</code></p>
 ]]></content>
       
         <categories>
@@ -289,7 +352,7 @@
       <url>https://xautshuanglong.github.io/2018/12/25/DICOM/ConquestDicomServer%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%B5%8B%E8%AF%95/</url>
       <content type="html"><![CDATA[<p>更进一步</p>
 <a id="more"></a>
-<h2 id="Conquest-服务器安装"><a href="#Conquest-服务器安装" class="headerlink" title="Conquest 服务器安装"></a>Conquest 服务器安装</h2><h2 id="DCMTK-测试"><a href="#DCMTK-测试" class="headerlink" title="DCMTK 测试"></a>DCMTK 测试</h2><p>命令参数示例：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询检索测试</span></span><br><span class="line">findscu.exe -v -aet DebugTest -aec MGIUSDICOM -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 上句使用默认查询模型: -W Worklist 其他可选性: -P patient -S study -O patient/study except worklist </span></span><br><span class="line"><span class="comment">// 是引用 -P 或 -S 或 -O 时需要指定查询等级(0x0008, 0x0052)，否则服务器无法正确处理。</span></span><br><span class="line"><span class="comment">// Patient Root Query/Retrieve          : Patient Level, Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Study Root Query/Retrieve            : Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Patient/Study Only Query/Retrieve    : Patient Level, Study Level.</span></span><br><span class="line">findscu.exe -v -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0x0008</span>,<span class="number">0x0052</span>=<span class="string">"STUDY"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询指定属性列表</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0010</span>,<span class="number">0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k <span class="number">0008</span>,<span class="number">0020</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>d=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">0010</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>e=<span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 为何 RadiAnt 能同时检索 STUDY 和 IMAGE ？ tag: (0020,1208) DCM_NumberOfStudyRelatedInstances</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k PatientID -k StudyInstanceUID -k SeriesInstanceUID -k SeriesNumber -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// Qt Demo 中使用</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName=<span class="string">"HEAD EXP2"</span> -k <span class="string">"QueryRetrieveLevel=STUDY"</span> -k PatientID -k StudyInstanceUID -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// 拉取测试</span></span><br><span class="line">getscu.exe -v +v -aet DebugTest -aec MGIUSDICOM -pdu <span class="number">32768</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 存储测试</span></span><br><span class="line">storescu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span> ./dicom_package.dcm</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移动/转存测试</span></span><br><span class="line">storescp.exe -v +v -pdu <span class="number">32768</span> <span class="number">5680</span></span><br><span class="line">movescu.exe -v -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line">movescu.exe -v +P -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Conquest-服务器安装"><a href="#Conquest-服务器安装" class="headerlink" title="Conquest 服务器安装"></a>Conquest 服务器安装</h2><h2 id="DCMTK-测试"><a href="#DCMTK-测试" class="headerlink" title="DCMTK 测试"></a>DCMTK 测试</h2><p>命令参数示例：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">echoscu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询检索测试</span></span><br><span class="line">findscu.exe -v -aet DebugTest -aec MGIUSDICOM -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 上句使用默认查询模型: -W Worklist 其他可选性: -P patient -S study -O patient/study except worklist </span></span><br><span class="line"><span class="comment">// 是引用 -P 或 -S 或 -O 时需要指定查询等级(0x0008, 0x0052)，否则服务器无法正确处理。</span></span><br><span class="line"><span class="comment">// Patient Root Query/Retrieve          : Patient Level, Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Study Root Query/Retrieve            : Study Level, Series Level, Composite Object Instance Level.</span></span><br><span class="line"><span class="comment">// Patient/Study Only Query/Retrieve    : Patient Level, Study Level.</span></span><br><span class="line">findscu.exe -v -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0x0008</span>,<span class="number">0x0052</span>=<span class="string">"STUDY"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询指定属性列表</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k <span class="number">0010</span>,<span class="number">0010</span>=<span class="string">"HEAD EXP2"</span> -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k <span class="number">0008</span>,<span class="number">0020</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>d=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">0010</span>=<span class="string">""</span> -k <span class="number">0020</span>,<span class="number">000</span>e=<span class="string">""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 为何 RadiAnt 能同时检索 STUDY 和 IMAGE ？ tag: (0020,1208) DCM_NumberOfStudyRelatedInstances</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName -k <span class="number">0008</span>,<span class="number">0052</span>=<span class="string">"STUDY"</span> -k PatientID -k StudyInstanceUID -k SeriesInstanceUID -k SeriesNumber -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// Qt Demo 中使用</span></span><br><span class="line">findscu.exe -d -S -aet DebugTest -aec MGIUSDICOM localhost <span class="number">5678</span> -k PatientName=<span class="string">"HEAD EXP2"</span> -k <span class="string">"QueryRetrieveLevel=STUDY"</span> -k PatientID -k StudyInstanceUID -k NumberOfStudyRelatedInstances</span><br><span class="line"></span><br><span class="line"><span class="comment">// 拉取测试</span></span><br><span class="line">getscu.exe -v -aet DebugTest -aec MGIUSDICOM -pdu <span class="number">32768</span> -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 存储测试</span></span><br><span class="line">storescu.exe -v -aet DebugTest -aec MGIUSDICOM <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span> ./dicom_package.dcm</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移动/转存测试</span></span><br><span class="line">storescp.exe -v -pdu <span class="number">32768</span> <span class="number">5680</span></span><br><span class="line">movescu.exe -v -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br><span class="line">movescu.exe -v +P <span class="number">5680</span> -aet DebugTest -aec MGIUSDICOM -aem DebugTest -k <span class="number">0x0010</span>,<span class="number">0x0010</span>=<span class="string">"HEAD EXP2"</span> <span class="number">192.168</span><span class="number">.28</span><span class="number">.128</span> <span class="number">5678</span></span><br></pre></td></tr></table></figure></p>
 <p>注意事项：</p>
 <ul>
 <li>movescu.exe 测试时需 storescp.exe 配合。<br>【<code>C-MOVE</code> 请求发出后，服务端反向建立连接发送 <code>C-STORE</code> 请求】</li>
@@ -1047,17 +1110,7 @@
 <p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class="mermaid"&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class="mermaid"&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure></p>
 <div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将语句：</span></span><br><span class="line">Class01 &lt;|-- AVeryLongClass : Cool</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line">Class01 &amp;lt;|-- AVeryLongClass : Cool</span><br></pre></td></tr></table></figure>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
-participant 网页
-participant 商品详情服务器 as A
-participant 商品价格服务器 as B
-Note over 网页:用户选择商品
-网页->A:查询
-A->B:查询
-B->B:查询DB并计算
-B-->A:返回
-A->A:获取其他信息
-A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
 e=>end: 登录
 io1=>inputoutput: 输入用户名密码
 sub1=>subroutine: 数据库查询子类
@@ -1068,7 +1121,17 @@ st->io1->sub1->cond
 cond(yes,right)->cond2
 cond(no)->io1(right)
 cond2(yes,right)->op->e
-cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 ]]></content>
       
         <categories>
@@ -1818,7 +1881,11 @@ opened again until the handle is closed.
 <li>WinUI : SkinUI DirectUI DuiEngine(“svn checkout <a href="http://duiengine.googlecode.com/svn/trunk/" target="_blank" rel="noopener">http://duiengine.googlecode.com/svn/trunk/</a> duiengine-read-only”)</li>
 <li>C++11 异步编程<br><a href="http://www.cnblogs.com/chengyuanchun/p/5394843.html" target="_blank" rel="noopener">深入浅出std::async</a><br><a href="http://www.cnblogs.com/qicosmos/p/3534211.html" target="_blank" rel="noopener">用C++11的std::async代替线程的创建</a><br><a href="http://cnodejs.org/topic/58ddd7a303d476b42d34c911" target="_blank" rel="noopener">协程概念</a></li>
 <li>并发编程<br>自旋锁：<a href="http://blog.csdn.net/a675311/article/details/49096435" target="_blank" rel="noopener">自旋锁（spin lock）与互斥量的区别</a>, <a href="http://www.cnblogs.com/cposture/p/SpinLock.html" target="_blank" rel="noopener">【原创+整理】线程同步之详解自旋锁</a>, <a href="http://blog.csdn.net/sharemyfree/article/details/47338001" target="_blank" rel="noopener">C++11实现自旋锁</a></li>
+<li>并行计算库 <code>TBB</code> 和 <code>PPL</code></li>
 <li><a href="https://www.byvoid.com/zhs/blog/string-hash-compare" target="_blank" rel="noopener">字符串 Hash 函数</a> <code>BKDRHash</code> <code>APHash</code> <code>DJBHash</code> <code>JSHash</code> <code>RSHash</code> <code>SDBMHash</code> <code>PJWHash</code> <code>ELFHash</code></li>
+<li>window 内存泄漏检测：<code>VLD</code>、<code>_CrtDumpMemoryLeaks</code>、<code>_CrtMemCheckpoint</code>、<code>_CrtMemDifference</code>。</li>
+<li>变量存储期：自动、静态、线程、分配。</li>
+<li>仿 QFile QFileInfo 封装文件操作</li>
 </ul>
 <h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><ul>
 <li>高性存储<br><a href="https://tech.meituan.com/disruptor.html" target="_blank" rel="noopener">高性能队列——Disruptor</a><br><a href="http://ifeve.com/disruptor/" target="_blank" rel="noopener">并发框架Disruptor译文</a></li>
@@ -1847,7 +1914,10 @@ opened again until the handle is closed.
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
 <li><code>局部敏感哈希</code></li>
 </ul>
-<h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><ul>
+<h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><h3 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h3><ul>
+<li>Windows CMD：<code>ping</code>、<code>netstat</code>、<code>arp</code>、<code>tracert</code>、<code>route</code>、<code>nbtstat</code>、<code>telnet</code>。</li>
+</ul>
+<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><ul>
 <li><a href="https://my.oschina.net/90888/blog/830379" target="_blank" rel="noopener">FTP协议（指令集）</a></li>
 </ul>
 <h3 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h3><ul>
@@ -1948,6 +2018,7 @@ opened again until the handle is closed.
       <title><![CDATA[WindowsSocket学习笔记]]></title>
       <url>https://xautshuanglong.github.io/2016/10/25/Network/WindowsSocket%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>winsock.h  htons函数  将端口号转换为网络字节顺序</p>
+<h2 id="三次握手与四次挥手"><a href="#三次握手与四次挥手" class="headerlink" title="三次握手与四次挥手"></a>三次握手与四次挥手</h2><p><img src="/images/Network/tcp_connect_and_disconnect.jpg" alt="https://baijiahao.baidu.com/s?id=1618114723935605183&amp;wfr=spider&amp;for=pc"></p>
 ]]></content>
       
         <categories>
@@ -2216,7 +2287,7 @@ opened again until the handle is closed.
 <li>每一层使用下层提供的服务，并向其上层提供服务；</li>
 <li>不同节点的同等层按照协议实现对等层之间的通信。</li>
 </ul>
-<h2 id="模型比较"><a href="#模型比较" class="headerlink" title="模型比较"></a>模型比较</h2><table> <tr><th>OSI 七层模型</th><th>TCP/IP 四层模型</th><th>网络协议</th></tr> <tr><td>应用层</td><td rowspan="3">应用层</td><td rowspan="3">HTTP、HTTPS、FTP、Telnet、NFS、SMTP、DNS、DHCP、TFTP、WWW。</td></tr> <tr><td>表示层</td></tr><tr><td>会话层</td></tr><tr><td>传输层</td><td>传输层</td><td>TCP、UDP</td></tr><tr><td>网络层</td><td>网际层</td><td>IP、ICMP、IGMP、RIP。</td></tr><tr><td>数据链路层</td><td rowspan="2">网络接口</td><td>PPP、ARP、RARP。</td></tr><tr><td>物理层</td><td>RJ-45、IEEE802.3、EIA/TIA RS232。</td></tr></table>
+<h2 id="模型比较"><a href="#模型比较" class="headerlink" title="模型比较"></a>模型比较</h2><table><tr><th>OSI 七层模型</th><th>TCP/IP 四层模型</th><th>网络协议</th></tr> <tr><td>应用层</td><td rowspan="3">应用层</td><td rowspan="3">HTTP、HTTPS、FTP、Telnet、<br>NFS、SMTP、DNS、DHCP、TFTP、WWW。</td></tr> <tr><td>表示层</td></tr><tr><td>会话层</td></tr><tr><td>传输层</td><td>传输层</td><td>TCP、UDP</td></tr><tr><td>网络层</td><td>网际层</td><td>IP、ICMP、IGMP、RIP。</td></tr><tr><td>数据链路层</td><td rowspan="2">网络接口</td><td>PPP、ARP、RARP。</td></tr><tr><td>物理层</td><td>RJ-45、IEEE802.3、EIA/TIA RS232。</td></tr></table>
 
 <h3 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h3><ol>
 <li><code>OSI</code>参考模型和<code>TCP/IP</code>参考模型都采用了层次结构的概念。</li>
@@ -3008,6 +3079,13 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://xmlgraphics.apache.org/fop/resources.html" target="_blank" rel="noopener">Apache™&#32;FOP&#32;Project</a>
 <a class="btn btn-danger" href="http://foa.sourceforge.net/download.html#example" target="_blank" rel="noopener">Formatting&#32;Objects&#32;Authoring</a>
 <a class="btn btn-danger" href="https://www.w3cschool.cn/xslfo" target="_blank" rel="noopener">XSL-FO教程</a>
+<a class="btn btn-danger" href="http://www.linuxfromscratch.org/blfs/view/svn/server/vsftpd.html" target="_blank" rel="noopener">vsftp&#32;源码</a>
+<a class="btn btn-danger" href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla&#32;官网</a>
+<a class="btn btn-danger" href="https://www.filezilla.cn/download/client" target="_blank" rel="noopener">FileZilla&#32;中文</a>
+<a class="btn btn-danger" href="https://filezilla-project.org/sourcecode.php" target="_blank" rel="noopener">FileZilla&#32;源码</a>
+<a class="btn btn-danger" href="https://wiki.filezilla-project.org/Client_Compile" target="_blank" rel="noopener">FileZilla&#32;客户端编译</a>
+<a class="btn btn-danger" href="https://nghttp2.org/" target="_blank" rel="noopener">Nghttp2&#32;官网</a>
+<a class="btn btn-danger" href="https://github.com/nghttp2/nghttp2" target="_blank" rel="noopener">Nghhttp2&#32;Github</a>
 <a class="btn btn-danger" href="https://gitlab.gnome.org/GNOME/libxml2/" target="_blank" rel="noopener">gitlab&#32;libxml2</a>
 <a class="btn btn-danger" href="https://gitlab.gnome.org/GNOME/libxslt/" target="_blank" rel="noopener">gitlab&#32;libxslt</a>
 <a class="btn btn-danger" href="https://github.com/GNOME/libxml2" target="_blank" rel="noopener">github&#32;libxml2</a>
@@ -3944,7 +4022,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#120;&#x6a;&#115;&#x68;&#117;&#97;&#110;&#103;&#108;&#111;&#110;&#103;&#64;&#x31;&#50;&#54;&#46;&#x63;&#111;&#x6d;">&#120;&#x6a;&#115;&#x68;&#117;&#97;&#110;&#103;&#108;&#111;&#110;&#103;&#64;&#x31;&#50;&#54;&#46;&#x63;&#111;&#x6d;</a></p>
+</code></pre><p><a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x78;&#x6a;&#x73;&#104;&#x75;&#97;&#x6e;&#103;&#108;&#x6f;&#110;&#x67;&#64;&#49;&#50;&#54;&#x2e;&#99;&#111;&#109;">&#x78;&#x6a;&#x73;&#104;&#x75;&#97;&#x6e;&#103;&#108;&#x6f;&#110;&#x67;&#64;&#49;&#50;&#54;&#x2e;&#99;&#111;&#109;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
