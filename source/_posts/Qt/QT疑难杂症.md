@@ -25,3 +25,8 @@ toc: true
 1. 从 QtCreator 项目导出 VisualStudio 项目，在头文件中加入 `Q_OBJECT` 宏却不执行 moc。
    提示错误 找不到 `qt_metacast` `qt_metacall` 等函数，经确认并没有生成 moc_xxxxx.cpp 文件，及仅替换了 `Q_OBJECT` 宏，却没有执行 moc 编译，所以没有对应的函数实现。
    解决方案是在 QtCreator 中提前加好 `Q_OBJECT` 并执行构建，再次导出 VisualStudio 项目。
+
+1. QObject::moveToThread() 需配合 QObject::thread() 使用，否则可能出现跨线程使用对象的错误。
+   移动到主线程： myObject->moveToThread(QApplication::instance()->thread());
+   如果 QObject 拥有父类会导致 moveToThread() 失败；
+
