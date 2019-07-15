@@ -156,6 +156,31 @@ $ openssl x509 -req -days 3650 -in server.csr -CA ca.crt -CAkey ca.key -set_seri
 1. GitBash 执行 DCMTK 测试程序时出现卡死
    通过任务管理器杀死 DCMTK 测试程序，GitBash 恢复命令行模式，即可继续操作。
 
+1. Conquest DICOM Server 添加 SSL 双向认证后，出现 SSL_read 阻塞现象，整个线程卡死且端口长时间占用无法释放。
+   服务器采用 select + block socket 模型，通常情况下不会阻塞，抓包发现服务端发出的应答包丢失，客户端超时重发仍无法收到确认包的情况下发送 RST 报文，但服务端阻塞线程依然无法退出，线程僵死且处于半连接状态。
+   初步确认为，OpenSSL 记录协议，需要读取到完整的记录才能解密，才认为 socket 读取完毕，否则一致阻塞。
+
+1. OpenSSL 自签名证书在 Chrome 下报告 Subject Alternative Name Missing 错误
+``` C
+Certificate - Subject Alternative Name missing
+The certificate for this site does not contain a Subject Alternative Name extension containing a domain name or IP address.
+Certificate - missing
+This site is missing a valid, trusted certificate (net::ERR_CERT_COMMON_NAME_INVALID).
+```
+   处理方法：生成证书时加入参数 -sha256 -extfile v3.ext。
+   v3.ext 内容如下: (DOMAIN 替换为域名)
+``` C
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = %%DOMAIN%%
+```
+
 ## 参考网址
 https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html
+https://codeday.me/bug/20181110/373571.html
+https://blog.csdn.net/u013066244/article/details/78725842
 
