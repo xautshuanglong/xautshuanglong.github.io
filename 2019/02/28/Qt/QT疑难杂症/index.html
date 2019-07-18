@@ -147,6 +147,10 @@ var _hmt = _hmt || [];
 <li>信号函数如果含有自定义类型，该类型需要声明为元对象类型，并注册运行时类型。<code>Q_DECLARE_METATYPE(CustomType)</code> <code>qRegisterMetaType&lt;CustomType&gt;(&quot;CustomType&quot;)</code></li>
 </ul>
 </li>
+<li><p>从 QtCreator 项目导出 VisualStudio 项目，在头文件中加入 <code>Q_OBJECT</code> 宏却不执行 moc。<br>提示错误 找不到 <code>qt_metacast</code> <code>qt_metacall</code> 等函数，经确认并没有生成 moc_xxxxx.cpp 文件，及仅替换了 <code>Q_OBJECT</code> 宏，却没有执行 moc 编译，所以没有对应的函数实现。<br>解决方案是在 QtCreator 中提前加好 <code>Q_OBJECT</code> 并执行构建，再次导出 VisualStudio 项目。</p>
+</li>
+<li><p>QObject::moveToThread() 需配合 QObject::thread() 使用，否则可能出现跨线程使用对象的错误。<br>移动到主线程： myObject-&gt;moveToThread(QApplication::instance()-&gt;thread());<br>如果 QObject 拥有父类会导致 moveToThread() 失败；</p>
+</li>
 </ol>
 	  
 	</div>
@@ -248,7 +252,7 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/QT/">QT<span>1</span></a></li>
+    </li><li><a href="/categories/QT/">QT<span>2</span></a></li>
   
 
     </ul>
@@ -261,7 +265,7 @@ var _hmt = _hmt || [];
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/qt/">qt<span>1</span></a></li>
+  <li><a href="/tags/qt/">qt<span>2</span></a></li>
     </ul>
 	</div>
 	

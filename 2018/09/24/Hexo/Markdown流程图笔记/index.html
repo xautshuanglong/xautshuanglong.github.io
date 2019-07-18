@@ -142,21 +142,21 @@ var _hmt = _hmt || [];
 <h3 id="2-Sequence"><a href="#2-Sequence" class="headerlink" title="2. Sequence"></a>2. Sequence</h3><div id="sequence-0"></div>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---------- sequence ----------</span><br><span class="line">title:这是一个例子</span><br><span class="line">participant 网页</span><br><span class="line">participant 商品详情服务器 as A</span><br><span class="line">participant 商品价格服务器 as B</span><br><span class="line">Note over 网页:用户选择商品</span><br><span class="line">网页-&gt;A:查询</span><br><span class="line">A-&gt;B:查询</span><br><span class="line">B-&gt;B:查询DB并计算</span><br><span class="line">B--&gt;A:返回</span><br><span class="line">A-&gt;A:获取其他信息</span><br><span class="line">A--&gt;网页:返回</span><br></pre></td></tr></table></figure>
-<h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><div class="mermaid">graph TD
+<h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><pre class="mermaid">graph TD
     A --> B
     A --> C
     B --> D
-    C --> D</div>
+    C --> D</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">graph TD</span><br><span class="line"><span class="code">    A --&gt; B</span></span><br><span class="line"><span class="code">    A --&gt; C</span></span><br><span class="line"><span class="code">    B --&gt; D</span></span><br><span class="line"><span class="code">    C --&gt; D</span></span><br></pre></td></tr></table></figure>
-<div class="mermaid">graph TD
+<pre class="mermaid">graph TD
     B["fa:fa-twitter for pease"]
     B-->C[fa:fa-ban forbidden]
     B-->D(fa:fa-spinner)
-    B-->E(A fa:fa-camera-retro perhaps?)</div>
+    B-->E(A fa:fa-camera-retro perhaps?)</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">graph TD</span><br><span class="line"><span class="code">    B["fa:fa-twitter for pease"]</span></span><br><span class="line"><span class="code">    B--&gt;C[fa:fa-ban forbidden]</span></span><br><span class="line"><span class="code">    B--&gt;D(fa:fa-spinner)</span></span><br><span class="line"><span class="code">    B--&gt;E(A fa:fa-camera-retro perhaps?)</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><div class="mermaid">sequenceDiagram
+<h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
     Alice->John: Hello John, how are you?
@@ -166,10 +166,10 @@ var _hmt = _hmt || [];
     Note right of John: Rational thoughts <br>prevail...
     John-->Alice: Great!
     John->Bob: How about you?
-    Bob-->John: Jolly good!</div>
+    Bob-->John: Jolly good!</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">sequenceDiagram</span><br><span class="line"><span class="code">    participant Alice</span></span><br><span class="line"><span class="code">    participant Bob</span></span><br><span class="line"><span class="code">    Alice-&gt;John: Hello John, how are you?</span></span><br><span class="line"><span class="code">    loop Healthcheck</span></span><br><span class="line"><span class="code">        John-&gt;John: Fight against hypochondria</span></span><br><span class="line"><span class="code">    end</span></span><br><span class="line"><span class="code">    Note right of John: Rational thoughts &lt;br/&gt;prevail...</span></span><br><span class="line"><span class="code">    John--&gt;Alice: Great!</span></span><br><span class="line"><span class="code">    John-&gt;Bob: How about you?</span></span><br><span class="line"><span class="code">    Bob--&gt;John: Jolly good!</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><div class="mermaid">gantt
+<h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><pre class="mermaid">gantt
     dateFormat  YYYY-MM-DD
     title Adding GANTT diagram functionality to mermaid
     section A section
@@ -183,10 +183,10 @@ var _hmt = _hmt || [];
     Create tests for parser             :crit, active, 3d
     Future task in critical line        :crit, 5d
     Create tests for renderer           :2d
-    Add to mermaid                      :1d</div>
+    Add to mermaid                      :1d</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">gantt</span><br><span class="line"><span class="code">    dateFormat  YYYY-MM-DD</span></span><br><span class="line"><span class="code">    title Adding GANTT diagram functionality to mermaid</span></span><br><span class="line"><span class="code">    section A section</span></span><br><span class="line"><span class="code">    Completed task            :done,    des1, 2014-01-06,2014-01-08</span></span><br><span class="line"><span class="code">    Active task               :active,  des2, 2014-01-09, 3d</span></span><br><span class="line"><span class="code">    Future task               :         des3, after des2, 5d</span></span><br><span class="line"><span class="code">    Future task2              :         des4, after des3, 5d</span></span><br><span class="line"><span class="code">    section Critical tasks</span></span><br><span class="line"><span class="code">    Completed task in the critical line :crit, done, 2014-01-06,24h</span></span><br><span class="line"><span class="code">    Implement parser and jison          :crit, done, after des1, 2d</span></span><br><span class="line"><span class="code">    Create tests for parser             :crit, active, 3d</span></span><br><span class="line"><span class="code">    Future task in critical line        :crit, 5d</span></span><br><span class="line"><span class="code">    Create tests for renderer           :2d</span></span><br><span class="line"><span class="code">    Add to mermaid                      :1d</span></span><br></pre></td></tr></table></figure>
-<h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><div class="mermaid">classDiagram
+<h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><pre class="mermaid">classDiagram
     Class01 &lt;|-- AVeryLongClass : Cool
     Class03 *-- Class04
     Class05 o-- Class06
@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
     Class01 : size()
     Class01 : int chimp
     Class01 : int gorilla
-    Class08 &lt;--> C2 : Cool label</div>
+    Class08 &lt;--> C2 : Cool label</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">classDiagram</span><br><span class="line"><span class="code">    Class01 &amp;lt;|-- AVeryLongClass : Cool</span></span><br><span class="line"><span class="code">    Class03 *-- Class04</span></span><br><span class="line"><span class="code">    Class05 o-- Class06</span></span><br><span class="line"><span class="code">    Class07 .. Class08</span></span><br><span class="line"><span class="code">    Class09 --&gt; C2 : Where am i?</span></span><br><span class="line"><span class="code">    Class09 --* C3</span></span><br><span class="line"><span class="code">    Class09 --|&gt; Class07</span></span><br><span class="line"><span class="code">    Class07 : equals()</span></span><br><span class="line"><span class="code">    Class07 : Object[] elementData</span></span><br><span class="line"><span class="code">    Class01 : size()</span></span><br><span class="line"><span class="code">    Class01 : int chimp</span></span><br><span class="line"><span class="code">    Class01 : int gorilla</span></span><br><span class="line"><span class="code">    Class08 &amp;lt;--&gt; C2 : Cool label</span></span><br></pre></td></tr></table></figure>
 <h2 id="编码注意事项"><a href="#编码注意事项" class="headerlink" title="编码注意事项"></a>编码注意事项</h2><div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams markdown渲染问题</div>

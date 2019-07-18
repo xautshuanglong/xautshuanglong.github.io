@@ -369,7 +369,7 @@ var _hmt = _hmt || [];
 <li>不能恢复至默认动作：<br><code>SIGILL</code>，<code>SIGTRAP</code>。</li>
 <li>默认会导致进程流产：<br><code>SIGABRT</code>，<code>SIGBUS</code>，<code>SIGFPE</code>，<code>SIGILL</code>，<code>SIGIOT</code>，<code>SIGQUIT</code>，<code>SIGSEGV</code>，<code>SIGTRAP</code>，<code>SIGXCPU</code>，<code>SIGXFSZ</code>。</li>
 <li>默认会导致进程退出：<br><code>SIGALRM</code>，<code>SIGHUP</code>，<code>SIGINT</code>，<code>SIGKILL</code>，<code>SIGPIPE</code>，<code>SIGPOLL</code>，<code>SIGPROF</code>，<code>SIGSYS</code>，<code>SIGTERM</code>，<code>SIGUSR1</code>，<code>SIGUSR2</code>，<code>SIGVIALRM</code>。</li>
-<li>默认会导致进程停止：<br><code>SIGSTOP``SIGTSTP``SIGTTIN``SIGTTOU</code>。</li>
+<li>默认会导致进程停止：<br><code>SIGSTOP`</code>SIGTSTP<code>SIGTTIN</code>SIGTTOU`。</li>
 <li>默认被进程忽略：<br><code>SIGCHLD</code>，<code>SIGPWR</code>，<code>SIGURG</code>，<code>SIGWINCH</code>。</li>
 </ul>
 <h3 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h3><p>内核给一个进程发送软中断信号的方法是在进程所在的进程表项的信号域设置对应于该信号的位。如果进程睡眠在可被终端的优先级上，则唤醒进程，否则置位，不唤醒。进程检查是否收到信号的时机是：一个进程在即将从内核态返回到用户态时，或者进程要进入或离开一个适当的低调度优先级睡眠状态。<br>内核处理一个进程收到的信号的时机是在一个进程从内核态返回用户态时。当一个进程在内核状态下运行时，软中断信号并不立即起作用，要等到将返回用户态时才处理。进程只有处理完信号才会返回用户态，进程在用户态下不会有未处理完的信号。<br>内核处理一个进程收到的信号的时机是在该进程的上下文中，因此，进程必须处于运行状态。（三种信号：退出、忽略、执行。）当进程收到一个它忽略的信号时，进程丢弃该信号，就像没收到信号似的继续运行。如果进程收到一个要捕获的信号，那么进程在从内核态返回到用户态时执行用户定义的函数。执行用户定义的函数时，内核在用户栈上创建一个新的层，该层中将返回地址的值设置成用户定义的函数的地址，这样进程从内核返回弹出栈顶是就返回到用户定义的函数处，从函数返回再弹出栈顶时，才返回原先进入内核的地方。这样做的原因是用户定义的函数不能且不允许在内核态下执行，否则用户可以获得任何权限。</p>

@@ -4,6 +4,130 @@
   
     
     <entry>
+      <title><![CDATA[开源协议整理]]></title>
+      <url>https://xautshuanglong.github.io/2019/07/18/CommonSense/OpenSourceLicense%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E6%95%B4%E7%90%86/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<p><img src="/images/CommonSense/open_source_license.jpg" alt="一图看懂开源协议"></p>
+]]></content>
+      
+        <categories>
+            
+            <category> CommonSense </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> license </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[HTTPS SSL 证书分类]]></title>
+      <url>https://xautshuanglong.github.io/2019/07/01/CommonSense/HTTPS_SSL_%E8%AF%81%E4%B9%A6%E5%88%86%E7%B1%BB/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="数字证书颁发机构"><a href="#数字证书颁发机构" class="headerlink" title="数字证书颁发机构"></a>数字证书颁发机构</h2><p>数字证书认证机构 <code>Certificate Authority，缩写为CA</code>，是负责发放和管理数字证书的权威机构，并作为电子商务交易中受信任的第三方，承担公钥体系中公钥的合法性检验的责任。</p>
+<h2 id="SSL-证书"><a href="#SSL-证书" class="headerlink" title="SSL 证书"></a>SSL 证书</h2><p>SSL 证书是由受信任的数字证书颁发机构 CA，在验证服务器身份后颁发，且具有服务器身份验证和数据传输加密功能。</p>
+<h2 id="SSL-证书级别"><a href="#SSL-证书级别" class="headerlink" title="SSL 证书级别"></a>SSL 证书级别</h2><p>SSL 证书根据验证级别，分为三种类型：</p>
+<ul>
+<li>域名型 SSL 证书，简称 DVSSL <code>Domain Validation SSL Certificate</code></li>
+<li>企业型 SSL 证书，简称 OVSSL <code>Organization Validation SSL Certificate</code></li>
+<li>增强型 SSL 证书，简称 EVSSL <code>Extended Validation SSL Certificate</code></li>
+</ul>
+<h2 id="SSL-证书域名类型"><a href="#SSL-证书域名类型" class="headerlink" title="SSL 证书域名类型"></a>SSL 证书域名类型</h2><p>根据保护域名的数量，SSL 证书又分为：</p>
+<ul>
+<li>单域名版：只保护一个具体域名</li>
+<li>多域名版：可以保护多个具体域名</li>
+<li>通配符版：可以保护同一个主域名下同一级的所有子域名，不限个数</li>
+</ul>
+<h2 id="OpenSSL"><a href="#OpenSSL" class="headerlink" title="OpenSSL"></a>OpenSSL</h2><p><a href="/2019/02/22/Libraries/OpenSSL学习笔记/" title="OpenSSL 学习笔记">参考</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> CommonSense </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> https </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[字体字库]]></title>
+      <url>https://xautshuanglong.github.io/2019/06/05/CommonSense/Font%E5%AD%97%E4%BD%93%E5%AD%97%E5%BA%93/</url>
+      <content type="html"><![CDATA[<p>关于 字体 字库 那些事儿</p>
+<a id="more"></a>
+<h2 id="字体名称中英文对照"><a href="#字体名称中英文对照" class="headerlink" title="字体名称中英文对照"></a>字体名称中英文对照</h2><p>FOP 使用字体时查阅<br>参考：<a href="https://blog.csdn.net/amy_king_0/article/details/54141460" target="_blank" rel="noopener">https://blog.csdn.net/amy_king_0/article/details/54141460</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> CommonSense </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[QT小技巧]]></title>
+      <url>https://xautshuanglong.github.io/2019/06/04/Qt/QT%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+      <content type="html"><![CDATA[<p>小技巧</p>
+<a id="more"></a>
+<h2 id="实用工具类"><a href="#实用工具类" class="headerlink" title="实用工具类"></a>实用工具类</h2><ul>
+<li>QStandardPaths</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> QT </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> qt </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PythonDjangoPycharm笔记]]></title>
+      <url>https://xautshuanglong.github.io/2019/05/09/Web/PythonDjangoPycharm%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>Django Web Backend</p>
+</blockquote>
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><h3 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h3><h3 id="PyCharm"><a href="#PyCharm" class="headerlink" title="PyCharm"></a>PyCharm</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// PyCharm 2019.1.2 激活码</span></span><br><span class="line"></span><br><span class="line">MTW881U3Z5-eyJsaWNlbnNlSWQiOiJNVFc4ODFVM1o1IiwibGljZW5zZWVOYW1lIjoiTnNzIEltIiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IkZvciBlZHVjYXRpb25hbCB1c2Ugb25seSIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IlBTIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiR08iLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IkNMIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJSU1UiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifV0sImhhc2giOiIxMDgyODE0Ni8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-aKyalfjUfiV5UXfhaMGgOqrMzTYy2rnsmobL47k8tTpR/jvG6HeL3FxxleetI+W+Anw3ZSe8QAMsSxqVS4podwlQgIe7f+<span class="number">3</span>w7zyAT1j8HMVlfl2h96KzygdGpDSbwTbwOkJ6/<span class="number">5</span>TQOPgAP86mkaSiM97KgvkZV/<span class="number">2</span>nXQHRz1yhm+MT+OsioTwxDhd/<span class="number">22</span>sSGq6KuIztZ03UvSciEmyrPdl2ueJw1WuT9YmFjdtTm9G7LuXvCM6eav+BgCRm+wwtUeDfoQqigbp0t6FQgkdQrcjoWvLSB0IUgp/f4qGf254fA7lXskT2VCFdDvi0jgxLyMVct1cKnPdM6fkHnbdSXKYDWw==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/<span class="number">5</span>oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/<span class="number">78</span>TmVqFl8nOeD5+<span class="number">07B</span>8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQAF8uc+YJOHHwOFcPzmbjcxNDuGoOUIP+<span class="number">2</span>h1R75Lecswb7ru2LWWSUMtXVKQzChLNPn/<span class="number">72</span>W0k+oI056tgiwuG7M49LXp4zQVlQnFmWU1wwGvVhq5R63Rpjx1zjGUhcXgayu7+<span class="number">9</span>zMUW596Lbomsg8qVve6euqsrFicYkIIuUu4zYPndJwfe0YkS5nY72SHnNdbPhEnN8wcB2Kz+OIG0lih3yz5EqFhld03bGp222ZQCIghCTVL6QBNadGsiN/lWLl4JdR3lJkZzlpFdiHijoVRdWeSWqM4y0t23c92HXKrgppoSV18XMxrWVdoSM3nuMHwxGhFyde05OdDtLpCv+jlWf5REAHHA201pAU6bJSZINyHDUTB+Beo28rRXSwSh3OUIvYwKNVeoBY+KwOJ7WnuTCUq1meE6GkKc4D/cXmgpOyW/<span class="number">1</span>SmBz3XjVIi/zprZ0zf3qH5mkphtg6ksjKgKjmx1cXfZAAX6wcDBNaCL+Ortep1Dh8xDUbqbBVNBL4jbiL3i3xsfNiyJgaZ5sX7i8tmStEpLbPwvHcByuf59qJhV/bZOl8KqJBETCDJcY6O2aqhTUy+<span class="number">9</span>x93ThKs1GKrRPePrWPluud7ttlgtRveit/pcBrnQcXOl1rHq7ByB8CFAxNotRUYL9IF5n3wJOgkPojMy6jetQA5Ogc8Sm7RG6vg1yow==</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> Web </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> django </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[MicrosoftCppRestSDK笔记]]></title>
       <url>https://xautshuanglong.github.io/2019/03/31/Libraries/MicrosoftCppRestSDK%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>REST SDK</p>
@@ -109,6 +233,10 @@
 <li>信号函数如果含有自定义类型，该类型需要声明为元对象类型，并注册运行时类型。<code>Q_DECLARE_METATYPE(CustomType)</code> <code>qRegisterMetaType&lt;CustomType&gt;(&quot;CustomType&quot;)</code></li>
 </ul>
 </li>
+<li><p>从 QtCreator 项目导出 VisualStudio 项目，在头文件中加入 <code>Q_OBJECT</code> 宏却不执行 moc。<br>提示错误 找不到 <code>qt_metacast</code> <code>qt_metacall</code> 等函数，经确认并没有生成 moc_xxxxx.cpp 文件，及仅替换了 <code>Q_OBJECT</code> 宏，却没有执行 moc 编译，所以没有对应的函数实现。<br>解决方案是在 QtCreator 中提前加好 <code>Q_OBJECT</code> 并执行构建，再次导出 VisualStudio 项目。</p>
+</li>
+<li><p>QObject::moveToThread() 需配合 QObject::thread() 使用，否则可能出现跨线程使用对象的错误。<br>移动到主线程： myObject-&gt;moveToThread(QApplication::instance()-&gt;thread());<br>如果 QObject 拥有父类会导致 moveToThread() 失败；</p>
+</li>
 </ol>
 ]]></content>
       
@@ -163,8 +291,15 @@
 </li>
 <li><p>GitBash 执行 DCMTK 测试程序时出现卡死<br>通过任务管理器杀死 DCMTK 测试程序，GitBash 恢复命令行模式，即可继续操作。</p>
 </li>
+<li><p>Conquest DICOM Server 添加 SSL 双向认证后，出现 SSL_read 阻塞现象，整个线程卡死且端口长时间占用无法释放。<br>服务器采用 select + block socket 模型，通常情况下不会阻塞，抓包发现服务端发出的应答包丢失，客户端超时重发仍无法收到确认包的情况下发送 RST 报文，但服务端阻塞线程依然无法退出，线程僵死且处于半连接状态。<br>初步确认为，OpenSSL 记录协议，需要读取到完整的记录才能解密，才认为 socket 读取完毕，否则一致阻塞。</p>
+</li>
+<li><p>OpenSSL 自签名证书在 Chrome 下报告 Subject Alternative Name Missing 错误</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Certificate - Subject Alternative Name missing</span><br><span class="line">The certificate <span class="keyword">for</span> <span class="keyword">this</span> site does <span class="keyword">not</span> contain a Subject Alternative Name extension containing a domain name <span class="keyword">or</span> IP address.</span><br><span class="line">Certificate - missing</span><br><span class="line">This site is missing a valid, trusted certificate (net::ERR_CERT_COMMON_NAME_INVALID).</span><br></pre></td></tr></table></figure>
+<p>处理方法：生成证书时加入参数 -sha256 -extfile v3.ext。<br>v3.ext 内容如下: (DOMAIN 替换为域名)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">authorityKeyIdentifier=keyid,issuer</span><br><span class="line">basicConstraints=CA:FALSE</span><br><span class="line">keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment</span><br><span class="line">subjectAltName = @alt_names</span><br><span class="line"></span><br><span class="line">[alt_names]</span><br><span class="line">DNS<span class="number">.1</span> = %%DOMAIN%%</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html" target="_blank" rel="noopener">https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html</a></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html" target="_blank" rel="noopener">https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html</a><br><a href="https://codeday.me/bug/20181110/373571.html" target="_blank" rel="noopener">https://codeday.me/bug/20181110/373571.html</a><br><a href="https://blog.csdn.net/u013066244/article/details/78725842" target="_blank" rel="noopener">https://blog.csdn.net/u013066244/article/details/78725842</a></p>
 ]]></content>
       
         <categories>
@@ -1014,11 +1149,11 @@
 <a id="more"></a>
 <h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p>
 <h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
 <p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p>
-<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -1046,21 +1181,21 @@
 <h3 id="2-Sequence"><a href="#2-Sequence" class="headerlink" title="2. Sequence"></a>2. Sequence</h3><div id="sequence-0"></div>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---------- sequence ----------</span><br><span class="line">title:这是一个例子</span><br><span class="line">participant 网页</span><br><span class="line">participant 商品详情服务器 as A</span><br><span class="line">participant 商品价格服务器 as B</span><br><span class="line">Note over 网页:用户选择商品</span><br><span class="line">网页-&gt;A:查询</span><br><span class="line">A-&gt;B:查询</span><br><span class="line">B-&gt;B:查询DB并计算</span><br><span class="line">B--&gt;A:返回</span><br><span class="line">A-&gt;A:获取其他信息</span><br><span class="line">A--&gt;网页:返回</span><br></pre></td></tr></table></figure>
-<h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><div class="mermaid">graph TD
+<h3 id="3-Mermaid-Flowchart"><a href="#3-Mermaid-Flowchart" class="headerlink" title="3. Mermaid Flowchart"></a>3. Mermaid Flowchart</h3><pre class="mermaid">graph TD
     A --> B
     A --> C
     B --> D
-    C --> D</div>
+    C --> D</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">graph TD</span><br><span class="line"><span class="code">    A --&gt; B</span></span><br><span class="line"><span class="code">    A --&gt; C</span></span><br><span class="line"><span class="code">    B --&gt; D</span></span><br><span class="line"><span class="code">    C --&gt; D</span></span><br></pre></td></tr></table></figure>
-<div class="mermaid">graph TD
+<pre class="mermaid">graph TD
     B["fa:fa-twitter for pease"]
     B-->C[fa:fa-ban forbidden]
     B-->D(fa:fa-spinner)
-    B-->E(A fa:fa-camera-retro perhaps?)</div>
+    B-->E(A fa:fa-camera-retro perhaps?)</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">graph TD</span><br><span class="line"><span class="code">    B["fa:fa-twitter for pease"]</span></span><br><span class="line"><span class="code">    B--&gt;C[fa:fa-ban forbidden]</span></span><br><span class="line"><span class="code">    B--&gt;D(fa:fa-spinner)</span></span><br><span class="line"><span class="code">    B--&gt;E(A fa:fa-camera-retro perhaps?)</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><div class="mermaid">sequenceDiagram
+<h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
     Alice->John: Hello John, how are you?
@@ -1070,10 +1205,10 @@
     Note right of John: Rational thoughts <br>prevail...
     John-->Alice: Great!
     John->Bob: How about you?
-    Bob-->John: Jolly good!</div>
+    Bob-->John: Jolly good!</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">sequenceDiagram</span><br><span class="line"><span class="code">    participant Alice</span></span><br><span class="line"><span class="code">    participant Bob</span></span><br><span class="line"><span class="code">    Alice-&gt;John: Hello John, how are you?</span></span><br><span class="line"><span class="code">    loop Healthcheck</span></span><br><span class="line"><span class="code">        John-&gt;John: Fight against hypochondria</span></span><br><span class="line"><span class="code">    end</span></span><br><span class="line"><span class="code">    Note right of John: Rational thoughts &lt;br/&gt;prevail...</span></span><br><span class="line"><span class="code">    John--&gt;Alice: Great!</span></span><br><span class="line"><span class="code">    John-&gt;Bob: How about you?</span></span><br><span class="line"><span class="code">    Bob--&gt;John: Jolly good!</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><div class="mermaid">gantt
+<h3 id="5-Mermaid-Gantt"><a href="#5-Mermaid-Gantt" class="headerlink" title="5. Mermaid Gantt"></a>5. Mermaid Gantt</h3><pre class="mermaid">gantt
     dateFormat  YYYY-MM-DD
     title Adding GANTT diagram functionality to mermaid
     section A section
@@ -1087,10 +1222,10 @@
     Create tests for parser             :crit, active, 3d
     Future task in critical line        :crit, 5d
     Create tests for renderer           :2d
-    Add to mermaid                      :1d</div>
+    Add to mermaid                      :1d</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">gantt</span><br><span class="line"><span class="code">    dateFormat  YYYY-MM-DD</span></span><br><span class="line"><span class="code">    title Adding GANTT diagram functionality to mermaid</span></span><br><span class="line"><span class="code">    section A section</span></span><br><span class="line"><span class="code">    Completed task            :done,    des1, 2014-01-06,2014-01-08</span></span><br><span class="line"><span class="code">    Active task               :active,  des2, 2014-01-09, 3d</span></span><br><span class="line"><span class="code">    Future task               :         des3, after des2, 5d</span></span><br><span class="line"><span class="code">    Future task2              :         des4, after des3, 5d</span></span><br><span class="line"><span class="code">    section Critical tasks</span></span><br><span class="line"><span class="code">    Completed task in the critical line :crit, done, 2014-01-06,24h</span></span><br><span class="line"><span class="code">    Implement parser and jison          :crit, done, after des1, 2d</span></span><br><span class="line"><span class="code">    Create tests for parser             :crit, active, 3d</span></span><br><span class="line"><span class="code">    Future task in critical line        :crit, 5d</span></span><br><span class="line"><span class="code">    Create tests for renderer           :2d</span></span><br><span class="line"><span class="code">    Add to mermaid                      :1d</span></span><br></pre></td></tr></table></figure>
-<h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><div class="mermaid">classDiagram
+<h3 id="6-Mermaid-Class"><a href="#6-Mermaid-Class" class="headerlink" title="6. Mermaid Class"></a>6. Mermaid Class</h3><pre class="mermaid">classDiagram
     Class01 &lt;|-- AVeryLongClass : Cool
     Class03 *-- Class04
     Class05 o-- Class06
@@ -1103,7 +1238,7 @@
     Class01 : size()
     Class01 : int chimp
     Class01 : int gorilla
-    Class08 &lt;--> C2 : Cool label</div>
+    Class08 &lt;--> C2 : Cool label</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">classDiagram</span><br><span class="line"><span class="code">    Class01 &amp;lt;|-- AVeryLongClass : Cool</span></span><br><span class="line"><span class="code">    Class03 *-- Class04</span></span><br><span class="line"><span class="code">    Class05 o-- Class06</span></span><br><span class="line"><span class="code">    Class07 .. Class08</span></span><br><span class="line"><span class="code">    Class09 --&gt; C2 : Where am i?</span></span><br><span class="line"><span class="code">    Class09 --* C3</span></span><br><span class="line"><span class="code">    Class09 --|&gt; Class07</span></span><br><span class="line"><span class="code">    Class07 : equals()</span></span><br><span class="line"><span class="code">    Class07 : Object[] elementData</span></span><br><span class="line"><span class="code">    Class01 : size()</span></span><br><span class="line"><span class="code">    Class01 : int chimp</span></span><br><span class="line"><span class="code">    Class01 : int gorilla</span></span><br><span class="line"><span class="code">    Class08 &amp;lt;--&gt; C2 : Cool label</span></span><br></pre></td></tr></table></figure>
 <h2 id="编码注意事项"><a href="#编码注意事项" class="headerlink" title="编码注意事项"></a>编码注意事项</h2><div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams markdown渲染问题</div>
@@ -2557,7 +2692,7 @@ opened again until the handle is closed.
 <li>不能恢复至默认动作：<br><code>SIGILL</code>，<code>SIGTRAP</code>。</li>
 <li>默认会导致进程流产：<br><code>SIGABRT</code>，<code>SIGBUS</code>，<code>SIGFPE</code>，<code>SIGILL</code>，<code>SIGIOT</code>，<code>SIGQUIT</code>，<code>SIGSEGV</code>，<code>SIGTRAP</code>，<code>SIGXCPU</code>，<code>SIGXFSZ</code>。</li>
 <li>默认会导致进程退出：<br><code>SIGALRM</code>，<code>SIGHUP</code>，<code>SIGINT</code>，<code>SIGKILL</code>，<code>SIGPIPE</code>，<code>SIGPOLL</code>，<code>SIGPROF</code>，<code>SIGSYS</code>，<code>SIGTERM</code>，<code>SIGUSR1</code>，<code>SIGUSR2</code>，<code>SIGVIALRM</code>。</li>
-<li>默认会导致进程停止：<br><code>SIGSTOP``SIGTSTP``SIGTTIN``SIGTTOU</code>。</li>
+<li>默认会导致进程停止：<br><code>SIGSTOP`</code>SIGTSTP<code>SIGTTIN</code>SIGTTOU`。</li>
 <li>默认被进程忽略：<br><code>SIGCHLD</code>，<code>SIGPWR</code>，<code>SIGURG</code>，<code>SIGWINCH</code>。</li>
 </ul>
 <h3 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h3><p>内核给一个进程发送软中断信号的方法是在进程所在的进程表项的信号域设置对应于该信号的位。如果进程睡眠在可被终端的优先级上，则唤醒进程，否则置位，不唤醒。进程检查是否收到信号的时机是：一个进程在即将从内核态返回到用户态时，或者进程要进入或离开一个适当的低调度优先级睡眠状态。<br>内核处理一个进程收到的信号的时机是在一个进程从内核态返回用户态时。当一个进程在内核状态下运行时，软中断信号并不立即起作用，要等到将返回用户态时才处理。进程只有处理完信号才会返回用户态，进程在用户态下不会有未处理完的信号。<br>内核处理一个进程收到的信号的时机是在该进程的上下文中，因此，进程必须处于运行状态。（三种信号：退出、忽略、执行。）当进程收到一个它忽略的信号时，进程丢弃该信号，就像没收到信号似的继续运行。如果进程收到一个要捕获的信号，那么进程在从内核态返回到用户态时执行用户定义的函数。执行用户定义的函数时，内核在用户栈上创建一个新的层，该层中将返回地址的值设置成用户定义的函数的地址，这样进程从内核返回弹出栈顶是就返回到用户定义的函数处，从函数返回再弹出栈顶时，才返回原先进入内核的地方。这样做的原因是用户定义的函数不能且不允许在内核态下执行，否则用户可以获得任何权限。</p>
@@ -3048,6 +3183,7 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://webrtc.org/native-code/native-apis/" target="_blank" rel="noopener">WebRTC&#32;Native&#32;API</a>
 <a class="btn btn-danger" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" target="_blank" rel="noopener">WebRTC&#32;API&#32;doc&#32;zh-CN</a>
 <a class="btn btn-danger" href="https://www.cnblogs.com/huyong/p/6517949.html" target="_blank" rel="noopener">Vue&#32;经典开源项目</a>
+<a class="btn btn-danger" href="https://www.w3cschool.cn/axurezwjc/" target="_blank" rel="noopener">Axure&#32;原型设计教程</a>
 <h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><a class="btn btn-info" href="http://www.runoob.com/java/java-tutorial.html" target="_blank" rel="noopener">菜鸟教程【Java】</a>
 <a class="btn btn-info" href="http://wiki.jikexueyuan.com/list/java/" target="_blank" rel="noopener">极客学院【Java】</a>
 <a class="btn btn-info" href="https://quanke.gitbooks.io/think-in-java/content/" target="_blank" rel="noopener">Thinking&#32;In&#32;Java【Gitbooks】</a>
@@ -3357,9 +3493,9 @@ Handler.removeFilter() # 删除过滤器
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> log4py </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -4022,7 +4158,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x78;&#x6a;&#x73;&#104;&#x75;&#97;&#x6e;&#103;&#108;&#x6f;&#110;&#x67;&#64;&#49;&#50;&#54;&#x2e;&#99;&#111;&#109;">&#x78;&#x6a;&#x73;&#104;&#x75;&#97;&#x6e;&#103;&#108;&#x6f;&#110;&#x67;&#64;&#49;&#50;&#54;&#x2e;&#99;&#111;&#109;</a></p>
+</code></pre><p><a href="mailto:&#120;&#x6a;&#115;&#x68;&#117;&#x61;&#110;&#x67;&#x6c;&#111;&#110;&#x67;&#x40;&#49;&#x32;&#x36;&#x2e;&#99;&#111;&#109;" target="_blank" rel="noopener">&#120;&#x6a;&#115;&#x68;&#117;&#x61;&#110;&#x67;&#x6c;&#111;&#110;&#x67;&#x40;&#49;&#x32;&#x36;&#x2e;&#99;&#111;&#109;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
