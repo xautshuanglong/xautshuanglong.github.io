@@ -10,6 +10,12 @@ toc: true
 ## 计算机计时原理
 `GMT`时间(`Greenwich Mean Time`)，即`格林威治标准时间`，正午太阳横穿格林威治子午线的时间。
 `UTC`时间(`Universal Time Coordinated`)，即`世界调整时间`，由原子钟计时，根据`GMT`校准后得到的时间。
+`CST`时间(`Central Standard Time`)，即`中央标准时间`，可视为`美国`，`澳大利亚`，`古巴`或`中国`的标准时间:
+
+* 美国中部时间：Central Standard Time (USA) UT-6:00
+* 澳大利亚中部时间：Central Standar Time (Australia) UT+9:30
+* 中国标准时间：Chian Standard Time UT+8:00
+* 古巴标准时间：Cuba Standar Time UT -4:00
 
 自1924年2月5日开始，格林威治天文台每隔一小时会向全世界发放调时信息。
 
@@ -226,6 +232,7 @@ If the amount of elapsed time is unavailable, the function returns –1, cast as
 ```
 
 ## CPP 标准库时间
+ 
 ```cpp
 typedef ratio<1, 1000000000000000000000000LL> yocto;  // 有条件的支持
 typedef ratio<1, 1000000000000000000000LL> zepto;     // 有条件的支持
