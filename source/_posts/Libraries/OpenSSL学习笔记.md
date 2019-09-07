@@ -177,7 +177,15 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = %%DOMAIN%%
+DNS.2 = %%DOMAIN%%
+IP.1 = %%IP%%
+IP.2 = %%IP%%
 ```
+
+1. 关于本地调试遇到的问题：
+    `net::ERR_CERT_COMMON_NAME_INVALID`
+    `net::ERR_CERT_DATE_INVALID`
+    处理方法：COMMON_NAME 代表证书中的服务器域名，使用正确的域名（生成签名请求时指定 Common Name 或者在 extfile 中添加 Subject Alternative Name, 本地环境建议加入 localhost）；DATE INVALID 是指证书过期了，openssl x509 检查日期，注意，-days 参数值竟然可以是负数（时间往前推）。
 
 ## 参考网址
 https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html
