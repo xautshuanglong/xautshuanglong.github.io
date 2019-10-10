@@ -17,6 +17,9 @@ toc: true
 
 *注*：子模块（动态链接库）中包含 vld.h 并正确配置 vld lib 才能暴露子模块中的内存泄漏问题。
 
+C++ 类模板的惰性会使静态成员被使用时才实例化。
+模板单例模式，为保证静态变量实例化，给静态变量类型增加内联空函数，并调用之。（不影响性能，不扩大占用空间。）
+
 https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017
 
 http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html
