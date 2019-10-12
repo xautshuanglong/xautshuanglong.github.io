@@ -219,8 +219,9 @@ private void RandomTest()
 输出结果：
 ![输出结果](\images\Algorithm\RandomNumber_Java_Test.png)
 试验总结：
-* 1
-* 2
+* 采用线性同余算法；
+* 种子相同时产生相同的伪随机数序列；
+* Random 类默认种子根据时间获得，赋值种子为 1 ，会通过异或运算生成第一个种子。
 
 Java 源码 JDK 1.8.0_221
 ``` java 
