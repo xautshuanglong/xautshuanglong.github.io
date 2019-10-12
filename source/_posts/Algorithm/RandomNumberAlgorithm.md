@@ -224,13 +224,52 @@ private void RandomTest()
 * Random 类默认种子根据时间获得，赋值种子为 1 ，会通过异或运算生成第一个种子。
 
 Java 源码 JDK 1.8.0_221
+
 ``` java 
+// Random.java
+
 // 十进制 25214903917 [0x5deece66d];
 private static final long multiplier = 0x5DEECE66DL;
 // 11 [0xb]
 private static final long addend = 0xBL;
 // 281474976710655 [0xffffffffffff]
 private static final long mask = (1L << 48) - 1;
+
+/**
+ * Creates a new random number generator. This constructor sets
+ * the seed of the random number generator to a value very likely
+ * to be distinct from any other invocation of this constructor.
+ */
+public Random() {
+    this(seedUniquifier() ^ System.nanoTime());
+}
+
+/**
+ * Creates a new random number generator using a single {@code long} seed.
+ * The seed is the initial value of the internal state of the pseudorandom
+ * number generator which is maintained by method {@link #next}.
+ *
+ * <p>The invocation {@code new Random(seed)} is equivalent to:
+ *  <pre> {@code
+ * Random rnd = new Random();
+ * rnd.setSeed(seed);}</pre>
+ *
+ * @param seed the initial seed
+ * @see   #setSeed(long)
+ */
+public Random(long seed) {
+    if (getClass() == Random.class)
+        this.seed = new AtomicLong(initialScramble(seed));
+    else {
+        // subclass might have overriden setSeed
+        this.seed = new AtomicLong();
+        setSeed(seed);
+    }
+}
+
+private static long initialScramble(long seed) {
+    return (seed ^ multiplier) & mask;
+}
 
 /**
  * Returns the next pseudorandom, uniformly distributed {@code int}
