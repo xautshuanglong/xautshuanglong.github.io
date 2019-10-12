@@ -145,6 +145,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> init_seg(&#123; compiler | lib | user | <span class="meta-string">"section-name"</span> [, func-name]&#125; )</span></span><br></pre></td></tr></table></figure>
 <p><em>注</em>：子模块（动态链接库）中包含 vld.h 并正确配置 vld lib 才能暴露子模块中的内存泄漏问题。</p>
+<p>C++ 类模板的惰性会使静态成员被使用时才实例化。<br>模板单例模式，为保证静态变量实例化，给静态变量类型增加内联空函数，并调用之。（不影响性能，不扩大占用空间。）</p>
 <p><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017</a></p>
 <p><a href="http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html" target="_blank" rel="noopener">http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html</a></p>
 	  
