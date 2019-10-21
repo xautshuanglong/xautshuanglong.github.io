@@ -1,7 +1,9 @@
 ---
 title: Apache配置多个虚拟主机 (Windows)
 date: 2016-04-22 16:04:56
+categories: Network
 tags: [Apache,VirtualHost]
+toc: true
 ---
 
 ### Windows下为Apache配置多个虚拟主机
