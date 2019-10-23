@@ -4,6 +4,23 @@
   
     
     <entry>
+      <title><![CDATA[POD Trivial 普通类型和平凡类型说明]]></title>
+      <url>https://xautshuanglong.github.io/2019/10/19/CPlusPlus/POD-Trivial-%E6%99%AE%E9%80%9A%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%B9%B3%E5%87%A1%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/</url>
+      <content type="html"><![CDATA[<p>C++11 新特性学习笔记：<br><code>std::enable_if</code> <code>std::is_pod</code> <code>std::is_trivial</code></p>
+<a id="more"></a>
+<p>参考网址：<br><a href="https://zh.cppreference.com/w/cpp/types/is_trivial" target="_blank" rel="noopener">cpp_reference</a><br><a href="https://blog.csdn.net/WizardtoH/article/details/80767740" target="_blank" rel="noopener">《深入理解C++11》笔记–POD类型</a><br><a href="https://www.jianshu.com/p/a961c35910d2" target="_blank" rel="noopener">C++11新特性–std::enable_if和SFINAE</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> C++11 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[随机数算法]]></title>
       <url>https://xautshuanglong.github.io/2019/10/08/Algorithm/RandomNumberAlgorithm/</url>
       <content type="html"><![CDATA[<h2 id="类型分类"><a href="#类型分类" class="headerlink" title="类型分类"></a>类型分类</h2><ol>
@@ -1233,11 +1250,11 @@
 <a id="more"></a>
 <h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p>
 <h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p>
-<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -1706,9 +1723,9 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
     </entry>
     
     <entry>
-      <title><![CDATA[C++ 11 中的新特性]]></title>
+      <title><![CDATA[C++11 中的新特性]]></title>
       <url>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/</url>
-      <content type="html"><![CDATA[<p>C++ 11 新特性学习笔记：<br><code>default</code> 和 <code>delete</code> 修饰特殊成员函数。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p>C++11 新特性学习笔记：<br><code>default</code> 和 <code>delete</code> 修饰特殊成员函数。<br><a id="more"></a></p>
 <h2 id="Defaulted-and-Deleted-function"><a href="#Defaulted-and-Deleted-function" class="headerlink" title="Defaulted and Deleted function"></a>Defaulted and Deleted function</h2><h2 id="Asynchronous-Programming"><a href="#Asynchronous-Programming" class="headerlink" title="Asynchronous Programming"></a>Asynchronous Programming</h2><div class="alert alert-warning"><i class="fa fa-bell"></i>  以下三点都满足时， std::future 析构可能导致阻塞：</div>
 <p class="text-warning">1. 共享状态是在调用 std::async 时创建的；<br>
 2. 共享状态尚未处于 std::future_status::read 状态；<br>
@@ -1884,7 +1901,7 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
         
         <tags>
             
-            <tag> C11 </tag>
+            <tag> C++11 </tag>
             
         </tags>
         
@@ -2116,6 +2133,7 @@ opened again until the handle is closed.
 <li>高性存储<br><a href="https://tech.meituan.com/disruptor.html" target="_blank" rel="noopener">高性能队列——Disruptor</a><br><a href="http://ifeve.com/disruptor/" target="_blank" rel="noopener">并发框架Disruptor译文</a></li>
 <li>文本格式化<br>  FOP xml、xslt、xpath、xsl-fo，文档格式化<br>  FreeMarker 模板引擎</li>
 <li>GC 算法相关<br><a href="https://segmentfault.com/a/1190000004665100" target="_blank" rel="noopener">GC的三大基础算法</a></li>
+<li><a href="http://www.slf4j.org/" target="_blank" rel="noopener">SLF4j</a><br>基于外观模式的日志框架，不提供具体日志功能，可与多种日志类库兼容。<br><code>Log4j + slf4j-log4j12</code>、<code>Logback</code>、<code>java.util.Logging</code>、<code>slf4j-simple</code> 等</li>
 </ul>
 <h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><ul>
 <li>经典示例<br><a href="https://www.cnblogs.com/wangkc/p/7122120.html" target="_blank" rel="noopener">CPython解释器支持的线程和进程</a></li>
@@ -2244,6 +2262,13 @@ opened again until the handle is closed.
       <url>https://xautshuanglong.github.io/2016/10/25/Network/WindowsSocket%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>winsock.h  htons函数  将端口号转换为网络字节顺序</p>
 <h2 id="三次握手与四次挥手"><a href="#三次握手与四次挥手" class="headerlink" title="三次握手与四次挥手"></a>三次握手与四次挥手</h2><p><img src="/images/Network/tcp_connect_and_disconnect.jpg" alt="https://baijiahao.baidu.com/s?id=1618114723935605183&amp;wfr=spider&amp;for=pc"></p>
+<a id="more"></a>
+<h2 id="TCP-IP-通信模型"><a href="#TCP-IP-通信模型" class="headerlink" title="TCP_IP 通信模型"></a>TCP_IP 通信模型</h2><ol>
+<li><code>阻塞 send 和 recv (入门)</code><br>当 tcp 窗口太小时，send 会阻塞线程，当网络缓冲区没有数据时，recv 也会阻塞线程。<br>弊端：性能低，多线程开销大。</li>
+<li><code>IO 多路复用 （中级）</code><br>通过轮询的方式主动检测是否可以收发：select 或者 Linux 下的 poll。<br>弊端：轮询消耗性能，且可监视的套接字数量受操作系统限制。</li>
+<li><code>异步 （高级）</code><br>基于事件由操作系统主动通知：Windows 下 WSAAsyncSelect，Linux 下 epoll。</li>
+<li><code>完成端口 （锦上添花）</code><br>不仅通知可读可写，顺便完成收发工作。</li>
+</ol>
 ]]></content>
       
         <categories>
@@ -3321,6 +3346,11 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://pymupdf.readthedocs.io/en/latest/" target="_blank" rel="noopener">PyMuPDF&#32;Document</a>
 <a class="btn btn-danger" href="https://github.com/sumatrapdfreader/sumatrapdf" target="_blank" rel="noopener">SumatraPDF</a>
 <a class="btn btn-danger" href="https://www.sumatrapdfreader.org/free-pdf-reader.html" target="_blank" rel="noopener">SumatraPDF&#32;Official</a>
+<a class="btn btn-danger" href="http://www.slf4j.org" target="_blank" rel="noopener">SLF4j</a>
+<a class="btn btn-danger" href="http://commons.apache.org/" target="_blank" rel="noopener">Apache&#32;Common</a>
+<a class="btn btn-danger" href="https://github.com/DCMTK/dcmtk" target="_blank" rel="noopener">DCMTK</a>
+<a class="btn btn-danger" href="https://github.com/dcm4che/dcm4che" target="_blank" rel="noopener">dcm4che</a>
+<a class="btn btn-danger" href="https://github.com/fo-dicom" target="_blank" rel="noopener">fo-dicom</a>
 <a class="btn btn-danger" href="https://github.com/KindDragon/vld" target="_blank" rel="noopener">Visual&#32;Leak&#32;Detector</a>
 <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><a class="btn btn-success" href="https://cloud.docker.com/repository/list" target="_blank" rel="noopener">Docker&#32;Hub</a>
 <a class="btn btn-success" href="https://cr.console.aliyun.com/cn-hangzhou/repositories" target="_blank" rel="noopener">Aliyun&#32;Repositories</a>
@@ -3604,6 +3634,12 @@ Handler.removeFilter() # 删除过滤器
 </ol>
 ]]></content>
       
+        <categories>
+            
+            <category> Network </category>
+            
+        </categories>
+        
         
         <tags>
             
@@ -4248,7 +4284,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="mailto:&#x78;&#106;&#x73;&#x68;&#x75;&#97;&#x6e;&#x67;&#x6c;&#111;&#110;&#x67;&#x40;&#49;&#x32;&#54;&#46;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x78;&#106;&#x73;&#x68;&#x75;&#97;&#x6e;&#x67;&#x6c;&#111;&#110;&#x67;&#x40;&#49;&#x32;&#54;&#46;&#x63;&#x6f;&#x6d;</a></p>
+</code></pre><p><a href="mailto:&#x78;&#106;&#115;&#x68;&#117;&#x61;&#x6e;&#x67;&#x6c;&#111;&#110;&#103;&#64;&#x31;&#50;&#x36;&#x2e;&#x63;&#111;&#109;" target="_blank" rel="noopener">&#x78;&#106;&#115;&#x68;&#117;&#x61;&#x6e;&#x67;&#x6c;&#111;&#110;&#103;&#64;&#x31;&#50;&#x36;&#x2e;&#x63;&#111;&#109;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*

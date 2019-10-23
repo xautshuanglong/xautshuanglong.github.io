@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xautshuanglong.github.io/2016/11/18/TempRecord/</loc>
+    
+    <lastmod>2019-10-22T06:29:43.148Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</loc>
+    
+    <lastmod>2019-10-22T06:15:03.331Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/04/22/Network/Apache%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AA%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA-Windows/</loc>
+    
+    <lastmod>2019-10-21T06:59:06.697Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/10/25/Network/WindowsSocket%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2019-10-21T06:56:56.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2019/10/19/CPlusPlus/POD-Trivial-%E6%99%AE%E9%80%9A%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%B9%B3%E5%87%A1%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2019-10-21T06:07:54.453Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
+    
+    <lastmod>2019-10-21T06:07:54.451Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xautshuanglong.github.io/2019/10/08/Algorithm/RandomNumberAlgorithm/</loc>
     
     <lastmod>2019-10-12T08:27:12.611Z</lastmod>
@@ -51,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/05/08/Web/WebsiteAddress/</loc>
-    
-    <lastmod>2019-07-05T06:34:09.552Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2016/08/25/CommonSense/RTTI%E7%90%86%E8%A7%A3/</loc>
     
     <lastmod>2019-07-01T12:42:07.517Z</lastmod>
@@ -93,13 +128,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/11/18/TempRecord/</loc>
-    
-    <lastmod>2019-04-16T01:57:33.049Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2019/03/31/Libraries/MicrosoftCppRestSDK%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2019-04-01T10:14:27.202Z</lastmod>
@@ -117,13 +145,6 @@
     <loc>https://xautshuanglong.github.io/2018/12/25/DICOM/ConquestDicomServer%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2019-03-11T02:29:46.319Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2016/10/25/Network/WindowsSocket%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2019-03-11T02:26:04.791Z</lastmod>
     
   </url>
   
@@ -324,13 +345,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/about/index.html</loc>
-    
-    <lastmod>2018-06-07T06:25:37.062Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2016/07/01/VisualStudio/SDL%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</loc>
     
     <lastmod>2018-06-07T06:25:37.062Z</lastmod>
@@ -338,9 +352,9 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/05/06/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://xautshuanglong.github.io/about/index.html</loc>
     
-    <lastmod>2018-06-07T06:25:37.061Z</lastmod>
+    <lastmod>2018-06-07T06:25:37.062Z</lastmod>
     
   </url>
   
@@ -352,9 +366,9 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/04/22/Network/Apache%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AA%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA-Windows/</loc>
+    <loc>https://xautshuanglong.github.io/2016/05/06/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
     
-    <lastmod>2018-06-07T06:25:37.058Z</lastmod>
+    <lastmod>2018-06-07T06:25:37.061Z</lastmod>
     
   </url>
   
@@ -380,13 +394,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2017/03/05/CommonSense/PortNumberRegistry/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.053Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2018/04/17/CommonSense/MemoryPoolTechnique/</loc>
     
     <lastmod>2018-06-07T06:25:37.053Z</lastmod>
@@ -394,9 +401,9 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/05/09/CPlusPlus/stringstream%E9%99%B7%E9%98%B1/</loc>
+    <loc>https://xautshuanglong.github.io/2017/03/05/CommonSense/PortNumberRegistry/</loc>
     
-    <lastmod>2018-06-07T06:25:37.052Z</lastmod>
+    <lastmod>2018-06-07T06:25:37.053Z</lastmod>
     
   </url>
   
@@ -408,7 +415,21 @@
   </url>
   
   <url>
+    <loc>https://xautshuanglong.github.io/2016/05/09/CPlusPlus/stringstream%E9%99%B7%E9%98%B1/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.052Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-08-Deque/</loc>
+    
+    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
     
     <lastmod>2018-06-07T06:25:37.051Z</lastmod>
     
@@ -436,13 +457,6 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2016/11/27/CPlusPlus/const%E7%94%A8%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.051Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-05-Map/</loc>
     
     <lastmod>2018-06-07T06:25:37.050Z</lastmod>
@@ -450,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/</loc>
     
     <lastmod>2018-06-07T06:25:37.050Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-03-List/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-06-Stack/</loc>
     
     <lastmod>2018-06-07T06:25:37.050Z</lastmod>
     
@@ -478,14 +492,14 @@
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-02-Vector/</loc>
+    <loc>https://xautshuanglong.github.io/2018/01/11/CPlusPlus/STL-Series-01-Array/</loc>
     
     <lastmod>2018-06-07T06:25:37.049Z</lastmod>
     
@@ -502,13 +516,6 @@
     <loc>https://xautshuanglong.github.io/2016/11/04/CPlusPlus/CPlusPlus%E4%B8%AD%E7%9A%84%E5%9D%91/</loc>
     
     <lastmod>2018-06-07T06:25:37.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xautshuanglong.github.io/2016/12/26/CPlusPlus/CPP11%E6%96%B0%E7%89%B9%E6%80%A7/</loc>
-    
-    <lastmod>2018-06-07T06:25:37.047Z</lastmod>
     
   </url>
   

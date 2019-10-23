@@ -3,15 +3,15 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>WindowsSocket学习笔记 | Shuanglong</title>
+  <title>POD Trivial 普通类型和平凡类型说明 | Shuanglong</title>
   <meta name="author" content="JiangShuanglong">
   
-  <meta name="description" content="Descrition">
+  <meta name="description" content="C++11 普通类型 平凡类型">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="WindowsSocket学习笔记">
+  <meta property="og:title" content="POD Trivial 普通类型和平凡类型说明">
   <meta property="og:site_name" content="Shuanglong">
 
   
@@ -115,7 +115,7 @@ var _hmt = _hmt || [];
 
 	
 		<div class="page-header page-header-inverse ">		
-			<h1 class="title title-inverse "> WindowsSocket学习笔记</h1>
+			<h1 class="title title-inverse "> POD Trivial 普通类型和平凡类型说明</h1>
 		</div>		
 	
 
@@ -133,17 +133,16 @@ var _hmt = _hmt || [];
 
 	<!-- content -->
 	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>C++11 普通类型 平凡类型</p>
+			
+		 </div> <!-- alert -->
 	  		
 
-	  <p>winsock.h  htons函数  将端口号转换为网络字节顺序</p>
-<h2 id="三次握手与四次挥手"><a href="#三次握手与四次挥手" class="headerlink" title="三次握手与四次挥手"></a>三次握手与四次挥手</h2><p><img src="/images/Network/tcp_connect_and_disconnect.jpg" alt="https://baijiahao.baidu.com/s?id=1618114723935605183&amp;wfr=spider&amp;for=pc"></p>
+	  <p>C++11 新特性学习笔记：<br><code>std::enable_if</code> <code>std::is_pod</code> <code>std::is_trivial</code></p>
 <a id="more"></a>
-<h2 id="TCP-IP-通信模型"><a href="#TCP-IP-通信模型" class="headerlink" title="TCP_IP 通信模型"></a>TCP_IP 通信模型</h2><ol>
-<li><code>阻塞 send 和 recv (入门)</code><br>当 tcp 窗口太小时，send 会阻塞线程，当网络缓冲区没有数据时，recv 也会阻塞线程。<br>弊端：性能低，多线程开销大。</li>
-<li><code>IO 多路复用 （中级）</code><br>通过轮询的方式主动检测是否可以收发：select 或者 Linux 下的 poll。<br>弊端：轮询消耗性能，且可监视的套接字数量受操作系统限制。</li>
-<li><code>异步 （高级）</code><br>基于事件由操作系统主动通知：Windows 下 WSAAsyncSelect，Linux 下 epoll。</li>
-<li><code>完成端口 （锦上添花）</code><br>不仅通知可读可写，顺便完成收发工作。</li>
-</ol>
+<p>参考网址：<br><a href="https://zh.cppreference.com/w/cpp/types/is_trivial" target="_blank" rel="noopener">cpp_reference</a><br><a href="https://blog.csdn.net/WizardtoH/article/details/80767740" target="_blank" rel="noopener">《深入理解C++11》笔记–POD类型</a><br><a href="https://www.jianshu.com/p/a961c35910d2" target="_blank" rel="noopener">C++11新特性–std::enable_if和SFINAE</a></p>
 	  
 	</div>
 
@@ -155,14 +154,14 @@ var _hmt = _hmt || [];
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/2016/11/04/CPlusPlus/CPlusPlus中的坑/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/2016/08/27/Linux/Shell快捷键/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/2019/10/08/Algorithm/RandomNumberAlgorithm/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -212,7 +211,7 @@ var _hmt = _hmt || [];
 		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
-		   issue_title: "WindowsSocket学习笔记",
+		   issue_title: "POD Trivial 普通类型和平凡类型说明",
 		   issue_id: "undefined",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
@@ -233,23 +232,12 @@ var _hmt = _hmt || [];
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	2016-10-25 
+	2019-10-19 
 	</div>
 	
 
 	<!-- categories -->
     
-	<div class="meta-widget">
-	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
-    <ul id="categorys" class="tag_box list-unstyled collapse in">
-          
-  <li>
-    </li><li><a href="/categories/Network/">Network<span>4</span></a></li>
-  
-
-    </ul>
-	</div>
-	
 
 	<!-- tags -->
 	
@@ -257,7 +245,7 @@ var _hmt = _hmt || [];
 	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
     <ul id="tags" class="tag_box list-unstyled collapse in">	  
 	    
-  <li><a href="/tags/socket/">socket<span>2</span></a></li>
+  <li><a href="/tags/C-11/">C++11<span>2</span></a></li>
     </ul>
 	</div>
 	
@@ -267,7 +255,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#三次握手与四次挥手"><span class="toc-article-text">三次握手与四次挥手</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#TCP-IP-通信模型"><span class="toc-article-text">TCP_IP 通信模型</span></a></li></ol>
+			
 		</div>
 	
 	</div>

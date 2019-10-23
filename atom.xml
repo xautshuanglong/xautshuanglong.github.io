@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2019-10-12T08:27:12.611Z</updated>
+  <updated>2019-10-21T06:07:54.453Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>POD Trivial 普通类型和平凡类型说明</title>
+    <link href="https://xautshuanglong.github.io/2019/10/19/CPlusPlus/POD-Trivial-%E6%99%AE%E9%80%9A%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%B9%B3%E5%87%A1%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/"/>
+    <id>https://xautshuanglong.github.io/2019/10/19/CPlusPlus/POD-Trivial-普通类型和平凡类型说明/</id>
+    <published>2019-10-19T14:37:52.000Z</published>
+    <updated>2019-10-21T06:07:54.453Z</updated>
+    
+    <content type="html"><![CDATA[<p>C++11 新特性学习笔记：<br><code>std::enable_if</code> <code>std::is_pod</code> <code>std::is_trivial</code></p><a id="more"></a><p>参考网址：<br><a href="https://zh.cppreference.com/w/cpp/types/is_trivial" target="_blank" rel="noopener">cpp_reference</a><br><a href="https://blog.csdn.net/WizardtoH/article/details/80767740" target="_blank" rel="noopener">《深入理解C++11》笔记–POD类型</a><br><a href="https://www.jianshu.com/p/a961c35910d2" target="_blank" rel="noopener">C++11新特性–std::enable_if和SFINAE</a></p>]]></content>
+    
+    <summary type="html">
+    
+      C++11 普通类型 平凡类型
+    
+    </summary>
+    
+    
+      <category term="C++11" scheme="https://xautshuanglong.github.io/tags/C-11/"/>
+    
+  </entry>
   
   <entry>
     <title>随机数算法</title>
@@ -481,28 +501,6 @@
     
       <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>StarUML 使用教程</title>
-    <link href="https://xautshuanglong.github.io/2018/11/27/UML/StarUML%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-    <id>https://xautshuanglong.github.io/2018/11/27/UML/StarUML使用教程/</id>
-    <published>2018-11-27T05:24:58.000Z</published>
-    <updated>2018-11-27T06:36:53.763Z</updated>
-    
-    <content type="html"><![CDATA[<p>可视化编程</p><a id="more"></a><h2 id="科学使用方法"><a href="#科学使用方法" class="headerlink" title="科学使用方法"></a>科学使用方法</h2><p>StarUML 是用 nodejs 写的（<a href="https://github.com/electron/electron" target="_blank" rel="noopener">Electron框架</a>），新版本中源代码采用 asar 工具打包，无法直接看到 <code>LicenseManagerDomain.js</code>。</p><ol><li><p>安装 asar</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g asar</span><br></pre></td></tr></table></figure></li><li><p>解压 app.asar</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 找到 StartUML 安装目录下 resources/app.asar， 默认安装路径为 C:\Program Files\StarUML</span><br><span class="line">app extract app.asar</span><br></pre></td></tr></table></figure></li><li><p>修改 JavaScript 源码</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 修改前</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="keyword">this</span>.validate().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, () =&gt; &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">false</span>)</span><br><span class="line">    UnregisteredDialog.showDialog()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改后</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="keyword">this</span>.validate().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, () =&gt; &#123;</span><br><span class="line">    <span class="comment">//setStatus(this, false)</span></span><br><span class="line">    <span class="comment">//UnregisteredDialog.showDialog()</span></span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>打包 app.asar</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asar pack app app.asar</span><br></pre></td></tr></table></figure></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;可视化编程&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="UML" scheme="https://xautshuanglong.github.io/categories/UML/"/>
-    
-    
-      <category term="uml" scheme="https://xautshuanglong.github.io/tags/uml/"/>
     
   </entry>
   
