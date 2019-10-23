@@ -163,6 +163,9 @@ https://www.microsoft.com/com/default.mspx
     FreeMarker 模板引擎
 * GC 算法相关
   [GC的三大基础算法](https://segmentfault.com/a/1190000004665100)
+* [SLF4j](http://www.slf4j.org/)
+  基于外观模式的日志框架，不提供具体日志功能，可与多种日志类库兼容。
+  `Log4j + slf4j-log4j12`、`Logback`、`java.util.Logging`、`slf4j-simple` 等
 
 ### Python
 * 经典示例

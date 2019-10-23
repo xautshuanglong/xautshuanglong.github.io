@@ -129,6 +129,13 @@ toc: true
 {% btn https://pymupdf.readthedocs.io/en/latest/ PyMuPDF&#32;Document danger %}
 {% btn https://github.com/sumatrapdfreader/sumatrapdf SumatraPDF danger %}
 {% btn https://www.sumatrapdfreader.org/free-pdf-reader.html SumatraPDF&#32;Official danger %}
+[//]: # (Java 经典实用类库)
+{% btn http://www.slf4j.org SLF4j danger %}
+{% btn http://commons.apache.org/ Apache&#32;Common danger %}
+[//]: # (DICOM)
+{% btn https://github.com/DCMTK/dcmtk DCMTK danger %}
+{% btn https://github.com/dcm4che/dcm4che dcm4che danger %}
+{% btn https://github.com/fo-dicom fo-dicom danger %}
 [//]: # (内存泄漏检测)
 {% btn https://github.com/KindDragon/vld Visual&#32;Leak&#32;Detector danger %}
 [^_^]: # (特殊注释)
