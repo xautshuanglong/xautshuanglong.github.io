@@ -166,6 +166,10 @@ https://www.microsoft.com/com/default.mspx
 * [SLF4j](http://www.slf4j.org/)
   基于外观模式的日志框架，不提供具体日志功能，可与多种日志类库兼容。
   `Log4j + slf4j-log4j12`、`Logback`、`java.util.Logging`、`slf4j-simple` 等
+* Spring Boot 相关
+  [Spring Boot 中文索引](http://springboot.fun/)
+  [纯洁的微笑-Spring Boot 系列完整](http://www.ityouknow.com/spring-boot.html)
+* JVM内存结构、Java内存模型、Java对象模型区别。
 
 ### Python
 * 经典示例
@@ -188,8 +192,10 @@ https://www.microsoft.com/com/default.mspx
 
 ### BAT 批处理
   [DOS批处理中%~dp0等扩充变量语法详解](http://www.jb51.net/article/97588.htm)
-
 * 系统应用：`shutdown`、`sc`、`reg`。
+
+### Docker
+* [Docker系列](https://www.cnblogs.com/ityouknow/category/1173004.html)
 
 ## 算法
 * `局部敏感哈希`
