@@ -225,3 +225,13 @@ https://www.microsoft.com/com/default.mspx
   [使用火焰图做性能分析](http://neoremind.com/2017/09/%E4%BD%BF%E7%94%A8%E7%81%AB%E7%84%B0%E5%9B%BE%E5%81%9A%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/)
   [如何读懂火焰图](http://www.ruanyifeng.com/blog/2017/09/flame-graph.html)
   [linux 下用火焰图进行性能分析](https://blog.csdn.net/gatieme/article/details/78885908)
+
+## 性能优化
+* [高并发编程系列：4大JVM性能分析工具详解，及内存泄漏分析方案](https://youzhixueyuan.com/jvm-performance-analysis-tool.html)
+* [阿里P8架构师谈：多线程、架构、异步消息、Redis等性能优化策略](https://youzhixueyuan.com/high-concurrency-performance-optimization-method.html)
+* [阿里P8架构师谈：Web前端、应用服务器、数据库SQL等性能优化总结](https://youzhixueyuan.com/web-front-end-application-database-performance-optimization.html)
+* [阿里P8架构师谈：MySQL数据库的索引原理、与慢SQL优化的5大原则](https://youzhixueyuan.com/index-principle-and-slow-query-optimization-of-mysql.html)
+* [常用的后端性能优化六种方式：缓存化+服务化+异步化等](https://youzhixueyuan.com/six-ways-to-optimize-rear-end-performance.html)
+* [阿里P8架构师谈：架构设计之数据库垂直、水平拆分六大原则](https://youzhixueyuan.com/six-principles-of-vertical-and-horizontal-resolution-of-database.html)
+* [阿里P8架构师谈：MySQL慢查询优化、索引优化、以及表等优化总结](https://youzhixueyuan.com/mysql-slow-query-optimization-index-optimization.html)
+
