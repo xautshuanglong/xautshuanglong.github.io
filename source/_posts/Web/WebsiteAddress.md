@@ -138,6 +138,8 @@ toc: true
 {% btn https://github.com/fo-dicom fo-dicom danger %}
 [//]: # (内存泄漏检测)
 {% btn https://github.com/KindDragon/vld Visual&#32;Leak&#32;Detector danger %}
+[//]: # (目录访问控制)
+{% btn http://www.openldap.org/ OpenLDAP danger %}
 [^_^]: # (特殊注释)
 [commont]: # (啰嗦注释)
 [commont]: <> (啰嗦注释)
