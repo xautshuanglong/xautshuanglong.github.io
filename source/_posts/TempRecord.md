@@ -90,6 +90,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * `PDH` `Performance Data Helper` 微软性能数据助手，如同性能监视器记录数据。[PDH header](https://docs.microsoft.com/en-us/windows/desktop/api/pdh/)
 * 关于进程退出检测
   `std::atexit` 注册进程退出时调用的函数（可注册多个函数，后注册者先调用。）
+* [Windows任务管理器API](https://blog.csdn.net/zhuyaojun/article/details/7066691)
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
