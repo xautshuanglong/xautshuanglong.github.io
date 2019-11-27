@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2019-10-21T06:07:54.453Z</updated>
+  <updated>2019-11-27T12:05:30.307Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SELinux 学习笔记</title>
+    <link href="https://xautshuanglong.github.io/2019/11/27/Linux/SELinux%E2%80%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xautshuanglong.github.io/2019/11/27/Linux/SELinux—学习笔记/</id>
+    <published>2019-11-27T11:56:40.000Z</published>
+    <updated>2019-11-27T12:05:30.307Z</updated>
+    
+    <content type="html"><![CDATA[<p>SELinux</p><a id="more"></a><h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://blog.51cto.com/10492754/2092597" target="_blank" rel="noopener">SELinux介绍与设置</a><br><a href="https://www.linuxidc.com/Linux/2016-09/135202.htm" target="_blank" rel="noopener">SELinux入门和基本配置</a><br><a href="https://zhuanlan.zhihu.com/p/30483108" target="_blank" rel="noopener">做人做事，安全第一！ —— SELinux 入门</a><br><a href="https://www.cnblogs.com/xiaoluo501395377/archive/2013/05/26/3100444.html" target="_blank" rel="noopener">SELinux安全系统基础</a><br><a href="http://www.toxingwang.com/management/security/1011.html" target="_blank" rel="noopener">SELinux基本概念及基本配置</a></p>]]></content>
+    
+    <summary type="html">
+    
+      SELinux 安全第一步。
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://xautshuanglong.github.io/categories/Linux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>POD Trivial 普通类型和平凡类型说明</title>
@@ -68,9 +88,9 @@
     <link href="https://xautshuanglong.github.io/2019/08/01/Libraries/gRPC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://xautshuanglong.github.io/2019/08/01/Libraries/gRPC学习笔记/</id>
     <published>2019-08-01T02:44:09.000Z</published>
-    <updated>2019-08-01T03:19:21.034Z</updated>
+    <updated>2019-11-27T08:31:21.471Z</updated>
     
-    <content type="html"><![CDATA[<p>Google RPC 框架</p><a id="more"></a><h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>gRPC 主要有四种 请求/响应 模式：</p><ol><li>简单模式（Simple RPC）</li><li>服务端数据流模式（Server-side streaming RPC）</li><li>客户端数据流模式（Client-side streaming RPC）</li><li>双向数据流模式（Bidirectional streaming RPC）</li></ol><p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Google RPC 框架</p><a id="more"></a><h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>gRPC 主要有四种 请求/响应 模式：</p><ol><li>简单模式（Simple RPC）</li><li>服务端数据流模式（Server-side streaming RPC）</li><li>客户端数据流模式（Client-side streaming RPC）</li><li>双向数据流模式（Bidirectional streaming RPC）</li></ol><h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol><li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li><li>gRPC 暂不支持带密码的私钥，需要修改源码，加入秘钥短语参数才行。</li><li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）<br><em>注:最好保证服务端客户端都有正确的 CN ，否则会校验失败。实践中只设置服务端证书的 CN 无效，调试得知校验客户端证书失败。</em></li></ol><p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>]]></content>
     
     <summary type="html">
     
@@ -481,26 +501,6 @@
     
     
       <category term="socket" scheme="https://xautshuanglong.github.io/tags/socket/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于引用计数</title>
-    <link href="https://xautshuanglong.github.io/2018/11/30/CommonSense/ReferenceCount%E5%85%B3%E4%BA%8E%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0/"/>
-    <id>https://xautshuanglong.github.io/2018/11/30/CommonSense/ReferenceCount关于引用计数/</id>
-    <published>2018-11-30T03:07:50.000Z</published>
-    <updated>2018-11-30T08:18:48.047Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h2><p>引用计数是计算机编程语言中的一种内存管理技术，是指将资源（可以是对象、内存或磁盘空间等等）的被引用次数保存起来，当被引用次数变为零时就将其释放的过程。<br>使用引用计数技术可以实现自动资源管理的目的，同时引用计数还可以指使用引用计数技术回收未使用资源的垃圾回收算法。<br>当创建一个对象的实例并在堆上申请内存时，对象的引用计数就为1，在其他对象中需要持有这个对象时，就需要把该对象的引用计数加1，需要释放一个对象时，就将该对象的引用计数减1，直至对象的引用计数为0，对象的内存会被立刻释放。</p><a id="more"></a><p><a href="https://zh.wikipedia.org/wiki/%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0" target="_blank" rel="noopener">引用计数 wiki</a></p><h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><p>垃圾回收（英语：Garbage Collection，缩写为GC），在计算机科学中是一种自动的存储器管理机制。当一个计算机上的动态存储器不再需要时，就应该予以释放，以让出存储器，这种存储器资源管理，称为垃圾回收。<br><a href="https://zh.wikipedia.org/wiki/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8" target="_blank" rel="noopener">垃圾回收不（计算机科学）</a>)</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;引用计数&quot;&gt;&lt;a href=&quot;#引用计数&quot; class=&quot;headerlink&quot; title=&quot;引用计数&quot;&gt;&lt;/a&gt;引用计数&lt;/h2&gt;&lt;p&gt;引用计数是计算机编程语言中的一种内存管理技术，是指将资源（可以是对象、内存或磁盘空间等等）的被引用次数保存起来，当被引用次数变为零时就将其释放的过程。&lt;br&gt;使用引用计数技术可以实现自动资源管理的目的，同时引用计数还可以指使用引用计数技术回收未使用资源的垃圾回收算法。&lt;br&gt;当创建一个对象的实例并在堆上申请内存时，对象的引用计数就为1，在其他对象中需要持有这个对象时，就需要把该对象的引用计数加1，需要释放一个对象时，就将该对象的引用计数减1，直至对象的引用计数为0，对象的内存会被立刻释放。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
-    
     
   </entry>
   

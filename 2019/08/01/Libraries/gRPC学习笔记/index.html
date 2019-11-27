@@ -144,6 +144,11 @@ var _hmt = _hmt || [];
 <li>客户端数据流模式（Client-side streaming RPC）</li>
 <li>双向数据流模式（Bidirectional streaming RPC）</li>
 </ol>
+<h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol>
+<li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li>
+<li>gRPC 暂不支持带密码的私钥，需要修改源码，加入秘钥短语参数才行。</li>
+<li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）<br><em>注:最好保证服务端客户端都有正确的 CN ，否则会校验失败。实践中只设置服务端证书的 CN 无效，调试得知校验客户端证书失败。</em></li>
+</ol>
 <p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>
 	  
 	</div>
@@ -268,7 +273,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#工作模式"><span class="toc-article-text">工作模式</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#工作模式"><span class="toc-article-text">工作模式</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#安全通信"><span class="toc-article-text">安全通信</span></a></li></ol>
 		</div>
 	
 	</div>

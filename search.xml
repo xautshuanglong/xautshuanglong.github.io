@@ -4,6 +4,23 @@
   
     
     <entry>
+      <title><![CDATA[SELinux 学习笔记]]></title>
+      <url>https://xautshuanglong.github.io/2019/11/27/Linux/SELinux%E2%80%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>SELinux</p>
+<a id="more"></a>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://blog.51cto.com/10492754/2092597" target="_blank" rel="noopener">SELinux介绍与设置</a><br><a href="https://www.linuxidc.com/Linux/2016-09/135202.htm" target="_blank" rel="noopener">SELinux入门和基本配置</a><br><a href="https://zhuanlan.zhihu.com/p/30483108" target="_blank" rel="noopener">做人做事，安全第一！ —— SELinux 入门</a><br><a href="https://www.cnblogs.com/xiaoluo501395377/archive/2013/05/26/3100444.html" target="_blank" rel="noopener">SELinux安全系统基础</a><br><a href="http://www.toxingwang.com/management/security/1011.html" target="_blank" rel="noopener">SELinux基本概念及基本配置</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[POD Trivial 普通类型和平凡类型说明]]></title>
       <url>https://xautshuanglong.github.io/2019/10/19/CPlusPlus/POD-Trivial-%E6%99%AE%E9%80%9A%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%B9%B3%E5%87%A1%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E/</url>
       <content type="html"><![CDATA[<p>C++11 新特性学习笔记：<br><code>std::enable_if</code> <code>std::is_pod</code> <code>std::is_trivial</code></p>
@@ -82,6 +99,11 @@
 <li>服务端数据流模式（Server-side streaming RPC）</li>
 <li>客户端数据流模式（Client-side streaming RPC）</li>
 <li>双向数据流模式（Bidirectional streaming RPC）</li>
+</ol>
+<h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol>
+<li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li>
+<li>gRPC 暂不支持带密码的私钥，需要修改源码，加入秘钥短语参数才行。</li>
+<li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）<br><em>注:最好保证服务端客户端都有正确的 CN ，否则会校验失败。实践中只设置服务端证书的 CN 无效，调试得知校验客户端证书失败。</em></li>
 </ol>
 <p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>
 ]]></content>
@@ -2081,6 +2103,7 @@ opened again until the handle is closed.
 <li><code>DIA</code> <code>Debug Interface Access SDK</code>，访问存储在PDB（Program Database）文件中信息的库。<br>VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。<br><a href="https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015" target="_blank" rel="noopener">官方参考</a></li>
 <li><code>PDH</code> <code>Performance Data Helper</code> 微软性能数据助手，如同性能监视器记录数据。<a href="https://docs.microsoft.com/en-us/windows/desktop/api/pdh/" target="_blank" rel="noopener">PDH header</a></li>
 <li>关于进程退出检测<br><code>std::atexit</code> 注册进程退出时调用的函数（可注册多个函数，后注册者先调用。）</li>
+<li><a href="https://blog.csdn.net/zhuyaojun/article/details/7066691" target="_blank" rel="noopener">Windows任务管理器API</a></li>
 </ul>
 <h3 id="Windows-Service"><a href="#Windows-Service" class="headerlink" title="Windows Service"></a>Windows Service</h3><ul>
 <li>Related API：<code>OpenSCManager</code>、<code>CreateService</code>、<code>OpenService</code>、<code>ControlService</code>、<code>DeleteService</code>、<code>RegisterServiceCtrlHandler</code>、<code>SetServiceStatus</code>、<code>StartServiceCtrlDispatcher</code></li>
@@ -3366,6 +3389,7 @@ x = MyClass(110,&quot;Shuang&quot;)
 <a class="btn btn-danger" href="https://github.com/dcm4che/dcm4che" target="_blank" rel="noopener">dcm4che</a>
 <a class="btn btn-danger" href="https://github.com/fo-dicom" target="_blank" rel="noopener">fo-dicom</a>
 <a class="btn btn-danger" href="https://github.com/KindDragon/vld" target="_blank" rel="noopener">Visual&#32;Leak&#32;Detector</a>
+<a class="btn btn-danger" href="http://www.openldap.org/" target="_blank" rel="noopener">OpenLDAP</a>
 <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><a class="btn btn-success" href="https://cloud.docker.com/repository/list" target="_blank" rel="noopener">Docker&#32;Hub</a>
 <a class="btn btn-success" href="https://cr.console.aliyun.com/cn-hangzhou/repositories" target="_blank" rel="noopener">Aliyun&#32;Repositories</a>
 <a class="btn btn-success" href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank" rel="noopener">Docker&#32;从入门到实践</a>
@@ -4298,7 +4322,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="mailto:&#x78;&#x6a;&#x73;&#x68;&#117;&#97;&#x6e;&#103;&#x6c;&#x6f;&#x6e;&#103;&#64;&#x31;&#x32;&#54;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x78;&#x6a;&#x73;&#x68;&#117;&#97;&#x6e;&#103;&#x6c;&#x6f;&#x6e;&#103;&#64;&#x31;&#x32;&#54;&#x2e;&#99;&#111;&#x6d;</a></p>
+</code></pre><p><a href="mailto:&#x78;&#106;&#115;&#104;&#x75;&#x61;&#110;&#x67;&#108;&#x6f;&#110;&#x67;&#x40;&#x31;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x78;&#106;&#115;&#104;&#x75;&#x61;&#110;&#x67;&#108;&#x6f;&#110;&#x67;&#x40;&#x31;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
