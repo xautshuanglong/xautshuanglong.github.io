@@ -188,7 +188,10 @@ IP.2 = %%IP%%
     处理方法：COMMON_NAME 代表证书中的服务器域名，使用正确的域名（生成签名请求时指定 Common Name 或者在 extfile 中添加 Subject Alternative Name, 本地环境建议加入 localhost）；DATE INVALID 是指证书过期了，openssl x509 检查日期，注意，-days 参数值竟然可以是负数（时间往前推）。
 
 ## 参考网址
-https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html
-https://codeday.me/bug/20181110/373571.html
-https://blog.csdn.net/u013066244/article/details/78725842
+[基于 OpenSSL 自建 CA 和颁发 SSL 证书](https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html)
+[google-chrome – Chrome：无效的自签名SSL证书 – “Subject Alternative Name Missing”](https://codeday.me/bug/20181110/373571.html)
+[OpenSSL自签发配置有多域名或ip地址的证书](https://blog.csdn.net/u013066244/article/details/78725842)
+[https wireshark抓包——要解密出原始数据光有ssl 证书还不行，还要有浏览器内的pre-master-secret（内存里）](https://www.cnblogs.com/bonelee/p/9577115.html)
+[RSA与 Diffie-Hellman密钥交换 的区别](https://blog.csdn.net/u013066244/article/details/79364011)
+[SSL/TLS协议详解(下)——TLS握手协议](https://xz.aliyun.com/t/2531)
 
