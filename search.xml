@@ -103,7 +103,7 @@
 <h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol>
 <li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li>
 <li>gRPC 暂不支持带密码的私钥，需要修改源码，加入秘钥短语参数才行。</li>
-<li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）<br><em>注:最好保证服务端客户端都有正确的 CN ，否则会校验失败。实践中只设置服务端证书的 CN 无效，调试得知校验客户端证书失败。</em></li>
+<li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）</li>
 </ol>
 <p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>
 ]]></content>
@@ -3651,9 +3651,9 @@ Handler.removeFilter() # 删除过滤器
         
         <tags>
             
-            <tag> log4py </tag>
-            
             <tag> Python </tag>
+            
+            <tag> log4py </tag>
             
         </tags>
         
@@ -4322,7 +4322,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="mailto:&#x78;&#106;&#115;&#104;&#x75;&#x61;&#110;&#x67;&#108;&#x6f;&#110;&#x67;&#x40;&#x31;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x78;&#106;&#115;&#104;&#x75;&#x61;&#110;&#x67;&#108;&#x6f;&#110;&#x67;&#x40;&#x31;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+</code></pre><p><a href="mailto:&#x78;&#x6a;&#115;&#x68;&#117;&#x61;&#x6e;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#50;&#54;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#x78;&#x6a;&#115;&#x68;&#117;&#x61;&#x6e;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#50;&#54;&#x2e;&#x63;&#111;&#x6d;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*

@@ -88,9 +88,9 @@
     <link href="https://xautshuanglong.github.io/2019/08/01/Libraries/gRPC%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://xautshuanglong.github.io/2019/08/01/Libraries/gRPC学习笔记/</id>
     <published>2019-08-01T02:44:09.000Z</published>
-    <updated>2019-11-27T08:31:21.471Z</updated>
+    <updated>2019-11-28T03:32:58.459Z</updated>
     
-    <content type="html"><![CDATA[<p>Google RPC 框架</p><a id="more"></a><h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>gRPC 主要有四种 请求/响应 模式：</p><ol><li>简单模式（Simple RPC）</li><li>服务端数据流模式（Server-side streaming RPC）</li><li>客户端数据流模式（Client-side streaming RPC）</li><li>双向数据流模式（Bidirectional streaming RPC）</li></ol><h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol><li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li><li>gRPC 暂不支持带密码的私钥，需要修改源码，加入秘钥短语参数才行。</li><li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）<br><em>注:最好保证服务端客户端都有正确的 CN ，否则会校验失败。实践中只设置服务端证书的 CN 无效，调试得知校验客户端证书失败。</em></li></ol><p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Google RPC 框架</p><a id="more"></a><h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>gRPC 主要有四种 请求/响应 模式：</p><ol><li>简单模式（Simple RPC）</li><li>服务端数据流模式（Server-side streaming RPC）</li><li>客户端数据流模式（Client-side streaming RPC）</li><li>双向数据流模式（Bidirectional streaming RPC）</li></ol><h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol><li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li><li>gRPC 暂不支持带密码的私钥，需要修改源码，加入秘钥短语参数才行。</li><li>gRPC 基于 HTTP2，证书验证时要求服务器名称匹配，否则建立链接失败。（关于服务器名称/别名，参见 <a href="/2019/02/22/Libraries/OpenSSL学习笔记/">OpenSSL学习笔记</a>）</li></ol><p><a href="https://www.jianshu.com/p/5158d6686769" target="_blank" rel="noopener">参考 gRPC双向数据流的交互控制</a></p>]]></content>
     
     <summary type="html">
     
