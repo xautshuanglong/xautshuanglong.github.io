@@ -90,7 +90,18 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * `PDH` `Performance Data Helper` 微软性能数据助手，如同性能监视器记录数据。[PDH header](https://docs.microsoft.com/en-us/windows/desktop/api/pdh/)
 * 关于进程退出检测
   `std::atexit` 注册进程退出时调用的函数（可注册多个函数，后注册者先调用。）
-* [Windows任务管理器API](https://blog.csdn.net/zhuyaojun/article/details/7066691)
+* [Windows任务管理器API (博客)](https://blog.csdn.net/zhuyaojun/article/details/7066691)
+* [System Information Functions](https://docs.microsoft.com/zh-cn/windows/win32/sysinfo/system-information-functions)
+* [Volume Management Functions (官方)](https://docs.microsoft.com/zh-cn/windows/win32/fileio/volume-management-functions)
+* [Snapshots of the System (官方)](https://docs.microsoft.com/en-us/windows/win32/toolhelp/snapshots-of-the-system)
+* [Taking a Snapshot and Viewing Processes (官方)](https://docs.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes)
+* [Editing Drive Letter Assignments](https://docs.microsoft.com/zh-cn/windows/win32/fileio/editing-drive-letter-assignments)
+* [Mounted Folders](https://docs.microsoft.com/zh-cn/windows/win32/fileio/volume-mount-points)
+* [Mounted Folder Examples](https://docs.microsoft.com/zh-cn/windows/win32/fileio/volume-mount-point-examples)
+* [Extensible Authentication Protocol Reference](https://docs.microsoft.com/zh-cn/windows/win32/eap/extensible-authentication-protocol-reference)
+* [关于字符串长度](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l?view=vs-2019)
+* Session 远程桌面相关
+  WTSQuerySessionInformationA function
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
