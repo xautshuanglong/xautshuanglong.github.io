@@ -139,10 +139,23 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 <h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>gRPC 主要有四种 请求/响应 模式：</p>
 <ol>
-<li>简单模式（Simple RPC）</li>
-<li>服务端数据流模式（Server-side streaming RPC）</li>
-<li>客户端数据流模式（Client-side streaming RPC）</li>
-<li>双向数据流模式（Bidirectional streaming RPC）</li>
+<li><p>简单模式（Simple RPC）<br>客户端发起请求数据，服务端返回响应数据。<br>不足之处：</p>
+<ul>
+<li>数据包过大造成瞬时压力；</li>
+<li>需要所有数据包接收成功且正确后，才能回调响应，进行业务处理（无法做到客户端边发送，服务端边处理）。</li>
+</ul>
+<p>流模式：</p>
+<ul>
+<li>大规模数据包</li>
+<li>实时场景</li>
+</ul>
+</li>
+<li><p>服务端数据流模式（Server-side streaming RPC）<br>客户端发起一个请求，服务端返回一端连续的数据流响应。服务端与客户端的调用可以并行处理。</p>
+</li>
+<li><p>客户端数据流模式（Client-side streaming RPC）<br>客户端将一段连续的数据发送到服务端，服务端返回一个响应。</p>
+</li>
+<li><p>双向数据流模式（Bidirectional streaming RPC）<br>客户端发送连续的数据流，服务端返回交互的数据流。</p>
+</li>
 </ol>
 <h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol>
 <li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li>
@@ -293,7 +306,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="container-narrow">
   <footer> <p>
-  &copy; 2019 JiangShuanglong
+  &copy; 2020 JiangShuanglong
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

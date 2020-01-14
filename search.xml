@@ -4,6 +4,85 @@
   
     
     <entry>
+      <title><![CDATA[SQLite3 学习笔记]]></title>
+      <url>https://xautshuanglong.github.io/2020/01/14/Libraries/Sqlite3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>SQLite：是一个进程内的库，实现了自给自足的、无服务器的、零配置的、事务性的 SQL 数据库引擎。它是一个零配置的数据库，这意味着与其他数据库一样，您不需要在系统中配置。</p>
+<p>SQLCipher is an SQLite extension that provides 256 bit AES encryption of database files.</p>
+<p><a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQL Cipher</a><br><a href="https://github.com/sqlcipher/sqlcipher" target="_blank" rel="noopener">Open Source Library</a><br><a href="https://github.com/sqlcipher/android-database-sqlcipher" target="_blank" rel="noopener">Open Source Android</a></p>
+<a id="more"></a>
+<h2 id="SQLite-常用命令"><a href="#SQLite-常用命令" class="headerlink" title="SQLite 常用命令"></a>SQLite 常用命令</h2><h2 id="SQLCipher-编译"><a href="#SQLCipher-编译" class="headerlink" title="SQLCipher 编译"></a>SQLCipher 编译</h2><h3 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h3><p>开发工具：<code>Visual Studio 2015</code><br>辅助工具：<a href="https://www.activestate.com/products/tcl/" target="_blank" rel="noopener">ActiveTCL</a> <code>SourceInsight</code></p>
+<h3 id="编译报错"><a href="#编译报错" class="headerlink" title="编译报错"></a>编译报错</h3><ol>
+<li><p>无法识别标识符 <code>CRITICAL_SECTION</code></p>
+ <span class="label label-danger">问题描述</span>
+<p> sqlite3.c(30924): error C2061: 语法错误: 标识符“CRITICAL_SECTION”</p>
+ <span class="label label-primary">问题根源</span>
+<p> CRITICAL_SECTION 在 winnt.h 中有定义，是平台而定。<br> 包含 windows.h 可正常识别，SQLITE_HAS_CODEC 导致 windows.h 没有被包含到源文件。</p>
+ <span class="label label-success">解决方案</span>
+<p> 增加 -DSQLITE_HAS_CODEC 编译参数，参考自 <a href="https://github.com/sqlcipher/sqlcipher/issues/206" target="_blank" rel="noopener">issue 206</a></p>
+</li>
+<li><p>缺少 OpenSSL 依赖</p>
+ <span class="label label-danger">问题描述</span>
+<p> sqlite3.c(23821): fatal error C1083: 无法打开包括文件: “openssl/rand.h”: No such file or directory</p>
+ <span class="label label-primary">问题根源</span>
+<p> 加解密功能依赖于 OpenSSL 库，需要下载或编译并正确配置依赖库路径。</p>
+ <span class="label label-success">解决方案</span>
+<p> 模仿 TCL、ZLIB 库配置 OpenSSL 依赖库。</p>
+</li>
+<li><p>缺少 TCL 依赖</p>
+ <span class="label label-danger">问题描述</span>
+<p> 测试程序编译，找不到 TCL 依赖库</p>
+ <span class="label label-primary">问题根源</span>
+<p> 编译前需要 TCL 脚本生成相应源码，以及对中间生成对象进行重组。</p>
+ <span class="label label-success">解决方案</span>
+<p> 配置 TCL 依赖库，安装 ActiveTCL 的位置。</p>
+</li>
+<li><p>链接不到 OpenSSL</p>
+ <span class="label label-danger">问题描述</span>
+<p> 部分exe, 如 sqldiff.exe 链接失败，找不到 OpenSSL 中的函数。</p>
+ <span class="label label-primary">问题根源</span>
+<p> 这部分 EXE 链接时，没有依赖 OpenSSL 相关 *.lib。</p>
+ <span class="label label-success">解决方案</span>
+<p> OpenSSL 为新增依赖库，需要配置依赖它的所有可执行文件编译时能链接库该库。</p>
+</li>
+<li><p>替换 Navicat SQLite 插件报错</p>
+ <span class="label label-danger">问题描述</span>
+<p> 用 sqlcipher 编译出来的 sqlite3.dll 替换 Navicat Premium 12.0.28 中的 sqlite3.dll 启动时报错：<br> SQLite function sqlite3_user_authenticate cannot linked. 查看 sqlite3.dll 导出函数的确没有 sqlite3_user_authenticate 函数。</p>
+ <span class="label label-primary">问题根源</span>
+<p> 没有开启用户授权功能模块的控制宏。</p>
+ <span class="label label-success">解决方案</span>
+<p> 编译参数添加 -DSQLITE_USER_AUTHENTICATION 并且将 userauth.c 加入到编源文件列表。</p>
+</li>
+<li><p>Navicat 启动提示缺失部分函数</p>
+ <span class="label label-danger">问题描述</span>
+<p> 用 sqlcipher 编译出来的 sqlite3.dll 替换 Navicat Premium 12.0.28 中的 sqlite3.dll 启动时报错：<br> SQLite function sqlite3_libversion cannot linked.<br> 查看 sqlite3.dll 导出函数的确没有 sqlite3_libversion 函数，但是 libsqlite3.lib 中有 sqlite3_libversion 而 sqlite3.def 没有该函数。<br> 手动补全 sqlite3.def 并单独执行如下命令：</p>
+<pre><code>link.exe /DEBUG   /NOLOGO /MACHINE:X64  /LIBPATH:..\sqlcipher-4.2.0\..\OpenSSL_x64\Release /DLL /DEF:sqlite3.def /OUT:sqlite3.dll sqlite3.lo sqlite3res.lo  libeay32.lib ssleay32.lib  userauth.lo
+</code></pre><p> 可正常导出且 Navicat 不报错。</p>
+ <span class="label label-primary">问题根源</span>
+<p> sqlite3.dll 是由静态库 libsqlite3.lib 生成，命令行参数中通过 sqlite3.def 指定导出函数。<br> 因为 sqlite3.def 没有指定相应函数名，所以 sqlite3.dll 中就没有相应导出函数。<br> 对比不同方式下生成的 libsqlite3.lib 中的函数名，发现:不加入 userauth.lo 时，函数名为 1 sqlite3_xxxx;加入 userauth.lo 时，函数名为 2 sqlite3_xxxx。<br> 再看 sqlite3.def 的生成规则，其中正则表达式以 1？（0/1个1）开头，忽略了以 2 开头的函数名。</p>
+ <span class="label label-success">解决方案</span>
+<p> 修改正则表达式为以 2？ 开头的函数：</p>
+<pre><code>dumpbin /all libsqlite3.lib | $(TCLSH_CMD) $(TOP)\tool\replace.tcl include &quot;^\s+[12]? _?(sqlite3(?:session|changeset|changegroup|rebaser)?_[^@]*)(?:@\d+)?$$&quot; \1 | sort &gt;&gt; sqlite3.def
+</code></pre></li>
+</ol>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://www.zetetic.net/sqlcipher/" target="_blank" rel="noopener">SQLite3 SqlCipher windows下的编</a><br><a href="https://github.com/sqlcipher/sqlcipher/issues/206" target="_blank" rel="noopener">Github issues CRITICAL_SECTION</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Database </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> sqlite </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[SELinux 学习笔记]]></title>
       <url>https://xautshuanglong.github.io/2019/11/27/Linux/SELinux%E2%80%94%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<p>SELinux</p>
@@ -95,10 +174,23 @@
 <a id="more"></a>
 <h3 id="工作模式"><a href="#工作模式" class="headerlink" title="工作模式"></a>工作模式</h3><p>gRPC 主要有四种 请求/响应 模式：</p>
 <ol>
-<li>简单模式（Simple RPC）</li>
-<li>服务端数据流模式（Server-side streaming RPC）</li>
-<li>客户端数据流模式（Client-side streaming RPC）</li>
-<li>双向数据流模式（Bidirectional streaming RPC）</li>
+<li><p>简单模式（Simple RPC）<br>客户端发起请求数据，服务端返回响应数据。<br>不足之处：</p>
+<ul>
+<li>数据包过大造成瞬时压力；</li>
+<li>需要所有数据包接收成功且正确后，才能回调响应，进行业务处理（无法做到客户端边发送，服务端边处理）。</li>
+</ul>
+<p>流模式：</p>
+<ul>
+<li>大规模数据包</li>
+<li>实时场景</li>
+</ul>
+</li>
+<li><p>服务端数据流模式（Server-side streaming RPC）<br>客户端发起一个请求，服务端返回一端连续的数据流响应。服务端与客户端的调用可以并行处理。</p>
+</li>
+<li><p>客户端数据流模式（Client-side streaming RPC）<br>客户端将一段连续的数据发送到服务端，服务端返回一个响应。</p>
+</li>
+<li><p>双向数据流模式（Bidirectional streaming RPC）<br>客户端发送连续的数据流，服务端返回交互的数据流。</p>
+</li>
 </ol>
 <h3 id="安全通信"><a href="#安全通信" class="headerlink" title="安全通信"></a>安全通信</h3><ol>
 <li>gRPC 暂未提供读取证书及秘钥文件的接口，需要自行读取，或将证书或秘钥内容拷贝到变量中。（注意换行）</li>
@@ -421,7 +513,7 @@
 <li><p>关于本地调试遇到的问题：<br> <code>net::ERR_CERT_COMMON_NAME_INVALID</code><br> <code>net::ERR_CERT_DATE_INVALID</code><br> 处理方法：COMMON_NAME 代表证书中的服务器域名，使用正确的域名（生成签名请求时指定 Common Name 或者在 extfile 中添加 Subject Alternative Name, 本地环境建议加入 localhost）；DATE INVALID 是指证书过期了，openssl x509 检查日期，注意，-days 参数值竟然可以是负数（时间往前推）。</p>
 </li>
 </ol>
-<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html" target="_blank" rel="noopener">https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html</a><br><a href="https://codeday.me/bug/20181110/373571.html" target="_blank" rel="noopener">https://codeday.me/bug/20181110/373571.html</a><br><a href="https://blog.csdn.net/u013066244/article/details/78725842" target="_blank" rel="noopener">https://blog.csdn.net/u013066244/article/details/78725842</a></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a href="https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html" target="_blank" rel="noopener">基于 OpenSSL 自建 CA 和颁发 SSL 证书</a><br><a href="https://codeday.me/bug/20181110/373571.html" target="_blank" rel="noopener">google-chrome – Chrome：无效的自签名SSL证书 – “Subject Alternative Name Missing”</a><br><a href="https://blog.csdn.net/u013066244/article/details/78725842" target="_blank" rel="noopener">OpenSSL自签发配置有多域名或ip地址的证书</a><br><a href="https://www.cnblogs.com/bonelee/p/9577115.html" target="_blank" rel="noopener">https wireshark抓包——要解密出原始数据光有ssl 证书还不行，还要有浏览器内的pre-master-secret（内存里）</a><br><a href="https://blog.csdn.net/u013066244/article/details/79364011" target="_blank" rel="noopener">RSA与 Diffie-Hellman密钥交换 的区别</a><br><a href="https://xz.aliyun.com/t/2531" target="_blank" rel="noopener">SSL/TLS协议详解(下)——TLS握手协议</a></p>
 ]]></content>
       
         <categories>
@@ -1272,11 +1364,11 @@
 <a id="more"></a>
 <h2 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h2><h2 id="Maven-配置"><a href="#Maven-配置" class="headerlink" title="Maven 配置"></a>Maven 配置</h2><h3 id="使用外部Maven"><a href="#使用外部Maven" class="headerlink" title="使用外部Maven"></a>使用外部Maven</h3><p>在 Eclipse 中设置外部 Maven，并使用自定义 Maven 配置文件 <code>settings.xml</code>。</p>
 <h3 id="JRE-版本配置"><a href="#JRE-版本配置" class="headerlink" title="JRE 版本配置"></a>JRE 版本配置</h3><p>默认情况下，右键项目 -&gt; Maven -&gt; Update Project<br>(check “Update project configuration from pom.xml”)<br>项目属性将被设置成 JRE1.5，警告与当前所使用 JRE 不兼容。<br>修改 Maven 配置<code>D:\Program_Files\Java\Maven\conf</code>，如下：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;profile&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line">&lt;/profile&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jdk-1.8&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;activation&gt;</span></span><br><span class="line"><span class="code">        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;</span></span><br><span class="line"><span class="code">        &lt;jdk&gt;1.8&lt;/jdk&gt;</span></span><br><span class="line"><span class="code">    &lt;/activation&gt;</span></span><br><span class="line"><span class="code">    &lt;properties&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;</span></span><br><span class="line"><span class="code">        &lt;maven.compiler.compilerVersion&gt;1.8&lt;/maven.compiler.compilerVersion&gt;</span></span><br><span class="line"><span class="code">    &lt;/properties&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>参见：<a href="https://blog.csdn.net/wu2374633583/article/details/78949095" target="_blank" rel="noopener">如何将maven的默认JRE1.5改成1.7修改方法</a></p>
-<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line">&lt;mirror&gt;</span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line">&lt;/mirror&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Maven-仓库"><a href="#Maven-仓库" class="headerlink" title="Maven 仓库"></a>Maven 仓库</h2><h3 id="远程-本地-仓库"><a href="#远程-本地-仓库" class="headerlink" title="(远程/本地)仓库"></a>(远程/本地)仓库</h3><h3 id="国内高速镜像站"><a href="#国内高速镜像站" class="headerlink" title="国内高速镜像站"></a>国内高速镜像站</h3><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*----------- 阿里云 ----------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;nexus-aliyun&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Nexus aliyun&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*--- Maven 官方运维的2号仓库 ---*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;repo2&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;Mirror from Maven Repo2&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repo2.maven.org/maven2/&lt;/url&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/<span class="emphasis">*-------- JBoss 的仓库 -------*</span>/</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span></span><br><span class="line"><span class="code">    &lt;id&gt;jboss-public-repository-group&lt;/id&gt;</span></span><br><span class="line"><span class="code">    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;</span></span><br><span class="line"><span class="code">    &lt;name&gt;JBoss Public Repository Group&lt;/name&gt;</span></span><br><span class="line"><span class="code">    &lt;url&gt;http://repository.jboss.org/nexus/content/groups/public&lt;/url&gt;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -1368,7 +1460,17 @@
 <p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class="mermaid"&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class="mermaid"&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure></p>
 <div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突</div>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将语句：</span></span><br><span class="line">Class01 &lt;|-- AVeryLongClass : Cool</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line">Class01 &amp;lt;|-- AVeryLongClass : Cool</span><br></pre></td></tr></table></figure>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
+participant 网页
+participant 商品详情服务器 as A
+participant 商品价格服务器 as B
+Note over 网页:用户选择商品
+网页->A:查询
+A->B:查询
+B->B:查询DB并计算
+B-->A:返回
+A->A:获取其他信息
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
 e=>end: 登录
 io1=>inputoutput: 输入用户名密码
 sub1=>subroutine: 数据库查询子类
@@ -1379,17 +1481,7 @@ st->io1->sub1->cond
 cond(yes,right)->cond2
 cond(no)->io1(right)
 cond2(yes,right)->op->e
-cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">title:这是一个例子
-participant 网页
-participant 商品详情服务器 as A
-participant 商品价格服务器 as B
-Note over 网页:用户选择商品
-网页->A:查询
-A->B:查询
-B->B:查询DB并计算
-B-->A:返回
-A->A:获取其他信息
-A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+cond2(no)->io1</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 ]]></content>
       
         <categories>
@@ -2103,7 +2195,17 @@ opened again until the handle is closed.
 <li><code>DIA</code> <code>Debug Interface Access SDK</code>，访问存储在PDB（Program Database）文件中信息的库。<br>VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。<br><a href="https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015" target="_blank" rel="noopener">官方参考</a></li>
 <li><code>PDH</code> <code>Performance Data Helper</code> 微软性能数据助手，如同性能监视器记录数据。<a href="https://docs.microsoft.com/en-us/windows/desktop/api/pdh/" target="_blank" rel="noopener">PDH header</a></li>
 <li>关于进程退出检测<br><code>std::atexit</code> 注册进程退出时调用的函数（可注册多个函数，后注册者先调用。）</li>
-<li><a href="https://blog.csdn.net/zhuyaojun/article/details/7066691" target="_blank" rel="noopener">Windows任务管理器API</a></li>
+<li><a href="https://blog.csdn.net/zhuyaojun/article/details/7066691" target="_blank" rel="noopener">Windows任务管理器API (博客)</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/win32/sysinfo/system-information-functions" target="_blank" rel="noopener">System Information Functions</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/win32/fileio/volume-management-functions" target="_blank" rel="noopener">Volume Management Functions (官方)</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/win32/toolhelp/snapshots-of-the-system" target="_blank" rel="noopener">Snapshots of the System (官方)</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes" target="_blank" rel="noopener">Taking a Snapshot and Viewing Processes (官方)</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/win32/fileio/editing-drive-letter-assignments" target="_blank" rel="noopener">Editing Drive Letter Assignments</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/win32/fileio/volume-mount-points" target="_blank" rel="noopener">Mounted Folders</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/win32/fileio/volume-mount-point-examples" target="_blank" rel="noopener">Mounted Folder Examples</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/win32/eap/extensible-authentication-protocol-reference" target="_blank" rel="noopener">Extensible Authentication Protocol Reference</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l?view=vs-2019" target="_blank" rel="noopener">关于字符串长度</a></li>
+<li>Session 远程桌面相关<br>WTSQuerySessionInformationA function</li>
 </ul>
 <h3 id="Windows-Service"><a href="#Windows-Service" class="headerlink" title="Windows Service"></a>Windows Service</h3><ul>
 <li>Related API：<code>OpenSCManager</code>、<code>CreateService</code>、<code>OpenService</code>、<code>ControlService</code>、<code>DeleteService</code>、<code>RegisterServiceCtrlHandler</code>、<code>SetServiceStatus</code>、<code>StartServiceCtrlDispatcher</code></li>
@@ -3651,9 +3753,9 @@ Handler.removeFilter() # 删除过滤器
         
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> log4py </tag>
+            
+            <tag> Python </tag>
             
         </tags>
         
@@ -4322,7 +4424,7 @@ This is [an example][id] reference-style link.
 <pre><code>&lt;http://www.baidu.com&gt;
 </code></pre><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>  </p>
 <pre><code>&lt;xjshuanglong@126.com&gt;
-</code></pre><p><a href="mailto:&#x78;&#x6a;&#115;&#x68;&#117;&#x61;&#x6e;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#50;&#54;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#x78;&#x6a;&#115;&#x68;&#117;&#x61;&#x6e;&#103;&#x6c;&#x6f;&#110;&#103;&#64;&#49;&#50;&#54;&#x2e;&#x63;&#111;&#x6d;</a></p>
+</code></pre><p><a href="mailto:&#x78;&#x6a;&#x73;&#104;&#x75;&#x61;&#x6e;&#103;&#108;&#111;&#x6e;&#103;&#x40;&#x31;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x78;&#x6a;&#x73;&#104;&#x75;&#x61;&#x6e;&#103;&#108;&#111;&#x6e;&#103;&#x40;&#x31;&#50;&#54;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 </li>
 <li><p>反斜杠<br>可以利用反斜杠来插入一些在语法中有其它意义的符号。<br>例如：不要将文本两侧的<code>*</code>转为<code>&lt;em&gt;</code>标签</p>
 <pre><code>*需要转换*
