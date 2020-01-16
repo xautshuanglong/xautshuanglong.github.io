@@ -102,6 +102,7 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * [关于字符串长度](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l?view=vs-2019)
 * Session 远程桌面相关
   WTSQuerySessionInformationA function
+* 文件操作 `SetFileAttributes` `CopyFile` `CopyFileEx`
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
