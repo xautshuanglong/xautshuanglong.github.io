@@ -28,6 +28,7 @@ toc: true
 {% btn https://wiki.python.org/moin/DatabaseInterfaces Python&#32;Mysql warning %}
 {% btn https://docs.python.org/zh-cn/3.7/c-api/index.html Python/C&#32;参考手册 warning %}
 {% btn http://code.py40.com Python在线&#32;Py40.com warning %}
+{% btn https://jupyter-notebook.readthedocs.io/en/stable/ Jupyter&#32;Notebook warning %}
 
 ### C&#35;
 {% btn http://www.runoob.com/csharp/csharp-tutorial.html 菜鸟教程【C&#35;】 danger %}
