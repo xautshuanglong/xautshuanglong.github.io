@@ -27,6 +27,7 @@ SQLCipher is an SQLite extension that provides 256 bit AES encryption of databas
 
 开发工具：`Visual Studio 2015`
 辅助工具：[ActiveTCL](https://www.activestate.com/products/tcl/) `SourceInsight`
+相关依赖：`OpenSSL` `ZLib`
 
 ### 编译报错
 
