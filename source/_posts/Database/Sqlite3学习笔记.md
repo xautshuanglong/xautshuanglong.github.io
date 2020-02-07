@@ -3,7 +3,7 @@ title: SQLite3 学习笔记
 date: 2020-01-14 09:27:39
 categories: Database
 description: SQLite 命令行用法，Sqlcipher 数据库加解密。
-feature: /images/Libraries/SQLite_logo.jpg
+feature: /images/Database/SQLite_logo.jpg
 tags: sqlite
 toc: true
 ---
