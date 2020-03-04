@@ -245,6 +245,9 @@ vim-nerdtree-tabs
 nerdtree-git-plugin
 ```
 
+## vim 更多插件
+[我的Shell + VIM配置](https://www.cnblogs.com/edward2013/p/5295004.html)
+
 ## vim 疑难
 
 ### 换行符处理
