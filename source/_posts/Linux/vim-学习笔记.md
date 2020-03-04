@@ -206,7 +206,7 @@ filetype plugin indent on
 
 "------------------ Tagbar Configuration --------------------"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 "------------------ NERDTree Configuration --------------------"
 let NERDTreeShowBookmarks=1
 let NERDTreeShowLineNumbers=1
