@@ -177,7 +177,15 @@ set showmatch
 set laststatus=2
 set wildmenu
 set scrolloff=3
+set nowrap
+
 set completeopt=longest,menu
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType java set omnifunc=javacomplete#Complet
 
 set cursorline
 "set cursorcolumn
@@ -202,18 +210,23 @@ call vundle#begin()
     Plugin 'Xuyuanp/nerdtree-git-plugin'
     Plugin 'jistr/vim-nerdtree-tabs'
 call vundle#end()
+
+filetype indent on
+filetype plugin on
 filetype plugin indent on
 
 "------------------ Tagbar Configuration --------------------"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+let g:tagbar_width=35
+autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx,*.java,*.py call tagbar#autoopen()
 "------------------ NERDTree Configuration --------------------"
 let NERDTreeShowBookmarks=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
+let NERDTreeWinSize=35
 let g:nerdtree_tabs_open_on_console_startup=1
-let NERDTreeIgnore=['\.pyc$','\~$','\.swp$','\.o$','\.a$','\.so$']
+let NERDTreeIgnore=['\.pyc$','\.class$','\~$','\.swp$','\.o$','\.a$','\.so$']
 ```
 
 ## vim nerdtree
