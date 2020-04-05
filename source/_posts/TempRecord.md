@@ -216,6 +216,7 @@ https://www.microsoft.com/com/default.mspx
 
 ## 算法
 * `局部敏感哈希`
+* 字符串变形，可见范围，自定义基长度，同 `Base64` （`Base85` git 源码 base85.h base85.c）
 
 ## 网络协议
 
