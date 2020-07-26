@@ -26,7 +26,7 @@ tags: Markdown
 | 标题2 | `## 标题2` |行首（#后有空格）|
 | 标题3 | `### 标题3` |行首（#后有空格）|
 | 链接 |`[百度](http://www.baidu.com "百度")`|[百度](http://www.baidu.com "百度")(标题双引号前有空格)|
-| 图片 |`![alt](/css/images/favicon.ico)`|![Alert](/css/images/favicon.ico)|
+| 图片 |`![Alert](/css/images/favicon.ico)`|![Alert](/css/images/favicon.ico)|
 
 ### 几点说明
 1. 关于有序列表，序号可以不按顺序标记，甚至可以相同。
