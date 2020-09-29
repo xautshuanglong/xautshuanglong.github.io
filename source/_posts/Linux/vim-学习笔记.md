@@ -154,6 +154,7 @@ toc: true
 |:%!fmt|对齐所有行|
 |!}fmt|对齐光标处的所有行|
 |5!!fmt|对齐光标所在处向下 5 行|
+|gg=G|从第一行到最后一行，将源码内容对齐，简单格式化|
 
 [Vim 命令合集](http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html "http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html")
 [超过130个你需要了解的 vim 命令](http://www.oschina.net/news/43167/130-essential-vim-commands)
