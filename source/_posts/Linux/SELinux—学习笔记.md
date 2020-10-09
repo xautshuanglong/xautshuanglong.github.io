@@ -16,4 +16,5 @@ SELinux
 [做人做事，安全第一！ —— SELinux 入门](https://zhuanlan.zhihu.com/p/30483108)
 [SELinux安全系统基础](https://www.cnblogs.com/xiaoluo501395377/archive/2013/05/26/3100444.html)
 [SELinux基本概念及基本配置](http://www.toxingwang.com/management/security/1011.html)
+[如何在Ubuntu上安装SELinux](https://cloud.tencent.com/developer/article/1188032)
 
