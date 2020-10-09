@@ -143,8 +143,8 @@ toc: true
 [//]: # (目录访问控制)
 {% btn http://www.openldap.org/ OpenLDAP danger %}
 [^_^]: # (特殊注释)
-[commont]: # (啰嗦注释)
-[commont]: <> (啰嗦注释)
+[comment]: # (啰嗦注释)
+[comment]: <> (啰嗦注释)
 
 ## Docker
 {% btn https://cloud.docker.com/repository/list Docker&#32;Hub success %}
