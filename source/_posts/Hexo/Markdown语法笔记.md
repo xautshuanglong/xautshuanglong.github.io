@@ -60,6 +60,27 @@ tags: Markdown
         <xjshuanglong@126.com>
     <xjshuanglong@126.com>
 
+* 注释：不渲染到 HTML
+        // 以下写法有效 Hexo Markdown
+        [comment]: <> (This is a comment, it will not be included)
+        [comment]: <> (in the output file unless you use it in)
+        [comment]: <> (a reference style link.)
+        [//]: <> (This is also a comment.)
+        [//]: # (This may be the most platform independent comment)
+        [^_^]: # (This is also a comment.)
+    
+        // 以下写法无效 Hexo Markdown
+        [^_^]:
+            commentted-out contents
+            should be shift to right by four spaces (`>>`).
+
+[comment]: <> (This is a comment, it will not be included)
+[comment]: <> (in the output file unless you use it in)
+[comment]: <> (a reference style link.)
+[//]: <> (This is also a comment.)
+[//]: # (This may be the most platform independent comment)
+[^_^]: # (This is also a comment.)
+
 *   反斜杠
 可以利用反斜杠来插入一些在语法中有其它意义的符号。  
 例如：不要将文本两侧的`*`转为`<em>`标签
@@ -90,3 +111,4 @@ __需要转换的特殊字符如下所示：__
 __转义解决不了的字符__  
 如果碰见特殊字符，可以通过 **Unicode** 编码进行处理：
 eg:在表格中插入`|`,可用 `&#124;`.
+
