@@ -18,6 +18,29 @@ toc: true
 
 ## 配置说明
 
+代理那些事
+
+[//]: # (借助 v2ray 下载墙外代码，端口号根据代理软件而定)
+
+git config core.longpaths true
+git config http.proxy http://127.0.0.1:10809
+git config https.proxy https://127.0.0.1:10809
+
+CMD 管理员权限系统环境
+
+netsh winhttp show proxy
+netsh winhttp set proxy
+netsh winhttp reset proxy
+
+CMD 运行环境
+
+set http_proxy=http://127.0.0.1:10809
+set https_proxy=https://127.0.0.1:10809
+set socks5_proxy=socks5://127.0.0.1:10808
+
+特殊情况下无法 TLS 协议 https://xxx.xxx.xxx 下载资源，尝试将 https 替换为 socks5
+set https_proxy=socks5://127.0.0.1:10808
+
 
 ## 问题解决
 
@@ -64,6 +87,8 @@ netsh interface portproxy show all
 {% endalert %}
 {% label 问题描述 danger %}
 无法从 WSL 中访问主机应用（代理软件）
+127.0.0.1 不能访问宿主机，通过宿主机内网 IP 也不能访问宿主机。
+通过 windows 网络适配器管理可以看到名为 vEthernet(WSL) 的适配器 `Hyper-V Virtrual Ethernet Adapter`，查看属性得知使用了静态 IP 和特定的子网掩码，使用该 IP 可实现从 WSL 访问主机。也可在 WSL 中通过命令行查看：`cat /etc/resolve.conf`。
 {% label 解决方案 success %}
 找对IP，配置防火墙规则。
 参考网址：[比较 WSL 1 和 WSL 2 —— 访问网络应用程序](https://docs.microsoft.com/zh-cn/windows/wsl/compare-versions)
