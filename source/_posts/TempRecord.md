@@ -16,19 +16,6 @@ toc: true
 [右值引用与转移语义](http://www.ibm.com/developerworks/cn/aix/library/1307_lisl_c11/)
 [Range-based for 循环](https://www.cnblogs.com/h46incon/archive/2013/06/02/3113737.html)
 
-## C# 相关
-### C# WinForm 应用退出
-[C# WinForm程序退出的方法](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
-[C# — WinForm 退出方法总结](http://blog.csdn.net/yl2isoft/article/details/38168681)
-[C# Enum,Int,String的互相转换 枚举转换](http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html)
-
-### C# dllimport 类型转换
-[C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
-[C#调用VC的DLL的接口函数参数类型转换一览表](http://www.cnblogs.com/Huayuan/archive/2012/07/05/2577439.html)
-
-### C# Windows 服务
-[穿透Session 0 隔离（一）](http://www.cnblogs.com/gnielee/archive/2010/04/07/session0-isolation-part1.html)
-[穿透Session 0 隔离（二）](http://www.cnblogs.com/gnielee/archive/2010/04/08/session0-isolation-part2.html)
 
 ## Windows
 ### 查看 Windows 系统版本
@@ -137,6 +124,19 @@ https://www.microsoft.com/com/default.mspx
 `RtlCaptureContext`
 
 ## 需要总结内容
+
+### C&#35;
+* C# WinForm 应用退出
+[C# WinForm程序退出的方法](http://www.cnblogs.com/yugen/archive/2010/08/10/1796864.html)
+[C# — WinForm 退出方法总结](http://blog.csdn.net/yl2isoft/article/details/38168681)
+[C# Enum,Int,String的互相转换 枚举转换](http://www.cnblogs.com/pato/archive/2011/08/15/2139705.html)
+* C# dllimport 类型转换
+[C#调用dll时的类型转换总结](http://blog.chinaunix.net/uid-16685753-id-2738234.html)
+[C#调用VC的DLL的接口函数参数类型转换一览表](http://www.cnblogs.com/Huayuan/archive/2012/07/05/2577439.html)
+* C# Windows 服务
+[穿透Session 0 隔离（一）](http://www.cnblogs.com/gnielee/archive/2010/04/07/session0-isolation-part1.html)
+[穿透Session 0 隔离（二）](http://www.cnblogs.com/gnielee/archive/2010/04/08/session0-isolation-part2.html)
+
 ### C/C++ 
 * [Google开源项目风格](http://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/classes/)
 * 初始化列表
@@ -214,6 +214,13 @@ https://www.microsoft.com/com/default.mspx
 ### Docker
 * [Docker系列](https://www.cnblogs.com/ityouknow/category/1173004.html)
 
+## 常用工具
+* CURL POST 传参
+  curl -d @- http://hostname:port
+  Linux: ctrl + D 一次不行就两次，前后输入 ENTER 试试。
+  Windows: ctrl + Z 一次不行就两次，前后输入 ENTER 试试。
+  [命令行中输入EOF,即文本结束符](https://blog.csdn.net/candyguy242/article/details/8256325)
+
 ## 算法
 * `局部敏感哈希`
 * 字符串变形，可见范围，自定义基长度，同 `Base64` （`Base85` git 源码 base85.h base85.c）
@@ -262,6 +269,11 @@ https://www.microsoft.com/com/default.mspx
 ## 运维监控
 
 ### Prometheus
+* 特性说明
+  存储有限，将数据保存在本地，只监控近期数据变化，不适合大量数据存储。远程存储：`OpenTSDB`、`M3db`。
+  数据并非 100% 可靠
+  无权限管理系统，需额外上层管理系统配合支持。推荐 Grafana
+
 * PushGateway
   避免收集数据本身的`job`和`instance`被覆盖：prometheus 配置文件中添加`honor_labels: true`。
 ``` bash
