@@ -259,3 +259,22 @@ https://www.microsoft.com/com/default.mspx
 * [阿里P8架构师谈：架构设计之数据库垂直、水平拆分六大原则](https://youzhixueyuan.com/six-principles-of-vertical-and-horizontal-resolution-of-database.html)
 * [阿里P8架构师谈：MySQL慢查询优化、索引优化、以及表等优化总结](https://youzhixueyuan.com/mysql-slow-query-optimization-index-optimization.html)
 
+## 运维监控
+
+### Prometheus
+* PushGateway
+  避免收集数据本身的`job`和`instance`被覆盖：prometheus 配置文件中添加`honor_labels: true`。
+``` bash
+# 未覆盖示例：
+some_metric{instance="some_instance",job="some_job"}
+# 被覆盖示例：
+some_metric{exported_instance="some_instance",exported_job="some_job",instance="localhost:9091",job="PushGateway"}
+```
+  防止 pushgateway 重启或宕机时丢失数据：`-persistence.file`、`-persistence.file`
+
+* 其他
+
+### Zabbix
+
+### Open-FaIcon
+
