@@ -90,10 +90,12 @@ C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 * Session 远程桌面相关
   WTSQuerySessionInformationA function
 * 文件操作 `SetFileAttributes` `CopyFile` `CopyFileEx`
-* [【Print Spooler API Functions】](https://docs.microsoft.com/en-us/windows/win32/printdocs/printing-and-print-spooler-functions)
-* [【Print Document Package API】](https://docs.microsoft.com/zh-cn/windows/win32/printdocs/tailored-app-printing-api)
-* [【Print Dialog Box】](https://docs.microsoft.com/en-us/windows/win32/dlgbox/print-dialog-box)
-* [【Print Ticket API】](https://docs.microsoft.com/en-us/windows/win32/printdocs/print-ticket-api)
+* 打印机操作
+  [【Print Spooler API Functions】](https://docs.microsoft.com/en-us/windows/win32/printdocs/printing-and-print-spooler-functions)
+  [【Print Document Package API】](https://docs.microsoft.com/zh-cn/windows/win32/printdocs/tailored-app-printing-api)
+  [【Print Dialog Box】](https://docs.microsoft.com/en-us/windows/win32/dlgbox/print-dialog-box)
+  [【Print Ticket API】](https://docs.microsoft.com/en-us/windows/win32/printdocs/print-ticket-api)
+* 跟踪日志 `TraceLog.exe` `TracePdb.exe` `TraceView.exe` [Using TraceView](https://docs.microsoft.com/zh-tw/windows-hardware/drivers/devtest/using-traceview)
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
