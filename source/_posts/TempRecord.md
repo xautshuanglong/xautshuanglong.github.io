@@ -222,6 +222,11 @@ https://www.microsoft.com/com/default.mspx
   Linux: ctrl + D 一次不行就两次，前后输入 ENTER 试试。
   Windows: ctrl + Z 一次不行就两次，前后输入 ENTER 试试。
   [命令行中输入EOF,即文本结束符](https://blog.csdn.net/candyguy242/article/details/8256325)
+* 调试信息查看器
+  [Debug View](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview)
+* 进程监视器
+  [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+  [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
 
 ## 算法
 * `局部敏感哈希`
