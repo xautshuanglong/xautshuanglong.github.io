@@ -227,6 +227,15 @@ https://www.microsoft.com/com/default.mspx
 * 进程监视器
   [Process Explorer](https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer)
   [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
+* GPU 性能问题排查
+  GPUView log.cmd `错误：此时不应有 4000` 缺环境变量`TRACE_LOGGING_MEMORY` 扫描 systeminfo 查看内存时，遇到中文。
+  （设置环境变量或者 set 临时变量）
+  Vtune
+  Nvidia NightSight
+* Alternative Data Stream（备用数据流）
+  dir /r file/directory 查看文件是否有备用数据流
+  streams64.exe -d file 删除指定文件的备用数据流
+  PowerShell : Get-Content -Path filename -Stream streamname 可获取备用数据流的内容
 
 ## 算法
 * `局部敏感哈希`
@@ -263,6 +272,7 @@ https://www.microsoft.com/com/default.mspx
   [使用火焰图做性能分析](http://neoremind.com/2017/09/%E4%BD%BF%E7%94%A8%E7%81%AB%E7%84%B0%E5%9B%BE%E5%81%9A%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/)
   [如何读懂火焰图](http://www.ruanyifeng.com/blog/2017/09/flame-graph.html)
   [linux 下用火焰图进行性能分析](https://blog.csdn.net/gatieme/article/details/78885908)
+  [Windows Performance Toolkit Technical Reference](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945&#40;v=win.10&#41;?redirectedfrom=MSDN)
 
 ## 性能优化
 * [高并发编程系列：4大JVM性能分析工具详解，及内存泄漏分析方案](https://youzhixueyuan.com/jvm-performance-analysis-tool.html)
