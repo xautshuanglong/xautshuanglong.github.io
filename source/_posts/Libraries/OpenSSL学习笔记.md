@@ -36,6 +36,19 @@ toc: true
 链式根需要复杂的安装方法，因为中间根需要加载到托管证书的每个服务器和应用程序。
 链式根需要受到链接的 CA 支配，无法控制 root 用户，一旦root CA 停业，就会受到巨大的牵连。
 
+## 证书格式
+x509 证书常见扩展名：`DER`、`PEM`、`CRT`、`CER`。
+* .DER
+  用于二进制 DER 编码证书。
+* .PEM
+  用于不同类型的 x509v3 文件，以“-BEGIN”为前缀的 ASCII（或 Base64）数据。
+* .CRT
+  用于证书，可被编码为二进制 DER 或 ASCII PEM，常见于类 Unix 系统。
+* .CER
+  CRT 的替代形式（Microsoft Convention），Windows 环境下 .crt 可转为 .cer。
+* .KEY
+  用于公钥和私钥 PKCS#8，可被编码为二进制 DER 或 ASCII PEM。
+
 ## 颁发实战
 1. 配置文件
 ``` C
@@ -189,6 +202,10 @@ IP.2 = %%IP%%
     `net::ERR_CERT_COMMON_NAME_INVALID`
     `net::ERR_CERT_DATE_INVALID`
     处理方法：COMMON_NAME 代表证书中的服务器域名，使用正确的域名（生成签名请求时指定 Common Name 或者在 extfile 中添加 Subject Alternative Name, 本地环境建议加入 localhost）；DATE INVALID 是指证书过期了，openssl x509 检查日期，注意，-days 参数值竟然可以是负数（时间往前推）。
+
+1. OpenSSL 查看代码签名文件信息
+   windows 代码签名文件扩展名为 .cer，属于 DER 编码格式：
+   `openssl.exe x509 -inform DER -text -noout -in sign.cer`
 
 ## 参考网址
 [基于 OpenSSL 自建 CA 和颁发 SSL 证书](https://deepzz.com/post/based-on-openssl-privateCA-issuer-cert.html)
