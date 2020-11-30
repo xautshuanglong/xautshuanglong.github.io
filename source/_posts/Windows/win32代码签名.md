@@ -14,7 +14,7 @@ SPC — 软件发布者证书
 
 ### 方式一
 ``` bash
-makecert -r -pe -n "CN=Code Signature CA" -ss CA -sr CurrentUser -a sha256 -cy authority -sky signature -sv CodeSignatureCA.pvk CodeSignatureCA.cer
+makecert -r -pe -n "CN=Code Signature CA" -ss CA -sr CurrentUser -a sha256 -cy authority -sky signature -eku 1.3.6.1.5.5.7.3.3 -sv CodeSignatureCA.pvk CodeSignatureCA.cer
 // 此处选择手动安装于 本地计算机 受信任的根证书颁发机构
 certutil -user -addstore Root code_signature_ca.cer
 makecert -pe -n "CN=Code Signature" -a sha256 -cy end -sky signature -ic CodeSignatureCA.cer -iv CodeSignatureCA.pvk -sv CodeSignatureSPC.pvk CodeSignatureSPC.cer
