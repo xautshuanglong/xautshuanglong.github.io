@@ -46,8 +46,12 @@ x509 证书常见扩展名：`DER`、`PEM`、`CRT`、`CER`。
   用于证书，可被编码为二进制 DER 或 ASCII PEM，常见于类 Unix 系统。
 * .CER
   CRT 的替代形式（Microsoft Convention），Windows 环境下 .crt 可转为 .cer。
+  证书中只包含公钥，没有私钥。
 * .KEY
   用于公钥和私钥 PKCS#8，可被编码为二进制 DER 或 ASCII PEM。
+* .PFX
+  带私钥的证书（包含公钥和私钥）。
+  由 Public Key Cryptography Standards #12，PKCS#12标准定义，包含了公钥和私钥的二进制格式的证书形式，以 pfx 或 p12 作为证书文件后缀名。
 
 ## 颁发实战
 1. 配置文件
@@ -196,6 +200,16 @@ DNS.1 = %%DOMAIN%%
 DNS.2 = %%DOMAIN%%
 IP.1 = %%IP%%
 IP.2 = %%IP%%
+```
+
+1. OpenSSL 的扩展用途：
+``` bash
+Client Authentication  --- 1.3.6.1.5.5.7.3.2
+Server Authentication  --- 1.3.6.1.5.5.7.3.1
+Secure Email  ------------ 1.3.6.1.5.5.7.3.4
+Code Signing  ------------ 1.3.6.1.5.5.7.3.3
+Timestamp Signing  ------- 1.3.6.1.5.5.7.3.8
+// 更多参考：https://oidref.com/1.3.6.1.5.5.7.3.2
 ```
 
 1. 关于本地调试遇到的问题：
