@@ -3,6 +3,7 @@ title: Markdown 语法笔记
 date: 2016-04-10 15:46:20
 categories: Hexo
 tags: Markdown
+toc: true
 ---
 
 ### 概述
