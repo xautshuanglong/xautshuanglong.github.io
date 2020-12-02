@@ -37,6 +37,12 @@ $password = ConvertTo-SecureString -String password -Force -AsPlainText
 Export-PfxCertificate -cert "Cert:\CurrentUser\My\E19B89242AA47DA6F8640AC98F7AE4DA62E147F5" -FilePath E:\\test.pfx -Password $password
 ```
 
+### 证书安装
+代码签名证书需要被安装到`受信任的根证书颁发机构`才能接受被该证书签名的软件或脚本。
+方式一：生成的证书本来就是文件形式，在目标机器上双击安装即可。
+方式二：生成的证书是存到系统中的，需要导出成证书文件后安装到目标机器上。
+安装步骤：双击证书文件(\*.cer) -> 安装证书 -> 当前用户/本地计算机 -> 将所有的证书都放入下列存储 浏览 -> 受信任的根证书颁发机构 -> 确定
+
 ## 参考网址
 [如何在Windows上为代码签名创建自签名证书](https://blog.csdn.net/weixin_43982401/article/details/104437205)
 [为程序包签名创建证书](https://docs.microsoft.com/zh-cn/windows/msix/package/create-certificate-package-signing)
