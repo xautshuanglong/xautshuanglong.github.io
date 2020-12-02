@@ -68,7 +68,9 @@ toc: true
 * `DIA` `Debug Interface Access SDK`，访问存储在PDB（Program Database）文件中信息的库。
   VisualStudio 安装目录下有库及示例：D:\Program Files (x86)\Microsoft Visual Studio 14.0\DIA SDK 。
   [官方参考](https://docs.microsoft.com/zh-cn/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk?view=vs-2015)
-* `PDH` `Performance Data Helper` 微软性能数据助手，如同性能监视器记录数据。[PDH header](https://docs.microsoft.com/en-us/windows/desktop/api/pdh/)
+* `PDH` `Performance Data Helper` 微软性能数据助手，如同性能监视器记录数据。
+  [PDH header](https://docs.microsoft.com/en-us/windows/desktop/api/pdh/)
+  [browsing-performance-counters](https://docs.microsoft.com/en-us/windows/win32/perfctrs/browsing-performance-counters)
 * 关于进程退出检测
   `std::atexit` 注册进程退出时调用的函数（可注册多个函数，后注册者先调用。）
 * [Windows任务管理器API (博客)](https://blog.csdn.net/zhuyaojun/article/details/7066691)
