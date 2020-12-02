@@ -18,21 +18,15 @@ toc: true
 
 
 ## Windows
-### 查看 Windows 系统版本
 
-命令行
-winver
-systeminfo
-vmic `windows management instrumentation command-line`
-注册表
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion
+### Windows Path
+* Windows 调试器
+  C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 
-### Windows 路径
-C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
-
-### Windows 工具
-* ProcessExplorer
-* ProcessMonitor
+### Windows Command
+* 永久设置环境变量 [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) 
+* 查看系统版本 `winver` `systeminfo` `wmic(已弃用)`
+  或者 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`
 
 ### Windows API
 * 错误码处理
