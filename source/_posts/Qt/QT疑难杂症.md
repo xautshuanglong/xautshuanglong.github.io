@@ -30,3 +30,18 @@ toc: true
    移动到主线程： myObject->moveToThread(QApplication::instance()->thread());
    如果 QObject 拥有父类会导致 moveToThread() 失败；
 
+1. 信号与槽使用直连方式`Qt::DirectConnection`，在槽函数中使用 sender() 无法获取信号发送者，发送者指针为空，为什么为空？
+``` bash
+QT 帮助文档关于 QObject::sender() 的说明
+
+Returns a pointer to the object that sent the signal, if called in a slot activated by a signal; otherwise it returns nullptr. The pointer is valid only during the execution of the slot that calls this function from this object's thread context.
+The pointer returned by this function becomes invalid if the sender is destroyed, or if the slot is disconnected from the sender's signal.
+Warning: This function violates the object-oriented principle of modularity. However, getting access to the sender might be useful when many signals are connected to a single slot.
+Warning: As mentioned above, the return value of this function is not valid when the slot is called via a Qt::DirectConnection from a thread different from this object's thread. Do not use this function in this type of scenario.
+```
+    几点规律总结：
+    * 直连模式无法获取发送者对象，即使发送者与接收者在同一线程也无法获取发送者对象。（Qt5.15.0）
+    * 与 QTcpSocket disconnected 信号相对应的自定义槽函数无法获取发送者对象，进而无法调用 deleteLater()，此时，将 QTcpSocket::disconnected 信号连接到 QTcpSocket::deleteLater，如需自定义槽函数，多连接一个即可。
+
+1. 备用
+
