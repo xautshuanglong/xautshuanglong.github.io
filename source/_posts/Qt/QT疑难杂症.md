@@ -42,6 +42,7 @@ Warning: As mentioned above, the return value of this function is not valid when
     几点规律总结：
     * 直连模式无法获取发送者对象，即使发送者与接收者在同一线程也无法获取发送者对象。（Qt5.15.0）
     * 与 QTcpSocket disconnected 信号相对应的自定义槽函数无法获取发送者对象，进而无法调用 deleteLater()，此时，将 QTcpSocket::disconnected 信号连接到 QTcpSocket::deleteLater，如需自定义槽函数，多连接一个即可。
+    * 子类化 QThread 重载 run 函数并在其中执行 exec 函数，此时将子类化的类的实例通过 moveToThread 移动到自身线程中，可以让子类化后的类的槽函数工作在这个子线程中。
 
 1. 备用
 

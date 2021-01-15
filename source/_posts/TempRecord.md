@@ -27,6 +27,7 @@ toc: true
 * 永久设置环境变量 [setx](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx) 
 * 查看系统版本 `winver` `systeminfo` `wmic(已弃用)`
   或者 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`
+* wmic diskdrive list brief 列举磁盘驱动器：`\\.\PHYSICALDRIVE0`、`\\.\PHYSICALLDRIVE1`。
 
 ### Windows API
 * 错误码处理
