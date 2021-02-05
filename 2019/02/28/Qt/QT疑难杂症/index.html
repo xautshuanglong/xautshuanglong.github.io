@@ -151,6 +151,17 @@ var _hmt = _hmt || [];
 </li>
 <li><p>QObject::moveToThread() 需配合 QObject::thread() 使用，否则可能出现跨线程使用对象的错误。<br>移动到主线程： myObject-&gt;moveToThread(QApplication::instance()-&gt;thread());<br>如果 QObject 拥有父类会导致 moveToThread() 失败；</p>
 </li>
+<li><p>信号与槽使用直连方式<code>Qt::DirectConnection</code>，在槽函数中使用 sender() 无法获取信号发送者，发送者指针为空，为什么为空？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">QT 帮助文档关于 QObject::sender() 的说明</span><br><span class="line"></span><br><span class="line">Returns a pointer to the object that sent the signal, <span class="keyword">if</span> called <span class="keyword">in</span> a slot activated by a signal; otherwise it returns nullptr. The pointer is valid only during the execution of the slot that calls this <span class="keyword">function</span> from this object<span class="string">'s thread context.</span></span><br><span class="line"><span class="string">The pointer returned by this function becomes invalid if the sender is destroyed, or if the slot is disconnected from the sender'</span>s signal.</span><br><span class="line">Warning: This <span class="keyword">function</span> violates the object-oriented principle of modularity. However, getting access to the sender might be useful when many signals are connected to a single slot.</span><br><span class="line">Warning: As mentioned above, the <span class="built_in">return</span> value of this <span class="keyword">function</span> is not valid when the slot is called via a Qt::DirectConnection from a thread different from this object<span class="string">'s thread. Do not use this function in this type of scenario.</span></span><br></pre></td></tr></table></figure>
+<p> 几点规律总结：</p>
+<ul>
+<li>直连模式无法获取发送者对象，即使发送者与接收者在同一线程也无法获取发送者对象。（Qt5.15.0）</li>
+<li>与 QTcpSocket disconnected 信号相对应的自定义槽函数无法获取发送者对象，进而无法调用 deleteLater()，此时，将 QTcpSocket::disconnected 信号连接到 QTcpSocket::deleteLater，如需自定义槽函数，多连接一个即可。</li>
+<li>子类化 QThread 重载 run 函数并在其中执行 exec 函数，此时将子类化的类的实例通过 moveToThread 移动到自身线程中，可以让子类化后的类的槽函数工作在这个子线程中。</li>
+</ul>
+</li>
+<li><p>备用</p>
+</li>
 </ol>
 	  
 	</div>
@@ -295,7 +306,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="container-narrow">
   <footer> <p>
-  &copy; 2020 JiangShuanglong
+  &copy; 2021 JiangShuanglong
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>

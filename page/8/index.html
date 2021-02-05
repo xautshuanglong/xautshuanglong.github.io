@@ -137,6 +137,265 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2016-06-06 </div>
+			<div class="article-title"><a href="/2016/06/06/Linux/Linux信号/">Linux 信号及其处理</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Linux-信号"><a href="#Linux-信号" class="headerlink" title="Linux 信号"></a>Linux 信号</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>软中断信号（<code>signal</code>，简称为信号）用来通知进程发生了异步事件。进程之间可以互相通过系统调用kill发送软中断信号。内核也可以因为内部事件而给进程发送信号，通知进程发生了某个事件。<br><strong>注意：信号只是用来通知某进程发生了某事件，并不给进程传递任何数据。</strong></p>
+<p>收到信号的进程对各种信号有不同处理方法：</p>
+<ul>
+<li>第一种方法，类似中断的处理程序，对于需要处理的信号，进程可以指定处理函数，由该函数处理；</li>
+<li>第二种方法，忽略某个信号，对该信号不做任何处理，就像未发生过一样；</li>
+<li>第三种方法，对该信号的处理保留系统默认值，对大部分信号的缺省操作是使进程终止。
+	
+	</li></ul></div>
+  <a type="button" href="/2016/06/06/Linux/Linux信号/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-24 </div>
+			<div class="article-title"><a href="/2016/05/24/CommonSense/字符编码/">字符编码</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="字符编码相关常识"><a href="#字符编码相关常识" class="headerlink" title="字符编码相关常识"></a>字符编码相关常识</h1><h2 id="字符编码简介"><a href="#字符编码简介" class="headerlink" title="字符编码简介"></a>字符编码简介</h2><h3 id="1-ASCII"><a href="#1-ASCII" class="headerlink" title="1. ASCII"></a>1. ASCII</h3><p><code>ASSII</code>(American Standard Code for Information Interchange),是一种单字节编码。单字节可以表示 256 个不同的字符，可以表示所有的英文字符和许多控制符号。<code>ASCII</code>只用到其中的一半(\x80以下)，这是<code>MBCS</code>得以实现的基础。</p>
+<h3 id="2-MBCS"><a href="#2-MBCS" class="headerlink" title="2. MBCS"></a>2. MBCS</h3><p><code>MBCS</code>(Multi-Byte Character Set)是一种多字节编码。目前大多使用双字节编码，所以也叫<code>DBCS</code>(Double-Byte Character Byte)。<code>MBCS</code>并不是某一种特定的编码，Windows 中根据设定的区域不同，指代不同的编码。而Linux里无法使用MBCS作为编码。Windows中，微软使用<code>ANSI</code>来代表<code>MBCS</code>，在简体中文Windows默认的区域设定里，指代GBK。<br>如GBxxx、BIGxxx等，都是多字节字符编码，他们的规则是：如果第一个字节是\x80以下，则仍然表示ASCII字符；如果是\x80以上，则跟下一个字节一起（共两个字节）表示一个字符，然后跳过下一个字节，继续往下判断。<br>IBM发明了一个叫Code Page的概念，将这些编码都收入囊中并分配页码，GBK是第936页，也就是CP936。所以，也可以使用CP936表示GBK。</p>
+<h3 id="3-Unicode"><a href="#3-Unicode" class="headerlink" title="3. Unicode"></a>3. Unicode</h3><p><code>UCS</code>(Unicode Character Set)还仅仅是字符对应码位的一张表而已，比如<code>汉</code>这个字的码位是<code>6C49</code>。字符具体如何传输和储存则是由<code>UTF</code>(UCS Transformation Format)来负责。<br>Unicode标准<code>UCS-2</code>使用两个字节表示一个字符，<code>UCS-4</code>标准，使用4个字节表示一个字符。<br>最初，使用<code>UCS</code>的码位来保存，这就是<code>UTF-16</code>，比如，<code>汉</code>直接使用\x6C\x49保存(<code>UTF-16-BE</code>)，或是倒过来使用\x49\x6C保存(<code>UTF-16-LE</code>)。但英文字母只需要一个字节就能保存，变成了两个字节，空间消耗大了一倍，于是<code>UTF-8</code>横空出世。<br><code>BOM</code>(Byte Order Mark),文件编码方式。<br>
+	
+	</p></div>
+  <a type="button" href="/2016/05/24/CommonSense/字符编码/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-12 </div>
+			<div class="article-title"><a href="/2016/05/12/Python/Python学习笔记/" title="记录成长的脚印">Python 学习笔记</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote>
+<p>Python 是一门简单易学且功能强大的编程语言：<br>拥有高效的高级数据结构；能够用简单而又高效的方式进行面向对象编程。<br>Python 优雅的语法和动态类型，再结合它的解释性，使其在大多数平台的许多领域成为编写脚本或开发应用程序的理想语言。</p>
+</blockquote>
+	
+	</div>
+  <a type="button" href="/2016/05/12/Python/Python学习笔记/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-09 </div>
+			<div class="article-title"><a href="/2016/05/09/CPlusPlus/stringstream陷阱/">stringstream 陷阱</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="stringstream-陷阱"><a href="#stringstream-陷阱" class="headerlink" title="stringstream 陷阱"></a>stringstream 陷阱</h2><p>stringstream 对象的构造和析构是非常耗 CPU 时间的。<br>如果打算在多次转换中使用同一个 stringstream 对象（效率高），那么最好每次转换前使用 clear() 方法。<br>注意：</p>
+<ul>
+<li>clear() 清空的是 stream 的状态，如：错误状态。</li>
+<li>.str(“”),才能正确清空 stringstream。</li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2016/05/09/CPlusPlus/stringstream陷阱/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-08 </div>
+			<div class="article-title"><a href="/2016/05/08/Web/WebsiteAddress/" title="值得收藏的学习网站">网址收集</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="ProgramLanguage"><a href="#ProgramLanguage" class="headerlink" title="ProgramLanguage"></a>ProgramLanguage</h2><p>值得收藏的学习网址,每天进步一点点。<br>
+	
+	</p></div>
+  <a type="button" href="/2016/05/08/Web/WebsiteAddress/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-06 </div>
+			<div class="article-title"><a href="/2016/05/06/Python/Python小技巧/" title="小技巧">Python 小技巧</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Python-中的小技巧"><a href="#Python-中的小技巧" class="headerlink" title="Python 中的小技巧"></a>Python 中的小技巧</h2><h3 id="1-循环技巧-Looping-Techniques"><a href="#1-循环技巧-Looping-Techniques" class="headerlink" title="1. 循环技巧(Looping Techniques)"></a>1. 循环技巧(Looping Techniques)</h3><ul>
+<li><h4 id="在字典中循环"><a href="#在字典中循环" class="headerlink" title="在字典中循环"></a>在字典中循环</h4>关键字和对应的值可以用<code>iteritems()</code>方法同时解读出来。<pre><code>dict = {&apos;key0&apos;:&apos;value0&apos;,&apos;key1&apos;:&apos;value1&apos;,&apos;key2&apos;:&apos;value2&apos;}
+for key,value in dict.iteritems():
+    print key,value
+</code></pre></li>
+<li><h4 id="在序列中循环"><a href="#在序列中循环" class="headerlink" title="在序列中循环"></a>在序列中循环</h4>索引位置和对应的值可以用<code>enumerate()</code>方法同时得到。<pre><code>list = [&apos;value0&apos;,&apos;value1&apos;,&apos;value2&apos;]
+for index,value in enumerate(list):
+    print index,value
+</code></pre></li>
+<li><h4 id="同时循环多个序列"><a href="#同时循环多个序列" class="headerlink" title="同时循环多个序列"></a>同时循环多个序列</h4>同时循环两个或更多的序列，可以使用<code>zip()</code>整体打包。<pre><code>questions = [&apos;name&apos;,&apos;quest&apos;,&apos;favorite color&apos;]
+answer = [&apos;eric&apos;,&apos;the holy grail&apos;,&apos;blue&apos;]
+for q,a in zip(questions,answer):
+    print &apos;What is your {0}? It is {1}.&apos;.format(q,a)
+</code></pre></li>
+<li><h4 id="逆向循环序列"><a href="#逆向循环序列" class="headerlink" title="逆向循环序列"></a>逆向循环序列</h4>需要逆向循环序列的话，先正向定位序列，然后调用<code>reversed()</code>函数。<pre><code>for i in reversed(xrange(1,10,2)):
+    print i
+</code></pre></li>
+<li><h4 id="排序后循环"><a href="#排序后循环" class="headerlink" title="排序后循环"></a>排序后循环</h4><code>sorted()</code>函数，不改动原序列，生成一个新的已排序的序列。<pre><code>list = [&apos;value2&apos;,&apos;value1&apos;,&apos;value0&apos;]
+for value in sorted(set(list)):
+    print value
+</code></pre>
+	
+	</li></ul></div>
+  <a type="button" href="/2016/05/06/Python/Python小技巧/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-05-03 </div>
+			<div class="article-title"><a href="/2016/05/03/Python/Log4py学习笔记/">Log4py 学习笔记</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="Python-日志模块-logging-简介"><a href="#Python-日志模块-logging-简介" class="headerlink" title="Python 日志模块 logging 简介"></a>Python 日志模块 logging 简介</h2><p>logging分为4模块：loggers,handlers,filters,and formatters.</p>
+<ul>
+<li>loggers: 提供应用程序调用的接口</li>
+<li>handlers: 把日志发送到指定的位置</li>
+<li>filters: 过滤日志信息</li>
+<li>formatters: 格式化输出日志
+	
+	</li></ul></div>
+  <a type="button" href="/2016/05/03/Python/Log4py学习笔记/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-22 </div>
+			<div class="article-title"><a href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/">Apache配置多个虚拟主机 (Windows)</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="Windows下为Apache配置多个虚拟主机"><a href="#Windows下为Apache配置多个虚拟主机" class="headerlink" title="Windows下为Apache配置多个虚拟主机"></a>Windows下为Apache配置多个虚拟主机</h3><h5 id="修改Apache配置文件-安装目录下conf-httpd-conf"><a href="#修改Apache配置文件-安装目录下conf-httpd-conf" class="headerlink" title="修改Apache配置文件(安装目录下conf/httpd.conf)"></a>修改Apache配置文件(安装目录下conf/httpd.conf)</h5><ol>
+<li><p>添加将要监听的端口号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Listen: Allows you to bind Apache to specific IP addresses and/or</span></span><br><span class="line"><span class="comment"># ports, instead of the default. See also the &lt;VirtualHost&gt;</span></span><br><span class="line"><span class="comment"># directive.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Change this to Listen on specific IP addresses as shown below to </span></span><br><span class="line"><span class="comment"># prevent Apache from glomming onto all bound IP addresses.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#Listen 12.34.56.78:80</span></span><br><span class="line">Listen 80</span><br><span class="line">Listen 8080</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置虚拟主机的属性</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:8080&gt;</span><br><span class="line">    ServerAdmin ericjiang</span><br><span class="line">    <span class="comment">#网站文件存放的根目录</span></span><br><span class="line">    DocumentRoot E:/VirtualHost/Client</span><br><span class="line">    <span class="comment">#域名</span></span><br><span class="line">    ServerName http://www.phpcms.com/</span><br><span class="line">    ErrorLog logs/<span class="built_in">test</span>-error.log</span><br><span class="line">    CustomLog logs/<span class="built_in">test</span>-access.log common</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+	
+	</div>
+  <a type="button" href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-04-15 </div>
+			<div class="article-title"><a href="/2016/04/15/Linux/vim-学习笔记/" title="记录 vim 的使用方法及技巧">vim 学习笔记</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+           
+              <div class="thumbnail"><a href="/2016/04/15/Linux/vim-学习笔记/"><img src="/images/Linux/vim_logo.png" alt="vim 学习笔记" class="nofancybox"></a>
+           
+		</div>
+	
+	
+		<h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p>图文并茂地记录 <code>vim</code> 各模式下的操作方法及相应快捷键，附带 <code>vim</code> 地配制方法及插件安装。</p>
+	
+	</div>
+  <a type="button" href="/2016/04/15/Linux/vim-学习笔记/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2016-04-10 </div>
 			<div class="article-title"><a href="/2016/04/10/Hexo/Markdown语法笔记/">Markdown 语法笔记</a></div>						
 		</h3>
@@ -160,118 +419,6 @@ var _hmt = _hmt || [];
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-04 </div>
-			<div class="article-title"><a href="/2016/04/04/Libraries/Log4cpp的编译与使用/">Log4cpp的编译与使用</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="Log4cpp-介绍"><a href="#Log4cpp-介绍" class="headerlink" title="Log4cpp 介绍"></a>Log4cpp 介绍</h3><h5 id="log4cpp-编译"><a href="#log4cpp-编译" class="headerlink" title="log4cpp 编译"></a>log4cpp 编译</h5><h5 id="log4cpp-使用"><a href="#log4cpp-使用" class="headerlink" title="log4cpp 使用"></a>log4cpp 使用</h5>
-	
-	</div>
-  <a type="button" href="/2016/04/04/Libraries/Log4cpp的编译与使用/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-02 </div>
-			<div class="article-title"><a href="/2016/04/02/CPlusPlus/关于log4cpp的配置文件/">关于 log4cpp 的配置文件</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="优先级："><a href="#优先级：" class="headerlink" title="优先级："></a>优先级：</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">符号</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">c%</td>
-<td style="text-align:center">类名 log4cpp有3个主要的组件：categories（类别）、appenders（附加目的地）、和 layouts（布局），layout类控制输出日志消息的显示样式（看起来像什么）。log4cpp当前提供以下layout格式：</td>
-</tr>
-<tr>
-<td style="text-align:center">aaaaaaaaaa</td>
-<td style="text-align:center">aaaaaaaaaaaaaaaaaa</td>
-</tr>
-</tbody>
-</table>
-
-	
-	</div>
-  <a type="button" href="/2016/04/02/CPlusPlus/关于log4cpp的配置文件/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2016-04-02 </div>
-			<div class="article-title"><a href="/2016/04/02/Hexo/Hexo命令集/">Hexo 命令集</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-	
-		<h3 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">hexo 命令</th>
-<th style="text-align:center">范例</th>
-<th style="text-align:center">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">new “title”</td>
-<td style="text-align:center">hexo new “title”</td>
-<td style="text-align:center">创建一篇新文章</td>
-</tr>
-<tr>
-<td style="text-align:center">new draft “title”</td>
-<td style="text-align:center">hexo new draft “title”</td>
-<td style="text-align:center">创建一篇新草稿</td>
-</tr>
-<tr>
-<td style="text-align:center">publish [layout] “title”</td>
-<td style="text-align:center">hexo publish post “title”</td>
-<td style="text-align:center">发布一篇草稿 layout=post\page</td>
-</tr>
-</tbody>
-</table>
-	
-	</div>
-  <a type="button" href="/2016/04/02/Hexo/Hexo命令集/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -288,7 +435,7 @@ var _hmt = _hmt || [];
         <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
 
 		
-          <li class="next disabled"><a>下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		   <li class="next"> <a href="/page/9/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a> </li>          
         
 	
 </ul>
@@ -320,15 +467,15 @@ var _hmt = _hmt || [];
 		<h4>分类</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/Algorithm/">Algorithm<span>2</span></a></li>
+			<li><a href="/categories/Algorithm/">Algorithm<span>3</span></a></li>
 		
-			<li><a href="/categories/CPP/">CPP<span>19</span></a></li>
+			<li><a href="/categories/CPP/">CPP<span>20</span></a></li>
 		
-			<li><a href="/categories/CommonSense/">CommonSense<span>12</span></a></li>
+			<li><a href="/categories/CommonSense/">CommonSense<span>13</span></a></li>
 		
 			<li><a href="/categories/DICOM/">DICOM<span>2</span></a></li>
 		
-			<li><a href="/categories/Database/">Database<span>1</span></a></li>
+			<li><a href="/categories/Database/">Database<span>2</span></a></li>
 		
 			<li><a href="/categories/Docker/">Docker<span>1</span></a></li>
 		
@@ -338,11 +485,11 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/Libraries/">Libraries<span>6</span></a></li>
 		
-			<li><a href="/categories/Linux/">Linux<span>4</span></a></li>
+			<li><a href="/categories/Linux/">Linux<span>5</span></a></li>
 		
 			<li><a href="/categories/Mathematic/">Mathematic<span>4</span></a></li>
 		
-			<li><a href="/categories/Network/">Network<span>4</span></a></li>
+			<li><a href="/categories/Network/">Network<span>6</span></a></li>
 		
 			<li><a href="/categories/Python/">Python<span>4</span></a></li>
 		
@@ -352,7 +499,9 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/VisualStudio/">VisualStudio<span>1</span></a></li>
 		
-			<li><a href="/categories/Web/">Web<span>4</span></a></li>
+			<li><a href="/categories/Web/">Web<span>5</span></a></li>
+		
+			<li><a href="/categories/Windows/">Windows<span>1</span></a></li>
 		
 		</ul>
 	</div>
@@ -363,48 +512,48 @@ var _hmt = _hmt || [];
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/LDAP/">LDAP<span>1</span></a></li>
+		
 			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
 		
-			<li><a href="/tags/xsl/">xsl<span>1</span></a></li>
-		
-			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
-		
-			<li><a href="/tags/STL/">STL<span>9</span></a></li>
-		
-			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-		
-			<li><a href="/tags/license/">license<span>1</span></a></li>
-		
-			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
-		
-			<li><a href="/tags/C-11/">C++11<span>2</span></a></li>
-		
-			<li><a href="/tags/shell/">shell<span>1</span></a></li>
-		
-			<li><a href="/tags/log4py/">log4py<span>1</span></a></li>
-		
-			<li><a href="/tags/gRPC/">gRPC<span>1</span></a></li>
-		
-			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
+			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
 		
 			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
 		
-			<li><a href="/tags/sqlite/">sqlite<span>1</span></a></li>
+			<li><a href="/tags/socket/">socket<span>2</span></a></li>
 		
-			<li><a href="/tags/keywords/">keywords<span>1</span></a></li>
+			<li><a href="/tags/signal/">signal<span>1</span></a></li>
 		
-			<li><a href="/tags/Python/">Python<span>3</span></a></li>
+			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
 		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
 		
-			<li><a href="/tags/Apache/">Apache<span>1</span></a></li>
+			<li><a href="/tags/shell/">shell<span>1</span></a></li>
 		
-			<li><a href="/tags/Website/">Website<span>1</span></a></li>
+			<li><a href="/tags/https/">https<span>1</span></a></li>
 		
 			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
 		
+			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>46</span></a></li>
+			<li><a href="/tags/Sorting/">Sorting<span>1</span></a></li>
+		
+			<li><a href="/tags/STL/">STL<span>9</span></a></li>
+		
+			<li><a href="/tags/VirtualHost/">VirtualHost<span>1</span></a></li>
+		
+			<li><a href="/tags/const/">const<span>1</span></a></li>
+		
+			<li><a href="/tags/websocket/">websocket<span>1</span></a></li>
+		
+			<li><a href="/tags/wsl/">wsl<span>1</span></a></li>
+		
+			<li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>53</span></a></li>
 		 
 		</ul>
 	</div>
@@ -417,23 +566,23 @@ var _hmt = _hmt || [];
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2020/01/14/Libraries/Sqlite3学习笔记/" title="SQLite 命令行用法，Sqlcipher 数据库加解密。"><i class="fa fa-file-o"></i>SQLite3 学习笔记</a>
+        <a href="/2021/02/05/Algorithm/Sorting/"><i class="fa fa-file-o"></i>排序算法汇总</a>
       </li>
     
       <li>
-        <a href="/2019/11/27/Linux/SELinux—学习笔记/" title="SELinux 安全第一步。"><i class="fa fa-file-o"></i>SELinux 学习笔记</a>
+        <a href="/2021/01/18/Network/WebSocket学习笔记/"><i class="fa fa-file-o"></i>WebSocket学习笔记</a>
       </li>
     
       <li>
-        <a href="/2019/10/19/CPlusPlus/POD-Trivial-普通类型和平凡类型说明/" title="C++11 普通类型 平凡类型"><i class="fa fa-file-o"></i>POD Trivial 普通类型和平凡类型说明</a>
+        <a href="/2021/01/15/CPlusPlus/基础概念澄清/" title="基础概念澄清"><i class="fa fa-file-o"></i>基础概念澄清</a>
       </li>
     
       <li>
-        <a href="/2019/10/08/Algorithm/RandomNumberAlgorithm/"><i class="fa fa-file-o"></i>随机数算法</a>
+        <a href="/2020/11/27/Windows/win32代码签名/"><i class="fa fa-file-o"></i>Windows环境下代码签名</a>
       </li>
     
       <li>
-        <a href="/2019/08/01/Libraries/gRPC学习笔记/"><i class="fa fa-file-o"></i>gRPC学习笔记</a>
+        <a href="/2020/07/28/CommonSense/ColorSpace颜色空间/"><i class="fa fa-file-o"></i>ColorSpace颜色空间</a>
       </li>
     
   </ul>
@@ -500,7 +649,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="container-narrow">
   <footer> <p>
-  &copy; 2020 JiangShuanglong
+  &copy; 2021 JiangShuanglong
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
