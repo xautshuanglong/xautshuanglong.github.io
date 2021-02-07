@@ -37,6 +37,9 @@ base64.b64encode(hashlib.sha1('lNnmFaCQ0C8d0BGOeA5RGA==258EAFA5-E914-47DA-95CA-C
 参考资料：
 [JWT、JWS 与 JWE](https://www.jianshu.com/p/50ade6f2e4fd)
 [LibWebsockets JOSE](https://libwebsockets.org/git/libwebsockets/tree/lib/jose)
+[什么是 JWT](https://www.jianshu.com/p/576dbf44b2ae)
+[五分钟带你了解啥是JWT](https://zhuanlan.zhihu.com/p/86937325)
+[JWT 工具](https://jwt.io/)
 
 ## 第三方库
 
