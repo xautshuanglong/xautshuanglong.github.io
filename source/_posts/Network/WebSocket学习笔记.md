@@ -109,5 +109,32 @@ static signed char cb(struct lejp_ctx *ctx, char reason)
 1. test-lejp.c 中 `lws_snprintf` 缓冲区大小计算为：当前指针位置减去缓冲区末尾指针，存在大小端问题，导致部分格式化字符串无法正常输出。
    解决方法：判断地址大小，用大的减去小的，确保计算出来的缓冲区大小为非负数，再去做格式化。
 
-1. CMake 生成 VS2019 解决方案，OpenSSL 配置，openssl.exe 生成证书时需要 openssl.conf 查看 svn 修改记录
+1. CMake 生成 VS2019 解决方案，OpenSSL 配置，openssl.exe 生成证书时需要 openssl.conf
+``` bash
+// libwebsockets-4.1.6/lib/tls/CMakeLists.txt
+// Win32 环境下可能无法找到 openssl.conf 配置文件（手动编译 OpenSSL），Linux 环境安装 OpenSSL 后会有 openssl.conf，可在默认情况下找到。
+// CMake GUI 中增加文件路径变量 OPENSSL_CONFIG_FILE 并定位到 openssl.conf 全路径。
+
+file(WRITE "${PROJECT_BINARY_DIR}/openssl_input.txt"
+    "GB\n"
+    "Erewhon\n"
+    "All around\n"
+    "libwebsockets-test\n"
+    "localhost\n"
+    "none@invalid.org\n\n"
+    )
+# The "type" command is a bit picky with paths.
+file(TO_NATIVE_PATH "${PROJECT_BINARY_DIR}/openssl_input.txt" OPENSSL_INPUT_WIN_PATH)
+message("OPENSSL_INPUT_WIN_PATH = ${OPENSSL_INPUT_WIN_PATH}")
+message("cmd = \"${OPENSSL_EXECUTABLE}\" req -new -newkey rsa:2048 -days 10000 -nodes -x509 -keyout \"${TEST_SERVER_SSL_KEY}\" -out \"${TEST_SERVER_SSL_CERT}\" -config ${OPENSSL_CONFIG_FILE}")
+
+execute_process(
+    COMMAND cmd /c type "${OPENSSL_INPUT_WIN_PATH}"
+    COMMAND "${OPENSSL_EXECUTABLE}" req -new -newkey rsa:2048 -days 10000 -nodes -x509 -keyout "${TEST_SERVER_SSL_KEY}" -out "${TEST_SERVER_SSL_CERT}" -config ${OPENSSL_CONFIG_FILE} RESULT_VARIABLE OPENSSL_RETURN_CODE
+    OUTPUT_QUIET ERROR_QUIET)
+
+message("\n")
+```
+
+1. libwebsockets CMake 生成 JOSE examples 工程 CMake GUI 勾选 `LWS_WITH_JOSE`。
 
