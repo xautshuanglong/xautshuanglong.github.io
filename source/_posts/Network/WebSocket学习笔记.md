@@ -27,6 +27,9 @@ base64.b64encode(hashlib.sha1('lNnmFaCQ0C8d0BGOeA5RGA==258EAFA5-E914-47DA-95CA-C
 // b'jd5qokdDimNb4Vvtu5guseRRObw=' // 输出内容
 ```
 
+## JWT
+组成：JWE JWK JWS
+
 ## 第三方库
 
 ### QWebSocket
@@ -88,14 +91,14 @@ static signed char cb(struct lejp_ctx *ctx, char reason)
     switch (reason) {
     case LEJPCB_COMPLETE:
         lwsl_notice("%sParsing Completed (LEJPCB_COMPLETE)\n", buf);
-        //lejp_reset(ctx);// Shuanglong
+        lejp_reset(ctx);// Shuanglong
         break;
     case LEJPCB_PAIR_NAME:
         lwsl_notice("%spath: '%s' (LEJPCB_PAIR_NAME)\n", buf, ctx->path);
         break;
     case LEJPCB_FAILED:
         lwsl_notice("Parsing Failed ......\n");
-        //lejp_reset(ctx);// Shuanglong
+        lejp_reset(ctx);// Shuanglong
         break;
     }
 
@@ -103,6 +106,8 @@ static signed char cb(struct lejp_ctx *ctx, char reason)
 }
 ```
 
-2. test-lejp.c 中 `lws_snprintf` 缓冲区大小计算为：当前指针位置减去缓冲区末尾指针，存在大小端问题，导致部分格式化字符串无法正常输出。
+1. test-lejp.c 中 `lws_snprintf` 缓冲区大小计算为：当前指针位置减去缓冲区末尾指针，存在大小端问题，导致部分格式化字符串无法正常输出。
    解决方法：判断地址大小，用大的减去小的，确保计算出来的缓冲区大小为非负数，再去做格式化。
+
+1. CMake 生成 VS2019 解决方案，OpenSSL 配置，openssl.exe 生成证书时需要 openssl.conf 查看 svn 修改记录
 
