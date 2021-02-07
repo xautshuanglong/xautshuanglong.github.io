@@ -28,7 +28,15 @@ base64.b64encode(hashlib.sha1('lNnmFaCQ0C8d0BGOeA5RGA==258EAFA5-E914-47DA-95CA-C
 ```
 
 ## JWT
-组成：JWE JWK JWS
+`JWT`: `Json Web Token`
+`JWS`: `Json Web Signatures`
+`JWE`: `Json Web Encryption`
+`JWK`: `Json Web Keys`
+`JWA`: `Json Web Algorithms`
+
+参考资料：
+[JWT、JWS 与 JWE](https://www.jianshu.com/p/50ade6f2e4fd)
+[LibWebsockets JOSE](https://libwebsockets.org/git/libwebsockets/tree/lib/jose)
 
 ## 第三方库
 
