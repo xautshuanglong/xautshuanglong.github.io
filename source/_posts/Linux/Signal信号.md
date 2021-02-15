@@ -1,5 +1,5 @@
 ---
-title: Linux 信号及其处理
+title: 信号及其处理
 date: 2016-06-06 15:58:12
 categories: Linux
 tags: [signal]
@@ -107,6 +107,7 @@ handler: 指定一个处理函数或是`SIG_IGN`、`SIG_DFL`。
 * SIG_DFL:恢复参数 signum 所指的信号的处理方法为默认值。
 
 传递给信号处理函数的参数是信号值，这样使得一个信号处理函数可以处理多个信号。返回值是信号 signum 上一个处理函数或者错误代码 SIG_ERR （出错时）。
+__sigaction 系统调用__
 __kill 系统调用__
 系统调用`kill`用来向进程发送一个信号。声明如下：
 int kill(pid_t pid, int sig);
@@ -138,17 +139,21 @@ ITIMER_REAL: 按实际时间计时，计时到达将给进程发送 SIGALRM 信�
 ITIMER_VIRTUAL: 仅当进程执行时才进行计时。计时到达将发送 SIGVTALRM 信号给进程。
 ITIMER+PROF: 当进程执行时和系统为该进程执行动作时都计时。计时到达将发送 SIGPROF 信号给进程。
 定时器参数 value 用来指明定时器的时间，结构如下：
-struct itimerval
-{
-    struct timeval it_interval;// 下一次的取值
-    struct timeval it_value;// 本次的设定值
-}
+
+    struct itimerval
+    {
+        struct timeval it_interval;// 下一次的取值
+        struct timeval it_value;// 本次的设定值
+    }
+
 该结构中 timeval 结构定义如下：
-struct timeval
-{
-    long tv_sec;// 秒
-    long tv_usec;// 微妙，1 秒 = 1000000 微秒
-}
+
+    struct timeval
+    {
+        long tv_sec;// 秒
+        long tv_usec;// 微妙，1 秒 = 1000000 微秒
+    }
+
 在`setitimer`调用中，参数 old_value 如果不为空，则其中保留的是上次调用设定的值。定时器将 it_value 递减到 0 时，产生一个信号，并将 it_value 的值设定为 it_interval 的值，然后重新计时，如此往复。当 it_value 设定为 0 时，计时器停止，或者当它计时到期，而 it_interval 为 0 时停止。
 调用成功时，返回 0，错误是返回 -1，并设置相应的错误代码 errno：
 EFAULT: 参数 value 或 ovalue 是无效的指针。
@@ -204,3 +209,6 @@ int main()
 }
 
 ```
+
+## Windows 信号
+
