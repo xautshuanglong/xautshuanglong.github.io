@@ -49,6 +49,10 @@ body {
   font-size: 0.9em;
 }
 
+a {
+    word-break: break-word;
+}
+
 /* =============================================================================
    page, post
    ========================================================================== */
@@ -514,11 +518,11 @@ th {
 }
 
 th:first-child {
-  border-left: none; 
+  border-left: none;
 }
 
 th:last-child {
-  border-right: none; 
+  border-right: none;
 }
 
 td {
@@ -533,11 +537,11 @@ td {
 }
 
 td:first-child {
-  border-left: none; 
+  border-left: none;
 }
 
 td:last-child {
-  border-right: none; 
+  border-right: none;
 }
 
 /**

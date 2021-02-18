@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>Markdown 流程图 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Markdown 流程图">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="Markdown 流程图"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -136,6 +136,7 @@ var _hmt = _hmt || [];
 	  		
 
 	  <h2 id="简单流程图示例"><a href="#简单流程图示例" class="headerlink" title="简单流程图示例"></a>简单流程图示例</h2><a id="more"></a>
+
 <h3 id="1-Flowchart"><a href="#1-Flowchart" class="headerlink" title="1. Flowchart"></a>1. Flowchart</h3><div id="flowchart-0" class="flow-chart"></div>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">---------- flow ----------</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">e=&gt;end: 登录</span><br><span class="line">io1=&gt;inputoutput: 输入用户名密码</span><br><span class="line">sub1=&gt;subroutine: 数据库查询子类</span><br><span class="line">cond=&gt;condition: 是否有此用户</span><br><span class="line">cond2=&gt;condition: 密码是否正确</span><br><span class="line">op=&gt;operation: 读入用户信息</span><br><span class="line">st-&gt;io1-&gt;sub1-&gt;cond</span><br><span class="line">cond(yes,right)-&gt;cond2</span><br><span class="line">cond(no)-&gt;io1(right)</span><br><span class="line">cond2(yes,right)-&gt;op-&gt;e</span><br><span class="line">cond2(no)-&gt;io1</span><br></pre></td></tr></table></figure>
@@ -155,7 +156,7 @@ var _hmt = _hmt || [];
     B-->D(fa:fa-spinner)
     B-->E(A fa:fa-camera-retro perhaps?)</pre>
 
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">graph TD</span><br><span class="line"><span class="code">    B["fa:fa-twitter for pease"]</span></span><br><span class="line"><span class="code">    B--&gt;C[fa:fa-ban forbidden]</span></span><br><span class="line"><span class="code">    B--&gt;D(fa:fa-spinner)</span></span><br><span class="line"><span class="code">    B--&gt;E(A fa:fa-camera-retro perhaps?)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">graph TD</span><br><span class="line"><span class="code">    B[&quot;fa:fa-twitter for pease&quot;]</span></span><br><span class="line"><span class="code">    B--&gt;C[fa:fa-ban forbidden]</span></span><br><span class="line"><span class="code">    B--&gt;D(fa:fa-spinner)</span></span><br><span class="line"><span class="code">    B--&gt;E(A fa:fa-camera-retro perhaps?)</span></span><br></pre></td></tr></table></figure>
 <h3 id="4-Mermaid-Sequence"><a href="#4-Mermaid-Sequence" class="headerlink" title="4. Mermaid Sequence"></a>4. Mermaid Sequence</h3><pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
@@ -163,7 +164,7 @@ var _hmt = _hmt || [];
     loop Healthcheck
         John->John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts <br>prevail...
+    Note right of John: Rational thoughts <br/>prevail...
     John-->Alice: Great!
     John->Bob: How about you?
     Bob-->John: Jolly good!</pre>
@@ -202,11 +203,16 @@ var _hmt = _hmt || [];
     Class08 &lt;--> C2 : Cool label</pre>
 
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">---------- mermaid ----------</span><br><span class="line">classDiagram</span><br><span class="line"><span class="code">    Class01 &amp;lt;|-- AVeryLongClass : Cool</span></span><br><span class="line"><span class="code">    Class03 *-- Class04</span></span><br><span class="line"><span class="code">    Class05 o-- Class06</span></span><br><span class="line"><span class="code">    Class07 .. Class08</span></span><br><span class="line"><span class="code">    Class09 --&gt; C2 : Where am i?</span></span><br><span class="line"><span class="code">    Class09 --* C3</span></span><br><span class="line"><span class="code">    Class09 --|&gt; Class07</span></span><br><span class="line"><span class="code">    Class07 : equals()</span></span><br><span class="line"><span class="code">    Class07 : Object[] elementData</span></span><br><span class="line"><span class="code">    Class01 : size()</span></span><br><span class="line"><span class="code">    Class01 : int chimp</span></span><br><span class="line"><span class="code">    Class01 : int gorilla</span></span><br><span class="line"><span class="code">    Class08 &amp;lt;--&gt; C2 : Cool label</span></span><br></pre></td></tr></table></figure>
-<h2 id="编码注意事项"><a href="#编码注意事项" class="headerlink" title="编码注意事项"></a>编码注意事项</h2><div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams markdown渲染问题</div>
-<p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class="mermaid"&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class="mermaid"&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure></p>
-<div class="alert alert-danger"><i class="fa fa-bug"></i>  hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|-- 与 markdown 冲突</div>
+<h2 id="编码注意事项"><a href="#编码注意事项" class="headerlink" title="编码注意事项"></a>编码注意事项</h2><div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p>hexo-filter-mermaid-diagrams markdown渲染问题</p>
+</div>
+
+<p>ejs 渲染时将 <code>--&gt;</code> 替换成 <code>-&amp;gt</code>，导致<code>mermaid.min.js</code>无法识别该语法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将脚本语句：（node_modules\hexo-filter-mermaid-diagrams\lib\render.js line:19）</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;pre class=&quot;mermaid&quot;&gt;<span class="subst">$&#123;content&#125;</span>&lt;/pre&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line"><span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;start&#125;</span>&lt;div class=&quot;mermaid&quot;&gt;&#123;% raw %&#125;<span class="subst">$&#123;content&#125;</span>&#123;% endraw %&#125;&lt;/div&gt;<span class="subst">$&#123;end&#125;</span>`</span>;</span><br></pre></td></tr></table></figure>
+<div class="alert alert-danger"><i class="fa fa-bug  float-left"></i>  <p>hexo-filter-mermaid-diagrams 类图中继承语法 &lt;|– 与 markdown 冲突</p>
+</div>
+
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将语句：</span></span><br><span class="line">Class01 &lt;|-- AVeryLongClass : Cool</span><br><span class="line"><span class="comment">// 替换为：</span></span><br><span class="line">Class01 &amp;lt;|-- AVeryLongClass : Cool</span><br></pre></td></tr></table></figure>
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
 e=>end: 登录
 io1=>inputoutput: 输入用户名密码
 sub1=>subroutine: 数据库查询子类
@@ -227,8 +233,7 @@ A->B:查询
 B->B:查询DB并计算
 B-->A:返回
 A->A:获取其他信息
-A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
-	  
+A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script>	  
 	</div>
 
 	<!-- recommended posts -->
@@ -297,7 +302,7 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "Markdown 流程图",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -328,8 +333,8 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
-  
+    <li><a href="/categories/Hexo/">Hexo<span>3</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -351,7 +356,7 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#简单流程图示例"><span class="toc-article-text">简单流程图示例</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#1-Flowchart"><span class="toc-article-text">1. Flowchart</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#2-Sequence"><span class="toc-article-text">2. Sequence</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#3-Mermaid-Flowchart"><span class="toc-article-text">3. Mermaid Flowchart</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#4-Mermaid-Sequence"><span class="toc-article-text">4. Mermaid Sequence</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#5-Mermaid-Gantt"><span class="toc-article-text">5. Mermaid Gantt</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#6-Mermaid-Class"><span class="toc-article-text">6. Mermaid Class</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#编码注意事项"><span class="toc-article-text">编码注意事项</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%AE%80%E5%8D%95%E6%B5%81%E7%A8%8B%E5%9B%BE%E7%A4%BA%E4%BE%8B"><span class="toc-article-text">简单流程图示例</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#1-Flowchart"><span class="toc-article-text">1. Flowchart</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#2-Sequence"><span class="toc-article-text">2. Sequence</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#3-Mermaid-Flowchart"><span class="toc-article-text">3. Mermaid Flowchart</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#4-Mermaid-Sequence"><span class="toc-article-text">4. Mermaid Sequence</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#5-Mermaid-Gantt"><span class="toc-article-text">5. Mermaid Gantt</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#6-Mermaid-Class"><span class="toc-article-text">6. Mermaid Class</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%BC%96%E7%A0%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-article-text">编码注意事项</span></a></li></ol>
 		</div>
 	
 	</div>
@@ -367,15 +372,15 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -435,7 +440,7 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
 
 <!-- mermaid chart -->
 
-  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script src='https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js'></script>
   <script>
     if (window.mermaid) {
       mermaid.initialize({theme: 'forest'});
@@ -444,4 +449,4 @@ A-->网页:返回</textarea><textarea id="sequence-0-options" style="display: no
 
 
 </body>
-   </html>
+</html>

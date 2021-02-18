@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>几种图片格式介绍 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="几种图片格式介绍">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="几种图片格式介绍"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -137,7 +137,8 @@ var _hmt = _hmt || [];
 
 	  <p><code>BMP</code><br>Bitmap 是 Windows 操作系统中的标准图像文件格式：DDB 设备相关位图；DIB 设备无关位图。<br><code>PNG</code><br>Portable Network Graphics 便携式网络图形是一种无损压缩的图形格式。<br><code>JPEG</code><br>Joint Photographic Expert Group 联合图像专家小组的缩写，是第一个国际图像压缩标准。<br><code>GIF</code><br>Graphics Interchange Format 图像互换格式，是一种基于 LZW 算法的连续色调的无损压缩格式。<br><code>XPM</code><br>X PixMap 是一种基于 ASCII 编码的图像格式，在 X Windows 中应用广泛。</p>
 <a id="more"></a>
-<h2 id="BMP"><a href="#BMP" class="headerlink" title="BMP"></a>BMP</h2><h2 id="PNG"><a href="#PNG" class="headerlink" title="PNG"></a>PNG</h2><h2 id="JPEG"><a href="#JPEG" class="headerlink" title="JPEG"></a>JPEG</h2><h2 id="GIF"><a href="#GIF" class="headerlink" title="GIF"></a>GIF</h2><h2 id="XPM"><a href="#XPM" class="headerlink" title="XPM"></a>XPM</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* XPM */</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> *xpmFile[] =</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"value string"</span>, <span class="comment">// width height numcolors chars_per_pixel x_hotspot y_hotspot XPMEXT</span></span><br><span class="line">    <span class="string">"colors string"</span>, <span class="comment">// #开头表示十六进制RGB  %开头表示十六进制HSV</span></span><br><span class="line">    <span class="string">"pixels string"</span>,</span><br><span class="line">    <span class="string">"other string"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="BMP"><a href="#BMP" class="headerlink" title="BMP"></a>BMP</h2><h2 id="PNG"><a href="#PNG" class="headerlink" title="PNG"></a>PNG</h2><h2 id="JPEG"><a href="#JPEG" class="headerlink" title="JPEG"></a>JPEG</h2><h2 id="GIF"><a href="#GIF" class="headerlink" title="GIF"></a>GIF</h2><h2 id="XPM"><a href="#XPM" class="headerlink" title="XPM"></a>XPM</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* XPM */</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> *xpmFile[] =</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;value string&quot;</span>, <span class="comment">// width height numcolors chars_per_pixel x_hotspot y_hotspot XPMEXT</span></span><br><span class="line">    <span class="string">&quot;colors string&quot;</span>, <span class="comment">// #开头表示十六进制RGB  %开头表示十六进制HSV</span></span><br><span class="line">    <span class="string">&quot;pixels string&quot;</span>,</span><br><span class="line">    <span class="string">&quot;other string&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Colors String 构成：颜色索引<code>character</code>，关键字<code>key</code>，颜色值<code>color</code>。</p>
 <h3 id="颜色索引"><a href="#颜色索引" class="headerlink" title="颜色索引"></a>颜色索引</h3><p>字符串 NONE，表示该颜色是透明色。</p>
 <h3 id="颜色关键字"><a href="#颜色关键字" class="headerlink" title="颜色关键字"></a>颜色关键字</h3><ul>
@@ -152,7 +153,8 @@ var _hmt = _hmt || [];
 <li>% 开头的十六进制数表示 HSV 空间颜色值</li>
 </ul>
 <p>Pixels 部分表示实际的像素，采用调色板中定义的索引，由等同于图像高度的行组成。<br>Extension 部分可以自己定义一些图像附加信息，可单行亦可多行。</p>
-<p>example:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* XPM */</span> </span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> * plaid[] =</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* plaid pixmap */</span></span><br><span class="line">    <span class="comment">/* width height ncolors chars_per_pixel */</span></span><br><span class="line">    <span class="string">"22 22 4 2 0 0 XPMEXT"</span>,</span><br><span class="line">    </span><br><span class="line">　　<span class="comment">/* colors */</span></span><br><span class="line">    <span class="string">"  c red m white s light_color"</span>,</span><br><span class="line">    <span class="string">"Y c green m black s ines_in_mix"</span>,</span><br><span class="line">    <span class="string">"+ c yellow m white s lines_in_dark "</span>,</span><br><span class="line">    <span class="string">"x m black s dark_color "</span>,</span><br><span class="line"></span><br><span class="line">　  <span class="comment">/* pixels */</span></span><br><span class="line">　  <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">"Y Y Y Y Y x Y Y Y Y Y + x + x + x + x + x + "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x + x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">"x x x x x x x x x x x x x x x x x x x x x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">" x x x Y x x "</span>,</span><br><span class="line">    <span class="string">" x x x x Y x x x "</span>,</span><br><span class="line">    <span class="string">"XPMEXT ext1 data1"</span>,</span><br><span class="line">    <span class="string">"XPMEXT ext2"</span>,</span><br><span class="line">    <span class="string">"data2_1"</span>,</span><br><span class="line">    <span class="string">"data2_2"</span>, </span><br><span class="line">    <span class="string">"XPMEXT ext3"</span>,</span><br><span class="line">    <span class="string">"data3"</span>,</span><br><span class="line">    <span class="string">"XPMEXT"</span>,</span><br><span class="line">    <span class="string">"data4"</span>,</span><br><span class="line">    <span class="string">"XPMENDEXT"</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>example:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* XPM */</span> </span><br><span class="line"><span class="keyword">static</span> <span class="keyword">char</span> * plaid[] =</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">/* plaid pixmap */</span></span><br><span class="line">    <span class="comment">/* width height ncolors chars_per_pixel */</span></span><br><span class="line">    <span class="string">&quot;22 22 4 2 0 0 XPMEXT&quot;</span>,</span><br><span class="line">    </span><br><span class="line">　　<span class="comment">/* colors */</span></span><br><span class="line">    <span class="string">&quot;  c red m white s light_color&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Y c green m black s ines_in_mix&quot;</span>,</span><br><span class="line">    <span class="string">&quot;+ c yellow m white s lines_in_dark &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x m black s dark_color &quot;</span>,</span><br><span class="line"></span><br><span class="line">　  <span class="comment">/* pixels */</span></span><br><span class="line">　  <span class="string">&quot;x x x x x x x x x x x x + x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x x x x x x x x x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x x x x x x x x x x x x + x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x x x x x x x x x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x x x x x x x x x x x x + x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;Y Y Y Y Y x Y Y Y Y Y + x + x + x + x + x + &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x x x x x x x x x x x x + x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x x x x x x x x x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x x x x x x x x x x x x + x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x x x x x x x x x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x x x x x x x x x x x x + x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x Y x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x Y x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x Y x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x Y x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x Y x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;x x x x x x x x x x x x x x x x x x x x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x Y x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x Y x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x Y x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x Y x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot; x x x x Y x x x &quot;</span>,</span><br><span class="line">    <span class="string">&quot;XPMEXT ext1 data1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;XPMEXT ext2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;data2_1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;data2_2&quot;</span>, </span><br><span class="line">    <span class="string">&quot;XPMEXT ext3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;data3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;XPMEXT&quot;</span>,</span><br><span class="line">    <span class="string">&quot;data4&quot;</span>,</span><br><span class="line">    <span class="string">&quot;XPMENDEXT&quot;</span></span><br><span class="line">&#125;; </span><br></pre></td></tr></table></figure>
 	  
 	</div>
 
@@ -222,7 +224,7 @@ var _hmt = _hmt || [];
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "几种图片格式介绍",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -253,8 +255,8 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/CommonSense/">CommonSense<span>13</span></a></li>
-  
+    <li><a href="/categories/CommonSense/">CommonSense<span>14</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -268,7 +270,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#BMP"><span class="toc-article-text">BMP</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#PNG"><span class="toc-article-text">PNG</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#JPEG"><span class="toc-article-text">JPEG</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#GIF"><span class="toc-article-text">GIF</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#XPM"><span class="toc-article-text">XPM</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#颜色索引"><span class="toc-article-text">颜色索引</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#颜色关键字"><span class="toc-article-text">颜色关键字</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#颜色值"><span class="toc-article-text">颜色值</span></a></li></ol></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#BMP"><span class="toc-article-text">BMP</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#PNG"><span class="toc-article-text">PNG</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#JPEG"><span class="toc-article-text">JPEG</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#GIF"><span class="toc-article-text">GIF</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#XPM"><span class="toc-article-text">XPM</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E9%A2%9C%E8%89%B2%E7%B4%A2%E5%BC%95"><span class="toc-article-text">颜色索引</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E9%A2%9C%E8%89%B2%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-article-text">颜色关键字</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E9%A2%9C%E8%89%B2%E5%80%BC"><span class="toc-article-text">颜色值</span></a></li></ol></li></ol>
 		</div>
 	
 	</div>
@@ -284,15 +286,15 @@ var _hmt = _hmt || [];
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -354,4 +356,4 @@ var _hmt = _hmt || [];
 
 
 </body>
-   </html>
+</html>

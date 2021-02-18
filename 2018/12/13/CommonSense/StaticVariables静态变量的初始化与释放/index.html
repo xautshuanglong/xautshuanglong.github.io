@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>静态变量的初始化与释放 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="静态变量的初始化与释放">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="静态变量的初始化与释放"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -141,13 +141,13 @@ var _hmt = _hmt || [];
 	  		
 
 	  <blockquote>
-<p><strong>前情提要：</strong><br>VLD要记录每次的内存分配，它通过Windows提供的分配钩子allocation hooks来监视调试堆内存的分配。它是一个用户自定义的回调函数，在每次从堆中分配内存之前被调用，在初始化是VLD使用_CrtSetAllocation注册这个钩子函数。 全局变量在程序初始化时就初始化，如果将VLD作为一个全局变量就可以与程序一起启动，但是C/C++并没有约定全局变量初始化的顺序，如果其它全局变量的构造函数中有内存分配则可能无法检测到。<br><a href="https://blog.csdn.net/fan_hai_ping/article/details/8023433" target="_blank" rel="noopener">https://blog.csdn.net/fan_hai_ping/article/details/8023433</a> </p>
+<p><strong>前情提要：</strong><br>VLD要记录每次的内存分配，它通过Windows提供的分配钩子allocation hooks来监视调试堆内存的分配。它是一个用户自定义的回调函数，在每次从堆中分配内存之前被调用，在初始化是VLD使用_CrtSetAllocation注册这个钩子函数。 全局变量在程序初始化时就初始化，如果将VLD作为一个全局变量就可以与程序一起启动，但是C/C++并没有约定全局变量初始化的顺序，如果其它全局变量的构造函数中有内存分配则可能无法检测到。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fan_hai_ping/article/details/8023433">https://blog.csdn.net/fan_hai_ping/article/details/8023433</a> </p>
 </blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> init_seg(&#123; compiler | lib | user | <span class="meta-string">"section-name"</span> [, func-name]&#125; )</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> init_seg(&#123; compiler | lib | user | <span class="meta-string">&quot;section-name&quot;</span> [, func-name]&#125; )</span></span><br></pre></td></tr></table></figure>
 <p><em>注</em>：子模块（动态链接库）中包含 vld.h 并正确配置 vld lib 才能暴露子模块中的内存泄漏问题。</p>
 <p>C++ 类模板的惰性会使静态成员被使用时才实例化。<br>模板单例模式，为保证静态变量实例化，给静态变量类型增加内联空函数，并调用之。（不影响性能，不扩大占用空间。）</p>
-<p><a href="https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017</a></p>
-<p><a href="http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html" target="_blank" rel="noopener">http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017">https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html">http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html</a></p>
 	  
 	</div>
 
@@ -217,7 +217,7 @@ var _hmt = _hmt || [];
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "静态变量的初始化与释放",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -248,8 +248,8 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/CommonSense/">CommonSense<span>13</span></a></li>
-  
+    <li><a href="/categories/CommonSense/">CommonSense<span>14</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -287,15 +287,15 @@ var _hmt = _hmt || [];
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -357,4 +357,4 @@ var _hmt = _hmt || [];
 
 
 </body>
-   </html>
+</html>

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>StarUML 使用教程 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="StarUML 使用教程">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="StarUML 使用教程"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -137,19 +137,13 @@ var _hmt = _hmt || [];
 
 	  <p>可视化编程</p>
 <a id="more"></a>
-<h2 id="科学使用方法"><a href="#科学使用方法" class="headerlink" title="科学使用方法"></a>科学使用方法</h2><p>StarUML 是用 nodejs 写的（<a href="https://github.com/electron/electron" target="_blank" rel="noopener">Electron框架</a>），新版本中源代码采用 asar 工具打包，无法直接看到 <code>LicenseManagerDomain.js</code>。</p>
+
+<h2 id="科学使用方法"><a href="#科学使用方法" class="headerlink" title="科学使用方法"></a>科学使用方法</h2><p>StarUML 是用 nodejs 写的（<a target="_blank" rel="noopener" href="https://github.com/electron/electron">Electron框架</a>），新版本中源代码采用 asar 工具打包，无法直接看到 <code>LicenseManagerDomain.js</code>。</p>
 <ol>
-<li><p>安装 asar</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g asar</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解压 app.asar</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 找到 StartUML 安装目录下 resources/app.asar， 默认安装路径为 C:\Program Files\StarUML</span><br><span class="line">app extract app.asar</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 JavaScript 源码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 修改前</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="keyword">this</span>.validate().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, () =&gt; &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">false</span>)</span><br><span class="line">    UnregisteredDialog.showDialog()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改后</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="keyword">this</span>.validate().then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, () =&gt; &#123;</span><br><span class="line">    <span class="comment">//setStatus(this, false)</span></span><br><span class="line">    <span class="comment">//UnregisteredDialog.showDialog()</span></span><br><span class="line">    setStatus(<span class="keyword">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打包 app.asar</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asar pack app app.asar</span><br></pre></td></tr></table></figure>
+<li>安装 asar<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g asar</span><br></pre></td></tr></table></figure></li>
+<li>解压 app.asar<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 找到 StartUML 安装目录下 resources&#x2F;app.asar， 默认安装路径为 C:\Program Files\StarUML</span><br><span class="line">app extract app.asar</span><br></pre></td></tr></table></figure></li>
+<li>修改 JavaScript 源码<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 修改前</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="built_in">this</span>.validate().then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="built_in">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="built_in">this</span>, <span class="literal">false</span>)</span><br><span class="line">    UnregisteredDialog.showDialog()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改后</span></span><br><span class="line">checkLicenseValidity () &#123;</span><br><span class="line">  <span class="built_in">this</span>.validate().then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    setStatus(<span class="built_in">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//setStatus(this, false)</span></span><br><span class="line">    <span class="comment">//UnregisteredDialog.showDialog()</span></span><br><span class="line">    setStatus(<span class="built_in">this</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>打包 app.asar<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asar pack app app.asar</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 	  
@@ -221,7 +215,7 @@ var _hmt = _hmt || [];
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "StarUML 使用教程",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -252,8 +246,8 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/UML/">UML<span>1</span></a></li>
-  
+    <li><a href="/categories/UML/">UML<span>1</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -275,7 +269,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#科学使用方法"><span class="toc-article-text">科学使用方法</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%A7%91%E5%AD%A6%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-article-text">科学使用方法</span></a></li></ol>
 		</div>
 	
 	</div>
@@ -291,15 +285,15 @@ var _hmt = _hmt || [];
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -361,4 +355,4 @@ var _hmt = _hmt || [];
 
 
 </body>
-   </html>
+</html>

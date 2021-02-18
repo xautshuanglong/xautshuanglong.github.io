@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>WinApiCollection 常用 Windows API | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="WinApiCollection 常用 Windows API">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="WinApiCollection 常用 Windows API"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -141,8 +141,10 @@ var _hmt = _hmt || [];
 	  		
 
 	  <blockquote>
-<p>经典 Windows API 用法说明，值得收藏···<br><a id="more"></a></p>
+<p>经典 Windows API 用法说明，值得收藏···</p>
 </blockquote>
+<a id="more"></a>
+
 <h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><h4 id="CopyFile"><a href="#CopyFile" class="headerlink" title="CopyFile"></a>CopyFile</h4><pre><code>BOOL WINAPI CopyFile(
     _In_  LPCTSTR lpExistingFileName,
     _In_  LPCTSTR lpNewFileName,
@@ -154,7 +156,8 @@ lpNewFileName[in] --&gt; The name of new file.
 bFailIfExists[in] --&gt; If this parameter is TRUE and the new file specified by lpNewFileName 
 already exist, the function fails. If this parameter is FALSE and the new file already exists, 
 the function overwrites the existing file andd succeeds.
-</code></pre><h4 id="CreateDirectory"><a href="#CreateDirectory" class="headerlink" title="CreateDirectory"></a>CreateDirectory</h4><pre><code>BOOL CreateDirectory(
+</code></pre>
+<h4 id="CreateDirectory"><a href="#CreateDirectory" class="headerlink" title="CreateDirectory"></a>CreateDirectory</h4><pre><code>BOOL CreateDirectory(
     LPCTSTR lpPathName,
     LPSECURITY_ATTRIBUTES lpSecurityAttributes 
 );
@@ -163,12 +166,14 @@ directories, the function applies a specified security descriptor to the new dir
 lpPathName[in] --&gt; Long pointer to a null-terminated string that specified the path of the directory 
 to be created.
 lpSecurityAttributes[in] --&gt; Ignored; set to NULL.
-</code></pre><h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><h4 id="DeleteFile"><a href="#DeleteFile" class="headerlink" title="DeleteFile"></a>DeleteFile</h4><pre><code>BOOL WINAPI DeleteFile(
+</code></pre>
+<h3 id="D"><a href="#D" class="headerlink" title="D"></a>D</h3><h4 id="DeleteFile"><a href="#DeleteFile" class="headerlink" title="DeleteFile"></a>DeleteFile</h4><pre><code>BOOL WINAPI DeleteFile(
     _In_ LPCTSTR lpFileName
 );
 Deletes an existing file.
 lpFileName[in] --&gt; The name of file to be deleted.
-</code></pre><h3 id="M"><a href="#M" class="headerlink" title="M"></a>M</h3><h4 id="MoveFile"><a href="#MoveFile" class="headerlink" title="MoveFile"></a>MoveFile</h4><pre><code>BOOL WINAPI MoveFile(
+</code></pre>
+<h3 id="M"><a href="#M" class="headerlink" title="M"></a>M</h3><h4 id="MoveFile"><a href="#MoveFile" class="headerlink" title="MoveFile"></a>MoveFile</h4><pre><code>BOOL WINAPI MoveFile(
     _In_ LPCTSTR lpExistingFileName,
     _In_ LPCTSTR lpNewFileName
 );
@@ -176,14 +181,16 @@ Moves an existing file or a directory, including its children.
 lpExistingFileName[in] --&gt; The current name of the file or directory on the local computer.
 lpNewFileName[in] --&gt; The new name for the file or directory. The new file must not already exist.
 A new file may be on a different file system or drive. A new directory must be on the same drive. 
-</code></pre><h3 id="R"><a href="#R" class="headerlink" title="R"></a>R</h3><h4 id="RemoveDirectory"><a href="#RemoveDirectory" class="headerlink" title="RemoveDirectory"></a>RemoveDirectory</h4><pre><code>BOOL RemoveDirectory(
+</code></pre>
+<h3 id="R"><a href="#R" class="headerlink" title="R"></a>R</h3><h4 id="RemoveDirectory"><a href="#RemoveDirectory" class="headerlink" title="RemoveDirectory"></a>RemoveDirectory</h4><pre><code>BOOL RemoveDirectory(
     LPCTSTR lpPathName
 );
 This function detetes an empty directory.
 lpPathName[in] --&gt; Pointer to a null-terminated string that specifies the path of the directory 
 to be removed. The path must specify an empty directory, and the calling process must have delete 
 access to the directory.
-</code></pre><h4 id="ReOpenFile"><a href="#ReOpenFile" class="headerlink" title="ReOpenFile"></a>ReOpenFile</h4><pre><code>HANDLE WINAPI ReOpenFile(
+</code></pre>
+<h4 id="ReOpenFile"><a href="#ReOpenFile" class="headerlink" title="ReOpenFile"></a>ReOpenFile</h4><pre><code>HANDLE WINAPI ReOpenFile(
     _In_  HANDLE hOriginalFile,
     _In_  DWORD dwDesiredAccess,
     _In_  DWORD dwShareMode,
@@ -202,7 +209,8 @@ dwShareMode [in] --&gt; The sharing mode of the object. You cannot request a sha
 conflicts with the access mode specified in a previous open request whose handle is still open.
 If this parameter is zero (0) and CreateFile succeeds, the object cannot be shared and cannot be 
 opened again until the handle is closed.
-</code></pre>	  
+</code></pre>
+	  
 	</div>
 
 	<!-- recommended posts -->
@@ -271,7 +279,7 @@ opened again until the handle is closed.
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "WinApiCollection 常用 Windows API",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -302,8 +310,8 @@ opened again until the handle is closed.
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/CPP/">CPP<span>20</span></a></li>
-  
+    <li><a href="/categories/CPP/">CPP<span>20</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -341,15 +349,15 @@ opened again until the handle is closed.
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -411,4 +419,4 @@ opened again until the handle is closed.
 
 
 </body>
-   </html>
+</html>

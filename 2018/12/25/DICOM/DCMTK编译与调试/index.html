@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>DCMTK 编译与调试 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="DCMTK 编译与调试">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="DCMTK 编译与调试"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -137,6 +137,7 @@ var _hmt = _hmt || [];
 
 	  <p>CMake 生成 VS 解决方案使用绝对路径留下的痛</p>
 <a id="more"></a>
+
 <h2 id="CMake-DCMTK"><a href="#CMake-DCMTK" class="headerlink" title="CMake DCMTK"></a>CMake DCMTK</h2><ul>
 <li>指定安装路径，打包头文件及依赖库；</li>
 <li>支持库：xml、png、tiff、openssl、iconv、zlib；</li>
@@ -145,7 +146,7 @@ var _hmt = _hmt || [];
 <h2 id="疑难杂症"><a href="#疑难杂症" class="headerlink" title="疑难杂症"></a>疑难杂症</h2><ol>
 <li>VLD 检查出 log4cplus 内存泄漏<br>现象描述：单线模式（主线程）下通过 DCMTK 中的 log4cplus 输出日志没有检测出内存泄漏，但在多线程环境下，就会出现内存泄漏，大致如下：</li>
 </ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">---------- Block <span class="number">936</span> at <span class="number">0x00000000002672F0</span>: <span class="number">522</span> bytes ----------</span><br><span class="line">  CRT Alloc ID: <span class="number">381092</span></span><br><span class="line">  Leak Hash: <span class="number">0xE89898E0</span>, Count: <span class="number">1</span>, Total <span class="number">522</span> bytes</span><br><span class="line">  Call Stack (TID 5948):</span><br><span class="line">    ucrtbased.dll!<span class="built_in">malloc</span>()</span><br><span class="line">    <span class="keyword">operator</span> <span class="keyword">new</span>[]()</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::reserve() + <span class="number">0xA</span> bytes</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::resize()</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::OFVector&lt;<span class="keyword">char</span>&gt;()</span><br><span class="line">    dcmtk::log4cplus::helpers::snprintf_buf::snprintf_buf()</span><br><span class="line">    dcmtk::log4cplus::internal::per_thread_data::per_thread_data() + <span class="number">0x13</span> bytes</span><br><span class="line">    dcmtk::log4cplus::internal::alloc_ptd() + <span class="number">0x21</span> bytes</span><br><span class="line">    dcmtk::log4cplus::internal::get_ptd() + <span class="number">0x5</span> bytes</span><br><span class="line">    dcmtk::log4cplus::detail::get_macro_body_oss() + <span class="number">0x7</span> bytes</span><br><span class="line">    DicomSCU::InitNetwork() + <span class="number">0x36</span> bytes</span><br><span class="line">    DicomSCU::PerformEcho() + <span class="number">0x15</span> bytes</span><br><span class="line">    DicomSCU::ExcuteOperation() + <span class="number">0x12</span> bytes</span><br><span class="line">    DicomExecutor::run() + <span class="number">0x1C</span> bytes</span><br><span class="line">    Qt5Cored.dll!QBitArray::size() + <span class="number">0x99D40</span> bytes</span><br><span class="line">    Qt5Cored.dll!QBitArray::size() + <span class="number">0xA2BBB</span> bytes</span><br><span class="line">    kernel32.dll!BaseThreadInitThunk() + <span class="number">0xD</span> bytes</span><br><span class="line">    ntdll.dll!RtlUserThreadStart() + <span class="number">0x1D</span> bytes</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">---------- Block <span class="number">936</span> at <span class="number">0x00000000002672F0</span>: <span class="number">522</span> bytes ----------</span><br><span class="line">  CRT Alloc ID: <span class="number">381092</span></span><br><span class="line">  Leak Hash: <span class="number">0xE89898E0</span>, Count: <span class="number">1</span>, Total <span class="number">522</span> bytes</span><br><span class="line">  <span class="function">Call <span class="title">Stack</span> <span class="params">(TID <span class="number">5948</span>)</span>:</span></span><br><span class="line">    ucrtbased.dll!malloc()</span><br><span class="line">    <span class="keyword">operator</span> <span class="keyword">new</span>[]()</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::reserve() + <span class="number">0xA</span> bytes</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::resize()</span><br><span class="line">    OFVector&lt;<span class="keyword">char</span>&gt;::OFVector&lt;<span class="keyword">char</span>&gt;()</span><br><span class="line">    dcmtk::log4cplus::helpers::snprintf_buf::snprintf_buf()</span><br><span class="line">    dcmtk::log4cplus::internal::per_thread_data::per_thread_data() + <span class="number">0x13</span> bytes</span><br><span class="line">    dcmtk::log4cplus::internal::alloc_ptd() + <span class="number">0x21</span> bytes</span><br><span class="line">    dcmtk::log4cplus::internal::get_ptd() + <span class="number">0x5</span> bytes</span><br><span class="line">    dcmtk::log4cplus::detail::get_macro_body_oss() + <span class="number">0x7</span> bytes</span><br><span class="line">    DicomSCU::InitNetwork() + <span class="number">0x36</span> bytes</span><br><span class="line">    DicomSCU::PerformEcho() + <span class="number">0x15</span> bytes</span><br><span class="line">    DicomSCU::ExcuteOperation() + <span class="number">0x12</span> bytes</span><br><span class="line">    DicomExecutor::run() + <span class="number">0x1C</span> bytes</span><br><span class="line">    Qt5Cored.dll!QBitArray::size() + <span class="number">0x99D40</span> bytes</span><br><span class="line">    Qt5Cored.dll!QBitArray::size() + <span class="number">0xA2BBB</span> bytes</span><br><span class="line">    kernel32.dll!BaseThreadInitThunk() + <span class="number">0xD</span> bytes</span><br><span class="line">    ntdll.dll!RtlUserThreadStart() + <span class="number">0x1D</span> bytes</span><br></pre></td></tr></table></figure>
 <p>   解决方案：log4cplus 采用线程局部变量存储多线程中的日志记录，局部变量只在线程中起作用，所以在线程退出时需要主动清理线程局部变量。<code>dcmtk::log4cplus::threadCleanup()</code></p>
 	  
 	</div>
@@ -216,7 +217,7 @@ var _hmt = _hmt || [];
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "DCMTK 编译与调试",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -247,8 +248,8 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/DICOM/">DICOM<span>2</span></a></li>
-  
+    <li><a href="/categories/DICOM/">DICOM<span>2</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -262,7 +263,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#CMake-DCMTK"><span class="toc-article-text">CMake DCMTK</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#疑难杂症"><span class="toc-article-text">疑难杂症</span></a></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#CMake-DCMTK"><span class="toc-article-text">CMake DCMTK</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87"><span class="toc-article-text">疑难杂症</span></a></li></ol>
 		</div>
 	
 	</div>
@@ -278,15 +279,15 @@ var _hmt = _hmt || [];
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -348,4 +349,4 @@ var _hmt = _hmt || [];
 
 
 </body>
-   </html>
+</html>

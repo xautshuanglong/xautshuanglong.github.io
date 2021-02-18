@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>C++11 中的新特性 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="C++11 中的新特性">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="C++11 中的新特性"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -140,171 +140,181 @@ var _hmt = _hmt || [];
 		 </div> <!-- alert -->
 	  		
 
-	  <p>C++11 新特性学习笔记：<br><code>default</code> 和 <code>delete</code> 修饰特殊成员函数。<br><a id="more"></a></p>
-<h2 id="Defaulted-and-Deleted-function"><a href="#Defaulted-and-Deleted-function" class="headerlink" title="Defaulted and Deleted function"></a>Defaulted and Deleted function</h2><h2 id="Asynchronous-Programming"><a href="#Asynchronous-Programming" class="headerlink" title="Asynchronous Programming"></a>Asynchronous Programming</h2><div class="alert alert-warning"><i class="fa fa-bell"></i>  以下三点都满足时， std::future 析构可能导致阻塞：</div>
-<p class="text-warning">1. 共享状态是在调用 std::async 时创建的；<br>
-2. 共享状态尚未处于 std::future_status::read 状态；<br>
-3. 被析构的当前对象持有共享状态的最后一个引用。<br></p>
-<div class="alert alert-info"><i class="fa fa-info"></i>  获取 std::future 结果的方法：</div>
-<p class="text-info">1. std::future::get()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成并返回异步执行结果。<br>
-2. std::future::wait()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成，无返回值。<br>
-3. std::future::wait_for()&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，超时等待异步操作完成，返回异步操作执行状态。<br>
-4. std::future::wait_until()&nbsp;&nbsp;阻塞当前线程，等待异步操作完成直到指定的时间点。<br></p>
+	  <p>C++11 新特性学习笔记：<br><code>default</code> 和 <code>delete</code> 修饰特殊成员函数。</p>
+<a id="more"></a>
+
+<h2 id="Defaulted-and-Deleted-function"><a href="#Defaulted-and-Deleted-function" class="headerlink" title="Defaulted and Deleted function"></a>Defaulted and Deleted function</h2><h2 id="Asynchronous-Programming"><a href="#Asynchronous-Programming" class="headerlink" title="Asynchronous Programming"></a>Asynchronous Programming</h2><div class="alert alert-warning"><i class="fa fa-bell  float-left"></i>  <p>以下三点都满足时， std::future 析构可能导致阻塞：</p>
+</div>
+<p class="text-warning"><ol>
+<li>共享状态是在调用 std::async 时创建的；<br></li>
+<li>共享状态尚未处于 std::future_status::read 状态；<br></li>
+<li>被析构的当前对象持有共享状态的最后一个引用。<br></li>
+</ol>
+</p>
+
+
+<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>获取 std::future 结果的方法：</p>
+</div>
+<p class="text-info"><ol>
+<li>std::future::get()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成并返回异步执行结果。<br></li>
+<li>std::future::wait()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，等待异步操作完成，无返回值。<br></li>
+<li>std::future::wait_for()&nbsp;&nbsp;&nbsp;&nbsp;阻塞当前线程，超时等待异步操作完成，返回异步操作执行状态。<br></li>
+<li>std::future::wait_until()&nbsp;&nbsp;阻塞当前线程，等待异步操作完成直到指定的时间点。<br></li>
+</ol>
+</p>
+
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:left">Description</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">future::get</td>
-<td style="text-align:left">Retrieves the result that is stored in the associated asynchronous state.</td>
+<tbody><tr>
+<td align="left">future::get</td>
+<td align="left">Retrieves the result that is stored in the associated asynchronous state.</td>
 </tr>
 <tr>
-<td style="text-align:left">future::wait</td>
-<td style="text-align:left">Blocks the current thread until the associated asynchronous state is ready.</td>
+<td align="left">future::wait</td>
+<td align="left">Blocks the current thread until the associated asynchronous state is ready.</td>
 </tr>
 <tr>
-<td style="text-align:left">future::wait_for</td>
-<td style="text-align:left">Blocks until the associated asynchronous state is ready <br>or until the specified time has elapsed.</td>
+<td align="left">future::wait_for</td>
+<td align="left">Blocks until the associated asynchronous state is ready <br>or until the specified time has elapsed.</td>
 </tr>
 <tr>
-<td style="text-align:left">future::wait_until</td>
-<td style="text-align:left">Blocks until the associated asynchronous state is ready or until a specified point in time.</td>
+<td align="left">future::wait_until</td>
+<td align="left">Blocks until the associated asynchronous state is ready or until a specified point in time.</td>
 </tr>
-</tbody>
-</table>
-<p><br></p>
-<div class="alert alert-info"><i class="fa fa-info"></i>  与 std::future 相关的枚举类型：</div>
+<tr>
+<td align="left"><br></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>与 std::future 相关的枚举类型：</p>
+</div>
+
 <ul>
 <li>std::future_errc</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">label</th>
-<th style="text-align:center">value</th>
-<th style="text-align:left">description</th>
+<th align="left">label</th>
+<th align="center">value</th>
+<th align="left">description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">broken_promise</td>
-<td style="text-align:center">0</td>
-<td style="text-align:left">The promise object with which the future shares its shared state was destroyed before being set a value or an exception.</td>
+<tbody><tr>
+<td align="left">broken_promise</td>
+<td align="center">0</td>
+<td align="left">The promise object with which the future shares its shared state was destroyed before being set a value or an exception.</td>
 </tr>
 <tr>
-<td style="text-align:left">future_already_retrieved</td>
-<td style="text-align:center">1</td>
-<td style="text-align:left">A future object was already retrieved from this provider.</td>
+<td align="left">future_already_retrieved</td>
+<td align="center">1</td>
+<td align="left">A future object was already retrieved from this provider.</td>
 </tr>
 <tr>
-<td style="text-align:left">promise_already_satisfied</td>
-<td style="text-align:center">2</td>
-<td style="text-align:left">The promise object was already set a value or exception.</td>
+<td align="left">promise_already_satisfied</td>
+<td align="center">2</td>
+<td align="left">The promise object was already set a value or exception.</td>
 </tr>
 <tr>
-<td style="text-align:left">no_state</td>
-<td style="text-align:center">3</td>
-<td style="text-align:left">An operation attempted to access the shared state of an object with no shared state.</td>
+<td align="left">no_state</td>
+<td align="center">3</td>
+<td align="left">An operation attempted to access the shared state of an object with no shared state.</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
 <li>std::future_status</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">label</th>
-<th style="text-align:center">value</th>
-<th style="text-align:left">description</th>
+<th align="left">label</th>
+<th align="center">value</th>
+<th align="left">description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">future_status::ready</td>
-<td style="text-align:center">0</td>
-<td style="text-align:left">The function returned because the shared state was ready.</td>
+<tbody><tr>
+<td align="left">future_status::ready</td>
+<td align="center">0</td>
+<td align="left">The function returned because the shared state was ready.</td>
 </tr>
 <tr>
-<td style="text-align:left">future_status::timeout</td>
-<td style="text-align:center">1</td>
-<td style="text-align:left">The function returned because the specified time was exhausted.</td>
+<td align="left">future_status::timeout</td>
+<td align="center">1</td>
+<td align="left">The function returned because the specified time was exhausted.</td>
 </tr>
 <tr>
-<td style="text-align:left">future_status::deferred</td>
-<td style="text-align:center">2</td>
-<td style="text-align:left">The function returned because the shared state contains a deferred function (see std::async).</td>
+<td align="left">future_status::deferred</td>
+<td align="center">2</td>
+<td align="left">The function returned because the shared state contains a deferred function (see std::async).</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
 <li>std::launch</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">label</th>
-<th style="text-align:center">value</th>
-<th style="text-align:left">description</th>
+<th align="left">label</th>
+<th align="center">value</th>
+<th align="left">description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">launch::async</td>
-<td style="text-align:center">0x1(vc)</td>
-<td style="text-align:left">Asynchronous: The function is called asynchronously by a new thread and synchronizes its return with the point of access to the shared state.</td>
+<tbody><tr>
+<td align="left">launch::async</td>
+<td align="center">0x1(vc)</td>
+<td align="left">Asynchronous: The function is called asynchronously by a new thread and synchronizes its return with the point of access to the shared state.</td>
 </tr>
 <tr>
-<td style="text-align:left">launch::deferred</td>
-<td style="text-align:center">0x2(vc)</td>
-<td style="text-align:left">Deferred: The function is called at the point of access to the shared state.</td>
+<td align="left">launch::deferred</td>
+<td align="center">0x2(vc)</td>
+<td align="left">Deferred: The function is called at the point of access to the shared state.</td>
 </tr>
-</tbody>
-</table>
-<h2 id="Reference-and-Forwarding"><a href="#Reference-and-Forwarding" class="headerlink" title="Reference and Forwarding"></a>Reference and Forwarding</h2><p><a href="http://www.cnblogs.com/jiayayao/p/6527713.html" target="_blank" rel="noopener">为什么C++11引入了std::ref？</a><br><a href="http://blog.csdn.net/zwvista/article/details/12306283" target="_blank" rel="noopener">C++11尝鲜：右值引用和转发型引用</a></p>
-<h2 id="Lambda-Expression"><a href="#Lambda-Expression" class="headerlink" title="Lambda Expression"></a>Lambda Expression</h2><div class="alert alert-info"><i class="fa fa-info"></i>  Lambda 表达式中的闭包说明</div>
+</tbody></table>
+<h2 id="Reference-and-Forwarding"><a href="#Reference-and-Forwarding" class="headerlink" title="Reference and Forwarding"></a>Reference and Forwarding</h2><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/jiayayao/p/6527713.html">为什么C++11引入了std::ref？</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/zwvista/article/details/12306283">C++11尝鲜：右值引用和转发型引用</a></p>
+<h2 id="Lambda-Expression"><a href="#Lambda-Expression" class="headerlink" title="Lambda Expression"></a>Lambda Expression</h2><div class="alert alert-info"><i class="fa fa-info  float-left"></i>  <p>Lambda 表达式中的闭包说明</p>
+</div>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">语法</th>
-<th style="text-align:center">说明</th>
+<th align="center">语法</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>[a, &amp;b]</code></td>
-<td style="text-align:center">其中<code>a</code>以复制捕获，<code>b</code>以引用捕获</td>
+<tbody><tr>
+<td align="center"><code>[a, &amp;b]</code></td>
+<td align="center">其中<code>a</code>以复制捕获，<code>b</code>以引用捕获</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>[this]</code></td>
-<td style="text-align:center">以引用捕获当前对象(*this)</td>
+<td align="center"><code>[this]</code></td>
+<td align="center">以引用捕获当前对象(*this)</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>[&amp;]</code></td>
-<td style="text-align:center">以引用捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td>
+<td align="center"><code>[&amp;]</code></td>
+<td align="center">以引用捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>[=]</code></td>
-<td style="text-align:center">以复制捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td>
+<td align="center"><code>[=]</code></td>
+<td align="center">以复制捕获所有用于 lambda 体内的自动变量，并以引用捕获当前对象，若存在</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>[]</code></td>
-<td style="text-align:center">不捕获</td>
+<td align="center"><code>[]</code></td>
+<td align="center">不捕获</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>&amp;, x</code></td>
-<td style="text-align:center"><code>x</code>显式的捕获，其他变量按引用捕获。</td>
+<td align="center"><code>&amp;, x</code></td>
+<td align="center"><code>x</code>显式的捕获，其他变量按引用捕获。</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>=, &amp;z</code></td>
-<td style="text-align:center"><code>z</code>按引用捕获，其他变量按值捕获。</td>
+<td align="center"><code>=, &amp;z</code></td>
+<td align="center"><code>z</code>按引用捕获，其他变量按值捕获。</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 	  
 	</div>
 
@@ -374,7 +384,7 @@ var _hmt = _hmt || [];
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "C++11 中的新特性",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -405,8 +415,8 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/CPP/">CPP<span>20</span></a></li>
-  
+    <li><a href="/categories/CPP/">CPP<span>20</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -444,15 +454,15 @@ var _hmt = _hmt || [];
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -514,4 +524,4 @@ var _hmt = _hmt || [];
 
 
 </body>
-   </html>
+</html>

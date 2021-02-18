@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <title>Postgresql 学习笔记 | Shuanglong</title>
@@ -11,11 +11,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Postgresql 学习笔记">
-  <meta property="og:site_name" content="Shuanglong">
+  <meta property="og:title" content="Postgresql 学习笔记"/>
+  <meta property="og:site_name" content="Shuanglong"/>
 
   
-    <meta property="og:image" content="undefined">
+    <meta property="og:image" content=""/>
   
 
   
@@ -56,16 +56,16 @@
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?null";
+  hm.src = "//hm.baidu.com/hm.js?";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
 
 
-</head>
-</html>
- <body>  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
   <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -109,8 +109,8 @@ var _hmt = _hmt || [];
 <div class="clearfix"></div>
 
   <div class="container">
-  	<div class="content">
-    	 
+    <div class="content">
+      
 
 
 	
@@ -142,10 +142,11 @@ var _hmt = _hmt || [];
 
 	  <p>Postgresql 介绍</p>
 <a id="more"></a>
+
 <h2 id="Postgresql-客户端"><a href="#Postgresql-客户端" class="headerlink" title="Postgresql 客户端"></a>Postgresql 客户端</h2><h3 id="C-API"><a href="#C-API" class="headerlink" title="C API"></a>C API</h3><h3 id="C-API-1"><a href="#C-API-1" class="headerlink" title="C++ API"></a>C++ API</h3><p>qpxx 编译问题</p>
 <ol>
 <li>runner 工程编译失败，取消 PQXX_SHARED 宏定义</li>
-<li>unit_runner 工程编译失败，test_stream_from.cxx 找不到 pqxx::stream_from::extract_value<a href="std::nullptr_t" target="_blank" rel="noopener">std::nullptr_t</a> 定义<br>实际 stream_from.hxx 中声明，stream_from.cxx 中定义。解决方法：在 test_stream_from.cxx 中重新定义，可能未导出成功（模板没有实例化，懒）</li>
+<li>unit_runner 工程编译失败，test_stream_from.cxx 找不到 pqxx::stream_from::extract_value<a href="std::nullptr_t">std::nullptr_t</a> 定义<br>实际 stream_from.hxx 中声明，stream_from.cxx 中定义。解决方法：在 test_stream_from.cxx 中重新定义，可能未导出成功（模板没有实例化，懒）</li>
 </ol>
 	  
 	</div>
@@ -216,7 +217,7 @@ var _hmt = _hmt || [];
 		   go_to_comment: "去留言",
 		   no_issue: "no_issue",
 		   issue_title: "Postgresql 学习笔记",
-		   issue_id: "undefined",
+		   issue_id: "",
 		   btn_class: "btn btn-primary",
 		   comments_target: "#comment-thread",
 		   loading_target: "#loading_spin"
@@ -247,8 +248,8 @@ var _hmt = _hmt || [];
     <ul id="categorys" class="tag_box list-unstyled collapse in">
           
   <li>
-    </li><li><a href="/categories/Database/">Database<span>2</span></a></li>
-  
+    <li><a href="/categories/Database/">Database<span>2</span></a></li>
+  </li>
 
     </ul>
 	</div>
@@ -270,7 +271,7 @@ var _hmt = _hmt || [];
 	
 	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
 	   <div id="toc" class="toc collapse in">
-			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Postgresql-客户端"><span class="toc-article-text">Postgresql 客户端</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#C-API"><span class="toc-article-text">C API</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#C-API-1"><span class="toc-article-text">C++ API</span></a></li></ol></li></ol>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Postgresql-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-article-text">Postgresql 客户端</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#C-API"><span class="toc-article-text">C API</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#C-API-1"><span class="toc-article-text">C++ API</span></a></li></ol></li></ol>
 		</div>
 	
 	</div>
@@ -286,15 +287,15 @@ var _hmt = _hmt || [];
 
 
 
-	</div>
+    </div>
   </div>
   <div class="container-narrow">
-  <footer> <p>
+    <footer> <p>
   &copy; 2021 JiangShuanglong
   
-      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
-</div> <!-- container-narrow -->
+  </div> <!-- container-narrow -->
   
 
 
@@ -356,4 +357,4 @@ var _hmt = _hmt || [];
 
 
 </body>
-   </html>
+</html>
