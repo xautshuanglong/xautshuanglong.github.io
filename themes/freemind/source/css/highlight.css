@@ -27,7 +27,7 @@ code {
   font-size: 90%;
   text-shadow: 0 1px #fff;  
 /*  word-break: break-all; */
-  word-break: break-word; /* added by shuanglong */
+  word-break: break-word; /* added by Shuanglong */
   word-wrap: break-word;
   white-space: normal;
 }

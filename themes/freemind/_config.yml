@@ -81,3 +81,10 @@ comment_js:
   client_id: "9393dc785289a96d8026"
   client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28"
   count: 5
+
+# mermaid chart —— added by Shuanglong
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+  #startOnload: true  // default true
