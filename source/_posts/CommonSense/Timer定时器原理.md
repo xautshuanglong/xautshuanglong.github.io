@@ -2,6 +2,7 @@
 title: 定时器原理
 date: 2021-02-15 23:33:46
 categories: CommonSense
+feature: /images/CommonSense/Timer_logo.png
 description: 做守时的程序员
 tags: Time
 toc: true
