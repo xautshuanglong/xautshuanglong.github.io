@@ -39,8 +39,8 @@ Either SIG_DEL or SIG_IGN is set as the default signal handling behavior at prog
 7. 跟踪进程执行的信号。
 
 ### 信号描述
-编号 01~31：传统`UNIX`支持的信号，是不可靠信号（非实时的）。
-编号 32~64：扩充的信号，称作可靠信号（实时信号）。
+编号 01\~31：传统`UNIX`支持的信号，是不可靠信号（非实时的）。
+编号 32\~64：扩充的信号，称作可靠信号（实时信号）。
 不可靠信号与可靠信号的区别：前者不支持排队，可能造成信号丢失，而后者不会。
 
 | 编号 | 信号 | 默认动作 | 描述 |
@@ -107,7 +107,57 @@ handler: 指定一个处理函数或是`SIG_IGN`、`SIG_DFL`。
 * SIG_DFL:恢复参数 signum 所指的信号的处理方法为默认值。
 
 传递给信号处理函数的参数是信号值，这样使得一个信号处理函数可以处理多个信号。返回值是信号 signum 上一个处理函数或者错误代码 SIG_ERR （出错时）。
+
 __sigaction 系统调用__
+int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);
+The sigaction() system call is used to change the action taken by a process on receipt of a specific signal.
+signum: 指定有效信号，除了`SIGKILL`和`SIGSTOP`。
+act: 非空参数，为 signum 所代表信号安装的新动作。
+oldact: 如果该参数不为空，它将用于保存上一个动作。
+
+    The sigaction structure is defined as something like:
+    struct sigaction
+    {
+        void     (*sa_handler)(int);
+        void     (*sa_sigaction)(int, siginfo_t *, void *);
+        sigset_t   sa_mask;
+        int        sa_flags;
+        void     (*sa_restorer)(void);
+    };
+`sa_handler`、`sa_sigaction`定义与共用体内，不可同时设置。
+sa_handler 可以是：SIG_DEL、SIG_IGN、一个函数指针（接收一个参数，信号码）。
+当 sa_flags 被标记为 `SA_SIGINFO` 时，sa_sigaction 函数指针生效。
+sa_mask 标记将被阻塞的信号。
+
+    The siginfo_t data type is a structure with the following fields:
+    siginfo_t
+    {
+        int      si_signo;     /* Signal number */
+        int      si_errno;     /* An errno value */
+        int      si_code;      /* Signal code */
+        int      si_trapno;    /* Trap number that caused hardware-generated signal (unused on most architectures) */
+        pid_t    si_pid;       /* Sending process ID */
+        uid_t    si_uid;       /* Real user ID of sending process */
+        int      si_status;    /* Exit value or signal */
+        clock_t  si_utime;     /* User time consumed */
+        clock_t  si_stime;     /* System time consumed */
+        union sigval si_value; /* Signal value */
+        int      si_int;       /* POSIX.1b signal */
+        void    *si_ptr;       /* POSIX.1b signal */
+        int      si_overrun;   /* Timer overrun count; POSIX.1b timers */
+        int      si_timerid;   /* Timer ID; POSIX.1b timers */
+        void    *si_addr;      /* Memory location which caused fault */
+        long     si_band;      /* Band event (was int in glibc 2.3.2 and earlier) */
+        int      si_fd;        /* File descriptor */
+        short    si_addr_lsb;  /* Least significant bit of address (since Linux 2.6.32) */
+        void    *si_lower;     /* Lower bound when address violation occurred (since Linux 3.19) */
+        void    *si_upper;     /* Upper bound when address violation occurred (since Linux 3.19) */
+        int      si_pkey;      /* Protection key on PTE that caused fault (since Linux 4.6) */
+        void    *si_call_addr; /* Address of system call instruction (since Linux 3.5) */
+        int      si_syscall;   /* Number of attempted system call (since Linux 3.5) */
+        unsigned int si_arch;  /* Architecture of attempted system call (since Linux 3.5) */
+    }
+
 __kill 系统调用__
 系统调用`kill`用来向进程发送一个信号。声明如下：
 int kill(pid_t pid, int sig);

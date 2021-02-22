@@ -118,9 +118,15 @@ https://www.microsoft.com/com/default.mspx
 
 ### Unhandled Exception
 * SetUnhandledExceptionFilter : Enables an application to supersede(紧接着...) the top-level exception handler of each thread of a process.
-* _set_invalid_parameter_handler : Sets a function to be called when the CRT detects an invalid argument.
-* _set_purecall_handler : Sets the handler for a pure virtual function call.
+* \_set_invalid_parameter_handler : Sets a function to be called when the CRT detects an invalid argument.
+* \_set_purecall_handler : Sets the handler for a pure virtual function call.
 `RtlCaptureContext`
+
+## Linux
+
+### 函数妙用
+* echo ANSI 控制码 [常用 ANSI 控制码表](https://blog.csdn.net/zyj_zhouyongjun183/article/details/80211245)
+* man -f 显示指定内容的所有 section
 
 ## 需要总结内容
 
