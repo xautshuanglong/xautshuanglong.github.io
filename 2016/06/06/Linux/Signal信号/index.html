@@ -162,7 +162,7 @@ var _hmt = _hmt || [];
 <li>与终端交互相关的信号。如用户关闭一个终端，或者按下 break 键。</li>
 <li>跟踪进程执行的信号。</li>
 </ol>
-<h3 id="信号描述"><a href="#信号描述" class="headerlink" title="信号描述"></a>信号描述</h3><p>编号 01<del>31：传统<code>UNIX</code>支持的信号，是不可靠信号（非实时的）。<br>编号 32</del>64：扩充的信号，称作可靠信号（实时信号）。<br>不可靠信号与可靠信号的区别：前者不支持排队，可能造成信号丢失，而后者不会。</p>
+<h3 id="信号描述"><a href="#信号描述" class="headerlink" title="信号描述"></a>信号描述</h3><p>编号 01~31：传统<code>UNIX</code>支持的信号，是不可靠信号（非实时的）。<br>编号 32~64：扩充的信号，称作可靠信号（实时信号）。<br>不可靠信号与可靠信号的区别：前者不支持排队，可能造成信号丢失，而后者不会。</p>
 <table>
 <thead>
 <tr>
@@ -379,7 +379,49 @@ var _hmt = _hmt || [];
 <li>SIG_IGN:忽略参数 signum 所指的信号。</li>
 <li>SIG_DFL:恢复参数 signum 所指的信号的处理方法为默认值。</li>
 </ul>
-<p>传递给信号处理函数的参数是信号值，这样使得一个信号处理函数可以处理多个信号。返回值是信号 signum 上一个处理函数或者错误代码 SIG_ERR （出错时）。<br><strong>sigaction 系统调用</strong><br><strong>kill 系统调用</strong><br>系统调用<code>kill</code>用来向进程发送一个信号。声明如下：<br>int kill(pid_t pid, int sig);<br>如果参数 pid 大于 0 ，该调用将信号 sig 发送的进程号为 pid 的进程。<br>如果参数 pid 等于 0 ，那么信号 sig 将被发送给当前进程所属的进程组里的所有进程。<br>如果参数 pid 等于 -1 ，那么信号 sig 将被发送给除了进程 1 和自身以外的所有进程。<br>如果参数 pid 小于 -1 ，那么信号 sig 将被发送给属于进程组 -pid 的所有进程。<br>如果参数 sig 等于 0 ，将不发送信号。<br>该调用执行成功时，返回值为 0；出错时，返回值为 -1，并设置相应的错误 代码 errno：</p>
+<p>传递给信号处理函数的参数是信号值，这样使得一个信号处理函数可以处理多个信号。返回值是信号 signum 上一个处理函数或者错误代码 SIG_ERR （出错时）。</p>
+<p><strong>sigaction 系统调用</strong><br>int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);<br>The sigaction() system call is used to change the action taken by a process on receipt of a specific signal.<br>signum: 指定有效信号，除了<code>SIGKILL</code>和<code>SIGSTOP</code>。<br>act: 非空参数，为 signum 所代表信号安装的新动作。<br>oldact: 如果该参数不为空，它将用于保存上一个动作。</p>
+<pre><code>The sigaction structure is defined as something like:
+struct sigaction
+&#123;
+    void     (*sa_handler)(int);
+    void     (*sa_sigaction)(int, siginfo_t *, void *);
+    sigset_t   sa_mask;
+    int        sa_flags;
+    void     (*sa_restorer)(void);
+&#125;;
+</code></pre>
+<p><code>sa_handler</code>、<code>sa_sigaction</code>定义与共用体内，不可同时设置。<br>sa_handler 可以是：SIG_DEL、SIG_IGN、一个函数指针（接收一个参数，信号码）。<br>当 sa_flags 被标记为 <code>SA_SIGINFO</code> 时，sa_sigaction 函数指针生效。<br>sa_mask 标记将被阻塞的信号。</p>
+<pre><code>The siginfo_t data type is a structure with the following fields:
+siginfo_t
+&#123;
+    int      si_signo;     /* Signal number */
+    int      si_errno;     /* An errno value */
+    int      si_code;      /* Signal code */
+    int      si_trapno;    /* Trap number that caused hardware-generated signal (unused on most architectures) */
+    pid_t    si_pid;       /* Sending process ID */
+    uid_t    si_uid;       /* Real user ID of sending process */
+    int      si_status;    /* Exit value or signal */
+    clock_t  si_utime;     /* User time consumed */
+    clock_t  si_stime;     /* System time consumed */
+    union sigval si_value; /* Signal value */
+    int      si_int;       /* POSIX.1b signal */
+    void    *si_ptr;       /* POSIX.1b signal */
+    int      si_overrun;   /* Timer overrun count; POSIX.1b timers */
+    int      si_timerid;   /* Timer ID; POSIX.1b timers */
+    void    *si_addr;      /* Memory location which caused fault */
+    long     si_band;      /* Band event (was int in glibc 2.3.2 and earlier) */
+    int      si_fd;        /* File descriptor */
+    short    si_addr_lsb;  /* Least significant bit of address (since Linux 2.6.32) */
+    void    *si_lower;     /* Lower bound when address violation occurred (since Linux 3.19) */
+    void    *si_upper;     /* Upper bound when address violation occurred (since Linux 3.19) */
+    int      si_pkey;      /* Protection key on PTE that caused fault (since Linux 4.6) */
+    void    *si_call_addr; /* Address of system call instruction (since Linux 3.5) */
+    int      si_syscall;   /* Number of attempted system call (since Linux 3.5) */
+    unsigned int si_arch;  /* Architecture of attempted system call (since Linux 3.5) */
+&#125;
+</code></pre>
+<p><strong>kill 系统调用</strong><br>系统调用<code>kill</code>用来向进程发送一个信号。声明如下：<br>int kill(pid_t pid, int sig);<br>如果参数 pid 大于 0 ，该调用将信号 sig 发送的进程号为 pid 的进程。<br>如果参数 pid 等于 0 ，那么信号 sig 将被发送给当前进程所属的进程组里的所有进程。<br>如果参数 pid 等于 -1 ，那么信号 sig 将被发送给除了进程 1 和自身以外的所有进程。<br>如果参数 pid 小于 -1 ，那么信号 sig 将被发送给属于进程组 -pid 的所有进程。<br>如果参数 sig 等于 0 ，将不发送信号。<br>该调用执行成功时，返回值为 0；出错时，返回值为 -1，并设置相应的错误 代码 errno：</p>
 <ul>
 <li>EINVAL: 指定的信号 sig 无效。</li>
 <li>ESRCH: 参数 pid 指定的进程或进程组不存在。（进程表项中可能存在僵尸进程）</li>

@@ -6,7 +6,7 @@
   <link href="https://xautshuanglong.github.io/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2021-02-18T05:48:13.228Z</updated>
+  <updated>2021-02-21T07:11:30.270Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://xautshuanglong.github.io/2021/02/15/CommonSense/Timer%E5%AE%9A%E6%97%B6%E5%99%A8%E5%8E%9F%E7%90%86/"/>
     <id>https://xautshuanglong.github.io/2021/02/15/CommonSense/Timer%E5%AE%9A%E6%97%B6%E5%99%A8%E5%8E%9F%E7%90%86/</id>
     <published>2021-02-15T15:33:46.000Z</published>
-    <updated>2021-02-18T05:48:13.228Z</updated>
+    <updated>2021-02-21T07:11:30.270Z</updated>
     
     <content type="html"><![CDATA[<h2 id="定时器工作原理"><a href="#定时器工作原理" class="headerlink" title="定时器工作原理"></a>定时器工作原理</h2><p>Linux Windows STM32</p><a id="more"></a><h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><h3 id="时间轮"><a href="#时间轮" class="headerlink" title="时间轮"></a>时间轮</h3><h3 id="ASIO-小顶堆"><a href="#ASIO-小顶堆" class="headerlink" title="ASIO 小顶堆"></a>ASIO 小顶堆</h3><h3 id="Nginx-红黑树"><a href="#Nginx-红黑树" class="headerlink" title="Nginx 红黑树"></a>Nginx 红黑树</h3><h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><p><a href="/2016/06/06/Linux/Signal%E4%BF%A1%E5%8F%B7/">定时信号</a><br><a href="/2016/11/18/TempRecord/">定时器 WinAPI</a><br><a href="https://blog.csdn.net/fuyuwei2015/article/details/83825851">Java定时器之Timer使用与原理分析</a><br><a href="https://www.jianshu.com/p/67b7c4f74940">Linux C/C++ 定时器的实现原理和使用方法</a><br><a href="http://www.ilovecpp.com/2019/01/16/timer/">Linux下定时器的设计与实现</a><br><a href="https://zhuanlan.zhihu.com/p/84502375">时间轮定时器</a><br><a href="https://cloud.tencent.com/developer/article/1404012">定时器的几种实现方式</a><br><a href="https://www.jianshu.com/p/4c270f81ff22">算法 &amp; 数据结构——时间轮定时器</a><br><a href="http://oneyearago.me/2019/10/24/linux_timer/">Linux定时器时间轮算法</a></p>]]></content>
     
