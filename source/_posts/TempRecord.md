@@ -131,6 +131,8 @@ https://www.microsoft.com/com/default.mspx
 ### 命令行
 * `.`是`bash`内部指令：在当前`shell`中执行指定的`shell`脚本。
 * `source`在当前`shell`环境下读取并执行指定脚本中的命令。
+* [getopt 命令](https://www.cnblogs.com/cangqinglang/p/11943661.html)
+  :: 表示该选项可有有 0 个或 1 个参数，短型时，选项与参数之间不能有空格，长型时，选项与参数之间需用等号连接。
 
 ## 需要总结内容
 
