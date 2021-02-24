@@ -128,6 +128,10 @@ https://www.microsoft.com/com/default.mspx
 * echo ANSI 控制码 [常用 ANSI 控制码表](https://blog.csdn.net/zyj_zhouyongjun183/article/details/80211245)
 * man -f 显示指定内容的所有 section
 
+### 命令行
+* `.`是`bash`内部指令：在当前`shell`中执行指定的`shell`脚本。
+* `source`在当前`shell`环境下读取并执行指定脚本中的命令。
+
 ## 需要总结内容
 
 ### C&#35;
@@ -196,6 +200,24 @@ https://www.microsoft.com/com/default.mspx
 ### Python
 * 经典示例
   [CPython解释器支持的线程和进程](https://www.cnblogs.com/wangkc/p/7122120.html)
+* CSDN 视频链接 [微信公众号: GitHubDaily](https://mp.weixin.qq.com/s/3NEwI7-dM5ykSmvXj5GLCQ)
+  [从游戏开始的“0基础Python学习之路”](https://live.csdn.net/room/CSDNedu/NgQZAWBq)
+  [Python分布式爬虫+数据分析实战](https://live.csdn.net/room/CSDNedu/YceylATu)
+  [2020最新热点反爬虫机制与绕过实战](https://live.csdn.net/room/CSDNedu/JOGvggrA)
+  [Python程序化自动下单交易](https://live.csdn.net/room/CSDNedu/cPg6lGPq)
+  [Python自动化办公](https://live.csdn.net/room/CSDNedu/w7Ifsyx5)
+  [Python量化分析预测股灾拐点](https://live.csdn.net/room/CSDNedu/VNqpTJ0d)
+  [Python数据分析财务造假因子](https://live.csdn.net/room/CSDNedu/WE59lven)
+  [数据分析师必备的软硬技能](https://live.csdn.net/room/CSDNedu/Vc9QDqAH)
+  [提升Python数据处理速度四种方式](https://live.csdn.net/room/CSDNedu/TN5hZHwn)
+  [从数据专员到行业“叫兽”，必备经历](https://live.csdn.net/room/CSDNedu/fZUy43xw)
+  [Python机器学习与推荐系统应用](https://live.csdn.net/room/CSDNedu/wsJFrbBE)
+  [用40行Python代码实现抖音AI换脸](https://live.csdn.net/room/CSDNedu/A9jwFMBm)
+  [用2个小时写一个CSDN](https://live.csdn.net/room/CSDNedu/BrqBSfMn)
+  [0基础快速上手推荐系统](https://live.csdn.net/room/CSDNedu/5BDkcYfI)
+  [实战：CSDN站内搜索技术关键词](https://live.csdn.net/room/CSDNedu/rq27wEHR)
+  [程序员简历剖析课：如何打造高质量的简历内容？](https://live.csdn.net/room/CSDNedu/ve9DI9Mo)
+  [大型互联网公司面试复盘](https://live.csdn.net/room/CSDNedu/StTAlWj4)
 
 ### XML
 * XML 解释器 `DOM` `SAX` `Xerces` `Castor`
