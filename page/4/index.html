@@ -138,6 +138,37 @@ var _hmt = _hmt || [];
 	
 	<!-- display as entry -->	
 		<h3 class="title">
+			<div class="date"> 2018-12-13 </div>
+			<div class="article-title"><a href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/" title="由 VLD 引发的对静态变量初始化顺序的思考">静态变量的初始化与释放</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<blockquote>
+<p><strong>前情提要：</strong><br>VLD要记录每次的内存分配，它通过Windows提供的分配钩子allocation hooks来监视调试堆内存的分配。它是一个用户自定义的回调函数，在每次从堆中分配内存之前被调用，在初始化是VLD使用_CrtSetAllocation注册这个钩子函数。 全局变量在程序初始化时就初始化，如果将VLD作为一个全局变量就可以与程序一起启动，但是C/C++并没有约定全局变量初始化的顺序，如果其它全局变量的构造函数中有内存分配则可能无法检测到。<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fan_hai_ping/article/details/8023433">https://blog.csdn.net/fan_hai_ping/article/details/8023433</a> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> init_seg(&#123; compiler | lib | user | <span class="meta-string">&quot;section-name&quot;</span> [, func-name]&#125; )</span></span><br></pre></td></tr></table></figure>
+<p><em>注</em>：子模块（动态链接库）中包含 vld.h 并正确配置 vld lib 才能暴露子模块中的内存泄漏问题。</p>
+<p>C++ 类模板的惰性会使静态成员被使用时才实例化。<br>模板单例模式，为保证静态变量实例化，给静态变量类型增加内联空函数，并调用之。（不影响性能，不扩大占用空间。）</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017">https://docs.microsoft.com/en-us/cpp/preprocessor/init-seg?view=vs-2017</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html">http://www.cnblogs.com/hgy413/archive/2011/10/15/3693581.html</a></p>
+
+	
+	</div>
+  <a type="button" href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/#more" class="btn btn-default more">阅读此文</a>
+</div>
+
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
 			<div class="date"> 2018-12-01 </div>
 			<div class="article-title"><a href="/2018/12/01/Network/SocketOptions选项说明/" >Socket 选项说明</a></div>						
 		</h3>
@@ -421,36 +452,6 @@ var _hmt = _hmt || [];
 
            
 		
-           
-			  
-	
-	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> 2018-10-10 </div>
-			<div class="article-title"><a href="/2018/10/10/Libraries/ApacheFOP学习笔记/" >Apache FOP 学习笔记</a></div>						
-		</h3>
-	
-
-
-			  <div class="entry">
-  <div class="row">
-	
-           
-              <div class="thumbnail"><a href="/2018/10/10/Libraries/ApacheFOP学习笔记/"><img src="/images/Libraries/apache-fop-logo.jpg" alt="Apache FOP 学习笔记"  class="nofancybox"></a>
-           
-		</div>
-	
-	
-		<blockquote>
-<p>Apache™ FOP (Formatting Objects Processor) is a print formatter driven by XSL formatting objects (XSL-FO) and an output independent formatter. It is a Java application that reads a formatting object (FO) tree and renders the resulting pages to a specified output. Output formats currently supported include PDF, PS, PCL, AFP, XML (area tree representation), Print, AWT and PNG, and to a lesser extent, RTF and TXT. The primary output target is PDF.</p>
-</blockquote>
-	
-	</div>
-  <a type="button" href="/2018/10/10/Libraries/ApacheFOP学习笔记/#more" class="btn btn-default more">阅读此文</a>
-</div>
-
-           
-		
 
 		</div>
 
@@ -501,7 +502,7 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/categories/Algorithm/">Algorithm<span>3</span></a></li>
 		
-			<li><a href="/categories/CPP/">CPP<span>20</span></a></li>
+			<li><a href="/categories/CPP/">CPP<span>21</span></a></li>
 		
 			<li><a href="/categories/CommonSense/">CommonSense<span>14</span></a></li>
 		
@@ -544,48 +545,48 @@ var _hmt = _hmt || [];
 		<h4>标签云</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
+			<li><a href="/tags/static/">static<span>1</span></a></li>
 		
-			<li><a href="/tags/log4cpp/">log4cpp<span>2</span></a></li>
+			<li><a href="/tags/qt/">qt<span>2</span></a></li>
 		
-			<li><a href="/tags/Time/">Time<span>2</span></a></li>
-		
-			<li><a href="/tags/partition/">partition<span>1</span></a></li>
+			<li><a href="/tags/matrix/">matrix<span>1</span></a></li>
 		
 			<li><a href="/tags/keywords/">keywords<span>1</span></a></li>
 		
-			<li><a href="/tags/Maven/">Maven<span>1</span></a></li>
+			<li><a href="/tags/nginx/">nginx<span>1</span></a></li>
 		
-			<li><a href="/tags/postgresql/">postgresql<span>1</span></a></li>
-		
-			<li><a href="/tags/Random/">Random<span>1</span></a></li>
-		
-			<li><a href="/tags/MemPool/">MemPool<span>1</span></a></li>
-		
-			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
+			<li><a href="/tags/Markdown/">Markdown<span>2</span></a></li>
 		
 			<li><a href="/tags/Sorting/">Sorting<span>1</span></a></li>
 		
-			<li><a href="/tags/TensorFlow/">TensorFlow<span>1</span></a></li>
-		
-			<li><a href="/tags/cpprest/">cpprest<span>1</span></a></li>
-		
-			<li><a href="/tags/git/">git<span>1</span></a></li>
-		
-			<li><a href="/tags/socket/">socket<span>2</span></a></li>
-		
-			<li><a href="/tags/license/">license<span>1</span></a></li>
-		
-			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
-		
-			<li><a href="/tags/STL/">STL<span>9</span></a></li>
-		
-			<li><a href="/tags/OpenSSL/">OpenSSL<span>1</span></a></li>
+			<li><a href="/tags/RTTI/">RTTI<span>1</span></a></li>
 		
 			<li><a href="/tags/pdf/">pdf<span>1</span></a></li>
 		
+			<li><a href="/tags/FOP/">FOP<span>1</span></a></li>
 		
-		   <li><a href="/tags">...<span>53</span></a></li>
+			<li><a href="/tags/Trigonometric/">Trigonometric<span>1</span></a></li>
+		
+			<li><a href="/tags/https/">https<span>1</span></a></li>
+		
+			<li><a href="/tags/TensorFlow/">TensorFlow<span>1</span></a></li>
+		
+			<li><a href="/tags/Random/">Random<span>1</span></a></li>
+		
+			<li><a href="/tags/API/">API<span>1</span></a></li>
+		
+			<li><a href="/tags/PortNumber/">PortNumber<span>1</span></a></li>
+		
+			<li><a href="/tags/Encryption/">Encryption<span>1</span></a></li>
+		
+			<li><a href="/tags/VC/">VC<span>1</span></a></li>
+		
+			<li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
+		
+			<li><a href="/tags/partition/">partition<span>1</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>54</span></a></li>
 		 
 		</ul>
 	</div>
@@ -596,6 +597,10 @@ var _hmt = _hmt || [];
 <div class="widget">
   <h4>最新文章</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2021/03/23/CPlusPlus/CPP-Virtual虚函数覆盖/"  title="精益求精" ><i class="fa fa-file-o"></i>C++ 虚函数覆盖</a>
+      </li>
     
       <li>
         <a href="/2021/02/15/CommonSense/Timer定时器原理/"  title="做守时的程序员" ><i class="fa fa-file-o"></i>定时器原理</a>
@@ -611,10 +616,6 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2021/01/15/CPlusPlus/基础概念澄清/"  title="基础概念澄清" ><i class="fa fa-file-o"></i>基础概念澄清</a>
-      </li>
-    
-      <li>
-        <a href="/2020/11/27/Windows/win32代码签名/" ><i class="fa fa-file-o"></i>Windows环境下代码签名</a>
       </li>
     
   </ul>
