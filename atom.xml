@@ -6,7 +6,7 @@
   <link href="https://xautshuanglong.github.io/atom.xml" rel="self"/>
   
   <link href="https://xautshuanglong.github.io/"/>
-  <updated>2021-03-23T08:20:50.797Z</updated>
+  <updated>2021-03-25T06:01:59.869Z</updated>
   <id>https://xautshuanglong.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ninja 学习笔记</title>
+    <link href="https://xautshuanglong.github.io/2021/03/25/Tools/ninja%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://xautshuanglong.github.io/2021/03/25/Tools/ninja%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-03-25T05:52:28.000Z</published>
+    <updated>2021-03-25T06:01:59.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>高效构建工具</p><a id="more"></a><h2 id="MSVC"><a href="#MSVC" class="headerlink" title="MSVC"></a>MSVC</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># ninja -t clean -----&gt; 删除生成的目标文件仅 build 指定的目标。</span></span><br><span class="line"><span class="comment"># ninja clean    -----&gt; 显示调用 clean 目标，删除指定的文件。适用于 windows，基于 cmd.exe /c del 删除文件。</span></span><br><span class="line"></span><br><span class="line">ninja_required_version = 1.10.2</span><br><span class="line"></span><br><span class="line">CC = cl.exe</span><br><span class="line">cflags = /w</span><br><span class="line">builddir = Debug</span><br><span class="line">standard = /std:c++latest</span><br><span class="line"></span><br><span class="line">rule compile_HelloWorld</span><br><span class="line">    <span class="built_in">command</span> = <span class="variable">$CC</span> <span class="variable">$standard</span> /EHsc /c <span class="variable">$cflags</span> -MD <span class="variable">$in</span> /Fo <span class="variable">$out</span></span><br><span class="line">    description = --------&gt; Compiling <span class="variable">$in</span> to <span class="variable">$out</span></span><br><span class="line">    depfile = <span class="variable">$out</span>.d</span><br><span class="line">    deps = msvc</span><br><span class="line"></span><br><span class="line">build TestFunc.obj : compile_HelloWorld HelloWorld/TestFunc.cpp</span><br><span class="line">build HelloWorld.obj : compile_HelloWorld HelloWorld/HelloWorld.cpp</span><br><span class="line"></span><br><span class="line">rule link_HelloWorld</span><br><span class="line">   <span class="built_in">command</span> = <span class="variable">$CC</span> <span class="variable">$DEFINES</span> <span class="variable">$INCLUDES</span> <span class="variable">$cflags</span> <span class="variable">$in</span></span><br><span class="line">   description = --------&gt; Linking <span class="variable">$in</span> to <span class="variable">$out</span></span><br><span class="line"></span><br><span class="line">build HelloWorld.exe : link_HelloWorld HelloWorld.obj TestFunc.obj</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">rule clean_cmd</span><br><span class="line">    <span class="built_in">command</span> = cmd.exe /c $</span><br><span class="line">        <span class="keyword">if</span> exist HelloWorld.lib ( del /S HelloWorld.lib ) &amp; $</span><br><span class="line">        <span class="keyword">if</span> exist HelloWorld.exp ( del /S HelloWorld.exp )</span><br><span class="line">    description = --------&gt; Deleting generated files</span><br><span class="line"></span><br><span class="line">build clean: clean_cmd</span><br><span class="line"></span><br><span class="line">default HelloWorld.exe</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;高效构建工具&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Tools" scheme="https://xautshuanglong.github.io/categories/Tools/"/>
+    
+    
+    <category term="ninja" scheme="https://xautshuanglong.github.io/tags/ninja/"/>
+    
+  </entry>
   
   <entry>
     <title>C++ 虚函数覆盖</title>
@@ -421,27 +442,6 @@
     
     <category term="CommonSense" scheme="https://xautshuanglong.github.io/categories/CommonSense/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>QT小技巧</title>
-    <link href="https://xautshuanglong.github.io/2019/06/04/Qt/QT%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <id>https://xautshuanglong.github.io/2019/06/04/Qt/QT%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
-    <published>2019-06-04T06:11:21.000Z</published>
-    <updated>2019-06-04T06:16:36.369Z</updated>
-    
-    <content type="html"><![CDATA[<p>小技巧</p><a id="more"></a><h2 id="实用工具类"><a href="#实用工具类" class="headerlink" title="实用工具类"></a>实用工具类</h2><ul><li>QStandardPaths</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;小技巧&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="QT" scheme="https://xautshuanglong.github.io/categories/QT/"/>
-    
-    
-    <category term="qt" scheme="https://xautshuanglong.github.io/tags/qt/"/>
     
   </entry>
   
