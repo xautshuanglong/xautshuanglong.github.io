@@ -134,6 +134,19 @@ https://www.microsoft.com/com/default.mspx
 * [getopt 命令](https://www.cnblogs.com/cangqinglang/p/11943661.html)
   :: 表示该选项可有有 0 个或 1 个参数，短型时，选项与参数之间不能有空格，长型时，选项与参数之间需用等号连接。
 
+### 调试技巧
+* `gdb` 使用手册。
+* `gdb` 生成调试信息参数：`-g`。
+* `gdb > target remote IP:PORT` 进行远程调试。
+* `add-symbol-file FILENAME ADDR` 加载符号文件（本地文件），ADDR 为代码段地址，根据进程物理地址和符号文件代码段偏移地址计算而来。
+* `strip` 从带调试信息的可执行文件中删除调试信息，移出符号记录。
+* `objcopy --only-keep-debug` 从带调试信息的可执行文件中玻璃符号信息到独立的调试文件。
+* `add-symbol-file TestDemo.dbg` 将 `objcopy` 导出的符号文件加载到调试器。
+* `handle` 调试器对信号的处理，如：收到 `SIGUSR2` 不中断程序，`handle SIGUSR2 nostop`，其他：`stop`、`print`、`pass`、`ignore`。
+* `info handle/signal` 查看调试器对信号的处理情况。
+* `show debug-file-directory` 查看调试器加载调试信息的路径。
+* [从四个问题透析Linux下C++编译&链接](https://cloud.tencent.com/developer/news/700905)
+
 ## 需要总结内容
 
 ### C&#35;
