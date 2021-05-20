@@ -292,6 +292,7 @@ https://www.microsoft.com/com/default.mspx
 ### ICMP
 * [ICMP协议a](https://www.cnblogs.com/jingmoxukong/p/3811262.html)
 * [ICMP Type 对应表](https://www.cnblogs.com/itcomputer/p/4939399.html)
+* [IcmpSendEcho function (icmpapi.h)](https://docs.microsoft.com/en-us/windows/win32/api/icmpapi/nf-icmpapi-icmpsendecho)
 
 ### PXE
 * PXE 网络装机环境搭建：`DHCP`，`TFTP`，`HTTP`。
