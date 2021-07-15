@@ -122,6 +122,14 @@ https://www.microsoft.com/com/default.mspx
 * \_set_purecall_handler : Sets the handler for a pure virtual function call.
 `RtlCaptureContext`
 
+### MIDI MCI
+* [MIDI Functions](https://docs.microsoft.com/en-us/windows/win32/multimedia/midi-functions)
+* [MIDI Reference](https://docs.microsoft.com/en-us/windows/win32/multimedia/midi-reference)
+* [Musical Instrument Digital Interface (MIDI)](https://docs.microsoft.com/en-us/windows/win32/multimedia/musical-instrument-digital-interface--midi)
+* [MCI Functions](https://docs.microsoft.com/en-us/windows/win32/multimedia/mci-functions?redirectedfrom=MSDN)
+* [MCI Reference](https://docs.microsoft.com/en-us/windows/win32/multimedia/mci-reference)
+* [MCI](https://docs.microsoft.com/en-us/windows/win32/multimedia/mci)
+
 ## Linux
 
 ### 函数妙用
