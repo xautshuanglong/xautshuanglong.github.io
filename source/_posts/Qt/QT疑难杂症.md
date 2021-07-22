@@ -44,5 +44,10 @@ Warning: As mentioned above, the return value of this function is not valid when
     * 与 QTcpSocket disconnected 信号相对应的自定义槽函数无法获取发送者对象，进而无法调用 deleteLater()，此时，将 QTcpSocket::disconnected 信号连接到 QTcpSocket::deleteLater，如需自定义槽函数，多连接一个即可。
     * 子类化 QThread 重载 run 函数并在其中执行 exec 函数，此时将子类化的类的实例通过 moveToThread 移动到自身线程中，可以让子类化后的类的槽函数工作在这个子线程中。
 
+1. QTimer 定时器超时信号不响应（槽内断点不触发）
+    使用注意事项：
+    * QTimer::start 存在跨线程启动定时器。需在 QTimer 所属线程中调用（通常是创建 QTimer 的线程，moveToThread 另当别论）；
+    * QTimer 所属线已退出。
+
 1. 备用
 
