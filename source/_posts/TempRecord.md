@@ -93,6 +93,9 @@ toc: true
   [【Print Dialog Box】](https://docs.microsoft.com/en-us/windows/win32/dlgbox/print-dialog-box)
   [【Print Ticket API】](https://docs.microsoft.com/en-us/windows/win32/printdocs/print-ticket-api)
 * 跟踪日志 `TraceLog.exe` `TracePdb.exe` `TraceView.exe` [Using TraceView](https://docs.microsoft.com/zh-tw/windows-hardware/drivers/devtest/using-traceview)
+* ETW (Event Trace for Windows)
+  [MSDN: EventRegister](https://docs.microsoft.com/en-us/windows/win32/api/evntprov/nf-evntprov-eventregister) 内含示例
+  [MSDN: EventWrite](https://docs.microsoft.com/en-us/windows/win32/api/evntprov/nf-evntprov-eventwrite)
 
 ### Windows Service
 * Related API：`OpenSCManager`、`CreateService`、`OpenService`、`ControlService`、`DeleteService`、`RegisterServiceCtrlHandler`、`SetServiceStatus`、`StartServiceCtrlDispatcher`
