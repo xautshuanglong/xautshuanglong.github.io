@@ -86,7 +86,7 @@ toc: true
 * [关于字符串长度](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l?view=vs-2019)
 * Session 远程桌面相关
   WTSQuerySessionInformationA function
-* 文件操作 `SetFileAttributes` `CopyFile` `CopyFileEx`
+* 文件操作 `SetFileAttributes` `CopyFile` `CopyFileEx` `MoveFileEx`
 * 打印机操作
   [【Print Spooler API Functions】](https://docs.microsoft.com/en-us/windows/win32/printdocs/printing-and-print-spooler-functions)
   [【Print Document Package API】](https://docs.microsoft.com/zh-cn/windows/win32/printdocs/tailored-app-printing-api)
