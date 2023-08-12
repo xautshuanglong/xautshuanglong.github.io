@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Socket 选项说明 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="Descrition">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Socket 选项说明"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Socket 选项说明</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>Socket 是应用层和传输层之间的一个抽象层，<br>有很多选项可对其进行控制：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>SO_DEBUG</code></td>
+<td align="left"><code>SO_OOBINLINE</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_REUSEADDR</code></td>
+<td align="left"><code>SO_LINGER</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_TYPE</code></td>
+<td align="left"><code>SO_RCVLOWAT</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_ERROR</code></td>
+<td align="left"><code>SO_SNDLOWAT</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_DONTROUTE</code></td>
+<td align="left"><code>SO_RCVTIMEO</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_RCVBUF</code></td>
+<td align="left"><code>SO_SNDtIMEO</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_SNDBUF</code></td>
+<td align="left"><code>TCP_MAXSEG</code></td>
+</tr>
+<tr>
+<td align="left"><code>SO_KEEPALIVE</code></td>
+<td align="left"><code>TCP_NODELAY</code></td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h2 id="Socket-选项简要列表"><a href="#Socket-选项简要列表" class="headerlink" title="Socket 选项简要列表"></a>Socket 选项简要列表</h2><table>
+<thead>
+<tr>
+<th align="center">Level</th>
+<th align="left">Option Name</th>
+<th align="left">数据类型</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td align="left">SO_DEBUG</td>
+<td align="left">int</td>
+<td align="left">打开调试信息</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_REUSEADDR</td>
+<td align="left">int</td>
+<td align="left">重用本地地址</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_TYPE</td>
+<td align="left">int</td>
+<td align="left">获取 socket 类型</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_ERROR</td>
+<td align="left">int</td>
+<td align="left">获取并清除 socket 错误状态</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_DONTROUTE</td>
+<td align="left">int</td>
+<td align="left">不查看路由表，直接发送给局域网内主机。</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_RCVBUF</td>
+<td align="left">int</td>
+<td align="left">TCP 接受缓冲区大小</td>
+</tr>
+<tr>
+<td align="center">SOL_SOCKET 通用选项</td>
+<td align="left">SO_SNDBUF</td>
+<td align="left">int</td>
+<td align="left">TCP 发送缓冲区大小</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_KEEPALIVE</td>
+<td align="left">int</td>
+<td align="left">发送周期性保活报文以维持连接</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_OOBINLINE</td>
+<td align="left">int</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_LINGER</td>
+<td align="left">linger</td>
+<td align="left">若有数据待发送。则延迟关闭。</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_RCVLOWAT</td>
+<td align="left">int</td>
+<td align="left">TCP 接受缓冲区低水位标记</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_SNDLOWAT</td>
+<td align="left">int</td>
+<td align="left">TCP 发送缓冲区高水位标记</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_RCVTIMEO</td>
+<td align="left">timeval</td>
+<td align="left">接收数据超时</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">SO_SNDTIMEO</td>
+<td align="left">timeval</td>
+<td align="left">发送数据超时</td>
+</tr>
+<tr>
+<td align="center">IPPROTO_IP IPV4选项</td>
+<td align="left">IP_TOS</td>
+<td align="left">int</td>
+<td align="left">服务类型</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">IP_TTL</td>
+<td align="left">int</td>
+<td align="left">存活时间</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">IPV6_NEXTHOP</td>
+<td align="left">socketaddr</td>
+<td align="left">下一跳 IP 地址</td>
+</tr>
+<tr>
+<td align="center">IPPROTO_IPV6 IPV6选项</td>
+<td align="left">IPV6_RECVPKTINFO</td>
+<td align="left">int</td>
+<td align="left">接收分组信息</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">IPV6_DONTFRAGi</td>
+<td align="left">int</td>
+<td align="left">禁止分片</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">IPV6_RECVTCLASS</td>
+<td align="left">int</td>
+<td align="left">接收通信类型</td>
+</tr>
+<tr>
+<td align="center">IPPROTO_TCP TCP选项</td>
+<td align="left">TCP_MAXSEG</td>
+<td align="left">int</td>
+<td align="left">TCP 最大报文段大小</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">TCP_NODELAY</td>
+<td align="left">int</td>
+<td align="left">禁止 Nagle 算法</td>
+</tr>
+</tbody></table>
+<h2 id="Socket-选项详细说明"><a href="#Socket-选项详细说明" class="headerlink" title="Socket 选项详细说明"></a>Socket 选项详细说明</h2><h3 id="SO-DEBUG"><a href="#SO-DEBUG" class="headerlink" title="SO_DEBUG"></a>SO_DEBUG</h3><h3 id="SO-REUSEADDR"><a href="#SO-REUSEADDR" class="headerlink" title="SO_REUSEADDR"></a>SO_REUSEADDR</h3><h3 id="SO-TYPE"><a href="#SO-TYPE" class="headerlink" title="SO_TYPE"></a>SO_TYPE</h3><h3 id="SO-ERROR"><a href="#SO-ERROR" class="headerlink" title="SO_ERROR"></a>SO_ERROR</h3><h3 id="SO-DONTROUTE"><a href="#SO-DONTROUTE" class="headerlink" title="SO_DONTROUTE"></a>SO_DONTROUTE</h3><h3 id="SO-RCVBUF"><a href="#SO-RCVBUF" class="headerlink" title="SO_RCVBUF"></a>SO_RCVBUF</h3><h3 id="SO-SNDBUF"><a href="#SO-SNDBUF" class="headerlink" title="SO_SNDBUF"></a>SO_SNDBUF</h3><h3 id="SO-KEEPALIVE"><a href="#SO-KEEPALIVE" class="headerlink" title="SO_KEEPALIVE"></a>SO_KEEPALIVE</h3><h3 id="SO-OOBINLINE"><a href="#SO-OOBINLINE" class="headerlink" title="SO_OOBINLINE"></a>SO_OOBINLINE</h3><h3 id="SO-LINGER"><a href="#SO-LINGER" class="headerlink" title="SO_LINGER"></a>SO_LINGER</h3><h3 id="SO-RCVLOWAT"><a href="#SO-RCVLOWAT" class="headerlink" title="SO_RCVLOWAT"></a>SO_RCVLOWAT</h3><h3 id="SO-SNDLOWAT"><a href="#SO-SNDLOWAT" class="headerlink" title="SO_SNDLOWAT"></a>SO_SNDLOWAT</h3><h3 id="SO-RCVTIMEO"><a href="#SO-RCVTIMEO" class="headerlink" title="SO_RCVTIMEO"></a>SO_RCVTIMEO</h3><h3 id="SO-SNDTIMEO"><a href="#SO-SNDTIMEO" class="headerlink" title="SO_SNDTIMEO"></a>SO_SNDTIMEO</h3><h3 id="IP-TOS"><a href="#IP-TOS" class="headerlink" title="IP_TOS"></a>IP_TOS</h3><h3 id="IP-TTL"><a href="#IP-TTL" class="headerlink" title="IP_TTL"></a>IP_TTL</h3><h3 id="IPV6-NEXTHOP"><a href="#IPV6-NEXTHOP" class="headerlink" title="IPV6_NEXTHOP"></a>IPV6_NEXTHOP</h3><h3 id="IPV6-RECVPKTINFO"><a href="#IPV6-RECVPKTINFO" class="headerlink" title="IPV6_RECVPKTINFO"></a>IPV6_RECVPKTINFO</h3><h3 id="IPV6-DONTFRAG"><a href="#IPV6-DONTFRAG" class="headerlink" title="IPV6_DONTFRAG"></a>IPV6_DONTFRAG</h3><h3 id="IPV6-RECVTCLASS"><a href="#IPV6-RECVTCLASS" class="headerlink" title="IPV6_RECVTCLASS"></a>IPV6_RECVTCLASS</h3><h3 id="TCP-MAXSEG"><a href="#TCP-MAXSEG" class="headerlink" title="TCP_MAXSEG"></a>TCP_MAXSEG</h3><h3 id="TCP-NODELAY"><a href="#TCP-NODELAY" class="headerlink" title="TCP_NODELAY"></a>TCP_NODELAY</h3>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2018/12/13/CommonSense/StaticVariables静态变量的初始化与释放/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2018/11/30/CommonSense/ReferenceCount关于引用计数/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "Socket 选项说明",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-12-01 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Network/">Network<span>6</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/socket/">socket<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Socket-%E9%80%89%E9%A1%B9%E7%AE%80%E8%A6%81%E5%88%97%E8%A1%A8"><span class="toc-article-text">Socket 选项简要列表</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Socket-%E9%80%89%E9%A1%B9%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E"><span class="toc-article-text">Socket 选项详细说明</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-DEBUG"><span class="toc-article-text">SO_DEBUG</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-REUSEADDR"><span class="toc-article-text">SO_REUSEADDR</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-TYPE"><span class="toc-article-text">SO_TYPE</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-ERROR"><span class="toc-article-text">SO_ERROR</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-DONTROUTE"><span class="toc-article-text">SO_DONTROUTE</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-RCVBUF"><span class="toc-article-text">SO_RCVBUF</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-SNDBUF"><span class="toc-article-text">SO_SNDBUF</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-KEEPALIVE"><span class="toc-article-text">SO_KEEPALIVE</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-OOBINLINE"><span class="toc-article-text">SO_OOBINLINE</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-LINGER"><span class="toc-article-text">SO_LINGER</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-RCVLOWAT"><span class="toc-article-text">SO_RCVLOWAT</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-SNDLOWAT"><span class="toc-article-text">SO_SNDLOWAT</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-RCVTIMEO"><span class="toc-article-text">SO_RCVTIMEO</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#SO-SNDTIMEO"><span class="toc-article-text">SO_SNDTIMEO</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#IP-TOS"><span class="toc-article-text">IP_TOS</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#IP-TTL"><span class="toc-article-text">IP_TTL</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#IPV6-NEXTHOP"><span class="toc-article-text">IPV6_NEXTHOP</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#IPV6-RECVPKTINFO"><span class="toc-article-text">IPV6_RECVPKTINFO</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#IPV6-DONTFRAG"><span class="toc-article-text">IPV6_DONTFRAG</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#IPV6-RECVTCLASS"><span class="toc-article-text">IPV6_RECVTCLASS</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#TCP-MAXSEG"><span class="toc-article-text">TCP_MAXSEG</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#TCP-NODELAY"><span class="toc-article-text">TCP_NODELAY</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>信号及其处理 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="Descrition">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="信号及其处理"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 信号及其处理</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h2 id="Linux-信号"><a href="#Linux-信号" class="headerlink" title="Linux 信号"></a>Linux 信号</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>软中断信号（<code>signal</code>，简称为信号）用来通知进程发生了异步事件。进程之间可以互相通过系统调用kill发送软中断信号。内核也可以因为内部事件而给进程发送信号，通知进程发生了某个事件。<br><strong>注意：信号只是用来通知某进程发生了某事件，并不给进程传递任何数据。</strong></p>
+<p>收到信号的进程对各种信号有不同处理方法：</p>
+<ul>
+<li>第一种方法，类似中断的处理程序，对于需要处理的信号，进程可以指定处理函数，由该函数处理；</li>
+<li>第二种方法，忽略某个信号，对该信号不做任何处理，就像未发生过一样；</li>
+<li>第三种方法，对该信号的处理保留系统默认值，对大部分信号的缺省操作是使进程终止。<span id="more"></span></li>
+</ul>
+<p>void (*signal(int sig, void(*func)(int)))(int);<br>Set function to handle signal<br>Specifies a way  to handle the signals with the signal number specified by sig.<br>Parameter func specifies one of the three ways in which a signal can be handled by a program：</p>
+<ul>
+<li>Default handling (SIG_DEL):The signal is handled by the default action for that particular signal.</li>
+<li>Ignore signal (SIG_IGN):The signal is ignored and the code execution will continue even if not meaningful.</li>
+<li>Function handler: A specific function is defined to handle the signal.<br>Either SIG_DEL or SIG_IGN is set as the default signal handling behavior at program start up for each of the supported signals.</li>
+</ul>
+<p>在进程表的表项中有一个软中断信号域，该域中每一位对应一个信号，进程并不知道在处理之前来过多好个信号。</p>
+<h3 id="信号类型"><a href="#信号类型" class="headerlink" title="信号类型"></a>信号类型</h3><p>发出信号的原因很多，按信号发出原因分类如下：</p>
+<ol>
+<li>与进程终止相关的信号。当进程退出，或者子进程终止时，发出这类信号。</li>
+<li>与进程例外事件相关的信号。如进程越界，企图写入只读内存区域，执行特权指令，各种硬件错误。</li>
+<li>与系统调用期间遇到不可恢复条件相关的信号。如执行系统调用 exec 时，原有资源已释放，而目前系统资源又已经耗尽。</li>
+<li>与执行系统调用时遇到非预测错误条件相关的信号。如执行一个并不存在的系统调用。</li>
+<li>在用户态下的进程发出的信号。如进程调用 kill 向其他进程发送信号。</li>
+<li>与终端交互相关的信号。如用户关闭一个终端，或者按下 break 键。</li>
+<li>跟踪进程执行的信号。</li>
+</ol>
+<h3 id="信号描述"><a href="#信号描述" class="headerlink" title="信号描述"></a>信号描述</h3><p>编号 01~31：传统<code>UNIX</code>支持的信号，是不可靠信号（非实时的）。<br>编号 32~64：扩充的信号，称作可靠信号（实时信号）。<br>不可靠信号与可靠信号的区别：前者不支持排队，可能造成信号丢失，而后者不会。</p>
+<table>
+<thead>
+<tr>
+<th align="center">编号</th>
+<th align="center">信号</th>
+<th align="center">默认动作</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">SIGHUP</td>
+<td align="center">进程终止</td>
+<td align="center">用户终端连接结束。</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">SIGINT</td>
+<td align="center">进程终止</td>
+<td align="center">INTR字符，<code>Ctrl+c</code>发出，通知前台进程终止进程。</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">SIGQUIT</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">QUIT字符，<code>Ctrl+\</code>发出，进程会产生 core 文件，类似于程序错误信号。</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">SIGILL</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">执行了非法指令：可执行文件本身错误、试图执行数据段、堆栈溢出。</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">SIGTRAP</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">有断点指令或其它 trap 指令产生。</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">SIGABRT</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">程序异常终止，如调用<code>abort()</code>。</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">SIGBUS</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">非法地址，包括内存地址对齐出错。</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">SIGFPE</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">发生致命的算术运算错误：浮点运算错误、溢出、除零。</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">SIGKILL</td>
+<td align="center">进程终止</td>
+<td align="center">立即结束程序运行，不能被阻塞、处理、忽略。</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">SIGUSR1</td>
+<td align="center">进程终止</td>
+<td align="center">留给用户使用。</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">SIGSEGV</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">试图访问未分配给自己的内存，试图向没有写权限的内存地址写数据。</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">SIGUSR2</td>
+<td align="center">进程终止</td>
+<td align="center">留给用户使用。</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">SIGPIPE</td>
+<td align="center">进程终止</td>
+<td align="center">管道破裂。<br>读管道没有打开或者意外终止就往管道写，写进程会收到 SIGPIPE 信号。<br>写进程在写 Socket 的时候，读经常已经终止。</td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center">SIGALRM</td>
+<td align="center">进程终止</td>
+<td align="center">时钟定时信号，计算的是实际时间或时钟时间。<code>alarm</code>函数使用该信号。</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">SIGTERM</td>
+<td align="center">进程终止</td>
+<td align="center">程序结束信号，可以被阻塞和处理。<br>用来要求程序正常退出，shell kill 默认使用该命令。</td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center">…</td>
+<td align="center">进程终止</td>
+<td align="center">堆栈错误。</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td align="center">SIGCHLD</td>
+<td align="center">忽略</td>
+<td align="center">子进程结束时，父进程会收到该信号。<br>如果父进程没有处理这个信号，也没有等待子进程，子进程虽然终止，但是还会在内存进程表中占有表项，这时子进程称为僵尸进程。</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td align="center">SIGCONT</td>
+<td align="center">忽略</td>
+<td align="center">让一个停止的进程继续执行，不能被阻塞，可以被处理。</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="center">SIGSTOP</td>
+<td align="center">进程暂停</td>
+<td align="center">停止进程的执行。程序还未结束，只是暂停执行，不能被阻塞、处理、忽略。</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="center">SIGTSTP</td>
+<td align="center">进程暂停</td>
+<td align="center">停止进程的运行，可以被处理和忽略。SUSP字符，<code>Ctrl+z</code>发出。</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">SIGTTIN</td>
+<td align="center">进程暂停</td>
+<td align="center">后台作业要从用户终端读取数据时，作业中所有进程会收到该信号。<br>缺省时这些进程会停止执行。</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">SIGTTOU</td>
+<td align="center">进程暂停</td>
+<td align="center">类似 SIGTTIN ，但在写终端或修改终端模式时收到。</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td align="center">SIGURG</td>
+<td align="center">忽略</td>
+<td align="center">有紧急数据或 out-of-band 数据到达 Socket 时产生。</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td align="center">SIGXCPU</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">超过 CPU 时间资源限制。<br>这个限制可以由 getrlimit/setrlimit 来读取/改变。</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td align="center">SIGXFSZ</td>
+<td align="center">进程意外结束（Dump）</td>
+<td align="center">进程企图扩大文件以至于超过文件大小资源限制。</td>
+</tr>
+<tr>
+<td align="center">26</td>
+<td align="center">SIGVTALRM</td>
+<td align="center">进程终止</td>
+<td align="center">虚拟时钟信号，类似于 SIGALRM ，但是计算的是该进程占用的 CPU 时间。</td>
+</tr>
+<tr>
+<td align="center">27</td>
+<td align="center">SIGPROF</td>
+<td align="center">进程终止</td>
+<td align="center">类似于 SIGALRM / SIGVTALRM ，但是包括该进程的 CPU 时间以及系统调用时间。</td>
+</tr>
+<tr>
+<td align="center">28</td>
+<td align="center">SIGWINCH</td>
+<td align="center">忽略</td>
+<td align="center">窗口大小改变是发出。</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td align="center">SIGIO</td>
+<td align="center">进程暂停</td>
+<td align="center">文件描述符准备就绪，可以进行 输入 / 输出操作。</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="center">SIGPWR</td>
+<td align="center">进程暂停</td>
+<td align="center">Power failure</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="center">SIGSYS</td>
+<td align="center">进程暂停</td>
+<td align="center">非法的系统调用。</td>
+</tr>
+<tr>
+<td align="center">32~64</td>
+<td align="center">…</td>
+<td align="center">用户自定义</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="信号归类"><a href="#信号归类" class="headerlink" title="信号归类"></a>信号归类</h3><ul>
+<li>程序不可捕获、阻塞、忽略：<br><code>SIGKILL</code>，<code>SIGSTOP</code>。</li>
+<li>不能恢复至默认动作：<br><code>SIGILL</code>，<code>SIGTRAP</code>。</li>
+<li>默认会导致进程流产：<br><code>SIGABRT</code>，<code>SIGBUS</code>，<code>SIGFPE</code>，<code>SIGILL</code>，<code>SIGIOT</code>，<code>SIGQUIT</code>，<code>SIGSEGV</code>，<code>SIGTRAP</code>，<code>SIGXCPU</code>，<code>SIGXFSZ</code>。</li>
+<li>默认会导致进程退出：<br><code>SIGALRM</code>，<code>SIGHUP</code>，<code>SIGINT</code>，<code>SIGKILL</code>，<code>SIGPIPE</code>，<code>SIGPOLL</code>，<code>SIGPROF</code>，<code>SIGSYS</code>，<code>SIGTERM</code>，<code>SIGUSR1</code>，<code>SIGUSR2</code>，<code>SIGVIALRM</code>。</li>
+<li>默认会导致进程停止：<br><code>SIGSTOP``SIGTSTP``SIGTTIN``SIGTTOU</code>。</li>
+<li>默认被进程忽略：<br><code>SIGCHLD</code>，<code>SIGPWR</code>，<code>SIGURG</code>，<code>SIGWINCH</code>。</li>
+</ul>
+<h3 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h3><p>内核给一个进程发送软中断信号的方法是在进程所在的进程表项的信号域设置对应于该信号的位。如果进程睡眠在可被终端的优先级上，则唤醒进程，否则置位，不唤醒。进程检查是否收到信号的时机是：一个进程在即将从内核态返回到用户态时，或者进程要进入或离开一个适当的低调度优先级睡眠状态。<br>内核处理一个进程收到的信号的时机是在一个进程从内核态返回用户态时。当一个进程在内核状态下运行时，软中断信号并不立即起作用，要等到将返回用户态时才处理。进程只有处理完信号才会返回用户态，进程在用户态下不会有未处理完的信号。<br>内核处理一个进程收到的信号的时机是在该进程的上下文中，因此，进程必须处于运行状态。（三种信号：退出、忽略、执行。）当进程收到一个它忽略的信号时，进程丢弃该信号，就像没收到信号似的继续运行。如果进程收到一个要捕获的信号，那么进程在从内核态返回到用户态时执行用户定义的函数。执行用户定义的函数时，内核在用户栈上创建一个新的层，该层中将返回地址的值设置成用户定义的函数的地址，这样进程从内核返回弹出栈顶是就返回到用户定义的函数处，从函数返回再弹出栈顶时，才返回原先进入内核的地方。这样做的原因是用户定义的函数不能且不允许在内核态下执行，否则用户可以获得任何权限。</p>
+<h3 id="相关系统调用"><a href="#相关系统调用" class="headerlink" title="相关系统调用"></a>相关系统调用</h3><p><strong>signal 系统调用</strong><br>系统调用<code>signal</code>来设定某个信号的处理方法。声明如下：<br>void (*signal(int signum, void (*handler)(int)))(int);<br>signum: 指出要设置方法的信号。<br>handler: 指定一个处理函数或是<code>SIG_IGN</code>、<code>SIG_DFL</code>。</p>
+<ul>
+<li>SIG_IGN:忽略参数 signum 所指的信号。</li>
+<li>SIG_DFL:恢复参数 signum 所指的信号的处理方法为默认值。</li>
+</ul>
+<p>传递给信号处理函数的参数是信号值，这样使得一个信号处理函数可以处理多个信号。返回值是信号 signum 上一个处理函数或者错误代码 SIG_ERR （出错时）。</p>
+<p><strong>sigaction 系统调用</strong><br>int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);<br>The sigaction() system call is used to change the action taken by a process on receipt of a specific signal.<br>signum: 指定有效信号，除了<code>SIGKILL</code>和<code>SIGSTOP</code>。<br>act: 非空参数，为 signum 所代表信号安装的新动作。<br>oldact: 如果该参数不为空，它将用于保存上一个动作。</p>
+<pre><code>The sigaction structure is defined as something like:
+struct sigaction
+&#123;
+    void     (*sa_handler)(int);
+    void     (*sa_sigaction)(int, siginfo_t *, void *);
+    sigset_t   sa_mask;
+    int        sa_flags;
+    void     (*sa_restorer)(void);
+&#125;;
+</code></pre>
+<p><code>sa_handler</code>、<code>sa_sigaction</code>定义与共用体内，不可同时设置。<br>sa_handler 可以是：SIG_DEL、SIG_IGN、一个函数指针（接收一个参数，信号码）。<br>当 sa_flags 被标记为 <code>SA_SIGINFO</code> 时，sa_sigaction 函数指针生效。<br>sa_mask 标记将被阻塞的信号。</p>
+<pre><code>The siginfo_t data type is a structure with the following fields:
+siginfo_t
+&#123;
+    int      si_signo;     /* Signal number */
+    int      si_errno;     /* An errno value */
+    int      si_code;      /* Signal code */
+    int      si_trapno;    /* Trap number that caused hardware-generated signal (unused on most architectures) */
+    pid_t    si_pid;       /* Sending process ID */
+    uid_t    si_uid;       /* Real user ID of sending process */
+    int      si_status;    /* Exit value or signal */
+    clock_t  si_utime;     /* User time consumed */
+    clock_t  si_stime;     /* System time consumed */
+    union sigval si_value; /* Signal value */
+    int      si_int;       /* POSIX.1b signal */
+    void    *si_ptr;       /* POSIX.1b signal */
+    int      si_overrun;   /* Timer overrun count; POSIX.1b timers */
+    int      si_timerid;   /* Timer ID; POSIX.1b timers */
+    void    *si_addr;      /* Memory location which caused fault */
+    long     si_band;      /* Band event (was int in glibc 2.3.2 and earlier) */
+    int      si_fd;        /* File descriptor */
+    short    si_addr_lsb;  /* Least significant bit of address (since Linux 2.6.32) */
+    void    *si_lower;     /* Lower bound when address violation occurred (since Linux 3.19) */
+    void    *si_upper;     /* Upper bound when address violation occurred (since Linux 3.19) */
+    int      si_pkey;      /* Protection key on PTE that caused fault (since Linux 4.6) */
+    void    *si_call_addr; /* Address of system call instruction (since Linux 3.5) */
+    int      si_syscall;   /* Number of attempted system call (since Linux 3.5) */
+    unsigned int si_arch;  /* Architecture of attempted system call (since Linux 3.5) */
+&#125;
+</code></pre>
+<p><strong>kill 系统调用</strong><br>系统调用<code>kill</code>用来向进程发送一个信号。声明如下：<br>int kill(pid_t pid, int sig);<br>如果参数 pid 大于 0 ，该调用将信号 sig 发送的进程号为 pid 的进程。<br>如果参数 pid 等于 0 ，那么信号 sig 将被发送给当前进程所属的进程组里的所有进程。<br>如果参数 pid 等于 -1 ，那么信号 sig 将被发送给除了进程 1 和自身以外的所有进程。<br>如果参数 pid 小于 -1 ，那么信号 sig 将被发送给属于进程组 -pid 的所有进程。<br>如果参数 sig 等于 0 ，将不发送信号。<br>该调用执行成功时，返回值为 0；出错时，返回值为 -1，并设置相应的错误 代码 errno：</p>
+<ul>
+<li>EINVAL: 指定的信号 sig 无效。</li>
+<li>ESRCH: 参数 pid 指定的进程或进程组不存在。（进程表项中可能存在僵尸进程）</li>
+<li>EPERM: 进程没有权限将信号发送到指定的进程。</li>
+</ul>
+<p><strong>pause 系统调用</strong><br>系统调用<code>pause</code>的作用是等待一个信号。<br>int pause(void);<br>该调用使得发出调用的进程进入睡眠，直到收到一个信号为止。该调用总是返回 -1，并设置错误代码为 EINTR（接收到一个信号）。</p>
+<p><strong>alarm 和 setitimer 系统调用</strong><br>系统调用<code>alarm</code>的功能是设置一个定时器，当定时器到达时，将发出一个信号给进程。声明如下：<br>unsigned int alarm(unsigned int seconds);<br>系统调用<code>alarm</code>安排内核为调用进程在指定的 seconds 秒后发出一个<code>SIGALRM</code>的信号。如果指定的参数 seconds 为 0，则不再发生<code>SIGALRM</code>的信号。后一次的设定将取消前一次的设定。返回值为上次定时调用到发送之间剩余的时间，或者因为没有前一次调用而返回 0。<br><em>注意：在使用时，alarm 只设定为发送一次信号，如果要多次发送，就要多次调用 alarm。</em><br><code>setitimer</code>用来设置定时器，<code>getitimer</code>用来得到定时器的状态，生命如下：<br>int getitimer(int which, struct itimerval *value);<br>int setitimer(int which, const struct itimerval *new_value, struct itimerval *old_value);<br>该系统调用给进程提供三个定时器，它们各自有其独有的计时域，当其中任何一个到达，就发送一个相应的信号给进程，并使得计时器重新开始。三个计时器由 which 指定，如下所示：<br>ITIMER_REAL: 按实际时间计时，计时到达将给进程发送 SIGALRM 信号。<br>ITIMER_VIRTUAL: 仅当进程执行时才进行计时。计时到达将发送 SIGVTALRM 信号给进程。<br>ITIMER+PROF: 当进程执行时和系统为该进程执行动作时都计时。计时到达将发送 SIGPROF 信号给进程。<br>定时器参数 value 用来指明定时器的时间，结构如下：</p>
+<pre><code>struct itimerval
+&#123;
+    struct timeval it_interval;// 下一次的取值
+    struct timeval it_value;// 本次的设定值
+&#125;
+</code></pre>
+<p>该结构中 timeval 结构定义如下：</p>
+<pre><code>struct timeval
+&#123;
+    long tv_sec;// 秒
+    long tv_usec;// 微妙，1 秒 = 1000000 微秒
+&#125;
+</code></pre>
+<p>在<code>setitimer</code>调用中，参数 old_value 如果不为空，则其中保留的是上次调用设定的值。定时器将 it_value 递减到 0 时，产生一个信号，并将 it_value 的值设定为 it_interval 的值，然后重新计时，如此往复。当 it_value 设定为 0 时，计时器停止，或者当它计时到期，而 it_interval 为 0 时停止。<br>调用成功时，返回 0，错误是返回 -1，并设置相应的错误代码 errno：<br>EFAULT: 参数 value 或 ovalue 是无效的指针。<br>EINVAL: 参数 which 不是<code>ITIMER_REAL</code>、<code>ITIMER_VIRT</code>或<code>ITIMER_PROF</code>中的一个。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;signal.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sigRoutine</span><span class="params">(<span class="type">int</span> sigNum)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span>(sigNum)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">case</span> SIGALRM:</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;Catch a signal -- SIGALRM:%d\n&quot;</span>,sigNum);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> SIGVTALRM:</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;Catch a signal -- SIGVTALRM:%d\n&quot;</span>,sigNum);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;Receive signal:%d\n&quot;</span>, sigNum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">itimerval</span> value,ovalue,value2;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;process id is %d\n&quot;</span>, <span class="built_in">getpid</span>());</span><br><span class="line"></span><br><span class="line">    <span class="built_in">signal</span>(SIGALRM,sigRoutine);</span><br><span class="line">    <span class="built_in">signal</span>(SIGVTALRM,sigRoutine);</span><br><span class="line"></span><br><span class="line">    value.it_value.tv_sec = <span class="number">1</span>;</span><br><span class="line">    value.it_value.tv_usec = <span class="number">0</span>;</span><br><span class="line">    value.it_interval.tv_sec = <span class="number">1</span>;</span><br><span class="line">    value.it_interval.tv_usec = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">setitimer</span>(ITIMER_REAL, &amp;value, &amp;ovalue);</span><br><span class="line"></span><br><span class="line">    value2.it_value.tv_sec = <span class="number">0</span>;</span><br><span class="line">    value2.it_value.tv_usec = <span class="number">500000</span>;</span><br><span class="line">    value2.it_interval.tv_sec = <span class="number">0</span>;</span><br><span class="line">    value2.it_interval.tv_usec = <span class="number">500000</span>;</span><br><span class="line">    <span class="built_in">setitimer</span>(ITIMER_VIRTUAL, &amp;value2, &amp;ovalue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(;;)</span><br><span class="line">    &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Windows-信号"><a href="#Windows-信号" class="headerlink" title="Windows 信号"></a>Windows 信号</h2>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/06/16/Network/TCP-IP学习笔记/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/05/24/CommonSense/字符编码/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "信号及其处理",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-06-06 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Linux/">Linux<span>5</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/signal/">signal<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Linux-%E4%BF%A1%E5%8F%B7"><span class="toc-article-text">Linux 信号</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-article-text">基本概念</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E4%BF%A1%E5%8F%B7%E7%B1%BB%E5%9E%8B"><span class="toc-article-text">信号类型</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E4%BF%A1%E5%8F%B7%E6%8F%8F%E8%BF%B0"><span class="toc-article-text">信号描述</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E4%BF%A1%E5%8F%B7%E5%BD%92%E7%B1%BB"><span class="toc-article-text">信号归类</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E4%BF%A1%E5%8F%B7%E6%9C%BA%E5%88%B6"><span class="toc-article-text">信号机制</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E7%9B%B8%E5%85%B3%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8"><span class="toc-article-text">相关系统调用</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Windows-%E4%BF%A1%E5%8F%B7"><span class="toc-article-text">Windows 信号</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Python 小技巧 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="小技巧">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Python 小技巧"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Python 小技巧</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>小技巧</p>
+			
+		 </div> <!-- alert -->
+	  		
+
+	  <h2 id="Python-中的小技巧"><a href="#Python-中的小技巧" class="headerlink" title="Python 中的小技巧"></a>Python 中的小技巧</h2><h3 id="1-循环技巧-Looping-Techniques"><a href="#1-循环技巧-Looping-Techniques" class="headerlink" title="1. 循环技巧(Looping Techniques)"></a>1. 循环技巧(Looping Techniques)</h3><ul>
+<li><h4 id="在字典中循环"><a href="#在字典中循环" class="headerlink" title="在字典中循环"></a>在字典中循环</h4>关键字和对应的值可以用<code>iteritems()</code>方法同时解读出来。<pre><code>  dict = &#123;&#39;key0&#39;:&#39;value0&#39;,&#39;key1&#39;:&#39;value1&#39;,&#39;key2&#39;:&#39;value2&#39;&#125;
+  for key,value in dict.iteritems():
+      print key,value
+</code></pre>
+</li>
+<li><h4 id="在序列中循环"><a href="#在序列中循环" class="headerlink" title="在序列中循环"></a>在序列中循环</h4>索引位置和对应的值可以用<code>enumerate()</code>方法同时得到。<pre><code>  list = [&#39;value0&#39;,&#39;value1&#39;,&#39;value2&#39;]
+  for index,value in enumerate(list):
+      print index,value
+</code></pre>
+</li>
+<li><h4 id="同时循环多个序列"><a href="#同时循环多个序列" class="headerlink" title="同时循环多个序列"></a>同时循环多个序列</h4>同时循环两个或更多的序列，可以使用<code>zip()</code>整体打包。<pre><code>  questions = [&#39;name&#39;,&#39;quest&#39;,&#39;favorite color&#39;]
+  answer = [&#39;eric&#39;,&#39;the holy grail&#39;,&#39;blue&#39;]
+  for q,a in zip(questions,answer):
+      print &#39;What is your &#123;0&#125;? It is &#123;1&#125;.&#39;.format(q,a)
+</code></pre>
+</li>
+<li><h4 id="逆向循环序列"><a href="#逆向循环序列" class="headerlink" title="逆向循环序列"></a>逆向循环序列</h4>需要逆向循环序列的话，先正向定位序列，然后调用<code>reversed()</code>函数。<pre><code>  for i in reversed(xrange(1,10,2)):
+      print i
+</code></pre>
+</li>
+<li><h4 id="排序后循环"><a href="#排序后循环" class="headerlink" title="排序后循环"></a>排序后循环</h4><code>sorted()</code>函数，不改动原序列，生成一个新的已排序的序列。<pre><code>  list = [&#39;value2&#39;,&#39;value1&#39;,&#39;value0&#39;]
+  for value in sorted(set(list)):
+      print value
+</code></pre>
+<span id="more"></span></li>
+</ul>
+<h3 id="2-range-和xrange-的区别"><a href="#2-range-和xrange-的区别" class="headerlink" title="2. range()和xrange()的区别"></a>2. <code>range()</code>和<code>xrange()</code>的区别</h3><p><code>range()</code>返回的是一个列表<code>List</code>,而<code>xrange()</code>返回一个对象<code>Object</code>。<br>除非需要一个<code>List</code>【数据多时，生成<code>list</code>费时】，否则，选择<code>xrange()</code>,效率高【仅在调用时返回所需数字】。</p>
+<h3 id="3-dir-函数"><a href="#3-dir-函数" class="headerlink" title="3. dir()函数"></a>3. <code>dir()</code>函数</h3><p>内置函数<code>dir()</code>用于按模块名搜索模块定义，返回一个字符串类型的存储列表。</p>
+<pre><code>import Fibo
+print dir(&#39;Fibo&#39;)
+[&#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;fibonacci&#39;]
+</code></pre>
+<h3 id="4-str-和repr"><a href="#4-str-和repr" class="headerlink" title="4. str()和repr()"></a>4. <code>str()</code>和<code>repr()</code></h3><p><code>str()</code>将值转化为适于人阅读的形式；<br><code>repr()</code>将值转化为适于解释器读取的形式。<br>若没有适于人阅读的解释形式的话，<code>str()</code>会返回与<code>repr()</code>等同的值。<br>如：数值、链表、字典等，两者有统一的解读形式；字符串和浮点数则有着各自独特的解读方式。</p>
+<pre><code>s = &#39;Hello,world.&#39;
+s1 = str(s)  # s1 = &#39;Hello,world.&#39;
+s2 = repr(s) # s2 = &quot;&#39;Hello,world.&#39;&quot;
+print s1,s2  # Hello,world. &#39;Hello,world.&#39;
+
+s = &#39;Hello,\tworld.&#39;
+s1 = str(s)  # s1 = &#39;Hello,\tworld.&#39;
+s2 = repr(s) # s2 = &quot;&#39;Hello,\\tworld.&#39;&quot;
+print s1,s2  # Hello,    world. &#39;Hello,\tworld.&#39;
+
+s1 = str(1.0/7.0)  # s1 = 0.142857142857
+s2 = repr(1.0/7.0) # s2 = 0.142857142857142857
+</code></pre>
+<h3 id="5-其它技巧"><a href="#5-其它技巧" class="headerlink" title="5. 其它技巧"></a>5. 其它技巧</h3>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/05/08/Web/WebsiteAddress/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/05/03/Python/Log4py学习笔记/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "Python 小技巧",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-05-06 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Python/">Python<span>4</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Python/">Python<span>3</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#Python-%E4%B8%AD%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="toc-article-text">Python 中的小技巧</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#1-%E5%BE%AA%E7%8E%AF%E6%8A%80%E5%B7%A7-Looping-Techniques"><span class="toc-article-text">1. 循环技巧(Looping Techniques)</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%9C%A8%E5%AD%97%E5%85%B8%E4%B8%AD%E5%BE%AA%E7%8E%AF"><span class="toc-article-text">在字典中循环</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%9C%A8%E5%BA%8F%E5%88%97%E4%B8%AD%E5%BE%AA%E7%8E%AF"><span class="toc-article-text">在序列中循环</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E5%90%8C%E6%97%B6%E5%BE%AA%E7%8E%AF%E5%A4%9A%E4%B8%AA%E5%BA%8F%E5%88%97"><span class="toc-article-text">同时循环多个序列</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E9%80%86%E5%90%91%E5%BE%AA%E7%8E%AF%E5%BA%8F%E5%88%97"><span class="toc-article-text">逆向循环序列</span></a></li><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#%E6%8E%92%E5%BA%8F%E5%90%8E%E5%BE%AA%E7%8E%AF"><span class="toc-article-text">排序后循环</span></a></li></ol></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#2-range-%E5%92%8Cxrange-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-article-text">2. range()和xrange()的区别</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#3-dir-%E5%87%BD%E6%95%B0"><span class="toc-article-text">3. dir()函数</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#4-str-%E5%92%8Crepr"><span class="toc-article-text">4. str()和repr()</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#5-%E5%85%B6%E5%AE%83%E6%8A%80%E5%B7%A7"><span class="toc-article-text">5. 其它技巧</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>

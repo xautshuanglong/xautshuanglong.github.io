@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>计算机中的时间 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="做专业的程序员">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="计算机中的时间"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 计算机中的时间</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>做专业的程序员</p>
+			
+		 </div> <!-- alert -->
+	  		
+
+	  <h2 id="计算机计时原理"><a href="#计算机计时原理" class="headerlink" title="计算机计时原理"></a>计算机计时原理</h2><p><code>GMT</code>时间(<code>Greenwich Mean Time</code>)，即<code>格林威治标准时间</code>，正午太阳横穿格林威治子午线的时间。<br><code>UTC</code>时间(<code>Universal Time Coordinated</code>)，即<code>世界调整时间</code>，由原子钟计时，根据<code>GMT</code>校准后得到的时间。<br><code>CST</code>时间(<code>Central Standard Time</code>)，即<code>中央标准时间</code>，可视为<code>美国</code>，<code>澳大利亚</code>，<code>古巴</code>或<code>中国</code>的标准时间:</p>
+<ul>
+<li>美国中部时间：Central Standard Time (USA) UT-6:00</li>
+<li>澳大利亚中部时间：Central Standar Time (Australia) UT+9:30</li>
+<li>中国标准时间：Chian Standard Time UT+8:00</li>
+<li>古巴标准时间：Cuba Standar Time UT -4:00</li>
+</ul>
+<p>自1924年2月5日开始，格林威治天文台每隔一小时会向全世界发放调时信息。</p>
+<p><code>原子钟</code>是一种时钟，以原子共振频率标准来计算及保持时间的准确【电子转变能级时释放的精确微波信号】。原子钟是世界上已知最准确的时间测量和频率标准，也是国际时间和频率转换的标准。</p>
+<span id="more"></span>
+
+<h2 id="FILETIME与UNIX时间转换"><a href="#FILETIME与UNIX时间转换" class="headerlink" title="FILETIME与UNIX时间转换"></a>FILETIME与UNIX时间转换</h2><p>不同操作系统的计时起点：</p>
+<ul>
+<li>Linux/Unix&nbsp;&nbsp;1970-1-1 00:00:00 【考虑时区，北京时间：1970-1-1 08:00:00】</li>
+<li>Windows&nbsp;&nbsp;&nbsp;&nbsp;1601-1-1 00:00:00 【11644473600LL seconds before Linux/Unix epoch】<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">FILETIME</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    DWORD dwLowDateTime;	<span class="comment">// low 32 bits</span></span><br><span class="line">    DWORD dwHighDateTime;	<span class="comment">// high 32 bits</span></span><br><span class="line">&#125;FILETIME, *PFILETIME, *LPFILETIME;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">union</span> _<span class="title">ULARGE_INTEGER</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        DWORD LowPart;</span><br><span class="line">        DWORD HighPart;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line">        DWORD LowPart;</span><br><span class="line">        DWORD HighPart;</span><br><span class="line">    &#125;u;</span><br><span class="line">    ULONGLONG QuadPart;</span><br><span class="line">&#125;ULARGE_INTEGER, *PULARGE_INTEGER;</span><br><span class="line"></span><br><span class="line">FILETIME fileTime; <span class="comment">// 时钟嘀嗒，100ns，开始于 1601-01-01 00:00:00</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 移位操作</span></span><br><span class="line"><span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ulongTime = fileTime.dwHighDateTime;</span><br><span class="line">ulongTime = ulongTime &lt;&lt; <span class="number">32</span> | fileTime.dwLowDateTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 官方推荐</span></span><br><span class="line">ULARGE_INTEGER ulargeTime;</span><br><span class="line">ulargeTime.HighPart = fileTime.dwHighDateTime;</span><br><span class="line">ulargeTime.LowPart = fileTime.dwLowDateTime;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转换</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> WINDOWS_TICK 10000000 <span class="comment">// 100ns=10^-7s</span></span></span><br><span class="line"><span class="comment">// 1601-01-01 00:00:00 与 1970-01-01 00:00:00 间隔的秒数</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SEC_TO_UNIX_EPOCH 11644473600LL </span></span><br><span class="line"><span class="type">time_t</span> unixTime1 = ulongTime / WINDOWS_TICK - SEC_TO_UNIX_EPOCH;</span><br><span class="line"><span class="type">time_t</span> unixTime2 = ulargeTime.QuadPart / WINDOWS_TICK - SEC_TO_UNIX_EPOCH;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="获取当前系统时间"><a href="#获取当前系统时间" class="headerlink" title="获取当前系统时间"></a>获取当前系统时间</h2><ul>
+<li>time_t 时间戳，距离 1900-01-01 00:00:00 的秒数。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">time_t</span> <span class="title">time</span><span class="params">(<span class="type">time_t</span> *timer)</span></span>;</span><br><span class="line">timer --&gt; Pointer to the storage location <span class="keyword">for</span> time.</span><br><span class="line">Return Value --&gt; Return the time as seconds elapsed since midnight, January <span class="number">1</span>,<span class="number">1970</span>,</span><br><span class="line"><span class="keyword">or</span> <span class="number">-1</span> in the <span class="keyword">case</span> of an error.</span><br></pre></td></tr></table></figure></li>
+<li>tm 精确到秒的时间结构体，需注意各成员的取值范围。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">tm</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> tm_sec;     <span class="comment">// the number of seconds [0-59]</span></span><br><span class="line">    <span class="type">int</span> tm_min;     <span class="comment">// the number of minutes [0-59]</span></span><br><span class="line">    <span class="type">int</span> tm_hour;    <span class="comment">// the number of hours since midnight [0-23]</span></span><br><span class="line">    <span class="type">int</span> tm_mday;    <span class="comment">// indicate the day of the month [1-31]</span></span><br><span class="line">    <span class="type">int</span> tm_mon;     <span class="comment">// the number of months since January [0-11]</span></span><br><span class="line">    <span class="type">int</span> tm_year;    <span class="comment">// the number of years since 1900 [117 --&gt; 1900+117=2017]</span></span><br><span class="line">    <span class="type">int</span> tm_wday;    <span class="comment">// the number of days since Sundary [0-6]</span></span><br><span class="line">    <span class="type">int</span> tm_yday;    <span class="comment">// the number of days since January 1 [0-365]</span></span><br><span class="line">    <span class="type">int</span> tm_isdst;   <span class="comment">// daylight savings time [TRUE] and normal time [FALSE]</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">tm m_tmCurTime;</span><br><span class="line"><span class="type">time_t</span> m_tCurTime;</span><br><span class="line"><span class="built_in">time</span>(&amp;m_tCurTime);<span class="comment">// 当前时间戳</span></span><br><span class="line"><span class="comment">// 根据当前所在时区(系统设置)转换为信息全面的结构 </span></span><br><span class="line"><span class="built_in">localtime_s</span>(&amp;m_tmCurTime, &amp;m_tCurTime);</span><br><span class="line"></span><br><span class="line"><span class="type">long</span> timeZoneOffset;</span><br><span class="line"><span class="type">time_t</span> tempTime;</span><br><span class="line">_tzset();</span><br><span class="line">_get_timezone(&amp;timeZoneOffset);</span><br><span class="line">tempTime = m_tCurTime - timeZoneOffset;</span><br><span class="line"><span class="built_in">gmtime_s</span>(&amp;m_tmCurTime, &amp;tempTimeOB);<span class="comment">// 标准时间，需要根据时区自行调整(参见后文 时区)</span></span><br></pre></td></tr></table></figure></li>
+<li>SYSTEMTIME<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">_SYSTEMTIME</span></span><br><span class="line">&#123;</span><br><span class="line">    WORD wYear;         <span class="comment">// The current year.</span></span><br><span class="line">    WORD wMonth;        <span class="comment">// The current month; January is 1.</span></span><br><span class="line">    WORD wDayOfWeek;    <span class="comment">// The current day of the week; Sunday is 0, Monday is 1, and so on.</span></span><br><span class="line">    WORD wDay;          <span class="comment">// The current day of the month.</span></span><br><span class="line">    WORD wHour;         <span class="comment">// The current hour.</span></span><br><span class="line">    WORD wMinute;       <span class="comment">// The current minute.</span></span><br><span class="line">    WORD wSecond;       <span class="comment">// The current second.</span></span><br><span class="line">    WORD wMilliseconds; <span class="comment">// The current millisecond.</span></span><br><span class="line">&#125; SYSTEMTIME, *PSYSTEMTIME, *LPSYSTEMTIME;</span><br><span class="line">SYSTEMTIME m_systemTime;</span><br><span class="line">::<span class="built_in">GetLocalTime</span>(&amp;m_systemTime);</span><br><span class="line"><span class="type">char</span> timeBuffer[<span class="number">64</span>];</span><br><span class="line"><span class="built_in">sprintf_s</span>(timeBuffer, <span class="string">&quot;%4d-%02d-%02d %02d:%02d:%02d.%03d&quot;</span>,</span><br><span class="line">    m_systemTime.wYear, m_systemTime.wMonth, m_systemTime.wDay,</span><br><span class="line">    m_systemTime.wHour, m_systemTime.wMinute, m_systemTime.wSecond, m_systemTime.wMilliseconds);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="时区与时间差"><a href="#时区与时间差" class="headerlink" title="时区与时间差"></a>时区与时间差</h2><ul>
+<li>时差 UTC = LocalTime + Bias<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">time_t</span> timeTest;</span><br><span class="line"><span class="built_in">time</span>(&amp;timeTest);</span><br><span class="line"></span><br><span class="line">tm gmTime;</span><br><span class="line">tm loTime;</span><br><span class="line"><span class="built_in">gmtime_s</span>(&amp;gmTime, &amp;timeTest);</span><br><span class="line"><span class="type">time_t</span> gmt = <span class="built_in">mktime</span>(&amp;gmTime);</span><br><span class="line"><span class="built_in">localtime_s</span>(&amp;loTime, &amp;timeTest);</span><br><span class="line"><span class="type">time_t</span> lot = <span class="built_in">mktime</span>(&amp;loTime);</span><br><span class="line"><span class="type">double</span> diff = <span class="built_in">difftime</span>(gmt, lot);<span class="comment">// -28800.000000</span></span><br><span class="line"></span><br><span class="line"><span class="type">long</span> timeZone;</span><br><span class="line"><span class="comment">// The _get_timezone function retrieves the difference in seconds</span></span><br><span class="line"><span class="comment">// between UTC and local time as an integer.</span></span><br><span class="line"><span class="comment">// The default value is 28,800 seconds, for Pacific Standard Time (eight hours behind UTC).</span></span><br><span class="line"><span class="type">int</span> errorCode = _get_timezone(&amp;timeZone);<span class="comment">// -28800(28800)</span></span><br><span class="line"><span class="type">char</span> timeZoneName[<span class="number">64</span>];</span><br><span class="line"><span class="type">size_t</span> t;</span><br><span class="line">_get_tzname(&amp;t, timeZoneName, <span class="built_in">sizeof</span>(timeZoneName), <span class="number">0</span>);<span class="comment">// 中国标准时间(太平洋标准时间)</span></span><br><span class="line"><span class="comment">// 通过调整系统时间可知：</span></span><br><span class="line"><span class="comment">// 中国标准时间   = -28800</span></span><br><span class="line"><span class="comment">// 太平洋标准时间 =  28800</span></span><br><span class="line"><span class="comment">// _get_timezone  =  格林威治时间 - 本地时间</span></span><br></pre></td></tr></table></figure></li>
+<li>获取时区相关信息<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// set time environment variables:</span></span><br><span class="line"><span class="comment">// assign values to three global variables:_daylignt,_timezone and _tzname</span></span><br><span class="line">_tzset();</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> dayLightHours;     <span class="comment">// 以小时为单位的日光节约时间</span></span><br><span class="line"><span class="type">long</span> dayLightSeconds;  <span class="comment">// 以秒为单位的日光节约时间</span></span><br><span class="line"><span class="type">long</span> timeZone;         <span class="comment">// 秒数 = 格林威治时间 - 本地时间</span></span><br><span class="line"><span class="type">char</span> timeZoneName[<span class="number">64</span>]; <span class="comment">// 时区名称</span></span><br><span class="line"><span class="type">size_t</span> nameLen;        <span class="comment">// 时区名称长度，包括终结符</span></span><br><span class="line"></span><br><span class="line">_get_daylight(&amp;dayLightHours);<span class="comment">// daylight saving time offset in hours</span></span><br><span class="line">_get_dstbias(&amp;dayLightSeconds);<span class="comment">// daylight saving time offset in seconds </span></span><br><span class="line"><span class="type">int</span> errorCode = _get_timezone(&amp;timeZone);</span><br><span class="line">_get_tzname(&amp;nameLen, timeZoneName, <span class="built_in">sizeof</span>(timeZoneName), <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// This structure specifies information specific to the time zone.</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">_TIME_ZONE_INFORMATION</span></span><br><span class="line">&#123;</span><br><span class="line">    LONG Bias;</span><br><span class="line">    WCHAR StandardName[<span class="number">32</span>];</span><br><span class="line">    SYSTEMTIME StandardDate;</span><br><span class="line">    LONG StandardBias;</span><br><span class="line">    WCHAR DaylightName[<span class="number">32</span>];</span><br><span class="line">    SYSTEMTIME DaylightDate;</span><br><span class="line">    LONG DaylightBias;</span><br><span class="line">&#125; TIME_ZONE_INFORMATION;</span><br><span class="line">TIME_ZONE_INFORMATION timeZoneInfo;</span><br><span class="line"><span class="built_in">GetTimeZoneInformation</span>(&amp;timeZoneInfo);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="精确计算时间差"><a href="#精确计算时间差" class="headerlink" title="精确计算时间差"></a>精确计算时间差</h2><ul>
+<li>QueryPerformanceFrequency<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL <span class="title">QueryPerformanceFrequency</span><span class="params">(LARGE_INTEGER* lpFrequency)</span></span>;</span><br><span class="line">This function retrieves the frequency of the high-resolution performance counter</span><br><span class="line"><span class="keyword">if</span> one is provided by the OEM.</span><br><span class="line">lpFrequency --&gt; </span><br><span class="line">[out] Pointer to a variable that the function sets, in counts per second,</span><br><span class="line">to the current performance-counter frequency.</span><br><span class="line">If the installed hardware does <span class="keyword">not</span> support a high-resolution performance counter,</span><br><span class="line">the value passed back through <span class="keyword">this</span> pointer can be zero.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">TRUE indicates that a performance frequency value was successfully filed in.</span><br><span class="line">False indicates failure.</span><br></pre></td></tr></table></figure></li>
+<li>QueryPerformanceCounter<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL <span class="title">QueryPerformanceCounter</span><span class="params">(LARGE_INTEGER* lpPerformanceCount)</span></span>;</span><br><span class="line">This function retrieves the current value of the high-resolution performance counter </span><br><span class="line"><span class="keyword">if</span> one is provided by the OEM.</span><br><span class="line">lpPerformanceCount --&gt; </span><br><span class="line">[in] Pointer to a variable that the function sets, in counts, </span><br><span class="line">to the current performance-counter value.</span><br><span class="line">If the installed hardware does <span class="keyword">not</span> support a high-resolution performance counter, </span><br><span class="line"><span class="keyword">this</span> parameter can be set to zero.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">TRUE indicates that a performance counter value was successfully filled in.</span><br><span class="line">FALSE indicates failure.</span><br></pre></td></tr></table></figure></li>
+<li>GetTickCount<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DWORD WINAPI <span class="title function_">GetTickCount</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line">Retrieves the number of milliseconds that have elapsed since the system was started,</span><br><span class="line">up to <span class="number">49.7</span> days.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">The <span class="keyword">return</span> value is the number of milliseconds that have elapsed since the system was started.</span><br></pre></td></tr></table></figure></li>
+<li>clock<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">clock_t</span> <span class="title">clock</span><span class="params">( <span class="type">void</span> )</span></span>;</span><br><span class="line">Calculates the wall-clock time used by the calling process.</span><br><span class="line">Return Value --&gt;</span><br><span class="line">The elapsed wall-<span class="function">clock time since the start of the <span class="title">process</span></span></span><br><span class="line"><span class="function"><span class="params">(elapsed time in seconds times CLOCKS_PER_SEC)</span>.</span></span><br><span class="line"><span class="function">If the amount of elapsed time is unavailable, the function returns –1, cast as a <span class="type">clock_t</span>.</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="CPP-标准库时间"><a href="#CPP-标准库时间" class="headerlink" title="CPP 标准库时间"></a>CPP 标准库时间</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000000000000LL</span>&gt; yocto;  <span class="comment">// 有条件的支持</span></span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000000000LL</span>&gt; zepto;     <span class="comment">// 有条件的支持</span></span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000000LL</span>&gt; atto;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000000LL</span>&gt; femto;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000000LL</span>&gt; pico;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000000</span>&gt; nano;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000000</span>&gt; micro;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">1000</span>&gt; milli;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">100</span>&gt; centi;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1</span>, <span class="number">10</span>&gt; deci;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">10</span>, <span class="number">1</span>&gt; deca;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">100</span>, <span class="number">1</span>&gt; hecto;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000</span>, <span class="number">1</span>&gt; kilo;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000</span>, <span class="number">1</span>&gt; mega;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000</span>, <span class="number">1</span>&gt; giga;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000LL</span>, <span class="number">1</span>&gt; tera;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000LL</span>, <span class="number">1</span>&gt; peta;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000000LL</span>, <span class="number">1</span>&gt; exa;</span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000000000LL</span>, <span class="number">1</span>&gt; zetta;     <span class="comment">//有条件的支持</span></span><br><span class="line"><span class="keyword">typedef</span> ratio&lt;<span class="number">1000000000000000000000000LL</span>, <span class="number">1</span>&gt; yotta;  <span class="comment">//有条件的支持</span></span><br></pre></td></tr></table></figure>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2017/03/05/CommonSense/PortNumberRegistry/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/12/26/CPlusPlus/CPP11新特性/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "计算机中的时间",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2017-01-08 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/CommonSense/">CommonSense<span>15</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Time/">Time<span>2</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%A1%E6%97%B6%E5%8E%9F%E7%90%86"><span class="toc-article-text">计算机计时原理</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#FILETIME%E4%B8%8EUNIX%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2"><span class="toc-article-text">FILETIME与UNIX时间转换</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><span class="toc-article-text">获取当前系统时间</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%97%B6%E5%8C%BA%E4%B8%8E%E6%97%B6%E9%97%B4%E5%B7%AE"><span class="toc-article-text">时区与时间差</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E7%B2%BE%E7%A1%AE%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%B7%AE"><span class="toc-article-text">精确计算时间差</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#CPP-%E6%A0%87%E5%87%86%E5%BA%93%E6%97%B6%E9%97%B4"><span class="toc-article-text">CPP 标准库时间</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>

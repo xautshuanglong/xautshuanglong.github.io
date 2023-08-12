@@ -1,0 +1,875 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>vim 学习笔记 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="记录 vim 的使用方法及技巧">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="vim 学习笔记"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> vim 学习笔记</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  
+		 <div class="alert alert-success description">
+			<i class="fa fa-info-circle"></i> <p>记录 vim 的使用方法及技巧</p>
+			
+		 </div> <!-- alert -->
+	  		
+
+	  <h2 id="vim-常用命令图解"><a href="#vim-常用命令图解" class="headerlink" title="vim 常用命令图解"></a>vim 常用命令图解</h2><p>图文并茂地记录 <code>vim</code> 各模式下的操作方法及相应快捷键，附带 <code>vim</code> 地配制方法及插件安装。</p>
+<span id="more"></span>
+
+<p><img src="/images/Linux/20160415_0.png" alt="20160415_0.png"></p>
+<p><img src="/images/Linux/vi-vim-cheat-sheet-sch.gif" alt="vi-vim-cheat-sheet-sch.gif"></p>
+<h2 id="命令（快捷键）详解"><a href="#命令（快捷键）详解" class="headerlink" title="命令（快捷键）详解"></a>命令（快捷键）详解</h2><pre><code>1. 编辑模式  
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">i,I</td>
+<td align="left">i: 从光标所在处开始插入；<br>I: 在光标所在行的第一个非空格字符处开始插入。</td>
+</tr>
+<tr>
+<td align="right">a,A</td>
+<td align="left">a: 从光标所在处的下一个字符开始插入；<br>A: 在光标所在行的最后一个字符处开始插入。</td>
+</tr>
+<tr>
+<td align="right">o,O</td>
+<td align="left">o: 在光标所在行的下一行插入新行；<br>O: 在光标所在行的上一行插入新行。</td>
+</tr>
+<tr>
+<td align="right">r,R</td>
+<td align="left">r: 只取代光标所在处的字符一次；<br>R: 一直取代光标所在处的文字，直到按下 ESC为止。</td>
+</tr>
+</tbody></table>
+<pre><code>2. 指令模式
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">Esc</td>
+<td align="left">进入指令模式</td>
+</tr>
+<tr>
+<td align="right">:w</td>
+<td align="left">将编辑的数据写入到硬盘档案中</td>
+</tr>
+<tr>
+<td align="right">:w!</td>
+<td align="left">若文档属性为 <strong>只读</strong> 时，强制写入文档。能否写入成功与对该文档的权限有关。</td>
+</tr>
+<tr>
+<td align="right">:q</td>
+<td align="left">离开vi</td>
+</tr>
+<tr>
+<td align="right">:q!</td>
+<td align="left">强制离开，不存储文档。</td>
+</tr>
+<tr>
+<td align="right">:e</td>
+<td align="left">重新加载已打开的文件。</td>
+</tr>
+<tr>
+<td align="right">:e!</td>
+<td align="left">放弃所有修改，并打开原来的文件</td>
+</tr>
+<tr>
+<td align="right">:wq</td>
+<td align="left">存储后离开,若为 <strong>:wq!</strong> 则强制存储后离开。</td>
+</tr>
+<tr>
+<td align="right">ZZ</td>
+<td align="left">大写的 <strong>Z</strong><br>若文档没有改动，则不存储离开；<br>若文档被改动过，则存储后离开。</td>
+</tr>
+<tr>
+<td align="right">:w [filename]</td>
+<td align="left">将文档存储成另一个文档【另存为】。</td>
+</tr>
+<tr>
+<td align="right">:r [filename]</td>
+<td align="left">在编辑的数据中读入另一个文档，将【filename】内容添加到所在行后面。</td>
+</tr>
+<tr>
+<td align="right">:n1,n2 w [filename]</td>
+<td align="left">将n1到n2的内容存储到filename文档。</td>
+</tr>
+<tr>
+<td align="right">:! command</td>
+<td align="left">暂时离开vi到指令列模式，执行 command 并显示结果。</td>
+</tr>
+<tr>
+<td align="right">:set nu/nonu</td>
+<td align="left">vim 环境的变更<br>显示行号/取消行号。</td>
+</tr>
+</tbody></table>
+<pre><code>3. 移动光标
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">h 或 ←</td>
+<td align="left">光标向左移动一个字符</td>
+</tr>
+<tr>
+<td align="right">j 或 ↓</td>
+<td align="left">光标向下移动一个字符</td>
+</tr>
+<tr>
+<td align="right">k 或 ↑</td>
+<td align="left">光标向上移动一个字符</td>
+</tr>
+<tr>
+<td align="right">l 或 →</td>
+<td align="left">光标向右移动一个字符</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+[f]</td>
+<td align="left">视图【向下】移动一页 == PageDown</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+[b]</td>
+<td align="left">视图【向上】移动一页 == PageUp</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+[d]</td>
+<td align="left">视图【向下】移动半页</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+[u]</td>
+<td align="left">视图【向上】移动半页</td>
+</tr>
+<tr>
+<td align="right">nzh</td>
+<td align="left">视图【向左】移动 n 个字符</td>
+</tr>
+<tr>
+<td align="right">nzl</td>
+<td align="left">视图【向右】移动 n 个字符</td>
+</tr>
+<tr>
+<td align="right">zH</td>
+<td align="left">视图【向左】移动半页</td>
+</tr>
+<tr>
+<td align="right">zL</td>
+<td align="left">视图【向右】移动半页</td>
+</tr>
+<tr>
+<td align="right">zs</td>
+<td align="left">视图【向左】移动到最左侧</td>
+</tr>
+<tr>
+<td align="right">ze</td>
+<td align="left">视图【向右】移动到最右侧</td>
+</tr>
+<tr>
+<td align="right">+</td>
+<td align="left">光标移动到下一行首个非空格符处</td>
+</tr>
+<tr>
+<td align="right">-</td>
+<td align="left">光标移动到上一行首个非空格符处</td>
+</tr>
+<tr>
+<td align="right">n<code>space</code></td>
+<td align="left">光标向右移动n个字符（包括空格），当前行剩余字符不足n时，跳至下一行</td>
+</tr>
+<tr>
+<td align="right">0 或 home</td>
+<td align="left">光标移动到当前行的首字符</td>
+</tr>
+<tr>
+<td align="right">$ 或 end</td>
+<td align="left">光标移动到当前行的末字符</td>
+</tr>
+<tr>
+<td align="right">H</td>
+<td align="left">光标移动到屏幕首行首字符</td>
+</tr>
+<tr>
+<td align="right">M</td>
+<td align="left">光标移动到屏幕中间行首字符</td>
+</tr>
+<tr>
+<td align="right">L</td>
+<td align="left">光标移动到屏幕末行首字符</td>
+</tr>
+<tr>
+<td align="right">G</td>
+<td align="left">光标移动到文档末行首字符</td>
+</tr>
+<tr>
+<td align="right">nG</td>
+<td align="left">光标移动到文档第n行首字符</td>
+</tr>
+<tr>
+<td align="right">gg</td>
+<td align="left">光标移动到文档首行首字符</td>
+</tr>
+<tr>
+<td align="right">n<code>Enter</code></td>
+<td align="left">光标向下移动n行</td>
+</tr>
+<tr>
+<td align="right">b</td>
+<td align="left">将光标移动到单词开头</td>
+</tr>
+<tr>
+<td align="right">e</td>
+<td align="left">将光标移动到单词末尾</td>
+</tr>
+<tr>
+<td align="right">n&#124;</td>
+<td align="left">将光标移动到当前行的第 n 列</td>
+</tr>
+<tr>
+<td align="right">[[ 或 ]]</td>
+<td align="left">跳转到函数 <code>开头</code> 或 <code>结尾</code></td>
+</tr>
+<tr>
+<td align="right">{[ 或 ]}</td>
+<td align="left">跳转到区块 <code>开头</code> 或 <code>结尾</code></td>
+</tr>
+</tbody></table>
+<pre><code>4. 复制与粘贴
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">x,X</td>
+<td align="left">x向后(X向前)删除一个字符，Delete(Backspace)</td>
+</tr>
+<tr>
+<td align="right">nx</td>
+<td align="left">向后删除n个字符</td>
+</tr>
+<tr>
+<td align="right">dd</td>
+<td align="left">剪切光标所在的那一整行</td>
+</tr>
+<tr>
+<td align="right">ndd</td>
+<td align="left">剪切光标所在处向下n行</td>
+</tr>
+<tr>
+<td align="right">d1G</td>
+<td align="left">剪切光标所在处到第一行的所有数据</td>
+</tr>
+<tr>
+<td align="right">dG</td>
+<td align="left">剪切光标所在处到最后一行的所有数据</td>
+</tr>
+<tr>
+<td align="right">d$</td>
+<td align="left">剪切光标所在处到该行最后一个字符的所有数据</td>
+</tr>
+<tr>
+<td align="right">d0</td>
+<td align="left">剪切光标所在处到该行第一个字符的所有数据</td>
+</tr>
+<tr>
+<td align="right">D</td>
+<td align="left">剪切光标处到行末的所有数据</td>
+</tr>
+<tr>
+<td align="right">y</td>
+<td align="left">复制选中的内容到剪贴板</td>
+</tr>
+<tr>
+<td align="right">yy</td>
+<td align="left">复制光标所在的那一行</td>
+</tr>
+<tr>
+<td align="right">nyy</td>
+<td align="left">复制光标所在处向下n行</td>
+</tr>
+<tr>
+<td align="right">y1G</td>
+<td align="left">复制光标所在行到第一行的所有数据</td>
+</tr>
+<tr>
+<td align="right">yG</td>
+<td align="left">复制光标所在行到最后一行的所有数据</td>
+</tr>
+<tr>
+<td align="right">y0</td>
+<td align="left">复制光标所在处到该行行首的所有数据</td>
+</tr>
+<tr>
+<td align="right">y$</td>
+<td align="left">复制光标所在处到该行行尾的所有数据</td>
+</tr>
+<tr>
+<td align="right">p,P</td>
+<td align="left">p将已复制的数据粘贴到光标下一行；<br>P将已复制的数据粘贴到光标上一行.</td>
+</tr>
+<tr>
+<td align="right">J</td>
+<td align="left">将光标所在行与下一行的数据结合成一行</td>
+</tr>
+<tr>
+<td align="right">c</td>
+<td align="left">重复删除多个数据。eg:[10cj],向下删除10行</td>
+</tr>
+<tr>
+<td align="right">u</td>
+<td align="left">复原前一个动作</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+r</td>
+<td align="left">重做上一个动作</td>
+</tr>
+<tr>
+<td align="right">.</td>
+<td align="left">重复前一个动作</td>
+</tr>
+<tr>
+<td align="right">5.</td>
+<td align="left">重复5次前一个动作</td>
+</tr>
+<tr>
+<td align="right">:1,10 d</td>
+<td align="left">将1-10行剪切，可用 p 命令粘贴</td>
+</tr>
+<tr>
+<td align="right">:1,10 m 20</td>
+<td align="left">将 1-10 行移动到 20 行之后</td>
+</tr>
+<tr>
+<td align="right">:1,10 co 20</td>
+<td align="left">将 1-10 拷贝到 20 行之后</td>
+</tr>
+<tr>
+<td align="right">:1,$ co $</td>
+<td align="left">将整篇文档拷贝一份添加到文件末尾</td>
+</tr>
+</tbody></table>
+<pre><code>5. 搜索与替代
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">/word</td>
+<td align="left">从光标处向下查找 word 字符串<br>【:nohlsearch 关闭搜索高亮】</td>
+</tr>
+<tr>
+<td align="right">?word</td>
+<td align="left">从光标处向上查找 word 字符串</td>
+</tr>
+<tr>
+<td align="right">*</td>
+<td align="left">全文查找光标处的单词</td>
+</tr>
+<tr>
+<td align="right">n</td>
+<td align="left">重复前一个搜索动作</td>
+</tr>
+<tr>
+<td align="right">N</td>
+<td align="left">反向重复上一个搜索动作</td>
+</tr>
+<tr>
+<td align="right">:s/old/new</td>
+<td align="left">用 new 替换 old，当前行第一个匹配</td>
+</tr>
+<tr>
+<td align="right">:s/old/new/g</td>
+<td align="left">用 new 替换 old，当前行所有匹配</td>
+</tr>
+<tr>
+<td align="right">:%s/old/new</td>
+<td align="left">用 new 替换 old，所有行第一个匹配</td>
+</tr>
+<tr>
+<td align="right">:%s/old/new/g</td>
+<td align="left">用 new 替换 old，整篇文档的所有匹配</td>
+</tr>
+<tr>
+<td align="right">:n1,n2s/word1/word2/g<br>:n1,n2s/word1/word2/gc</td>
+<td align="left">在n1行与n2行之间寻找word1字符串，并将该字符串替换为word2。<br>在替换前提示用户确认是否需要替换</td>
+</tr>
+<tr>
+<td align="right">:3,5s/^/#/g<br>:3,5s/^////g</td>
+<td align="left">将3到5行注释掉</td>
+</tr>
+<tr>
+<td align="right">:3,5s/^#//g<br>:3,5s/^////g</td>
+<td align="left">取消3到5行的注释</td>
+</tr>
+<tr>
+<td align="right">:3,5s/^#/&nbsp;&nbsp;&nbsp;&nbsp;/g</td>
+<td align="left">在3到5行行首添加4个空格，用于缩进</td>
+</tr>
+<tr>
+<td align="right">:%s/^/#/g</td>
+<td align="left">注释整个文档，更快</td>
+</tr>
+<tr>
+<td align="right">%</td>
+<td align="left">括号匹配</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+a</td>
+<td align="left">增加光标处的数字</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+x</td>
+<td align="left">减小光标处的数字</td>
+</tr>
+</tbody></table>
+<pre><code>6. 窗口命令
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">:open file</td>
+<td align="left">在当前窗口打开一个新文件</td>
+</tr>
+<tr>
+<td align="right">:split file</td>
+<td align="left">在新窗口中打开文件（水平分割）</td>
+</tr>
+<tr>
+<td align="right">:new file</td>
+<td align="left">在新窗口中打开文件（水平方向）</td>
+</tr>
+<tr>
+<td align="right">:vsplit file</td>
+<td align="left">在新窗口中打开文件（垂直分割）</td>
+</tr>
+<tr>
+<td align="right">:bn/:bp</td>
+<td align="left">在当前窗口中切换至下/上一个已打开的文件</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+ww</td>
+<td align="left">移动到下一个窗口</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+wh</td>
+<td align="left">移动到左方的窗口</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+wj</td>
+<td align="left">移动到下方的窗口</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+wk</td>
+<td align="left">移动到上方的窗口</td>
+</tr>
+<tr>
+<td align="right">[Ctrl]+wl</td>
+<td align="left">移动到右方的窗口</td>
+</tr>
+<tr>
+<td align="right">:only</td>
+<td align="left">关闭所有窗口，只保留当前窗口</td>
+</tr>
+</tbody></table>
+<pre><code>7. 对齐命令
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="right">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">:%!fmt</td>
+<td align="left">对齐所有行</td>
+</tr>
+<tr>
+<td align="right">!}fmt</td>
+<td align="left">对齐光标处的所有行</td>
+</tr>
+<tr>
+<td align="right">5!!fmt</td>
+<td align="left">对齐光标所在处向下 5 行</td>
+</tr>
+<tr>
+<td align="right">gg=G</td>
+<td align="left">从第一行到最后一行，将源码内容对齐，简单格式化</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html" title="http://www.cnblogs.com/softwaretesting/archive/2011/07/12/2104435.html">Vim 命令合集</a><br><a target="_blank" rel="noopener" href="http://www.oschina.net/news/43167/130-essential-vim-commands">超过130个你需要了解的 vim 命令</a><br><a target="_blank" rel="noopener" href="http://lxs647.iteye.com/blog/1245948">vim 命令</a></p>
+<h2 id="vim-配置"><a href="#vim-配置" class="headerlink" title="vim 配置"></a>vim 配置</h2><h3 id="必知必会"><a href="#必知必会" class="headerlink" title="必知必会"></a>必知必会</h3><ul>
+<li>.vimrc example</li>
+</ul>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> autoindent</span><br><span class="line"><span class="keyword">set</span> <span class="built_in">cindent</span></span><br><span class="line"><span class="keyword">set</span> hlsearch</span><br><span class="line"><span class="keyword">set</span> incsearch</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"><span class="keyword">set</span> noswapfile</span><br><span class="line"><span class="keyword">set</span> nobackup</span><br><span class="line"><span class="keyword">set</span> ruler</span><br><span class="line"><span class="keyword">set</span> showmatch</span><br><span class="line"><span class="keyword">set</span> expandtab</span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> softtabstop=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span></span><br><span class="line"><span class="keyword">set</span> smarttab</span><br><span class="line"><span class="keyword">set</span> showmatch</span><br><span class="line"><span class="keyword">set</span> laststatus=<span class="number">2</span></span><br><span class="line"><span class="keyword">set</span> wildmenu</span><br><span class="line"><span class="keyword">set</span> scrolloff=<span class="number">3</span></span><br><span class="line"><span class="keyword">set</span> nowrap</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> completeopt=longest,<span class="keyword">menu</span></span><br><span class="line"><span class="keyword">autocmd</span> FileType <span class="keyword">python</span> <span class="keyword">set</span> omnifunc=pythoncomplete#Complete</span><br><span class="line"><span class="keyword">autocmd</span> FileType javascript <span class="keyword">set</span> omnifunc=javascriptcomplete#CompleteJS</span><br><span class="line"><span class="keyword">autocmd</span> FileType html <span class="keyword">set</span> omnifunc=htmlcomplete#CompleteTags</span><br><span class="line"><span class="keyword">autocmd</span> FileType css <span class="keyword">set</span> omnifunc=csscomplete#CompleteCSS</span><br><span class="line"><span class="keyword">autocmd</span> FileType xml <span class="keyword">set</span> omnifunc=xmlcomplete#CompleteTags</span><br><span class="line"><span class="keyword">autocmd</span> FileType java <span class="keyword">set</span> omnifunc=javacomplete#Complet</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> cursorline</span><br><span class="line"><span class="comment">&quot;set cursorcolumn</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> fileencodings=utf-<span class="number">8</span>,ucs-bom,gb18030,gbk,gb2312,cp936</span><br><span class="line"><span class="keyword">set</span> termencoding=utf-<span class="number">8</span></span><br><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">syntax</span> enable</span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"><span class="keyword">filetype</span> off</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> statusline=[%F]\ <span class="built_in">line</span>=%<span class="keyword">l</span>/%L\ <span class="keyword">col</span>=%<span class="keyword">c</span>]\ [%<span class="keyword">p</span>%%]</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/Vundle.<span class="keyword">vim</span></span><br><span class="line"><span class="keyword">call</span> vundle#begin()</span><br><span class="line">    Plugin <span class="string">&#x27;VundleVim/Vundle.vim&#x27;</span></span><br><span class="line">    Plugin <span class="string">&#x27;majutsushi/tagbar&#x27;</span></span><br><span class="line">    Plugin <span class="string">&#x27;pboettch/vim-cmake-syntax&#x27;</span></span><br><span class="line">    Plugin <span class="string">&#x27;scrooloose/nerdtree&#x27;</span></span><br><span class="line">    Plugin <span class="string">&#x27;octol/vim-cpp-enhanced-highlight&#x27;</span></span><br><span class="line">    Plugin <span class="string">&#x27;Xuyuanp/nerdtree-git-plugin&#x27;</span></span><br><span class="line">    Plugin <span class="string">&#x27;jistr/vim-nerdtree-tabs&#x27;</span></span><br><span class="line"><span class="keyword">call</span> vundle#end()</span><br><span class="line"></span><br><span class="line"><span class="keyword">filetype</span> <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="keyword">on</span></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;------------------ Tagbar Configuration --------------------&quot;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:tagbar_ctags_bin</span>=<span class="string">&#x27;/usr/local/bin/ctags&#x27;</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:tagbar_width</span>=<span class="number">35</span></span><br><span class="line"><span class="keyword">autocmd</span> BufReadPost *.cpp,*.<span class="keyword">c</span>,*.h,*.hpp,*.<span class="keyword">cc</span>,*.cxx,*.java,*.<span class="keyword">py</span> <span class="keyword">call</span> tagbar#autoopen()</span><br><span class="line"><span class="string">&quot;------------------ NERDTree Configuration --------------------&quot;</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowBookmarks=<span class="number">1</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowLineNumbers=<span class="number">1</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeAutoCenter=<span class="number">1</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowHidden=<span class="number">1</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinSize=<span class="number">35</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:nerdtree_tabs_open_on_console_startup</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeIgnore=[<span class="string">&#x27;\.pyc$&#x27;</span>,<span class="string">&#x27;\.class$&#x27;</span>,<span class="string">&#x27;\~$&#x27;</span>,<span class="string">&#x27;\.swp$&#x27;</span>,<span class="string">&#x27;\.o$&#x27;</span>,<span class="string">&#x27;\.a$&#x27;</span>,<span class="string">&#x27;\.so$&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="vim-nerdtree"><a href="#vim-nerdtree" class="headerlink" title="vim nerdtree"></a>vim nerdtree</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">NERDTree 说明</span><br><span class="line">和编辑文件一样，通过h <span class="keyword">j</span> <span class="keyword">k</span> <span class="keyword">l</span>移动光标定位</span><br><span class="line">打开关闭文件或者目录，如果是文件的话，光标出现在打开的文件中</span><br><span class="line"><span class="keyword">go</span> 效果同上，不过光标保持在文件目录里，类似预览文件内容的功能</span><br><span class="line">i和s可以水平分割或纵向分割窗口打开文件，前面加g类似<span class="keyword">go</span>的功能</span><br><span class="line">t 在标签页中打开</span><br><span class="line">T 在后台标签页中打开</span><br><span class="line">ctrl+<span class="keyword">w</span>+<span class="keyword">w</span> 光标在左右窗口切换</span><br><span class="line">ctrl+<span class="keyword">w</span>+r 切换当前窗口左右布局</span><br><span class="line">ctrl+<span class="keyword">p</span> 模糊搜索文件</span><br><span class="line">gT 切换到前一个<span class="keyword">tab</span></span><br><span class="line">g t 切换到后一个<span class="keyword">tab</span></span><br><span class="line"><span class="keyword">p</span> 到上层目录</span><br><span class="line"><span class="keyword">P</span> 到根目录</span><br><span class="line">K 到同目录第一个节点</span><br><span class="line">J 到同目录最后一个节点</span><br><span class="line"><span class="keyword">m</span> 显示文件系统菜单（添加、删除、移动操作）</span><br><span class="line">r: 刷新光标所在的目录</span><br><span class="line">R: 刷新当前根路径</span><br><span class="line">? 帮助</span><br><span class="line">q 关闭</span><br><span class="line"></span><br><span class="line">扩展插件：</span><br><span class="line"><span class="keyword">vim</span>-nerdtree-<span class="keyword">tabs</span></span><br><span class="line">nerdtree-git-plugin</span><br></pre></td></tr></table></figure>
+
+<h2 id="vim-更多插件"><a href="#vim-更多插件" class="headerlink" title="vim 更多插件"></a>vim 更多插件</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/edward2013/p/5295004.html">我的Shell + VIM配置</a></p>
+<h2 id="vim-疑难"><a href="#vim-疑难" class="headerlink" title="vim 疑难"></a>vim 疑难</h2><h3 id="换行符处理"><a href="#换行符处理" class="headerlink" title="换行符处理"></a>换行符处理</h3><span class="label label-danger">问题描述</span>
+<p>vim 保存后整个文档都被标记为更改，差异对比显示每行末尾出现<code>^M</code>字样。</p>
+<span class="label label-primary">问题根源</span>
+<p>Unix 只需一个换行符(\n) <code>0A</code>，<br>DOS/Windows 需要一个回车符加一个换行符(\r\n) <code>0D0A</code>。</p>
+<span class="label label-success">解决方案</span>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:e ++ff=unix         <span class="comment">/*设置 fileformats 为 unix，0D \r 被显示 ^M*/</span></span><br><span class="line">:%s/[^[:print]]$<span class="comment">//g  /*清除行末不可打印字符但不限于 ^M*/</span></span><br><span class="line">:%s/[[:space]]*$<span class="comment">//g  /*清楚行末空白字符*/</span></span><br><span class="line">:%s/\^M<span class="comment">//g           /* ^M == Ctrl+v, Ctrl+m */</span></span><br></pre></td></tr></table></figure>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/04/22/Network/Apache配置多个虚拟主机-Windows/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/04/10/Hexo/Markdown语法笔记/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "vim 学习笔记",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-04-15 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Linux/">Linux<span>5</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/vim/">vim<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#vim-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%9B%BE%E8%A7%A3"><span class="toc-article-text">vim 常用命令图解</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%91%BD%E4%BB%A4%EF%BC%88%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="toc-article-text">命令（快捷键）详解</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#vim-%E9%85%8D%E7%BD%AE"><span class="toc-article-text">vim 配置</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A"><span class="toc-article-text">必知必会</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#vim-nerdtree"><span class="toc-article-text">vim nerdtree</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#vim-%E6%9B%B4%E5%A4%9A%E6%8F%92%E4%BB%B6"><span class="toc-article-text">vim 更多插件</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#vim-%E7%96%91%E9%9A%BE"><span class="toc-article-text">vim 疑难</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E6%8D%A2%E8%A1%8C%E7%AC%A6%E5%A4%84%E7%90%86"><span class="toc-article-text">换行符处理</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>

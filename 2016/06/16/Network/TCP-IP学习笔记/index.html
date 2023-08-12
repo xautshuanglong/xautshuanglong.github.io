@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TCP/IP 学习笔记 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="Descrition">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="TCP/IP 学习笔记"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> TCP/IP 学习笔记</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h2 id="TCP-IP-参考模型"><a href="#TCP-IP-参考模型" class="headerlink" title="TCP/IP 参考模型"></a>TCP/IP 参考模型</h2><p><code>TCP/IP</code>参考模型是计算机网络的祖父<code>ARPANET</code>和其后继的因特网使用的参考模型。<code>ARPANET</code>是由美国国防部DoD（U.S.Department of Defense）赞助的研究网络。逐渐地它通过租用的电话线连结了数百所大学和政府部门。当无线网络和卫星出现以后，现有的协议在和它们相连的时候出现了问题，所以需要一种新的参考体系结构。这个体系结构在它的两个主要协议出现以后，被称为TCP/IP参考模型（TCP/IP reference model）。<br>由于国防部担心他们一些重要的主机、路由器和互联网关可能会突然崩溃，所以网络必须实现的另一目标是网络不受子网硬件损失的影响，已经建立的会话不会被取消，而且整个体系结构必须相当灵活。</p>
+<span id="more"></span>
+
+<h3 id="四层协议"><a href="#四层协议" class="headerlink" title="四层协议"></a>四层协议</h3><p><code>TCP/IP</code>是一组用于实现网络互连的通信协议。<code>Internet</code>网络体系结构以<code>TCP/IP</code>为核心。基于<code>TCP/IP</code>的参考模型将协议分成四个层次，它们分别是：网络访问层、网际互联层、传输层（主机到主机）、和应用层。</p>
+<ul>
+<li>应用层<br>应用层对应于<code>OSI</code>参考模型的高层（应用层、表示层、会话层），为用户提供所需要的各种服务，例如：<code>FTP</code>、<code>Telnet</code>、<code>DNS</code>、<code>SMTP</code>等。</li>
+<li>传输层<br>传输层对应于<code>OSI</code>参考模型的传输层，为应用层实体提供端到端的通信功能，保证了数据包的顺序传送及数据的完整性。该层定义了两个主要的协议：传输控制协议<code>TCP</code>和用户数据报协议<code>UDP</code>。<br><code>TCP</code>协议提供的是一种可靠的、通过“三次握手”来连接的数据传输服务；而<code>UDP</code>协议提供的则是不保证可靠的（并不是不可靠）、无连接的数据传输服务。<br><code>TCP</code>建立在<code>IP</code>之上，定义了网络上程序到程序的数据传输格式和规则，提供了<code>IP</code>数据包的传输确认、丢失数据包的重新请求、受到的数据包重新装配。<code>TCP</code>协议是面向连接的协议，类似于打电话，在开始传输数据之前，必须先建立明确的连接。<code>UDP</code>也建立在<code>IP</code>之上，但它是一种无连接协议，两台计算机之间的传输类似于传递邮件：消息从一台计算机发送到另一台计算机，两者之间没有明确的连接。<code>UDP</code>不保证数据的传输，也不提供重新排列次序或重新请求的功能，所以说它是不可靠的。虽然<code>UDP</code>的不可靠性限制了它的应用场合，但它比<code>TCP</code>具有更好的传输效率。</li>
+<li>网际互联层<br>网际互联层对应于<code>OSI</code>参考模型的网络层，主要解决主机到主机的通信问题。它所包含的协议设计数据包在整个网络上的逻辑传输。注重重新赋予主机一个<code>IP</code>地址来完成对主机的寻址，它还负责数据包在多种网络中的路由。该层有三个主要协议：网际协议<code>IP</code>、互联网组管理协议<code>IGMP</code>和互联网控制报文协议<code>ICMP</code>。<br><code>IP</code>协议是网际互联层最重要的协议，它提供的是一个可靠、无连接的数据报传递服务。如果没有使用一些监视系统进程的工具，用户是看不到在系统里的<code>IP</code>的。网络嗅探器<code>Sniffers</code>是能看到这些过程的一个装置（它可以是软件，也可以是硬件），它能读取通过网络发送的每一个包，即能读取发生在网络层协议的任何活动，因此网络嗅探器<code>Sniffers</code>会对安全造成威胁。重要的网络层协议包括<code>ARP</code>（地址解析协议）、<code>ICMP</code>（Internet控制消息协议）和<code>IP</code>（网际协议）等。</li>
+<li>网络接入（接口）层（即主机-网络层）<br>网络接入层与<code>OSI</code>参考模型中的物理层和数据链路层相对应。它负责监视数据在主机和网络之间的交换。事实上，<code>TCP/IP</code>本身并未定义该层的协议，而由参与互连的各网络使用自己的物理层和数据链路层协议，然后与<code>TCP/IP</code>的网络接入层进行连接。地址解析协议<code>ARP</code>工作在此层，即<code>OSI</code>参考模型的数据链路层。</li>
+</ul>
+<h2 id="OSI-参考模型"><a href="#OSI-参考模型" class="headerlink" title="OSI 参考模型"></a>OSI 参考模型</h2><h3 id="OSI-模型分层原则"><a href="#OSI-模型分层原则" class="headerlink" title="OSI 模型分层原则"></a>OSI 模型分层原则</h3><p><code>ISO</code>为了更好的使网络应用更为普及，就推出了<code>OSI</code>参考模型。其含义就是推荐所有公司使用这个规范来控制网络。这样所有公司都有相同的规范，就能互联了。提供各种网络服务功能的计算机网络系统是非常复杂的。根据分而治之的原则，<code>ISO</code>将整个通信功能划分为七个层次，划分原则是：</p>
+<ul>
+<li>网路中各节点都有相同的层次；</li>
+<li>不同节点的同等层具有相同的功能；</li>
+<li>同一节点内相邻层之间通过接口通信；</li>
+<li>每一层使用下层提供的服务，并向其上层提供服务；</li>
+<li>不同节点的同等层按照协议实现对等层之间的通信。</li>
+</ul>
+<h2 id="模型比较"><a href="#模型比较" class="headerlink" title="模型比较"></a>模型比较</h2><table><tr><th>OSI 七层模型</th><th>TCP/IP 四层模型</th><th>网络协议</th></tr> <tr><td>应用层</td><td rowspan="3">应用层</td><td rowspan="3">HTTP、HTTPS、FTP、Telnet、<br>NFS、SMTP、DNS、DHCP、TFTP、WWW。</td></tr> <tr><td>表示层</td></tr><tr><td>会话层</td></tr><tr><td>传输层</td><td>传输层</td><td>TCP、UDP</td></tr><tr><td>网络层</td><td>网际层</td><td>IP、ICMP、IGMP、RIP。</td></tr><tr><td>数据链路层</td><td rowspan="2">网络接口</td><td>PPP、ARP、RARP。</td></tr><tr><td>物理层</td><td>RJ-45、IEEE802.3、EIA/TIA RS232。</td></tr></table>
+
+<h3 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h3><ol>
+<li><code>OSI</code>参考模型和<code>TCP/IP</code>参考模型都采用了层次结构的概念。</li>
+<li>都能够提供面向连接和无连接两种通信服务机制。</li>
+</ol>
+<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><ol>
+<li><code>OSI</code>采用的七层模型，而<code>TCP/IP</code>是四层结构。</li>
+<li><code>TCP/IP</code>参考模型的网络接口层实际上并没有真正的定义，只是一些概念性的描述。而<code>OSI</code>参考模型不仅分了两层，而且每一层的功能都很详尽，甚至在数据链路层又分出一个介质访问子层，专门解决局域网的共享介质问题。</li>
+<li><code>OSI</code>模型是在协议开发前设计的，具有通用性。<code>TCP/IP</code>是先有协议集然后建立模型，不适用于非<code>TCP/IP</code>网络。</li>
+<li><code>OSI</code>参考模型与<code>TCP/IP</code>参考模型的传输层功能基本相似，都是负责为用户提供真正的端对端的通信服务，也对高层屏蔽了底层网络的实现细节。所不同的是<code>TCP/IP</code>参考模型的传输层是建立在网络互联层基础之上的，而网络互联层只提供无连接的网络服务，所以面向连接的功能完全在<code>TCP</code>协议中实现，当然<code>TCP/IP</code>的传输层还提供无连接的服务，如<code>UDP</code>；相反<code>OSI</code>参考模型的传输层是建立在网络层基础之上的，网络层既提供面向连接的服务，又提供无连接的服务，但传输层只提供面向连接的服务。</li>
+<li><code>OSI</code>参考模型的抽象能力高，适合与描述各种网络；而<code>TCP/IP</code>是先有了协议，才制定<code>TCP/IP</code>模型的。</li>
+<li><code>OSI</code>参考模型的概念划分清晰，但过于复杂；而<code>TCP/IP</code>参考模型在服务、接口和协议的 区别上不清楚，功能描述和实现细节混在一起。</li>
+<li><code>TCP/IP</code>参考模型的网络接口层并不是真正的一层；<code>OSI</code>参考模型的缺点是层次过多，划分意义不大但增加了复杂性。</li>
+<li><code>OSI</code>参考模型虽然被看好，由于没把握好时机，技术不成熟，实现困难；相反，<code>TCP/IP</code>参考模型虽然有许多不尽人意的地方，但还是比较成功的。</li>
+</ol>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/06/23/CPlusPlus/CPlusPlus访问权限及继承方式/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/06/06/Linux/Signal信号/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "TCP/IP 学习笔记",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-06-16 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/Network/">Network<span>6</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/TCP-IP/">TCP/IP<span>1</span></a></li>
+    </ul>
+	</div>
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#TCP-IP-%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-article-text">TCP&#x2F;IP 参考模型</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%9B%9B%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="toc-article-text">四层协议</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#OSI-%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-article-text">OSI 参考模型</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#OSI-%E6%A8%A1%E5%9E%8B%E5%88%86%E5%B1%82%E5%8E%9F%E5%88%99"><span class="toc-article-text">OSI 模型分层原则</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%A8%A1%E5%9E%8B%E6%AF%94%E8%BE%83"><span class="toc-article-text">模型比较</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E5%85%B1%E5%90%8C%E7%82%B9"><span class="toc-article-text">共同点</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#%E4%B8%8D%E5%90%8C%E7%82%B9"><span class="toc-article-text">不同点</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>

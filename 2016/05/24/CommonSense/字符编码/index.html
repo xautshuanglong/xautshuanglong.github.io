@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>字符编码 | Shuanglong</title>
+  <meta name="author" content="JiangShuanglong">
+  
+  <meta name="description" content="Descrition">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="字符编码"/>
+  <meta property="og:site_name" content="Shuanglong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="//atom.xml" title="Shuanglong" type="application/atom+xml">
+  
+  
+    <link href="/css/images/favicon.ico" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cdbf45c160c2410580214c9a5a9b169c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+
+<body>
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Shuanglong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About Shuanglong">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+    <div class="content">
+      
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 字符编码</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="字符编码相关常识"><a href="#字符编码相关常识" class="headerlink" title="字符编码相关常识"></a>字符编码相关常识</h1><h2 id="字符编码简介"><a href="#字符编码简介" class="headerlink" title="字符编码简介"></a>字符编码简介</h2><h3 id="1-ASCII"><a href="#1-ASCII" class="headerlink" title="1. ASCII"></a>1. ASCII</h3><p><code>ASSII</code>(American Standard Code for Information Interchange),是一种单字节编码。单字节可以表示 256 个不同的字符，可以表示所有的英文字符和许多控制符号。<code>ASCII</code>只用到其中的一半(\x80以下)，这是<code>MBCS</code>得以实现的基础。</p>
+<h3 id="2-MBCS"><a href="#2-MBCS" class="headerlink" title="2. MBCS"></a>2. MBCS</h3><p><code>MBCS</code>(Multi-Byte Character Set)是一种多字节编码。目前大多使用双字节编码，所以也叫<code>DBCS</code>(Double-Byte Character Byte)。<code>MBCS</code>并不是某一种特定的编码，Windows 中根据设定的区域不同，指代不同的编码。而Linux里无法使用MBCS作为编码。Windows中，微软使用<code>ANSI</code>来代表<code>MBCS</code>，在简体中文Windows默认的区域设定里，指代GBK。<br>如GBxxx、BIGxxx等，都是多字节字符编码，他们的规则是：如果第一个字节是\x80以下，则仍然表示ASCII字符；如果是\x80以上，则跟下一个字节一起（共两个字节）表示一个字符，然后跳过下一个字节，继续往下判断。<br>IBM发明了一个叫Code Page的概念，将这些编码都收入囊中并分配页码，GBK是第936页，也就是CP936。所以，也可以使用CP936表示GBK。</p>
+<h3 id="3-Unicode"><a href="#3-Unicode" class="headerlink" title="3. Unicode"></a>3. Unicode</h3><p><code>UCS</code>(Unicode Character Set)还仅仅是字符对应码位的一张表而已，比如<code>汉</code>这个字的码位是<code>6C49</code>。字符具体如何传输和储存则是由<code>UTF</code>(UCS Transformation Format)来负责。<br>Unicode标准<code>UCS-2</code>使用两个字节表示一个字符，<code>UCS-4</code>标准，使用4个字节表示一个字符。<br>最初，使用<code>UCS</code>的码位来保存，这就是<code>UTF-16</code>，比如，<code>汉</code>直接使用\x6C\x49保存(<code>UTF-16-BE</code>)，或是倒过来使用\x49\x6C保存(<code>UTF-16-LE</code>)。但英文字母只需要一个字节就能保存，变成了两个字节，空间消耗大了一倍，于是<code>UTF-8</code>横空出世。<br><code>BOM</code>(Byte Order Mark),文件编码方式。</p>
+<span id="more"></span>
+
+<h3 id="4-UTF-8"><a href="#4-UTF-8" class="headerlink" title="4. UTF-8"></a>4. UTF-8</h3><table>
+<thead>
+<tr>
+<th align="center">Byte 1</th>
+<th align="center">Byte 2</th>
+<th align="center">Byte 3</th>
+<th align="center">Byte 4</th>
+<th align="center">Byte 5</th>
+<th align="center">Byte 6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0xxx xxxx</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">110x xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1110 xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1111 0xxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1111 10xx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1111 110x</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+<td align="center">10xx xxxx</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+<h2 id="查询转换工具"><a href="#查询转换工具" class="headerlink" title="查询转换工具"></a>查询转换工具</h2><p><a target="_blank" rel="noopener" href="http://mytju.com/classcode/tools/encode_utf8.asp">查看字符编码（UTF-8）</a><br><a target="_blank" rel="noopener" href="http://tools.jb51.net/transcoding/chinese2unicode">在线中文汉字/ASCII码/Unicode编码互相转换工具</a><br><a target="_blank" rel="noopener" href="http://www.jsons.cn/unicode">在线Unicode编码转换工具（为您提供ASCII与Unicode互转，Unicode与中文互转，中文转换为&amp;#XXXX形式）</a><br><a target="_blank" rel="noopener" href="https://www.qqxiuzi.cn/zh/hanzi-gbk-bianma.php">GBK 编码</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/whiteyun/archive/2010/07/06/1772218.html">Unicode汉字编码表</a></p>
+<h2 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/23374078">Unicode 和 UTF-8 有什么区别？</a><br><a target="_blank" rel="noopener" href="http://www.fmddlmyy.cn/text30.html">GB18030编码研究以及GBK、GB18030与Unicode的映射</a></p>
+	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+				
+    	<li class="prev"><a href="/2016/06/06/Linux/Signal信号/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+  		
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/05/12/Python/Python学习笔记/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">留言</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "xautshuanglong",
+	       repo: "xautshuanglong.github.io",
+		   client_id: "9393dc785289a96d8026",
+           client_secret: "e33339d6cbd320a707d655ee9b941a01c3c8ae28",
+		   no_comment: "暂时还没有留言呢，点击下面的按钮去留言吧！",
+		   go_to_comment: "去留言",
+		   no_issue: "no_issue",
+		   issue_title: "字符编码",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
+  
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-05-24 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/CommonSense/">CommonSense<span>15</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%9B%B8%E5%85%B3%E5%B8%B8%E8%AF%86"><span class="toc-article-text">字符编码相关常识</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AE%80%E4%BB%8B"><span class="toc-article-text">字符编码简介</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#1-ASCII"><span class="toc-article-text">1. ASCII</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#2-MBCS"><span class="toc-article-text">2. MBCS</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#3-Unicode"><span class="toc-article-text">3. Unicode</span></a></li><li class="toc-article-item toc-article-level-3"><a class="toc-article-link" href="#4-UTF-8"><span class="toc-article-text">4. UTF-8</span></a></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E6%9F%A5%E8%AF%A2%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7"><span class="toc-article-text">查询转换工具</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#%E5%8F%82%E8%80%83%E7%BD%91%E5%9D%80"><span class="toc-article-text">参考网址</span></a></li></ol></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+    </div>
+  </div>
+  <div class="container-narrow">
+    <footer> <p>
+  &copy; 2023 JiangShuanglong
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+
+
+  <a id="gotop" href="#">
+  <span>▲</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- Mathjax for 3D formula by shuanglong begin -->
+
+<!-- Mathjax for 3D formula by shuanglong end -->
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
+
+
+<!-- mermaid chart -->
+
+
+</body>
+</html>
