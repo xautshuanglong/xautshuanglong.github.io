@@ -90,6 +90,9 @@ search:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repository: git@github.com:xautshuanglong/xautshuanglong.github.io.git
+  branch: master
+- type: git
+  repository: git@gitee.com:xautshuanglong/xautshuanglong.git
   branch: master
