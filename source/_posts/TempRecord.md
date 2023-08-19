@@ -31,9 +31,8 @@ toc: true
 
 ### Windows API
 * 错误码处理
-    GetLastError、FormatMessage
-    https://msdn.microsoft.com/zh-cn/library/windows/desktop/ms680582(v=vs.85).aspx
-    https://msdn.microsoft.com/en-us/library/ms679351(v=VS.85).aspx
+  [GetLastError](https://learn.microsoft.com/en-us/windows/win32/debug/retrieving-the-last-error-code?redirectedfrom=MSDN)
+  [FormatMessage](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-formatmessage?redirectedfrom=MSDN)
   [HRESULT 与 Windows Error Codes](http://www.cnblogs.com/greenerycn/archive/2010/08/30/hresult_and_win_error_codes.html)
   [C++异常继承关系](http://zh.cppreference.com/w/cpp/error/exception)
 
@@ -86,6 +85,8 @@ toc: true
 * [关于字符串长度](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l?view=vs-2019)
 * Session 远程桌面相关
   WTSQuerySessionInformationA function
+* 注册表操作
+  [RegOpenKeyExA](https://learn.microsoft.com/en-us/windows/win32/api/winreg/nf-winreg-regopenkeyexw) 打开当前用户注册表配置，服务、应用多种身份运行效果不同
 * 文件操作 `SetFileAttributes` `CopyFile` `CopyFileEx` `MoveFileEx`
 * 打印机操作
   [【Print Spooler API Functions】](https://docs.microsoft.com/en-us/windows/win32/printdocs/printing-and-print-spooler-functions)
